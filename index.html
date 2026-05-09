@@ -189,10 +189,22 @@
 </section>
 
 <section class="section contact" id="contact">
-  <h2>Contact Holidaydope</h2>
-  <p>Book your dream vacation today.</p>
-  <br>
-  <a class="btn" href="https://wa.me/918595789670">WhatsApp: 8595789670</a>
+  <h2>Plan Your Trip</h2>
+  <p>Fill details and send enquiry on WhatsApp.</p>
+
+  <form onsubmit="sendWhatsApp(); return false;" style="max-width:500px;margin:30px auto;text-align:left;">
+    <input id="name" type="text" placeholder="Your Name" required style="width:100%;padding:15px;margin:10px 0;border-radius:10px;border:none;">
+    
+    <input id="destination" type="text" placeholder="Destination e.g. Bali, Thailand" required style="width:100%;padding:15px;margin:10px 0;border-radius:10px;border:none;">
+    
+    <input id="date" type="date" required style="width:100%;padding:15px;margin:10px 0;border-radius:10px;border:none;">
+    
+    <input id="people" type="number" placeholder="Number of People" required style="width:100%;padding:15px;margin:10px 0;border-radius:10px;border:none;">
+    
+    <button type="submit" class="btn" style="border:none;width:100%;cursor:pointer;">
+      Send Enquiry on WhatsApp
+    </button>
+  </form>
 </section>
 
 <a class="whatsapp" href="https://wa.me/918595789670?text=Hello%20Holidaydope,%20I%20want%20to%20book%20a%20holiday%20package.">💬</a>
