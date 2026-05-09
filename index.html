@@ -103,6 +103,68 @@
       .hero p{font-size:18px}
       .section h2{font-size:32px}
     }
+    body{
+  background:radial-gradient(circle at top,#2b1b00,#050505 45%);
+}
+
+.hero{
+  position:relative;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,rgba(255,215,0,.12),transparent);
+}
+
+.hero div{
+  position:relative;
+  z-index:2;
+  background:rgba(0,0,0,.35);
+  padding:40px;
+  border-radius:30px;
+  border:1px solid rgba(255,215,0,.35);
+  backdrop-filter:blur(8px);
+}
+
+.btn{
+  background:linear-gradient(135deg,#fff1a8,#d4af37,#8a6500);
+  box-shadow:0 8px 25px rgba(255,215,0,.25);
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-3px) scale(1.04);
+  box-shadow:0 12px 35px rgba(255,215,0,.45);
+}
+
+.card{
+  background:rgba(255,255,255,.06);
+  backdrop-filter:blur(10px);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 15px 40px rgba(255,215,0,.25);
+}
+
+.card img{
+  transition:.4s;
+}
+
+.card:hover img{
+  transform:scale(1.05);
+}
+
+.section{
+  background:linear-gradient(180deg,#050505,#0f0b03);
+}
+
+header{
+  box-shadow:0 5px 25px rgba(255,215,0,.15);
+}
   </style>
 </head>
 
