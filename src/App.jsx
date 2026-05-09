@@ -58,32 +58,75 @@ if (path === "/kashmir") {
 }
 
 return (
-  <div style={{
-    background:"black",
-    color:"white",
+  <section style={{
+    position:"relative",
     height:"100vh",
-    display:"flex",
-    justifyContent:"center",
-    alignItems:"center",
-    flexDirection:"column"
+    overflow:"hidden"
   }}>
-    <h1 style={{color:"gold"}}>
-      Holidaydope
-    </h1>
 
-    <a
-    href="/kashmir"
-    style={{
-      marginTop:"20px",
-      background:"gold",
-      color:"black",
-      padding:"14px 30px",
-      borderRadius:"30px",
-      textDecoration:"none"
+    <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      style={{
+        position:"absolute",
+        width:"100%",
+        height:"100%",
+        objectFit:"cover"
+      }}
+    >
+      <source src="/beach.mp4" type="video/mp4" />
+    </video>
+
+    <div style={{
+      position:"absolute",
+      inset:"0",
+      background:"rgba(0,0,0,0.4)"
+    }}></div>
+
+    <div style={{
+      position:"relative",
+      zIndex:"10",
+      height:"100%",
+      display:"flex",
+      flexDirection:"column",
+      justifyContent:"center",
+      alignItems:"center",
+      color:"white",
+      textAlign:"center"
     }}>
-    Open Kashmir Package
-    </a>
-  </div>
-);
 
+      <h1 style={{
+        fontSize:"70px",
+        color:"gold"
+      }}>
+        Holidaydope
+      </h1>
+
+      <p style={{
+        fontSize:"28px"
+      }}>
+        Chalo Duniya Ghume ✈️
+      </p>
+
+      <a
+        href="/kashmir"
+        style={{
+          marginTop:"30px",
+          background:"gold",
+          color:"black",
+          padding:"15px 35px",
+          borderRadius:"40px",
+          textDecoration:"none",
+          fontWeight:"bold"
+        }}
+      >
+        Explore Packages
+      </a>
+
+    </div>
+
+  </section>
+);
 }
