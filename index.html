@@ -1,65 +1,308 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Holidaydope</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holidaydope | Chalo Duniya Ghume</title>
+
   <style>
-    body{margin:0;font-family:Arial;background:#050505;color:white}
-    header{padding:25px;text-align:center;background:#000;border-bottom:1px solid #b8860b}
-    h1{color:gold;font-size:48px;margin:0}
-    .tagline{font-size:22px;margin-top:8px}
-    .hero{text-align:center;padding:70px 20px;background:linear-gradient(#000,#1a1200)}
-    .hero h2{font-size:42px;color:gold}
-    .btn{display:inline-block;margin:15px;padding:15px 28px;background:gold;color:black;text-decoration:none;border-radius:30px;font-weight:bold}
-    .section{padding:50px 20px;text-align:center}
-    .cards{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
-    .card{background:#111;border:1px solid #b8860b;border-radius:18px;padding:25px;width:280px}
-    .card h3{color:gold}
-    footer{text-align:center;padding:25px;background:#000;color:#aaa}
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#050505;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 8%;
+      background:black;
+      border-bottom:1px solid gold;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .logo{
+      color:gold;
+      font-size:32px;
+      font-weight:bold;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:20px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:gold;
+    }
+
+    .hero{
+      height:90vh;
+      background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop') center/cover;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      position:relative;
+    }
+
+    .hero::before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.6);
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:70px;
+      color:gold;
+    }
+
+    .hero p{
+      margin-top:15px;
+      font-size:24px;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:25px;
+      padding:15px 35px;
+      background:gold;
+      color:black;
+      text-decoration:none;
+      border-radius:40px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:scale(1.05);
+    }
+
+    .section{
+      padding:70px 8%;
+      text-align:center;
+    }
+
+    .section h2{
+      color:gold;
+      margin-bottom:40px;
+      font-size:42px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:#111;
+      border:1px solid rgba(255,215,0,0.4);
+      border-radius:20px;
+      overflow:hidden;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 10px 25px rgba(255,215,0,0.2);
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .card h3{
+      color:gold;
+      margin-bottom:10px;
+      font-size:28px;
+    }
+
+    .reviews{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:25px;
+    }
+
+    .review-box{
+      background:#111;
+      padding:30px;
+      border-radius:20px;
+      border:1px solid rgba(255,215,0,0.3);
+    }
+
+    .whatsapp{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25D366;
+      color:white;
+      width:65px;
+      height:65px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:30px;
+      text-decoration:none;
+      box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      background:black;
+      border-top:1px solid gold;
+      color:#aaa;
+    }
+
+    @media(max-width:768px){
+      .hero h1{
+        font-size:42px;
+      }
+
+      nav{
+        display:none;
+      }
+    }
   </style>
 </head>
+
 <body>
 
 <header>
-  <h1>Holidaydope</h1>
-  <div class="tagline">Chalo Duniya Ghume 🌍✈️</div>
+  <div class="logo">Holidaydope</div>
+
+  <nav>
+    <a href="#packages">Packages</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <section class="hero">
-  <h2>Luxury Travel Packages</h2>
-  <p>Thailand • Bali • Maldives • Dubai • Kashmir</p>
-  <a class="btn" href="https://wa.me/918595789670">Book on WhatsApp</a>
-</section>
+  <div class="hero-content">
+    <h1>Chalo Duniya Ghume ✈️</h1>
+    <p>Luxury International Holiday Packages</p>
 
-<section class="section">
-  <h2>Popular Packages</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Thailand</h3>
-      <p>Starting from ₹24,999</p>
-      <p>Hotel + Sightseeing + Transfer</p>
-    </div>
-    <div class="card">
-      <h3>Bali</h3>
-      <p>Starting from ₹29,999</p>
-      <p>6 Nights / 7 Days Package</p>
-    </div>
-    <div class="card">
-      <h3>Maldives</h3>
-      <p>Starting from ₹49,999</p>
-      <p>Luxury Beach Holiday</p>
-    </div>
+    <a class="btn" href="https://wa.me/918595789670">
+      Book Now on WhatsApp
+    </a>
   </div>
 </section>
 
-<section class="section">
-  <h2>Why Choose Holidaydope?</h2>
-  <p>Trusted travel planning, easy booking, best holiday packages and WhatsApp support.</p>
-  <a class="btn" href="tel:+918595789670">Call Now: 8595789670</a>
+<section class="section" id="packages">
+  <h2>Popular Packages</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Maldives</h3>
+        <p>Starting from ₹49,999</p>
+        <br>
+        <a class="btn" href="https://wa.me/918595789670">Book Now</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Bali</h3>
+        <p>Starting from ₹29,999</p>
+        <br>
+        <a class="btn" href="https://wa.me/918595789670">Book Now</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Thailand</h3>
+        <p>Starting from ₹24,999</p>
+        <br>
+        <a class="btn" href="https://wa.me/918595789670">Book Now</a>
+      </div>
+    </div>
+
+  </div>
 </section>
 
+<section class="section" id="reviews">
+  <h2>Customer Reviews</h2>
+
+  <div class="reviews">
+
+    <div class="review-box">
+      ⭐⭐⭐⭐⭐
+      <p>
+        Amazing trip planning and smooth service.
+      </p>
+    </div>
+
+    <div class="review-box">
+      ⭐⭐⭐⭐⭐
+      <p>
+        Best Bali package experience with Holidaydope.
+      </p>
+    </div>
+
+    <div class="review-box">
+      ⭐⭐⭐⭐⭐
+      <p>
+        Professional support and affordable pricing.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <h2>Contact Us</h2>
+
+  <p>
+    WhatsApp: 8595789670
+  </p>
+
+  <br>
+
+  <a class="btn" href="https://wa.me/918595789670">
+    Chat on WhatsApp
+  </a>
+</section>
+
+<a class="whatsapp" href="https://wa.me/918595789670">
+  💬
+</a>
+
 <footer>
-  © 2026 Holidaydope | Chalo Duniya Ghume
+  © 2026 Holidaydope | Chalo Duniya Ghume 🌍
 </footer>
 
 </body>
