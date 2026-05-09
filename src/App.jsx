@@ -65,11 +65,12 @@ return (
   }}>
 
     <video
-      autoPlay
-      loop
-      muted
-      playsInline
-      style={{
+  autoPlay
+  loop
+  muted
+  playsInline
+  controls
+  style={{
         position:"absolute",
         width:"100%",
         height:"100%",
