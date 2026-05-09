@@ -58,44 +58,37 @@ if (path === "/kashmir") {
 }
 
 return (
-  <section style={{
+  <div style={{
     position:"relative",
     height:"100vh",
     overflow:"hidden"
   }}>
 
     <video
-  autoPlay
-  loop
-  muted
-  playsInline
-  controls
-  style={{
-        position:"absolute",
+      src="/beach.mp4"
+      autoPlay
+      muted
+      loop
+      controls
+      style={{
         width:"100%",
         height:"100%",
         objectFit:"cover"
       }}
-    >
-      <source src="/beach.mp4" type="video/mp4" />
-    </video>
+    />
 
     <div style={{
       position:"absolute",
-      inset:"0",
-      background:"rgba(0,0,0,0.4)"
-    }}></div>
-
-    <div style={{
-      position:"relative",
-      zIndex:"10",
+      top:"0",
+      left:"0",
+      width:"100%",
       height:"100%",
+      background:"rgba(0,0,0,0.4)",
       display:"flex",
-      flexDirection:"column",
       justifyContent:"center",
       alignItems:"center",
-      color:"white",
-      textAlign:"center"
+      flexDirection:"column",
+      color:"white"
     }}>
 
       <h1 style={{
@@ -106,28 +99,13 @@ return (
       </h1>
 
       <p style={{
-        fontSize:"28px"
+        fontSize:"30px"
       }}>
         Chalo Duniya Ghume ✈️
       </p>
 
-      <a
-        href="/kashmir"
-        style={{
-          marginTop:"30px",
-          background:"gold",
-          color:"black",
-          padding:"15px 35px",
-          borderRadius:"40px",
-          textDecoration:"none",
-          fontWeight:"bold"
-        }}
-      >
-        Explore Packages
-      </a>
-
     </div>
 
-  </section>
+  </div>
 );
 }
