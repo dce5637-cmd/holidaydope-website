@@ -92,11 +92,11 @@ return (
     }}>
 
       <h1 style={{
-        fontSize:"70px",
-        color:"gold"
-      }}>
-        Holidaydope
-      </h1>
+  fontSize:"70px",
+  color:"gold"
+}}>
+  Holidaydope TEST
+</h1>
 
       <p style={{
         fontSize:"30px"
