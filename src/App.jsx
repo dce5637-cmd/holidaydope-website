@@ -1,37 +1,49 @@
-export default function App() {
-  return (
-    <div style={{
-      width: "100%",
-      height: "100vh",
-      overflow: "hidden",
-      position: "relative"
-    }}>
+<section
+  className="relative h-screen bg-cover bg-center flex items-center"
+  style={{
+    backgroundImage: "url('/hero-maldives.png')",
+    fontFamily: "'Poppins', sans-serif"
+  }}
+>
+  <div className="absolute inset-0 bg-black/50"></div>
 
-      <video
-        src="/beach.mp4"
-        autoPlay
-        muted
-        loop
-        playsInline
-        controls
-        style={{
-          width: "100%",
-          height: "100%",
-          objectFit: "cover"
-        }}
-      />
+  <div className="relative z-10 px-8 md:px-20 text-white max-w-3xl">
 
-      <h1 style={{
-        position: "absolute",
-        top: "40%",
-        width: "100%",
-        textAlign: "center",
-        color: "white",
-        fontSize: "70px"
-      }}>
-        HOLIDAYDOPE
-      </h1>
+    <img
+      src="/logo.png"
+      alt="Holidaydope"
+      className="w-40 mb-6"
+    />
 
+    <p className="tracking-[6px] text-sm text-yellow-400 mb-3">
+      EXPLORE. DREAM. DISCOVER.
+    </p>
+
+    <h1
+      className="text-5xl md:text-7xl font-bold leading-tight"
+      style={{
+        fontFamily: "'Playfair Display', serif"
+      }}
+    >
+      Luxury Travel Experiences
+    </h1>
+
+    <p className="mt-6 text-lg text-gray-200">
+      Crafted Just For You
+    </p>
+
+    <div className="flex gap-4 mt-8 flex-wrap">
+      <a
+        href="https://wa.me/918595789670"
+        className="bg-yellow-500 hover:bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold transition"
+      >
+        WhatsApp Inquiry
+      </a>
+
+      <button className="border border-white px-8 py-4 rounded-full hover:bg-white hover:text-black transition">
+        Explore Packages
+      </button>
     </div>
-  );
-}
+
+  </div>
+</section>
