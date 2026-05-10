@@ -7,10 +7,9 @@ export default function App() {
         fontFamily: "'Poppins', sans-serif"
       }}
     >
-      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 bg-black/55"></div>
 
       <div className="relative z-10 px-8 md:px-20 text-white max-w-3xl">
-
         <img
           src="/logo.png"
           alt="Holidaydope"
@@ -35,7 +34,6 @@ export default function App() {
         </p>
 
         <div className="flex gap-4 mt-8 flex-wrap">
-
           <a
             href="https://wa.me/918595789670"
             target="_blank"
@@ -45,12 +43,13 @@ export default function App() {
             WhatsApp Inquiry
           </a>
 
-          <button className="border border-white px-8 py-4 rounded-full hover:bg-white hover:text-black transition">
+          <a
+            href="#packages"
+            className="border border-white px-8 py-4 rounded-full hover:bg-white hover:text-black transition"
+          >
             Explore Packages
-          </button>
-
+          </a>
         </div>
-
       </div>
     </section>
   );
