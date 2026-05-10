@@ -672,3 +672,12 @@ html{
   min-width:280px;
   scroll-snap-align:start;
 }
+.international{
+  background:#050505;
+  color:#fff;
+  padding:90px 7%;
+}
+
+.international .section-title h2{
+  color:#fff;
+}
