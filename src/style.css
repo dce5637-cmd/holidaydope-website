@@ -1,7 +1,4 @@
-body {
-  background: black;
-  color: white;
-  font-family: Arial;
-  text-align: center;
-  padding-top: 100px;
+body{
+  margin:0;
+  padding:0;
 }
