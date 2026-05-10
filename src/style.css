@@ -697,3 +697,10 @@ html{
   color:#111;
   padding:90px 7%;
 }
+.domestic .section-title h2{
+  color:#111 !important;
+}
+
+.domestic .section-title p{
+  color:#d4af37 !important;
+}
