@@ -886,3 +886,9 @@ html{
   }
 
 }
+.loader img{
+  width:120px !important;
+  max-width:40vw !important;
+  height:auto !important;
+  object-fit:contain !important;
+}
