@@ -3,61 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Holidaydope - Luxury Travel</title>
+
+  <title>Holidaydope - Luxury Travel Agency</title>
+
+  <link rel="stylesheet" href="/src/style.css" />
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:'Poppins',sans-serif;background:#000;color:#fff}
-    .hero{
-      min-height:100vh;
-      background:
-      linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.6)),
-      url('/hero-maldives.png') center/cover no-repeat;
-      display:flex;
-      align-items:center;
-      padding:70px;
-    }
-    .content{max-width:760px}
-    .logo{width:180px;margin-bottom:30px}
-    .tag{letter-spacing:6px;color:#d4af37;font-size:14px;margin-bottom:18px}
-    h1{
-      font-family:'Playfair Display',serif;
-      font-size:76px;
-      line-height:1.05;
-      margin-bottom:20px;
-    }
-    .gold{color:#d4af37}
-    .sub{font-size:22px;color:#eee;margin-bottom:35px}
-    .btns{display:flex;gap:18px;flex-wrap:wrap}
-    .btn{
-      padding:15px 30px;
-      border-radius:50px;
-      text-decoration:none;
-      font-weight:700;
-    }
-    .goldbtn{background:#d4af37;color:#000}
-    .outline{border:1px solid #fff;color:#fff}
-  </style>
 </head>
 
 <body>
   <section class="hero">
-    <div class="content">
-      <img src="/logo.png" class="logo" alt="Holidaydope Logo">
+    <div class="overlay"></div>
 
-      <p class="tag">EXPLORE. DREAM. DISCOVER.</p>
+    <div class="hero-content">
+      <img src="/logo.png" class="hero-logo" alt="Holidaydope Logo">
+
+      <p class="small-title">EXPLORE. DREAM. DISCOVER.</p>
 
       <h1>
-        Luxury Travel <span class="gold">Experiences</span>
+        Luxury Travel <span>Experiences</span>
       </h1>
 
-      <p class="sub">Crafted Just For You</p>
+      <p class="hero-subtitle">
+        Premium holidays crafted just for you
+      </p>
 
-      <div class="btns">
-        <a class="btn goldbtn" href="https://wa.me/918595789670">WhatsApp Inquiry</a>
-        <a class="btn outline" href="#packages">Explore Packages</a>
+      <div class="hero-buttons">
+        <a href="https://wa.me/918595789670" class="btn gold-btn">WhatsApp Inquiry</a>
+        <a href="#packages" class="btn outline-btn">Explore Packages</a>
       </div>
     </div>
   </section>
