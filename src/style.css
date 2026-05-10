@@ -657,3 +657,18 @@ html{
   font-size:30px;
   cursor:pointer;
 }
+.destination-grid{
+  overflow-x:auto;
+  display:flex;
+  scroll-snap-type:x mandatory;
+  padding-bottom:20px;
+}
+
+.destination-grid::-webkit-scrollbar{
+  display:none;
+}
+
+.card{
+  min-width:280px;
+  scroll-snap-align:start;
+}
