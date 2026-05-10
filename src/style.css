@@ -839,3 +839,50 @@ html{
     grid-template-columns:1fr !important;
   }
 }
+.floating-cta{
+  position:fixed;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  width:92%;
+  max-width:1100px;
+  background:rgba(0,0,0,.88);
+  backdrop-filter:blur(14px);
+  border-radius:22px;
+  padding:20px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:999;
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+.floating-text h3{
+  color:#fff;
+  margin-bottom:5px;
+  font-size:24px;
+}
+
+.floating-text p{
+  color:#ccc;
+}
+
+.floating-btn{
+  background:#d4af37;
+  color:#000;
+  padding:16px 28px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:700;
+}
+
+@media(max-width:768px){
+
+  .floating-cta{
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+    padding:22px;
+  }
+
+}
