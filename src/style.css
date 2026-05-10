@@ -892,3 +892,6 @@ html{
   height:auto !important;
   object-fit:contain !important;
 }
+.loader{
+  overflow:hidden;
+}
