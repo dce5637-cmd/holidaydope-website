@@ -446,3 +446,30 @@ h1 span{
   font-weight:700;
   box-shadow:0 10px 30px rgba(0,0,0,.3);
 }
+html{
+  scroll-behavior:smooth;
+}
+
+.card{
+  transition:.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.why-box{
+  transition:.4s;
+}
+
+.why-box:hover{
+  transform:translateY(-10px);
+}
+
+.testimonial-card{
+  transition:.4s;
+}
+
+.testimonial-card:hover{
+  transform:translateY(-10px);
+}
