@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Holidaydope Package</title>
+
+  <link rel="stylesheet" href="/src/style.css">
+
+  <style>
+
+    .package-hero{
+      height:70vh;
+      background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop') center/cover;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      position:relative;
+    }
+
+    .package-hero::after{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,.55);
+    }
+
+    .package-hero-content{
+      position:relative;
+      z-index:2;
+    }
+
+    .package-hero h1{
+      font-size:72px;
+      color:#fff;
+    }
+
+    .package-hero p{
+      color:#d4af37;
+      font-size:20px;
+      letter-spacing:3px;
+    }
+
+    .details{
+      padding:90px 7%;
+      background:#fff;
+      color:#111;
+    }
+
+    .detail-grid{
+      display:grid;
+      grid-template-columns:2fr 1fr;
+      gap:50px;
+    }
+
+    .detail-box{
+      background:#fff;
+      border-radius:24px;
+      padding:35px;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
+      margin-bottom:30px;
+    }
+
+    .detail-box h2{
+      margin-bottom:20px;
+      font-size:32px;
+    }
+
+    .detail-box p,
+    .detail-box li{
+      color:#555;
+      line-height:1.8;
+    }
+
+    .detail-box ul{
+      padding-left:20px;
+    }
+
+    .booking-card{
+      background:#050505;
+      color:#fff;
+      border-radius:24px;
+      padding:35px;
+      position:sticky;
+      top:30px;
+    }
+
+    .booking-card h3{
+      font-size:36px;
+      color:#d4af37;
+      margin-bottom:10px;
+    }
+
+    .booking-btn{
+      display:block;
+      margin-top:25px;
+      background:#d4af37;
+      color:#000;
+      text-align:center;
+      padding:16px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:700;
+    }
+
+    @media(max-width:900px){
+
+      .detail-grid{
+        grid-template-columns:1fr;
+      }
+
+      .package-hero h1{
+        font-size:46px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<section class="package-hero">
+
+  <div class="package-hero-content">
+    <p>LUXURY INTERNATIONAL PACKAGE</p>
+    <h1 id="packageTitle">Maldives</h1>
+  </div>
+
+</section>
+
+<section class="details">
+
+  <div class="detail-grid">
+
+    <div>
+
+      <div class="detail-box">
+        <h2>Overview</h2>
+
+        <p>
+          Experience a luxury international vacation with premium resorts,
+          beautiful beaches, private transfers and unforgettable memories.
+        </p>
+      </div>
+
+      <div class="detail-box">
+        <h2>Package Includes</h2>
+
+        <ul>
+          <li>Luxury Hotel Stay</li>
+          <li>Daily Breakfast</li>
+          <li>Airport Transfers</li>
+          <li>Sightseeing Tours</li>
+          <li>24/7 Support</li>
+        </ul>
+      </div>
+
+      <div class="detail-box">
+        <h2>Day Wise Itinerary</h2>
+
+        <p><b>Day 1:</b> Arrival & Hotel Check-in</p>
+        <p><b>Day 2:</b> Island / City Tour</p>
+        <p><b>Day 3:</b> Adventure Activities</p>
+        <p><b>Day 4:</b> Leisure & Shopping</p>
+        <p><b>Day 5:</b> Return Journey</p>
+      </div>
+
+    </div>
+
+    <div>
+
+      <div class="booking-card">
+
+        <p>Starting From</p>
+
+        <h3 id="packagePrice">₹69,999</h3>
+
+        <p>Per Person</p>
+
+        <a href="https://wa.me/918595789670" class="booking-btn">
+          Book Now
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const name = params.get("name");
+
+const title = document.getElementById("packageTitle");
+
+const price = document.getElementById("packagePrice");
+
+if(name === "bali"){
+  title.innerText = "Bali";
+  price.innerText = "₹49,999";
+}
+
+if(name === "thailand"){
+  title.innerText = "Thailand";
+  price.innerText = "₹42,999";
+}
+
+if(name === "dubai"){
+  title.innerText = "Dubai";
+  price.innerText = "₹59,999";
+}
+
+if(name === "kashmir"){
+  title.innerText = "Kashmir";
+  price.innerText = "₹29,999";
+}
+
+</script>
+
+</body>
+</html>
