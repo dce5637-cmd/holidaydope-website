@@ -180,7 +180,7 @@
 
         <p>Per Person</p>
 
-        <a href="https://wa.me/918595789670" class="booking-btn">
+        <a id="bookingBtn" href="https://wa.me/918595789670" target="_blank" class="booking-btn">
           Book Now
         </a>
 
@@ -221,7 +221,15 @@ if(name === "kashmir"){
   title.innerText = "Kashmir";
   price.innerText = "₹29,999";
 }
+const bookingBtn = document.getElementById("bookingBtn");
 
+bookingBtn.href =
+  "https://wa.me/918595789670?text=" +
+  encodeURIComponent(
+    "Hi Holidaydope 👋\n\nI want to book " +
+    title.innerText +
+    " package.\nPlease share full itinerary and final price."
+  );
 </script>
 
 </body>
