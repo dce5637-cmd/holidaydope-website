@@ -1011,3 +1011,16 @@ html{
   z-index: 9999;
   box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
+.call-btn{
+  position: fixed;
+  bottom: 160px;
+  right: 22px;
+  background: #111;
+  color: white;
+  padding: 14px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  z-index: 9999;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
