@@ -588,6 +588,30 @@ window.addEventListener("load", function(){
   document.getElementById("loader").style.display = "none";
 });
 </script>
+  <script>
+function sendToWhatsApp(event){
+  event.preventDefault();
+
+  let name = document.querySelector('.booking-form input[type="text"]').value;
+  let phone = document.querySelector('.booking-form input[type="tel"]').value;
+  let email = document.querySelector('.booking-form input[type="email"]').value;
+  let destination = document.querySelector('.booking-form select').value;
+
+  let message =
+`Hi Holidaydope 👋
+
+New Booking Inquiry
+
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Destination: ${destination}`;
+
+  let url = `https://wa.me/918595789670?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+}
+</script>
 </body>
 </html>
 
