@@ -1,58 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <!-- SEO -->
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Holidaydope Visa Services</title>
+  <title>Visa Services | Holidaydope</title>
+  <meta name="description" content="Holidaydope provides tourist visa assistance for Dubai, Thailand, Vietnam, Sri Lanka, Indonesia, Singapore and more.">
+  <meta name="keywords" content="Holidaydope visa, Dubai visa, Thailand visa, Vietnam visa, Singapore visa, tourist visa assistance">
+  <meta name="author" content="Holidaydope">
 
-  <meta name="description" content="Holidaydope visa assistance for Dubai, Thailand, Vietnam, Sri Lanka and more.">
-
-  <meta name="keywords" content="Dubai visa, Thailand visa, Vietnam visa, Holidaydope visa service">
-
-  <meta property="og:title" content="Holidaydope Visa Services">
-  <meta property="og:description" content="Easy tourist visa assistance with Holidaydope">
+  <meta property="og:title" content="Visa Services | Holidaydope">
+  <meta property="og:description" content="Easy tourist visa assistance with Holidaydope.">
   <meta property="og:image" content="/logo.png">
+  <meta property="og:type" content="website">
 
   <link rel="icon" href="/favicon.png">
-
-  <!-- FONT -->
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins',sans-serif;
-    }
-
-    body{
-      background:#08111f;
-      color:#fff;
-      overflow-x:hidden;
-    }
-
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
-
-    img{
-      width:100%;
-      display:block;
-    }
-
-    section{
-      padding:80px 7%;
-    }
-
-    /* NAVBAR */
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    body{background:#08111f;color:#fff;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    section{padding:80px 7%}
 
     .navbar{
       position:absolute;
@@ -61,14 +31,12 @@
       width:100%;
       padding:20px 7%;
       display:flex;
-      align-items:center;
       justify-content:space-between;
+      align-items:center;
       z-index:10;
     }
 
-    .logo{
-      width:130px;
-    }
+    .logo{width:130px}
 
     .home-btn{
       background:linear-gradient(135deg,#d4af37,#f7df8a);
@@ -78,36 +46,34 @@
       font-weight:800;
     }
 
-    /* HERO */
-
     .hero{
-      height:60vh;
+      height:65vh;
       background:
-      linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+      linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
       url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1600&auto=format&fit=crop');
-
       background-size:cover;
       background-position:center;
-
       display:flex;
       align-items:center;
       justify-content:center;
       text-align:center;
+      padding:0 7%;
     }
 
-    .hero-content h1{
-      font-size:72px;
-      font-family:'Playfair Display',serif;
-    }
-
-    .hero-content p{
+    .hero p{
       color:#f5c76b;
       letter-spacing:3px;
-      margin-bottom:15px;
       font-weight:700;
+      margin-bottom:15px;
     }
 
-    /* TITLE */
+    .hero h1{
+      font-family:'Playfair Display',serif;
+      font-size:72px;
+      line-height:1.05;
+    }
+
+    .hero span{color:#f5c76b}
 
     .section-title{
       text-align:center;
@@ -121,69 +87,125 @@
     }
 
     .section-title h2{
+      font-family:'Playfair Display',serif;
       font-size:46px;
       margin-top:10px;
-      font-family:'Playfair Display',serif;
     }
-
-    /* GRID */
 
     .visa-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
       gap:25px;
     }
 
     .visa-card{
       background:#111d2d;
-      border-radius:24px;
-      padding:35px;
-      text-align:center;
       border:1px solid rgba(255,255,255,.08);
+      border-radius:24px;
+      padding:32px;
+      text-align:center;
       transition:.3s;
+      box-shadow:0 20px 45px rgba(0,0,0,.25);
     }
 
     .visa-card:hover{
       transform:translateY(-8px);
+      border-color:rgba(245,199,107,.5);
     }
 
     .flag{
-      font-size:60px;
+      font-size:58px;
       margin-bottom:15px;
     }
 
     .visa-card h3{
-      font-size:28px;
-      margin-bottom:12px;
+      font-size:25px;
+      margin-bottom:10px;
     }
 
     .visa-card p{
       color:#cbd5e1;
-      margin-bottom:25px;
       line-height:1.7;
+      margin-bottom:22px;
     }
 
-    .btn{
+    .visa-btn{
       display:inline-block;
       background:linear-gradient(135deg,#d4af37,#f7df8a);
       color:#111;
       padding:13px 24px;
       border-radius:40px;
-      font-weight:700;
+      font-weight:800;
     }
 
-    /* FOOTER */
+    .process{
+      background:#0b1627;
+    }
+
+    .process-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:25px;
+    }
+
+    .process-box{
+      background:#111d2d;
+      padding:28px;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.08);
+      text-align:center;
+    }
+
+    .process-box h3{
+      color:#f5c76b;
+      margin-bottom:10px;
+    }
+
+    .process-box p{
+      color:#cbd5e1;
+      line-height:1.7;
+    }
+
+    .cta{
+      text-align:center;
+      background:
+      linear-gradient(135deg,rgba(212,175,55,.92),rgba(247,223,138,.92)),
+      url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      color:#111;
+    }
+
+    .cta h2{
+      font-family:'Playfair Display',serif;
+      font-size:44px;
+      margin-bottom:15px;
+    }
+
+    .cta p{
+      font-weight:600;
+      margin-bottom:25px;
+    }
+
+    .dark-btn{
+      display:inline-block;
+      background:#08111f;
+      color:#fff;
+      padding:14px 28px;
+      border-radius:40px;
+      font-weight:800;
+    }
 
     footer{
       background:#050b14;
       padding:50px 7%;
       text-align:center;
-      margin-top:40px;
     }
 
     .footer-logo{
       width:150px;
       margin:0 auto 20px;
+      display:block;
     }
 
     footer p{
@@ -191,210 +213,154 @@
       margin-bottom:10px;
     }
 
-    /* MOBILE */
-
-    @media(max-width:768px){
-
-      .hero-content h1{
-        font-size:46px;
-      }
-
-      .section-title h2{
-        font-size:34px;
-      }
-
+    .footer-links{
+      display:flex;
+      justify-content:center;
+      gap:25px;
+      flex-wrap:wrap;
+      margin:25px 0;
     }
 
+    @media(max-width:768px){
+      section{padding:65px 6%}
+      .logo{width:115px}
+      .hero h1{font-size:46px}
+      .section-title h2{font-size:34px}
+    }
   </style>
-
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-
 <nav class="navbar">
-
   <a href="/">
     <img src="/logo.png" class="logo" alt="Holidaydope">
   </a>
 
-  <a href="/" class="home-btn">
-    Home
-  </a>
-
+  <a href="/" class="home-btn">Home</a>
 </nav>
 
-<!-- HERO -->
-
 <section class="hero">
-
-  <div class="hero-content">
-
+  <div>
     <p>HOLIDAYDOPE VISA SERVICES</p>
-
-    <h1>
-      Easy Visa Assistance
-    </h1>
-
+    <h1>Easy Tourist <span>Visa Assistance</span></h1>
   </div>
-
 </section>
 
-<!-- VISA SECTION -->
-
 <section>
-
   <div class="section-title">
-
-    <p>TOURIST VISA</p>
-
-    <h2>Popular Visa Services</h2>
-
+    <p>POPULAR VISA SERVICES</p>
+    <h2>Choose Your Visa</h2>
   </div>
 
   <div class="visa-grid">
 
-    <!-- DUBAI -->
-
     <div class="visa-card">
-
       <div class="flag">🇦🇪</div>
-
       <h3>Dubai Visa</h3>
-
-      <p>
-        Fast UAE tourist visa assistance for your Dubai holiday.
-      </p>
-
-      <a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Dubai%20Visa%20details." target="_blank" class="btn">
-        Inquiry Now
-      </a>
-
+      <p>Fast UAE tourist visa support for your Dubai holiday.</p>
+      <a class="visa-btn" target="_blank" href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Dubai%20Visa%20details.">Inquiry Now</a>
     </div>
 
-    <!-- THAILAND -->
-
     <div class="visa-card">
-
       <div class="flag">🇹🇭</div>
-
       <h3>Thailand Visa</h3>
-
-      <p>
-        Easy Thailand tourist visa support with quick guidance.
-      </p>
-
-      <a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Thailand%20Visa%20details." target="_blank" class="btn">
-        Inquiry Now
-      </a>
-
+      <p>Thailand tourist visa guidance and travel support.</p>
+      <a class="visa-btn" target="_blank" href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Thailand%20Visa%20details.">Inquiry Now</a>
     </div>
 
-    <!-- VIETNAM -->
-
     <div class="visa-card">
-
       <div class="flag">🇻🇳</div>
-
       <h3>Vietnam Visa</h3>
-
-      <p>
-        Smooth Vietnam visa assistance for your next vacation.
-      </p>
-
-      <a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Vietnam%20Visa%20details." target="_blank" class="btn">
-        Inquiry Now
-      </a>
-
+      <p>Smooth Vietnam visa assistance for your vacation.</p>
+      <a class="visa-btn" target="_blank" href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Vietnam%20Visa%20details.">Inquiry Now</a>
     </div>
 
-    <!-- SRI LANKA -->
-
     <div class="visa-card">
-
       <div class="flag">🇱🇰</div>
-
       <h3>Sri Lanka Visa</h3>
-
-      <p>
-        Tourist visa support for your Sri Lanka island trip.
-      </p>
-
-      <a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Sri%20Lanka%20Visa%20details." target="_blank" class="btn">
-        Inquiry Now
-      </a>
-
+      <p>Tourist visa help for your Sri Lanka island trip.</p>
+      <a class="visa-btn" target="_blank" href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Sri%20Lanka%20Visa%20details.">Inquiry Now</a>
     </div>
 
-    <!-- BALI / INDONESIA -->
-
     <div class="visa-card">
-
       <div class="flag">🇮🇩</div>
-
-      <h3>Indonesia Visa</h3>
-
-      <p>
-        Bali & Indonesia visa assistance for smooth travel planning.
-      </p>
-
-      <a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Indonesia%20Visa%20details." target="_blank" class="btn">
-        Inquiry Now
-      </a>
-
+      <h3>Indonesia / Bali Visa</h3>
+      <p>Bali and Indonesia travel visa assistance.</p>
+      <a class="visa-btn" target="_blank" href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Indonesia%20Visa%20details.">Inquiry Now</a>
     </div>
 
-    <!-- SINGAPORE -->
-
     <div class="visa-card">
-
       <div class="flag">🇸🇬</div>
-
       <h3>Singapore Visa</h3>
-
-      <p>
-        Tourist visa guidance for your Singapore luxury vacation.
-      </p>
-
-      <a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Singapore%20Visa%20details." target="_blank" class="btn">
-        Inquiry Now
-      </a>
-
+      <p>Singapore tourist visa support and guidance.</p>
+      <a class="visa-btn" target="_blank" href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Singapore%20Visa%20details.">Inquiry Now</a>
     </div>
 
   </div>
-
 </section>
 
-<!-- FOOTER -->
+<section class="process">
+  <div class="section-title">
+    <p>HOW IT WORKS</p>
+    <h2>Simple Visa Process</h2>
+  </div>
+
+  <div class="process-grid">
+    <div class="process-box">
+      <h3>1. Send Inquiry</h3>
+      <p>Share your destination and travel date on WhatsApp.</p>
+    </div>
+
+    <div class="process-box">
+      <h3>2. Document Guidance</h3>
+      <p>We guide you with required documents and visa steps.</p>
+    </div>
+
+    <div class="process-box">
+      <h3>3. Application Support</h3>
+      <p>Get smooth support for tourist visa processing.</p>
+    </div>
+
+    <div class="process-box">
+      <h3>4. Travel Ready</h3>
+      <p>Plan your trip confidently with Holidaydope support.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Need Visa Help?</h2>
+  <p>Message Holidaydope and get quick tourist visa assistance.</p>
+
+  <a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20need%20visa%20assistance." target="_blank" class="dark-btn">
+    WhatsApp Now
+  </a>
+</section>
 
 <footer>
-
-  <img src="/logo.png" class="footer-logo">
+  <img src="/logo.png" class="footer-logo" alt="Holidaydope">
 
   <p>Holidaydope — Chalo Duniya Ghume</p>
-
   <p>WhatsApp / Call: 8595789670</p>
 
   <p>
     Instagram:
-    <a href="https://instagram.com/holiday_dope" target="_blank">
-      @holiday_dope
-    </a>
+    <a href="https://instagram.com/holiday_dope" target="_blank">@holiday_dope</a>
   </p>
 
   <p>
     Facebook:
-    <a href="https://www.facebook.com/profile.php?id=61555482407475" target="_blank">
-      Holidaydope Official
-    </a>
+    <a href="https://www.facebook.com/profile.php?id=61555482407475" target="_blank">Holidaydope Official</a>
   </p>
 
-  <p style="margin-top:20px;color:#888;">
-    © 2026 Holidaydope. All Rights Reserved.
-  </p>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/package/index.html">Packages</a>
+    <a href="/visa/index.html">Visa</a>
+  </div>
 
+  <p style="color:#888;">© 2026 Holidaydope. All Rights Reserved.</p>
 </footer>
 
 </body>
