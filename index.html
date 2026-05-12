@@ -336,6 +336,7 @@
     footer{
       background:#050b14;
       text-align:center;
+      padding:60px 7%;
     }
 
     .footer-logo{
@@ -426,6 +427,81 @@
       cursor:pointer;
     }
 
+    .ai-chatbot{
+      position:fixed;
+      right:18px;
+      bottom:155px;
+      z-index:300;
+    }
+
+    .ai-chat-btn{
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      color:#111;
+      border:none;
+      padding:14px 20px;
+      border-radius:40px;
+      font-weight:800;
+      cursor:pointer;
+      box-shadow:0 10px 25px rgba(0,0,0,.35);
+    }
+
+    .ai-chat-box{
+      display:none;
+      position:absolute;
+      right:0;
+      bottom:65px;
+      width:310px;
+      background:#111d2d;
+      border:1px solid rgba(245,199,107,.35);
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:0 20px 50px rgba(0,0,0,.45);
+    }
+
+    .ai-chat-box.show{
+      display:block;
+    }
+
+    .ai-chat-header{
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      color:#111;
+      padding:14px 16px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .ai-chat-header span{
+      cursor:pointer;
+      font-size:22px;
+      font-weight:800;
+    }
+
+    .ai-message{
+      padding:16px;
+      color:#e5e7eb;
+      font-size:14px;
+      line-height:1.6;
+    }
+
+    .ai-chat-box button{
+      width:90%;
+      margin:7px 5%;
+      padding:12px;
+      border:none;
+      border-radius:14px;
+      background:#08111f;
+      color:#fff;
+      font-weight:600;
+      cursor:pointer;
+      text-align:left;
+    }
+
+    .ai-chat-box button:hover{
+      background:#f5c76b;
+      color:#111;
+    }
+
     @media(max-width:768px){
       section{padding:65px 6%}
 
@@ -487,6 +563,20 @@
         right:12px;
         bottom:28px;
       }
+
+      .ai-chatbot{
+        right:12px;
+        bottom:155px;
+      }
+
+      .ai-chat-btn{
+        padding:12px 16px;
+        font-size:13px;
+      }
+
+      .ai-chat-box{
+        width:290px;
+      }
     }
   </style>
 </head>
@@ -537,9 +627,7 @@
 
   <div class="hero-content" data-aos="fade-right">
 
-    <p class="small-title">
-      EXPLORE • DREAM • DISCOVER
-    </p>
+    <p class="small-title">EXPLORE • DREAM • DISCOVER</p>
 
     <h1>
       Luxury Travel <span>Experiences</span>
@@ -550,7 +638,6 @@
     </p>
 
     <div class="hero-buttons">
-
       <a href="https://wa.me/918595789670" target="_blank" class="gold-btn">
         WhatsApp Inquiry
       </a>
@@ -558,7 +645,6 @@
       <a href="/package/index.html" class="outline-btn">
         Explore Packages
       </a>
-
     </div>
 
   </div>
@@ -574,63 +660,47 @@
 
   <div class="packages-grid">
 
-    <div class="package-card">
+    <div class="package-card" data-aos="fade-up">
       <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=1200&auto=format&fit=crop" alt="Maldives Package">
-
       <div class="package-content">
         <h3>Maldives Luxury</h3>
         <p class="days">4N / 5D</p>
         <div class="price">₹69,999</div>
         <p>Luxury water villa experience with premium stay & transfers.</p>
-
-        <a href="/package/maldives/index.html" class="package-btn">
-          View Details
-        </a>
+        <a href="/package/maldives/index.html" class="package-btn">View Details</a>
       </div>
     </div>
 
-    <div class="package-card">
+    <div class="package-card" data-aos="fade-up">
       <img src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?q=80&w=1200&auto=format&fit=crop" alt="Bali Package">
-
       <div class="package-content">
         <h3>Bali Escape</h3>
         <p class="days">5N / 6D</p>
         <div class="price">₹49,999</div>
         <p>Private villa stay with beach, waterfalls & island tours.</p>
-
-        <a href="/package/bali/index.html" class="package-btn">
-          View Details
-        </a>
+        <a href="/package/bali/index.html" class="package-btn">View Details</a>
       </div>
     </div>
 
-    <div class="package-card">
+    <div class="package-card" data-aos="fade-up">
       <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Thailand Package">
-
       <div class="package-content">
         <h3>Thailand Tour</h3>
         <p class="days">5N / 6D</p>
         <div class="price">₹42,999</div>
         <p>Bangkok, Phuket & Krabi premium island holiday package.</p>
-
-        <a href="/package/thailand/index.html" class="package-btn">
-          View Details
-        </a>
+        <a href="/package/thailand/index.html" class="package-btn">View Details</a>
       </div>
     </div>
 
-    <div class="package-card">
+    <div class="package-card" data-aos="fade-up">
       <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop" alt="Dubai Package">
-
       <div class="package-content">
         <h3>Dubai Premium</h3>
         <p class="days">4N / 5D</p>
         <div class="price">₹55,999</div>
         <p>Luxury Dubai city tour with desert safari & dhow cruise.</p>
-
-        <a href="/package/dubai/index.html" class="package-btn">
-          View Details
-        </a>
+        <a href="/package/dubai/index.html" class="package-btn">View Details</a>
       </div>
     </div>
 
@@ -695,7 +765,7 @@
 
   <div class="review-grid">
 
-    <div class="review-card">
+    <div class="review-card" data-aos="fade-up">
       <p>“Amazing Maldives experience with Holidaydope. Everything was perfectly managed.”</p>
       <div class="client">
         <h4>David</h4>
@@ -703,7 +773,7 @@
       </div>
     </div>
 
-    <div class="review-card">
+    <div class="review-card" data-aos="fade-up">
       <p>“Best Bali package at affordable price. Hotels and support were excellent.”</p>
       <div class="client">
         <h4>Miss Ngaihkim</h4>
@@ -711,7 +781,7 @@
       </div>
     </div>
 
-    <div class="review-card">
+    <div class="review-card" data-aos="fade-up">
       <p>“Very smooth Thailand trip. Great service and premium stays.”</p>
       <div class="client">
         <h4>Rahul Sharma</h4>
@@ -732,19 +802,19 @@
 
   <div class="gallery-grid">
 
-    <div class="gallery-item">
+    <div class="gallery-item" data-aos="zoom-in">
       <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Beach Travel">
     </div>
 
-    <div class="gallery-item">
+    <div class="gallery-item" data-aos="zoom-in">
       <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1200&auto=format&fit=crop" alt="Goa Travel">
     </div>
 
-    <div class="gallery-item">
+    <div class="gallery-item" data-aos="zoom-in">
       <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?q=80&w=1200&auto=format&fit=crop" alt="Luxury Travel">
     </div>
 
-    <div class="gallery-item">
+    <div class="gallery-item" data-aos="zoom-in">
       <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop" alt="Mountain Travel">
     </div>
 
@@ -754,13 +824,9 @@
 
 <section class="cta-banner">
 
-  <h2>
-    Ready For Your Dream Vacation?
-  </h2>
+  <h2>Ready For Your Dream Vacation?</h2>
 
-  <p>
-    Maldives • Bali • Thailand • Dubai • Kashmir • Goa & more
-  </p>
+  <p>Maldives • Bali • Thailand • Dubai • Kashmir • Goa & more</p>
 
   <a href="https://wa.me/918595789670" target="_blank" class="dark-btn">
     Book Now on WhatsApp
@@ -819,11 +885,29 @@
   📞 Call Now
 </a>
 
-<button onclick="scrollToTop()" id="topBtn">
-  ↑
-</button>
+<button onclick="scrollToTop()" id="topBtn">↑</button>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<div class="ai-chatbot">
+  <button class="ai-chat-btn" onclick="toggleAIChat()">💬 Holidaydope AI</button>
+
+  <div class="ai-chat-box" id="aiChatBox">
+    <div class="ai-chat-header">
+      <strong>Holidaydope AI Assistant</strong>
+      <span onclick="toggleAIChat()">×</span>
+    </div>
+
+    <div class="ai-message">
+      Hello 👋 Main Holidaydope AI hoon. Aap kya plan karna chahte ho?
+    </div>
+
+    <button onclick="sendAIOption('Best Packages')">🌍 Best Packages</button>
+    <button onclick="sendAIOption('Maldives Package')">🏝️ Maldives</button>
+    <button onclick="sendAIOption('Bali Package')">🌴 Bali</button>
+    <button onclick="sendAIOption('Dubai Package')">🏙️ Dubai</button>
+    <button onclick="sendAIOption('Visa Help')">🛂 Visa Help</button>
+    <button onclick="sendAIOption('Custom Trip Plan')">✈️ Custom Trip Plan</button>
+  </div>
+</div>
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
@@ -908,53 +992,26 @@ Travel Date: ${date}
 Travelers: ${travelers}
 Plan: ${plan}`;
 
-    let url =
-      `https://wa.me/918595789670?text=${encodeURIComponent(message)}`;
+    let url = `https://wa.me/918595789670?text=${encodeURIComponent(message)}`;
 
     window.open(url, "_blank");
 
   }
 
   function scrollToTop(){
-
     window.scrollTo({
       top:0,
       behavior:"smooth"
     });
-
   }
 
   if("serviceWorker" in navigator){
-
     window.addEventListener("load", function(){
-
       navigator.serviceWorker.register("/service-worker.js");
-
     });
-
   }
 
 </script>
-  <div class="ai-chatbot">
-  <button class="ai-chat-btn" onclick="toggleAIChat()">💬 Holidaydope AI</button>
 
-  <div class="ai-chat-box" id="aiChatBox">
-    <div class="ai-chat-header">
-      <strong>Holidaydope AI Assistant</strong>
-      <span onclick="toggleAIChat()">×</span>
-    </div>
-
-    <div class="ai-message">
-      Hello 👋 Main Holidaydope AI hoon. Aap kya plan karna chahte ho?
-    </div>
-
-    <button onclick="sendAIOption('Best Packages')">🌍 Best Packages</button>
-    <button onclick="sendAIOption('Maldives Package')">🏝️ Maldives</button>
-    <button onclick="sendAIOption('Bali Package')">🌴 Bali</button>
-    <button onclick="sendAIOption('Dubai Package')">🏙️ Dubai</button>
-    <button onclick="sendAIOption('Visa Help')">🛂 Visa Help</button>
-    <button onclick="sendAIOption('Custom Trip Plan')">✈️ Custom Trip Plan</button>
-  </div>
-</div>
 </body>
 </html>
