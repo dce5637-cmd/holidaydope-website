@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
   <meta charset="UTF-8" />
   <meta name="google-site-verification" content="OBJyesC_b5o-JZDaRvdOIRpzxrpl7_xKVcd1alGeSZ0" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Holidaydope - Luxury Travel Agency</title>
+  <title>Holidaydope - Luxury Travel Agency | Maldives, Bali, Thailand, Dubai Packages</title>
   <meta name="description" content="Holidaydope offers premium travel packages for Maldives, Bali, Thailand, Dubai, Vietnam, Sri Lanka, Kashmir, Himachal, Kerala, Rajasthan, Goa and North East India.">
   <meta name="keywords" content="Holidaydope, travel agency, Maldives packages, Bali packages, Thailand tour, Dubai trip, Kashmir package, Kerala trip, Goa package">
   <meta name="author" content="Holidaydope">
@@ -17,7 +15,12 @@
   <meta property="og:image" content="/logo.png">
   <meta property="og:type" content="website">
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#08111f">
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     *{
@@ -25,6 +28,10 @@
       padding:0;
       box-sizing:border-box;
       font-family:'Poppins',sans-serif;
+    }
+
+    html{
+      scroll-behavior:smooth;
     }
 
     body{
@@ -43,6 +50,10 @@
       display:block;
     }
 
+    section{
+      padding:85px 7%;
+    }
+
     #loader{
       position:fixed;
       inset:0;
@@ -59,7 +70,10 @@
     }
 
     @keyframes pulse{
-      50%{transform:scale(1.08);opacity:.7}
+      50%{
+        transform:scale(1.08);
+        opacity:.7;
+      }
     }
 
     .hero{
@@ -79,7 +93,7 @@
     .overlay{
       position:absolute;
       inset:0;
-      background:linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.25));
+      background:linear-gradient(90deg,rgba(0,0,0,.85),rgba(0,0,0,.25));
     }
 
     .navbar{
@@ -91,16 +105,17 @@
       display:flex;
       align-items:center;
       justify-content:space-between;
-      padding:20px 7%;
+      padding:18px 7%;
     }
 
     .nav-logo{
-      width:130px;
+      width:135px;
+      filter:drop-shadow(0 8px 18px rgba(245,199,107,.35));
     }
 
     .nav-links{
       display:flex;
-      gap:25px;
+      gap:24px;
       list-style:none;
     }
 
@@ -122,7 +137,15 @@
       color:#111;
       padding:12px 22px;
       border-radius:40px;
-      font-weight:700;
+      font-weight:800;
+      display:inline-block;
+    }
+
+    .outline-btn{
+      border:1px solid #f5c76b;
+      padding:12px 22px;
+      border-radius:40px;
+      color:#fff;
       display:inline-block;
     }
 
@@ -146,7 +169,7 @@
 
     .mobile-menu a{
       display:block;
-      padding:10px 40px 10px 5px;
+      padding:10px 45px 10px 5px;
     }
 
     .mobile-menu.show{
@@ -161,13 +184,13 @@
       flex-direction:column;
       justify-content:center;
       padding-left:8%;
-      max-width:760px;
+      max-width:780px;
     }
 
     .small-title{
       color:#f5c76b;
       letter-spacing:3px;
-      font-weight:600;
+      font-weight:700;
       margin-bottom:15px;
     }
 
@@ -193,18 +216,6 @@
       flex-wrap:wrap;
     }
 
-    .outline-btn{
-      border:1px solid #f5c76b;
-      padding:12px 22px;
-      border-radius:40px;
-      color:#fff;
-      display:inline-block;
-    }
-
-    section{
-      padding:85px 7%;
-    }
-
     .section-title{
       text-align:center;
       margin-bottom:45px;
@@ -216,7 +227,7 @@
     .gallery-small{
       color:#f5c76b;
       letter-spacing:2px;
-      font-weight:600;
+      font-weight:700;
     }
 
     .section-title h2,
@@ -232,7 +243,8 @@
     .packages-grid,
     .why-grid,
     .testimonial-grid,
-    .gallery-grid{
+    .gallery-grid,
+    .visa-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
       gap:25px;
@@ -241,7 +253,8 @@
     .card,
     .package-card,
     .why-box,
-    .testimonial-card{
+    .testimonial-card,
+    .visa-card{
       background:#111d2d;
       border:1px solid rgba(255,255,255,.08);
       border-radius:24px;
@@ -251,8 +264,10 @@
     }
 
     .card:hover,
-    .package-card:hover{
+    .package-card:hover,
+    .visa-card:hover{
       transform:translateY(-8px);
+      border-color:rgba(245,199,107,.5);
     }
 
     .card img,
@@ -264,13 +279,15 @@
     .card-content,
     .package-content,
     .why-box,
-    .testimonial-card{
+    .testimonial-card,
+    .visa-card{
       padding:24px;
     }
 
     .card-content h3,
     .package-content h3,
-    .why-box h3{
+    .why-box h3,
+    .visa-card h3{
       font-size:23px;
       margin-bottom:8px;
     }
@@ -278,7 +295,8 @@
     .card-content p,
     .package-content p,
     .why-box p,
-    .testimonial-card p{
+    .testimonial-card p,
+    .visa-card p{
       color:#cbd5e1;
       font-size:15px;
     }
@@ -321,10 +339,29 @@
 
     .days{
       color:#f5c76b!important;
+      font-weight:700;
+    }
+
+    .all-packages{
+      text-align:center;
+      margin-top:35px;
+    }
+
+    .visa{
+      background:#0b1627;
+    }
+
+    .flag{
+      font-size:42px;
+      margin-bottom:10px;
+    }
+
+    .visa-card{
+      text-align:center;
     }
 
     .booking{
-      background:#0b1627;
+      background:#08111f;
     }
 
     .booking-form{
@@ -405,7 +442,7 @@
     }
 
     .cta-banner p{
-      font-weight:500;
+      font-weight:600;
       margin-bottom:25px;
     }
 
@@ -414,7 +451,7 @@
       color:#fff;
       padding:14px 28px;
       border-radius:40px;
-      font-weight:700;
+      font-weight:800;
       display:inline-block;
     }
 
@@ -426,6 +463,7 @@
     .footer-logo{
       width:150px;
       margin:0 auto 20px;
+      filter:drop-shadow(0 8px 18px rgba(245,199,107,.25));
     }
 
     .footer-links{
@@ -483,6 +521,7 @@
 
     .float-whatsapp,
     .insta-btn,
+    .facebook-btn,
     .call-btn,
     #topBtn{
       position:fixed;
@@ -496,7 +535,7 @@
       color:#fff;
       padding:13px 18px;
       border-radius:40px;
-      font-weight:700;
+      font-weight:800;
     }
 
     .insta-btn{
@@ -512,7 +551,21 @@
       box-shadow:0 10px 25px rgba(0,0,0,.35);
     }
 
-    .insta-btn img{
+    .facebook-btn{
+      left:18px;
+      bottom:155px;
+      background:#1877f2;
+      width:50px;
+      height:50px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 10px 25px rgba(0,0,0,.35);
+    }
+
+    .insta-btn img,
+    .facebook-btn img{
       width:28px;
       height:28px;
       object-fit:contain;
@@ -525,7 +578,7 @@
       color:#fff;
       padding:13px 18px;
       border-radius:40px;
-      font-weight:700;
+      font-weight:800;
     }
 
     #topBtn{
@@ -567,6 +620,10 @@
     }
 
     @media(max-width:768px){
+      section{
+        padding:65px 6%;
+      }
+
       .nav-links,
       .nav-btn{
         display:none;
@@ -576,12 +633,20 @@
         display:block;
       }
 
+      .nav-logo{
+        width:115px;
+      }
+
       .hero-content{
         padding:0 7%;
       }
 
       .hero-content h1{
-        font-size:48px;
+        font-size:45px;
+      }
+
+      .hero-subtitle{
+        font-size:18px;
       }
 
       .section-title h2,
@@ -589,7 +654,7 @@
       .why h2,
       .gallery h2,
       .cta-banner h2{
-        font-size:34px;
+        font-size:32px;
       }
 
       .booking-form{
@@ -603,6 +668,33 @@
 
       .floating-cta{
         display:none;
+      }
+
+      .float-whatsapp{
+        right:12px;
+        bottom:90px;
+        font-size:13px;
+      }
+
+      .facebook-btn{
+        left:12px;
+        bottom:150px;
+      }
+
+      .insta-btn{
+        left:12px;
+        bottom:90px;
+      }
+
+      .call-btn{
+        left:12px;
+        bottom:28px;
+        font-size:13px;
+      }
+
+      #topBtn{
+        right:12px;
+        bottom:28px;
       }
     }
   </style>
@@ -619,6 +711,8 @@
     <source src="/hero-video.mp4" type="video/mp4">
   </video>
 
+  <div class="overlay"></div>
+
   <nav class="navbar">
     <img src="/logo.png" class="nav-logo" alt="Holidaydope">
 
@@ -626,7 +720,7 @@
       <li><a href="/">Home</a></li>
       <li><a href="#destinations">Destinations</a></li>
       <li><a href="/package/index.html">Packages</a></li>
-      <li><a href="/visa/index.html">Visa</a></li>
+      <li><a href="#visa">Visa</a></li>
       <li><a href="#booking">Booking</a></li>
       <li><a href="#reviews">Reviews</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -643,13 +737,11 @@
     <a href="/">Home</a>
     <a href="#destinations">Destinations</a>
     <a href="/package/index.html">Packages</a>
-    <a href="/visa/index.html">Visa</a>
+    <a href="#visa">Visa</a>
     <a href="#booking">Booking</a>
     <a href="#reviews">Reviews</a>
     <a href="#contact">Contact</a>
   </div>
-
-  <div class="overlay"></div>
 
   <div class="hero-content" data-aos="fade-right">
     <p class="small-title">EXPLORE. DREAM. DISCOVER.</p>
@@ -662,7 +754,7 @@
       </a>
 
       <a href="/package/index.html" class="btn outline-btn">
-        Explore Packages
+        Explore All Packages
       </a>
     </div>
   </div>
@@ -762,7 +854,7 @@
   </div>
 </section>
 
-<section class="packages">
+<section class="packages" id="packages">
   <div class="section-title">
     <p>BEST SELLING PACKAGES</p>
     <h2>Top Holiday Deals</h2>
@@ -815,6 +907,58 @@
       </div>
     </div>
 
+    <div class="package-card">
+      <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop" alt="Dubai Package">
+      <div class="package-content">
+        <h3>Dubai Premium</h3>
+        <p class="days">4N / 5D</p>
+        <h4>₹55,999</h4>
+        <ul>
+          <li>City Tour</li>
+          <li>Desert Safari</li>
+          <li>Dhow Cruise</li>
+        </ul>
+        <a href="/package/dubai/index.html" class="package-btn">View Details</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="all-packages">
+    <a href="/package/index.html" class="gold-btn">View All Domestic & International Packages</a>
+  </div>
+</section>
+
+<section class="visa" id="visa">
+  <div class="section-title">
+    <p>VISA ASSISTANCE</p>
+    <h2>Easy Visa Support</h2>
+  </div>
+
+  <div class="visa-grid">
+    <a href="/visa/index.html" class="visa-card">
+      <div class="flag">🇦🇪</div>
+      <h3>Dubai Visa</h3>
+      <p>Fast tourist visa assistance for Dubai travel.</p>
+    </a>
+
+    <a href="/visa/index.html" class="visa-card">
+      <div class="flag">🇹🇭</div>
+      <h3>Thailand Visa</h3>
+      <p>Thailand travel visa guidance and support.</p>
+    </a>
+
+    <a href="/visa/index.html" class="visa-card">
+      <div class="flag">🇻🇳</div>
+      <h3>Vietnam Visa</h3>
+      <p>Vietnam visa help for your next holiday.</p>
+    </a>
+
+    <a href="/visa/index.html" class="visa-card">
+      <div class="flag">🇱🇰</div>
+      <h3>Sri Lanka Visa</h3>
+      <p>Smooth Sri Lanka travel documentation support.</p>
+    </a>
   </div>
 </section>
 
@@ -952,13 +1096,22 @@
 
   <p>Holidaydope — Chalo Duniya Ghume</p>
   <p>WhatsApp / Call: 8595789670</p>
-  <p>Instagram: @holiday_dope</p>
+
+  <p>
+    Instagram:
+    <a href="https://instagram.com/holiday_dope" target="_blank">@holiday_dope</a>
+  </p>
+
+  <p>
+    Facebook:
+    <a href="https://www.facebook.com/profile.php?id=61555482407475" target="_blank">Holidaydope Official</a>
+  </p>
 
   <div class="footer-links">
     <a href="/">Home</a>
     <a href="#destinations">Destinations</a>
     <a href="/package/index.html">Packages</a>
-    <a href="/visa/index.html">Visa</a>
+    <a href="#visa">Visa</a>
     <a href="#booking">Booking</a>
     <a href="#contact">Contact</a>
   </div>
@@ -999,6 +1152,10 @@
 
 <a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20details%20about%20your%20travel%20packages." target="_blank" class="float-whatsapp">
   WhatsApp
+</a>
+
+<a href="https://www.facebook.com/profile.php?id=61555482407475" target="_blank" class="facebook-btn">
+  <img src="/facebook.png" alt="Facebook">
 </a>
 
 <a href="https://instagram.com/holiday_dope" target="_blank" class="insta-btn">
@@ -1099,6 +1256,14 @@ Plan: ${plan}`;
     window.scrollTo({
       top:0,
       behavior:"smooth"
+    });
+  }
+
+  if("serviceWorker" in navigator){
+    window.addEventListener("load", function(){
+      navigator.serviceWorker.register("/service-worker.js").catch(function(error){
+        console.log("Service Worker registration failed:", error);
+      });
     });
   }
 </script>
