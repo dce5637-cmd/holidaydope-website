@@ -1,182 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Himachal Package - Holidaydope</title>
+  <title>Himachal Tour Package | Holidaydope</title>
 
-  <link rel="stylesheet" href="/src/style.css">
+  <meta name="description" content="Book Himachal package with Holidaydope. Explore Manali, Shimla, snow mountains, rivers, adventure and beautiful hill station experiences.">
+
+  <meta name="keywords" content="Himachal package, Manali tour, Shimla trip, Himachal holiday, Holidaydope Himachal">
+
+  <meta property="og:title" content="Himachal Tour Package | Holidaydope">
+  <meta property="og:description" content="Beautiful Himachal holiday package with mountains, snowfall and luxury stays.">
+  <meta property="og:image" content="/logo.png">
+
+  <link rel="icon" href="/favicon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
 
-    body{
+    *{
       margin:0;
-      font-family:Poppins,sans-serif;
-      background:#f7f7f7;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#08111f;
+      color:#fff;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    img{
+      width:100%;
+      display:block;
+    }
+
+    section{
+      padding:80px 7%;
+    }
+
+    .navbar{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      padding:20px 7%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      z-index:10;
+    }
+
+    .logo{
+      width:130px;
+    }
+
+    .home-btn{
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      color:#111;
+      padding:12px 22px;
+      border-radius:40px;
+      font-weight:800;
     }
 
     .hero{
-      height:70vh;
-      background:url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1600&auto=format&fit=crop') center/cover;
+      height:80vh;
+
+      background:
+      linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+      url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1600&auto=format&fit=crop');
+
+      background-size:cover;
+      background-position:center;
+
       display:flex;
-      justify-content:center;
       align-items:center;
+      justify-content:center;
       text-align:center;
-      position:relative;
     }
 
-    .hero::after{
-      content:'';
-      position:absolute;
-      inset:0;
-      background:rgba(0,0,0,.55);
+    .hero-content h1{
+      font-size:78px;
+      font-family:'Playfair Display',serif;
     }
 
-    .hero-content{
-      position:relative;
-      z-index:2;
-      color:#fff;
+    .hero-content p{
+      color:#f5c76b;
+      letter-spacing:3px;
+      margin-bottom:15px;
+      font-weight:700;
     }
 
-    .hero h1{
-      font-size:72px;
-      margin:0;
-    }
-
-    .content{
-      padding:80px 7%;
+    .detail-grid{
       display:grid;
       grid-template-columns:2fr 1fr;
       gap:40px;
     }
 
     .box{
-      background:#fff;
-      padding:35px;
+      background:#111d2d;
       border-radius:24px;
+      padding:35px;
+      border:1px solid rgba(255,255,255,.08);
       margin-bottom:30px;
-      box-shadow:0 10px 30px rgba(0,0,0,.08);
     }
 
     .box h2{
+      color:#f5c76b;
       margin-bottom:20px;
+      font-size:34px;
     }
 
     .box p,
     .box li{
-      line-height:1.8;
-      color:#555;
+      color:#cbd5e1;
+      line-height:1.9;
     }
 
-    .booking{
-      background:#050505;
-      color:#fff;
-      padding:35px;
+    .box ul{
+      padding-left:20px;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:15px;
+    }
+
+    .gallery img{
+      height:240px;
+      object-fit:cover;
+      border-radius:20px;
+    }
+
+    .booking-card{
+      background:#111d2d;
       border-radius:24px;
+      padding:35px;
       position:sticky;
       top:30px;
+      border:1px solid rgba(255,255,255,.08);
     }
 
-    .booking h2{
-      color:#d4af37;
-      font-size:42px;
+    .booking-card h3{
+      font-size:48px;
+      color:#f5c76b;
+      margin:12px 0;
     }
 
-    .btn{
+    .booking-btn{
       display:block;
       margin-top:25px;
-      background:#d4af37;
-      color:#000;
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      color:#111;
       text-align:center;
       padding:16px;
       border-radius:50px;
-      text-decoration:none;
-      font-weight:700;
+      font-weight:800;
+    }
+
+    footer{
+      background:#050b14;
+      padding:50px 7%;
+      text-align:center;
+      margin-top:40px;
+    }
+
+    .footer-logo{
+      width:150px;
+      margin:0 auto 20px;
+    }
+
+    footer p{
+      color:#cbd5e1;
+      margin-bottom:10px;
     }
 
     @media(max-width:900px){
 
-      .content{
+      .detail-grid{
         grid-template-columns:1fr;
       }
 
-      .hero h1{
+      .hero-content h1{
         font-size:48px;
+      }
+
+      .gallery{
+        grid-template-columns:1fr;
       }
 
     }
 
   </style>
+
 </head>
 
 <body>
 
+<nav class="navbar">
+
+  <a href="/">
+    <img src="/logo.png" class="logo" alt="Holidaydope">
+  </a>
+
+  <a href="/package/index.html" class="home-btn">
+    All Packages
+  </a>
+
+</nav>
+
 <section class="hero">
 
   <div class="hero-content">
-    <p>BEAUTIFUL HILL STATIONS</p>
+
+    <p>PREMIUM DOMESTIC PACKAGE</p>
+
     <h1>Himachal</h1>
-  </div>
-
-</section>
-
-<section class="content">
-
-  <div>
-
-    <div class="box">
-      <h2>Overview</h2>
-
-      <p>
-        Explore the stunning beauty of Himachal Pradesh with snow mountains,
-        valleys, adventure activities and peaceful hill stations.
-      </p>
-    </div>
-
-    <div class="box">
-      <h2>Package Includes</h2>
-
-      <ul>
-        <li>Luxury Hotel Stay</li>
-        <li>Daily Breakfast & Dinner</li>
-        <li>Local Sightseeing</li>
-        <li>Mountain Adventure Activities</li>
-        <li>24/7 Holidaydope Support</li>
-      </ul>
-    </div>
-
-    <div class="box">
-      <h2>Day Wise Itinerary</h2>
-
-      <p><b>Day 1:</b> Arrival & Hotel Check-in</p>
-      <p><b>Day 2:</b> Shimla Sightseeing</p>
-      <p><b>Day 3:</b> Kufri & Adventure Activities</p>
-      <p><b>Day 4:</b> Manali Tour</p>
-      <p><b>Day 5:</b> Departure</p>
-    </div>
-
-  </div>
-
-  <div>
-
-    <div class="booking">
-
-      <p>Starting From</p>
-
-      <h2>₹24,999</h2>
-
-      <p>Per Person</p>
-
-      <a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0A%0AI%20want%20to%20book%20Himachal%20package.%20Please%20share%20details." target="_blank" class="btn">
-        Book Now
-      </a>
-
-    </div>
 
   </div>
 
 </section>
+
+<section>
+
+  <div class="detail-grid">
+
+    <div>
+
+      <div class="box">
+
+        <h2>Overview</h2>
+
+        <p>
+          Explore the beauty of Himachal Pradesh with snow mountains,
+          Manali valleys, Shimla sightseeing, rivers and adventure experiences.
+          Perfect for couples, family vacations and nature lovers.
+        </p>
+
+      </div>
+
+      <div class="box">
+
+        <h2>Package Gallery</h2>
+
+        <div class="gallery">
+
+          <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop">
+
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop">
+
+          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop">
+
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop">
+
+        </div>
+
+      </div>
+
+      <div class="box">
+
+        <h2>Package Includes</h2>
+
+        <ul>
+
+          <li>Premium Hotel Stay</li>
+
+          <li>Daily Breakfast & Dinner</li>
+
+          <li>Airport / Volvo Transfers</li>
+
+          <li>Shimla & Manali Sightseeing</li>
+
+          <li>Snow & Adventure Experience</li>
+
+          <li>24/7 Holidaydope Support</li>
+
+        </ul>
+
+      </div>
+
+      <div class="box">
+
+        <h2>Day Wise Itinerary</h2>
+
+        <p><b>Day 1:</b> Arrival & Hotel Check-In</p>
+
+        <p><b>Day 2:</b> Shimla Local Sightseeing</p>
+
+        <p><b>Day 3:</b> Manali Valley Experience</p>
+
+        <p><b>Day 4:</b> Snow Point & Adventure Activities</p>
+
+        <p><b>Day 5:</b> Return Journey</p>
+
+      </div>
+
+    </div>
+
+    <div>
+
+      <div class="booking-card">
+
+        <p>Starting From</p>
+
+        <h3>₹21,999</h3>
+
+        <p>Per Person</p>
+
+        <a
+          href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Himachal%20package%20details."
+          target="_blank"
+          class="booking-btn"
+        >
+          Book Now
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <img src="/logo.png" class="footer-logo" alt="Holidaydope">
+
+  <p>Holidaydope — Chalo Duniya Ghume</p>
+
+  <p>WhatsApp / Call: 8595789670</p>
+
+  <p>
+    Instagram:
+    <a href="https://instagram.com/holiday_dope" target="_blank">
+      @holiday_dope
+    </a>
+  </p>
+
+  <p>
+    Facebook:
+    <a href="https://www.facebook.com/profile.php?id=61555482407475" target="_blank">
+      Holidaydope Official
+    </a>
+  </p>
+
+  <p style="margin-top:20px;color:#888;">
+    © 2026 Holidaydope. All Rights Reserved.
+  </p>
+
+</footer>
 
 </body>
 </html>
