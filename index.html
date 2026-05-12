@@ -825,7 +825,10 @@
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
 <script>
+
   AOS.init({
     duration:1200,
     once:true
@@ -836,13 +839,50 @@
   }
 
   function toggleAIChat(){
-  document.getElementById("aiChatBox").classList.toggle("show");
-}
+    document.getElementById("aiChatBox").classList.toggle("show");
+  }
+
+  function sendAIOption(option){
+
+    let message = "";
+
+    if(option === "Best Packages"){
+      message = "Hi Holidaydope 👋\n\nI want to know your best-selling holiday packages.";
+    }
+
+    if(option === "Maldives Package"){
+      message = "Hi Holidaydope 👋\n\nI want Maldives package details with price and itinerary.";
+    }
+
+    if(option === "Bali Package"){
+      message = "Hi Holidaydope 👋\n\nI want Bali package details with price and itinerary.";
+    }
+
+    if(option === "Dubai Package"){
+      message = "Hi Holidaydope 👋\n\nI want Dubai package details with price and itinerary.";
+    }
+
+    if(option === "Visa Help"){
+      message = "Hi Holidaydope 👋\n\nI need visa assistance. Please share details.";
+    }
+
+    if(option === "Custom Trip Plan"){
+      message = "Hi Holidaydope 👋\n\nI want a customized trip plan. Please help me.";
+    }
+
+    window.open(
+      "https://wa.me/918595789670?text=" + encodeURIComponent(message),
+      "_blank"
+    );
+
+  }
+
   window.addEventListener("load", function(){
     document.getElementById("loader").style.display = "none";
   });
 
   function sendToWhatsApp(event){
+
     event.preventDefault();
 
     let inputs = document.querySelectorAll('.booking-form input');
@@ -868,25 +908,22 @@ Travel Date: ${date}
 Travelers: ${travelers}
 Plan: ${plan}`;
 
-    let url = `https://wa.me/918595789670?text=${encodeURIComponent(message)}`;
+    let url =
+      `https://wa.me/918595789670?text=${encodeURIComponent(message)}`;
 
     window.open(url, "_blank");
+
   }
 
   function scrollToTop(){
+
     window.scrollTo({
       top:0,
       behavior:"smooth"
     });
+
   }
 
-  if("serviceWorker" in navigator){
-    window.addEventListener("load", function(){
-      navigator.serviceWorker.register("/service-worker.js");
-    });
-  }
-</script>
-<script>
   if("serviceWorker" in navigator){
 
     window.addEventListener("load", function(){
@@ -896,6 +933,7 @@ Plan: ${plan}`;
     });
 
   }
+
 </script>
   <div class="ai-chatbot">
   <button class="ai-chat-btn" onclick="toggleAIChat()">💬 Holidaydope AI</button>
