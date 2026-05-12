@@ -898,20 +898,24 @@ Plan: ${plan}`;
   }
 </script>
   <div class="ai-chatbot">
-  <button class="ai-chat-btn" onclick="toggleAIChat()">💬 Ask Holidaydope AI</button>
+  <button class="ai-chat-btn" onclick="toggleAIChat()">💬 Holidaydope AI</button>
 
   <div class="ai-chat-box" id="aiChatBox">
     <div class="ai-chat-header">
-      <strong>Holidaydope AI</strong>
+      <strong>Holidaydope AI Assistant</strong>
       <span onclick="toggleAIChat()">×</span>
     </div>
 
-    <p>Hello 👋 How can we help you?</p>
+    <div class="ai-message">
+      Hello 👋 Main Holidaydope AI hoon. Aap kya plan karna chahte ho?
+    </div>
 
-    <a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20best%20holiday%20package%20details." target="_blank">Best Packages</a>
-    <a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Maldives%20package%20details." target="_blank">Maldives Package</a>
-    <a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Visa%20assistance." target="_blank">Visa Help</a>
-    <a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20customized%20trip%20plan." target="_blank">Custom Trip Plan</a>
+    <button onclick="sendAIOption('Best Packages')">🌍 Best Packages</button>
+    <button onclick="sendAIOption('Maldives Package')">🏝️ Maldives</button>
+    <button onclick="sendAIOption('Bali Package')">🌴 Bali</button>
+    <button onclick="sendAIOption('Dubai Package')">🏙️ Dubai</button>
+    <button onclick="sendAIOption('Visa Help')">🛂 Visa Help</button>
+    <button onclick="sendAIOption('Custom Trip Plan')">✈️ Custom Trip Plan</button>
   </div>
 </div>
 </body>
