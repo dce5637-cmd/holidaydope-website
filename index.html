@@ -1529,6 +1529,29 @@ Plan: ${plan}`;
   });
 
 });
+  const bookings = [
+
+  "Rahul from Delhi booked Bali Package ✈️",
+  "David booked Maldives Luxury Package 🏝️",
+  "Priya from Mumbai booked Dubai Trip 🌆",
+  "Aman booked Thailand Vacation 🌴",
+  "Miss Ngaihkim booked Bali Honeymoon 💕"
+
+];
+
+let popupIndex = 0;
+
+setInterval(() => {
+
+  popupIndex++;
+
+  if(popupIndex >= bookings.length){
+    popupIndex = 0;
+  }
+
+  document.getElementById("popupText").innerText = bookings[popupIndex];
+
+}, 4000);
 </script>
 <div class="booking-popup" id="bookingPopup">
 
