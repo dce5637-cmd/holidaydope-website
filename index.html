@@ -1416,6 +1416,19 @@ Plan: ${plan}`;
       navigator.serviceWorker.register("/service-worker.js");
     });
   }
+  document.addEventListener("DOMContentLoaded", function(){
+
+  const videos = document.querySelectorAll(".reel-card video");
+
+  videos.forEach(function(video){
+
+    video.muted = true;
+
+    video.play().catch(function(){});
+
+  });
+
+});
 </script>
 
 </body>
