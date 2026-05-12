@@ -1209,7 +1209,15 @@ Plan: ${plan}`;
       navigator.serviceWorker.register("/service-worker.js");
     });
   }
+setTimeout(() => {
 
+  const chatBox = document.getElementById("aiChatBox");
+
+  if(chatBox){
+    chatBox.classList.add("show");
+  }
+
+}, 3000);
 </script>
 
 </body>
