@@ -1215,3 +1215,236 @@ footer a:hover{
     display:none;
   }
 }
+/* HOLIDAYDOPE PREMIUM LUXURY UPGRADE */
+
+body{
+  background:
+    radial-gradient(circle at top left, rgba(212,175,55,.14), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(245,199,107,.10), transparent 35%),
+    #050b14 !important;
+}
+
+/* Premium Navbar */
+.navbar{
+  background:rgba(5,11,20,.72) !important;
+  backdrop-filter:blur(18px) !important;
+  border-bottom:1px solid rgba(245,199,107,.18) !important;
+  box-shadow:0 12px 35px rgba(0,0,0,.35) !important;
+}
+
+.nav-logo{
+  filter:drop-shadow(0 0 14px rgba(245,199,107,.45));
+}
+
+/* Hero Premium */
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg, rgba(5,11,20,.92), rgba(5,11,20,.35), rgba(5,11,20,.75));
+  z-index:1;
+  pointer-events:none;
+}
+
+.hero-content{
+  z-index:3 !important;
+}
+
+.hero-content h1{
+  text-shadow:0 8px 35px rgba(0,0,0,.7);
+}
+
+.hero-content h1 span{
+  background:linear-gradient(135deg,#d4af37,#fff1a8,#b8860b);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.small-title{
+  color:#f5c76b !important;
+  text-shadow:0 0 18px rgba(245,199,107,.45);
+}
+
+/* Premium Section Titles */
+.section-title h2{
+  background:linear-gradient(135deg,#fff,#f5c76b);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.section-title p{
+  color:#f5c76b !important;
+}
+
+/* Glass Package Cards */
+.package-card,
+.slide-card,
+.review-card,
+.visa-card,
+.stat-card{
+  background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.035)) !important;
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(245,199,107,.25) !important;
+  box-shadow:0 20px 55px rgba(0,0,0,.38) !important;
+}
+
+.package-card:hover,
+.slide-card:hover,
+.review-card:hover,
+.visa-card:hover,
+.stat-card:hover{
+  transform:translateY(-10px) scale(1.01);
+  border-color:rgba(245,199,107,.65) !important;
+  box-shadow:0 25px 70px rgba(212,175,55,.18) !important;
+}
+
+.package-card img,
+.slide-card img,
+.gallery-item img{
+  transition:.7s ease;
+}
+
+.package-card:hover img,
+.slide-card:hover img,
+.gallery-item:hover img{
+  transform:scale(1.08);
+}
+
+/* Gold Buttons */
+.gold-btn,
+.package-btn,
+.slide-btn,
+.reel-btn,
+.visa-card a,
+.booking-form button,
+.nav-btn{
+  background:linear-gradient(135deg,#b8860b,#ffd76b,#d4af37,#fff1a8) !important;
+  color:#111 !important;
+  box-shadow:0 0 22px rgba(212,175,55,.38) !important;
+  transition:.35s ease !important;
+}
+
+.gold-btn:hover,
+.package-btn:hover,
+.slide-btn:hover,
+.reel-btn:hover,
+.visa-card a:hover,
+.booking-form button:hover,
+.nav-btn:hover{
+  transform:translateY(-3px) scale(1.04);
+  box-shadow:0 0 35px rgba(245,199,107,.75) !important;
+}
+
+/* Premium Outline Button */
+.outline-btn{
+  border:1px solid rgba(245,199,107,.75) !important;
+  color:#f5c76b !important;
+  background:rgba(255,255,255,.04);
+  backdrop-filter:blur(12px);
+}
+
+.outline-btn:hover{
+  background:rgba(245,199,107,.12);
+}
+
+/* Cards Text */
+.package-content h3,
+.slide-content h3{
+  color:#fff !important;
+}
+
+.package-content p,
+.slide-content p,
+.review-card p{
+  color:#cbd5e1 !important;
+}
+
+.price,
+.slide-price,
+.days{
+  color:#f5c76b !important;
+}
+
+/* Booking Form Premium */
+.booking-form input,
+.booking-form select,
+.booking-form textarea{
+  background:rgba(255,255,255,.08) !important;
+  color:#fff !important;
+  border:1px solid rgba(245,199,107,.22) !important;
+}
+
+.booking-form input::placeholder,
+.booking-form textarea::placeholder{
+  color:#cbd5e1 !important;
+}
+
+.booking-form select option{
+  color:#111;
+}
+
+/* Premium Footer */
+footer{
+  background:linear-gradient(180deg,#050b14,#02040a) !important;
+  border-top:1px solid rgba(245,199,107,.18);
+}
+
+.footer-logo{
+  filter:drop-shadow(0 0 18px rgba(245,199,107,.45));
+}
+
+/* Mobile Menu Fix + Premium */
+.mobile-menu{
+  position:fixed !important;
+  top:78px !important;
+  left:6% !important;
+  right:6% !important;
+  background:rgba(5,11,20,.97) !important;
+  backdrop-filter:blur(18px) !important;
+  border:1px solid rgba(245,199,107,.35) !important;
+  border-radius:22px !important;
+  padding:18px !important;
+  z-index:99999999 !important;
+  box-shadow:0 25px 65px rgba(0,0,0,.55) !important;
+}
+
+.mobile-menu a{
+  display:block !important;
+  padding:15px 10px !important;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  font-weight:700;
+}
+
+.mobile-menu a:last-child{
+  border-bottom:none;
+}
+
+/* Floating Buttons More Clean */
+.float-whatsapp,
+.call-btn{
+  box-shadow:0 10px 30px rgba(0,0,0,.45) !important;
+}
+
+/* Mobile Polish */
+@media(max-width:768px){
+  .hero-content h1{
+    font-size:42px !important;
+  }
+
+  .hero-subtitle{
+    font-size:16px !important;
+  }
+
+  .section-title h2{
+    font-size:31px !important;
+  }
+
+  .package-card img{
+    height:230px !important;
+  }
+
+  .nav-logo{
+    width:110px !important;
+  }
+}
