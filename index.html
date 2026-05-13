@@ -969,6 +969,124 @@
     opacity:.3;
   }
 }
+    .logo-intro{
+  position:fixed;
+  inset:0;
+  background:#08111f;
+  z-index:999999999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  animation:introHide .4s ease forwards;
+  animation-delay:1.6s;
+}
+
+.intro-logo{
+  width:220px;
+  opacity:0;
+  transform:scale(.92);
+  animation:logoReveal 1.1s ease forwards;
+  animation-delay:.45s;
+  filter:drop-shadow(0 0 22px rgba(245,199,107,.45));
+}
+
+.intro-plane{
+  position:absolute;
+  left:-90px;
+  top:48%;
+  font-size:42px;
+  color:#f5c76b;
+  transform:rotate(12deg);
+  animation:planeFly 1.25s cubic-bezier(.19,1,.22,1) forwards;
+}
+
+.intro-trail{
+  position:absolute;
+  width:0;
+  height:3px;
+  left:32%;
+  top:57%;
+  background:linear-gradient(90deg,transparent,#f5c76b,transparent);
+  border-radius:50px;
+  box-shadow:0 0 18px rgba(245,199,107,.8);
+  animation:trailDraw .9s ease forwards;
+  animation-delay:.45s;
+}
+
+@keyframes planeFly{
+  0%{
+    left:-90px;
+    top:58%;
+    opacity:0;
+  }
+
+  20%{
+    opacity:1;
+  }
+
+  75%{
+    left:48%;
+    top:42%;
+  }
+
+  100%{
+    left:56%;
+    top:43%;
+    opacity:0;
+  }
+}
+
+@keyframes trailDraw{
+  0%{
+    width:0;
+    opacity:0;
+  }
+
+  30%{
+    opacity:1;
+  }
+
+  100%{
+    width:260px;
+    opacity:0;
+  }
+}
+
+@keyframes logoReveal{
+  0%{
+    opacity:0;
+    transform:scale(.92);
+  }
+
+  100%{
+    opacity:1;
+    transform:scale(1);
+  }
+}
+
+@keyframes introHide{
+  to{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+  }
+}
+
+@media(max-width:768px){
+  .intro-logo{
+    width:175px;
+  }
+
+  .intro-plane{
+    font-size:34px;
+  }
+
+  .intro-trail{
+    left:24%;
+    top:57%;
+  }
+}
   </style>
 </head>
 
