@@ -22,22 +22,1099 @@
   <link rel="icon" href="/favicon.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
-  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    html{scroll-behavior:smooth}
+    body{background:#08111f;color:#fff;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    img{width:100%;display:block}
+    section{padding:85px 7%}
+
+    #loader{
+      position:fixed;
+      inset:0;
+      background:#08111f;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      z-index:9999;
+    }
+
+    #loader img{
+      width:150px;
+      animation:pulse 1.5s infinite;
+    }
+
+    @keyframes pulse{
+
+  0%{
+    transform:scale(.9);
+    opacity:.3;
+  }
+
+  50%{
+    transform:scale(1.08);
+    opacity:1;
+  }
+
+  100%{
+    transform:scale(.9);
+    opacity:.3;
+  }
+
+}
+
+    .hero{
+      height:100vh;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero-video{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .overlay{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(90deg,rgba(0,0,0,.85),rgba(0,0,0,.25));
+    }
+
+    .navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 7%;
+  transition:.4s;
+}
+
+.navbar.scrolled{
+  background:rgba(8,17,31,.72);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+    .nav-logo{
+  width:135px;
+  animation:logoGlow 3s ease-in-out infinite;
+  transition:.4s;
+}
+
+.nav-logo:hover{
+  transform:scale(1.05);
+}
+
+@keyframes logoGlow{
+
+  0%{
+    filter:drop-shadow(0 0 0px rgba(245,199,107,.2));
+  }
+
+  50%{
+    filter:drop-shadow(0 0 18px rgba(245,199,107,.75));
+  }
+
+  100%{
+    filter:drop-shadow(0 0 0px rgba(245,199,107,.2));
+  }
+
+}
+
+    .nav-links{
+      display:flex;
+      gap:25px;
+      list-style:none;
+    }
+
+    .nav-links a{
+      font-size:15px;
+      font-weight:500;
+    }
+
+    .nav-links a:hover{color:#f5c76b}
+
+    .nav-btn{
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      color:#111;
+      padding:12px 22px;
+      border-radius:40px;
+      font-weight:800;
+    }
+
+    .menu-toggle{
+      display:none;
+      font-size:30px;
+      cursor:pointer;
+    }
+
+    .mobile-menu{
+      display:none;
+      position:absolute;
+      top:75px;
+      right:7%;
+      background:#111d2d;
+      padding:20px;
+      border-radius:18px;
+      z-index:200;
+    }
+
+    .mobile-menu a{
+      display:block;
+      padding:10px 40px 10px 5px;
+    }
+
+    .mobile-menu.show{display:block}
+
+    .hero-content{
+      position:relative;
+      z-index:10;
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      max-width:750px;
+      padding-left:8%;
+    }
+
+    .small-title{
+      color:#f5c76b;
+      letter-spacing:3px;
+      margin-bottom:15px;
+      font-weight:700;
+    }
+
+    .hero-content h1{
+      font-size:78px;
+      line-height:1.05;
+      font-family:'Playfair Display',serif;
+    }
+
+    .hero-content h1 span{color:#f5c76b}
+
+    .hero-subtitle{
+      font-size:22px;
+      color:#ddd;
+      margin:22px 0 35px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+    }
+
+    .gold-btn{
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      color:#111;
+      padding:14px 24px;
+      border-radius:40px;
+      font-weight:800;
+      display:inline-block;
+    }
+
+    .outline-btn{
+      border:1px solid #f5c76b;
+      padding:14px 24px;
+      border-radius:40px;
+      display:inline-block;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:45px;
+    }
+
+    .section-title p{
+      color:#f5c76b;
+      letter-spacing:2px;
+      font-weight:700;
+    }
+
+    .section-title h2{
+      font-size:46px;
+      font-family:'Playfair Display',serif;
+      margin-top:10px;
+    }
+
+    .packages-grid,
+    .gallery-grid,
+    .review-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .package-card,
+    .review-card{
+      background:#111d2d;
+      border-radius:24px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.08);
+      transition:.3s;
+    }
+
+    .package-card:hover{transform:translateY(-8px)}
+
+    .package-card img{
+      height:260px;
+      object-fit:cover;
+    }
+
+    .package-content,
+    .review-card{
+      padding:24px;
+    }
+
+    .package-content h3{
+      font-size:24px;
+      margin-bottom:8px;
+    }
+
+    .package-content p,
+    .review-card p{
+      color:#cbd5e1;
+    }
+
+    .package-btn{
+      display:inline-block;
+      margin-top:18px;
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      color:#111;
+      padding:12px 22px;
+      border-radius:40px;
+      font-weight:700;
+    }
+
+    .days{
+      color:#f5c76b!important;
+      font-weight:700;
+      margin:8px 0;
+    }
+
+    .price{
+      font-size:28px;
+      color:#f5c76b;
+      margin:10px 0;
+      font-weight:800;
+    }
+
+    /* TRENDING SLIDER */
+    .trending-slider{
+      margin-top:0;
+      overflow:hidden;
+      position:relative;
+      background:#08111f;
+    }
+
+    .slider-track{
+      display:flex;
+      gap:25px;
+      width:max-content;
+      animation:scrollSlider 30s linear infinite;
+    }
+
+    .slide-card{
+      min-width:320px;
+      background:#111d2d;
+      border-radius:24px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 10px 30px rgba(0,0,0,.25);
+    }
+
+    .slide-card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .slide-content{
+      padding:20px;
+    }
+
+    .slide-content h3{
+      font-size:24px;
+      margin-bottom:8px;
+    }
+
+    .slide-content p{
+      color:#cbd5e1;
+      margin-bottom:15px;
+    }
+
+    .slide-price{
+      color:#f5c76b;
+      font-size:28px;
+      font-weight:800;
+      margin-bottom:18px;
+    }
+
+    .slide-btn{
+      display:inline-block;
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      color:#111;
+      padding:12px 22px;
+      border-radius:40px;
+      font-weight:700;
+    }
+
+    @keyframes scrollSlider{
+      0%{transform:translateX(0)}
+      100%{transform:translateX(-50%)}
+    }
+
+    /* VISA FLAGS */
+    .visa-flags{
+      background:#08111f;
+      padding:85px 7%;
+    }
+
+    .visa-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:22px;
+    }
+
+    .visa-card{
+      background:#111d2d;
+      border:1px solid rgba(245,199,107,.25);
+      border-radius:22px;
+      padding:24px;
+      text-align:center;
+      transition:.3s;
+    }
+
+    .visa-card:hover{
+      transform:translateY(-8px);
+      border-color:#f5c76b;
+    }
+
+    .visa-flag{
+      font-size:42px;
+      margin-bottom:12px;
+    }
+
+    .visa-card h3{
+      margin-bottom:14px;
+    }
+
+    .visa-card a{
+      display:inline-block;
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      color:#111;
+      padding:10px 18px;
+      border-radius:40px;
+      font-weight:800;
+      font-size:14px;
+    }
+
+    /* BOOKING */
+    .booking-form{
+      max-width:900px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+    }
+
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea{
+      width:100%;
+      padding:16px;
+      border:none;
+      border-radius:14px;
+      outline:none;
+    }
+
+    .booking-form textarea{
+      height:120px;
+      grid-column:1/3;
+    }
+
+    .booking-form button{
+      grid-column:1/3;
+      border:none;
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      padding:16px;
+      border-radius:40px;
+      font-weight:800;
+      cursor:pointer;
+    }
+
+    .client{margin-top:18px}
+    .client h4{color:#f5c76b}
+
+    .gallery-item img{
+      height:260px;
+      object-fit:cover;
+      border-radius:24px;
+    }
+
+    /* TRAVEL REELS */
+    .travel-reels{
+      background:#050b14;
+      padding:90px 7%;
+    }
+
+    .reels-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:24px;
+    }
+
+    .reel-card{
+      position:relative;
+      overflow:hidden;
+      border-radius:24px;
+      height:500px;
+      background:#111;
+      box-shadow:0 15px 35px rgba(0,0,0,.35);
+    }
+
+    .reel-card video{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .reel-overlay{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(transparent,rgba(0,0,0,.85));
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      padding:24px;
+    }
+
+    .reel-overlay h3{
+      font-size:26px;
+      margin-bottom:8px;
+    }
+
+    .reel-overlay p{
+      color:#ddd;
+      margin-bottom:18px;
+    }
+
+    .reel-btn{
+      display:inline-block;
+      width:max-content;
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      color:#111;
+      padding:10px 20px;
+      border-radius:40px;
+      font-weight:800;
+    }
+
+    .cta-banner{
+      background:
+      linear-gradient(135deg,rgba(212,175,55,.92),rgba(247,223,138,.92)),
+      url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      color:#111;
+      text-align:center;
+    }
+
+    .cta-banner h2{
+      font-size:48px;
+      font-family:'Playfair Display',serif;
+      margin-bottom:15px;
+    }
+
+    .dark-btn{
+      display:inline-block;
+      margin-top:20px;
+      background:#08111f;
+      color:#fff;
+      padding:14px 28px;
+      border-radius:40px;
+      font-weight:800;
+    }
+
+    footer{
+      background:#050b14;
+      text-align:center;
+      padding:60px 7%;
+    }
+
+    .footer-logo{
+      width:150px;
+      margin:0 auto 20px;
+    }
+
+    .footer-links{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:25px;
+      margin:25px 0;
+    }
+
+    .footer-copy{
+      color:#aaa;
+      margin-top:20px;
+    }
+
+    .float-whatsapp,
+    .call-btn,
+    .insta-btn,
+    .facebook-btn,
+    #topBtn{
+      position:fixed;
+      z-index:9999;
+    }
+
+    .float-whatsapp{
+      right:18px;
+      bottom:30px;
+      background:#25d366;
+      color:#fff;
+      padding:13px 18px;
+      border-radius:40px;
+      font-weight:700;
+    }
+
+    .call-btn{
+      left:18px;
+      bottom:35px;
+      background:#0ea5e9;
+      color:#fff;
+      padding:13px 18px;
+      border-radius:40px;
+      font-weight:700;
+    }
+
+    .insta-btn,
+    .facebook-btn{
+      width:50px;
+      height:50px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .insta-btn{
+      left:18px;
+      bottom:95px;
+      background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
+    }
+
+    .facebook-btn{
+      left:18px;
+      bottom:155px;
+      background:#1877f2;
+    }
+
+    .insta-btn img,
+    .facebook-btn img{
+      width:28px;
+      height:28px;
+    }
+
+    #topBtn{
+      right:18px;
+      bottom:95px;
+      width:48px;
+      height:48px;
+      border:none;
+      border-radius:50%;
+      background:#f5c76b;
+      color:#111;
+      font-size:22px;
+      cursor:pointer;
+    }
+
+    .ai-chatbot{
+      position:fixed;
+      right:18px;
+      bottom:160px;
+      z-index:999999;
+    }
+
+    .ai-chat-btn{
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      color:#111;
+      border:none;
+      padding:14px 20px;
+      border-radius:40px;
+      font-weight:800;
+      cursor:pointer;
+      box-shadow:0 10px 25px rgba(0,0,0,.35);
+      display:block;
+    }
+
+    .ai-chat-box{
+  display:none;
+  position:absolute;
+  right:0;
+  bottom:65px;
+  width:280px;
+  max-height:520px;
+  overflow-y:auto;
+  background:rgba(17,29,45,.96);
+  backdrop-filter:blur(16px);
+  border:1px solid rgba(245,199,107,.28);
+  border-radius:24px;
+  box-shadow:0 20px 50px rgba(0,0,0,.45);
+  padding-bottom:10px;
+}
+
+.ai-chat-box.show{
+  display:block;
+  animation:chatFade .35s ease;
+}
+
+@keyframes chatFade{
+  from{
+    opacity:0;
+    transform:translateY(15px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.ai-chat-header{
+  background:linear-gradient(135deg,#d4af37,#f7df8a);
+  color:#111;
+  padding:15px 18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-weight:800;
+}
+
+.ai-chat-header span{
+  cursor:pointer;
+  font-size:24px;
+  font-weight:900;
+}
+
+.ai-message{
+  padding:18px;
+  color:#f1f5f9;
+  font-size:14px;
+  line-height:1.8;
+}
+
+.ai-chat-box button{
+  width:90%;
+  margin:8px 5%;
+  padding:14px;
+  border:none;
+  border-radius:16px;
+  background:#08111f;
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+  text-align:left;
+  transition:.3s;
+  border:1px solid rgba(255,255,255,.04);
+}
+
+.ai-chat-box button:hover{
+  background:linear-gradient(135deg,#d4af37,#f7df8a);
+  color:#111;
+  transform:translateX(4px);
+}
+
+    .install-popup{
+      position:fixed;
+      left:50%;
+      bottom:25px;
+      transform:translateX(-50%);
+      width:92%;
+      max-width:520px;
+      background:rgba(17,29,45,.95);
+      border:1px solid rgba(245,199,107,.35);
+      border-radius:22px;
+      padding:16px;
+      display:none;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      z-index:9999999;
+      box-shadow:0 20px 50px rgba(0,0,0,.45);
+    }
+
+    .install-popup strong{color:#f5c76b}
+
+    .install-popup p{
+      color:#cbd5e1;
+      font-size:13px;
+      margin-top:4px;
+    }
+
+    .install-popup button{
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      color:#111;
+      border:none;
+      border-radius:40px;
+      padding:10px 18px;
+      font-weight:800;
+      cursor:pointer;
+    }
+
+    .install-popup span{
+      color:#fff;
+      font-size:24px;
+      cursor:pointer;
+    }
+
+    @media(max-width:768px){
+      section{padding:65px 6%}
+
+      .nav-links,
+      .nav-btn{display:none}
+
+      .menu-toggle{display:block}
+
+      .hero-content{padding:0 7%}
+
+      .hero-content h1{font-size:48px}
+
+      .hero-subtitle{font-size:18px}
+
+      .section-title h2{font-size:34px}
+
+      .booking-form{grid-template-columns:1fr}
+
+      .booking-form textarea,
+      .booking-form button{grid-column:1}
+
+      .slide-card{min-width:260px}
+
+      .slide-card img{height:180px}
+
+      .reel-card{height:420px}
+
+      .float-whatsapp{
+        right:10px;
+        bottom:20px;
+        font-size:13px;
+        padding:12px 15px;
+      }
+
+      .facebook-btn{
+        left:12px;
+        bottom:145px;
+      }
+
+      .insta-btn{
+        left:12px;
+        bottom:85px;
+      }
+
+      .call-btn{
+        left:12px;
+        bottom:20px;
+        font-size:13px;
+        padding:12px 15px;
+      }
+
+      #topBtn{display:none}
+
+      .ai-chatbot{
+        right:10px;
+        bottom:90px;
+      }
+
+      .ai-chat-btn{
+        background:gold;
+        color:#000;
+        padding:11px 14px;
+        font-size:12px;
+        font-weight:900;
+      }
+
+      .ai-chat-box{
+  width:220px;
+  max-width:78vw;
+  right:0;
+  bottom:52px;
+  border-radius:18px;
+}
+
+.ai-message{
+  font-size:12px;
+  line-height:1.5;
+  padding:14px;
+}
+
+.ai-chat-box button{
+  padding:10px;
+  font-size:12px;
+  border-radius:12px;
+}
+
+.ai-chat-header{
+  padding:12px 14px;
+  font-size:13px;
+}
+
+      .install-popup{
+        bottom:15px;
+      }
+    }
+    .stats-section{
+  background:#08111f;
+  padding:80px 7%;
+}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:24px;
+}
+
+.stat-card{
+  background:#111d2d;
+  border:1px solid rgba(245,199,107,.25);
+  border-radius:24px;
+  text-align:center;
+  padding:32px 20px;
+}
+
+.stat-card h3{
+  color:#f5c76b;
+  font-size:42px;
+  margin-bottom:8px;
+}
+
+.stat-card p{
+  color:#cbd5e1;
+}
+    .booking-popup{
+  position:fixed;
+  left:20px;
+  bottom:220px;
+  background:#111d2d;
+  border:1px solid rgba(245,199,107,.25);
+  border-radius:18px;
+  padding:14px 18px;
+  width:290px;
+  z-index:999999;
+  box-shadow:0 15px 35px rgba(0,0,0,.35);
+  animation:popupFade .5s ease;
+}
+
+.booking-popup strong{
+  color:#f5c76b;
+}
+
+.booking-popup p{
+  font-size:14px;
+  color:#ddd;
+  margin-top:6px;
+  line-height:1.5;
+}
+
+@keyframes popupFade{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@media(max-width:768px){
+
+  .booking-popup{
+    width:250px;
+    left:12px;
+    bottom:210px;
+  }
+
+}
+    .typing{
+  display:flex;
+  gap:5px;
+  padding:0 16px 14px;
+}
+
+.typing span{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#f5c76b;
+  animation:typing 1.2s infinite;
+}
+
+.typing span:nth-child(2){
+  animation-delay:.2s;
+}
+
+.typing span:nth-child(3){
+  animation-delay:.4s;
+}
+
+@keyframes typing{
+  0%{
+    transform:translateY(0);
+    opacity:.3;
+  }
+
+  50%{
+    transform:translateY(-4px);
+    opacity:1;
+  }
+
+  100%{
+    transform:translateY(0);
+    opacity:.3;
+  }
+}
+    .logo-intro{
+  position:fixed;
+  inset:0;
+  background:#08111f;
+  z-index:999999999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  animation:introHide .4s ease forwards;
+  animation-delay:1.6s;
+}
+
+.intro-logo{
+  width:220px;
+  opacity:0;
+  transform:scale(.92);
+  animation:logoReveal 1.1s ease forwards;
+  animation-delay:.45s;
+  filter:drop-shadow(0 0 22px rgba(245,199,107,.45));
+}
+
+.intro-plane{
+  position:absolute;
+  left:-90px;
+  top:48%;
+  font-size:42px;
+  color:#f5c76b;
+  transform:rotate(12deg);
+  animation:planeFly 1.25s cubic-bezier(.19,1,.22,1) forwards;
+}
+
+.intro-trail{
+  position:absolute;
+  width:0;
+  height:3px;
+  left:32%;
+  top:57%;
+  background:linear-gradient(90deg,transparent,#f5c76b,transparent);
+  border-radius:50px;
+  box-shadow:0 0 18px rgba(245,199,107,.8);
+  animation:trailDraw .9s ease forwards;
+  animation-delay:.45s;
+}
+
+@keyframes planeFly{
+  0%{
+    left:-90px;
+    top:58%;
+    opacity:0;
+  }
+
+  20%{
+    opacity:1;
+  }
+
+  75%{
+    left:48%;
+    top:42%;
+  }
+
+  100%{
+    left:56%;
+    top:43%;
+    opacity:0;
+  }
+}
+
+@keyframes trailDraw{
+  0%{
+    width:0;
+    opacity:0;
+  }
+
+  30%{
+    opacity:1;
+  }
+
+  100%{
+    width:260px;
+    opacity:0;
+  }
+}
+
+@keyframes logoReveal{
+  0%{
+    opacity:0;
+    transform:scale(.92);
+  }
+
+  100%{
+    opacity:1;
+    transform:scale(1);
+  }
+}
+
+@keyframes introHide{
+  to{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+  }
+}
+
+@media(max-width:768px){
+  .intro-logo{
+    width:175px;
+  }
+
+  .intro-plane{
+    font-size:34px;
+  }
+
+  .intro-trail{
+    left:24%;
+    top:57%;
+  }
+}
+  </style>
 </head>
 
 <body>
 
-<div class="logo-intro" id="logoIntro">
-  <div class="intro-plane">✈</div>
-  <div class="intro-trail"></div>
-  <img src="/logo.png" class="intro-logo" alt="Holidaydope">
-</div>
+
 
 <section class="hero">
 
-  <video autoplay muted loop playsinline class="hero-video" poster="/hero-maldives.png">
+  <video autoplay muted loop playsinline class="hero-video">
     <source src="/hero-video.mp4" type="video/mp4">
   </video>
 
@@ -45,9 +1122,7 @@
 
   <nav class="navbar">
 
-    <a href="/" class="logo-link" aria-label="Holidaydope Home">
-      <img src="/logo.png" class="nav-logo" alt="Holidaydope">
-    </a>
+    <img src="/logo.png" class="nav-logo" alt="Holidaydope">
 
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
@@ -62,7 +1137,7 @@
       8595789670
     </a>
 
-    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open Menu">☰</button>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
   </nav>
 
@@ -76,6 +1151,7 @@
   </div>
 
   <div class="hero-content" data-aos="fade-right">
+
     <p class="small-title">EXPLORE • DREAM • DISCOVER</p>
 
     <h1>
@@ -87,7 +1163,7 @@
     </p>
 
     <div class="hero-buttons">
-      <a href="https://wa.me/918595789670?text=Hi Holidaydope, I want to plan my holiday package." target="_blank" class="gold-btn">
+      <a href="https://wa.me/918595789670" target="_blank" class="gold-btn">
         WhatsApp Inquiry
       </a>
 
@@ -96,46 +1172,8 @@
       </a>
     </div>
 
-    <div class="hero-trust">
-      <span>⭐ 500+ Happy Travelers</span>
-      <span>🌍 50+ Destinations</span>
-      <span>☎ 24/7 Support</span>
-    </div>
   </div>
 
-</section>
-
-<section class="why-choose">
-  <div class="section-title">
-    <p>WHY CHOOSE US</p>
-    <h2>Travel With Confidence</h2>
-  </div>
-
-  <div class="why-grid">
-    <div class="why-card" data-aos="fade-up">
-      <div class="why-icon">🏝️</div>
-      <h3>Premium Packages</h3>
-      <p>Handpicked stays, smooth transfers and memorable experiences.</p>
-    </div>
-
-    <div class="why-card" data-aos="fade-up">
-      <div class="why-icon">🛂</div>
-      <h3>Visa Assistance</h3>
-      <p>Dubai, Thailand, Vietnam, Sri Lanka and more visa support.</p>
-    </div>
-
-    <div class="why-card" data-aos="fade-up">
-      <div class="why-icon">💬</div>
-      <h3>WhatsApp Support</h3>
-      <p>Fast communication from planning to trip completion.</p>
-    </div>
-
-    <div class="why-card" data-aos="fade-up">
-      <div class="why-icon">✨</div>
-      <h3>Custom Trips</h3>
-      <p>Honeymoon, family, group and luxury trips as per your budget.</p>
-    </div>
-  </div>
 </section>
 
 <section class="packages">
@@ -148,10 +1186,7 @@
   <div class="packages-grid">
 
     <div class="package-card" data-aos="fade-up">
-      <div class="package-img-wrap">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=1200&auto=format&fit=crop" alt="Maldives Package">
-        <span class="badge">Best Seller</span>
-      </div>
+      <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=1200&auto=format&fit=crop" alt="Maldives Package">
       <div class="package-content">
         <h3>Maldives Luxury</h3>
         <p class="days">4N / 5D</p>
@@ -162,10 +1197,7 @@
     </div>
 
     <div class="package-card" data-aos="fade-up">
-      <div class="package-img-wrap">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?q=80&w=1200&auto=format&fit=crop" alt="Bali Package">
-        <span class="badge">Trending</span>
-      </div>
+      <img src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?q=80&w=1200&auto=format&fit=crop" alt="Bali Package">
       <div class="package-content">
         <h3>Bali Escape</h3>
         <p class="days">5N / 6D</p>
@@ -176,10 +1208,7 @@
     </div>
 
     <div class="package-card" data-aos="fade-up">
-      <div class="package-img-wrap">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Thailand Package">
-        <span class="badge">Family Trip</span>
-      </div>
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Thailand Package">
       <div class="package-content">
         <h3>Thailand Tour</h3>
         <p class="days">5N / 6D</p>
@@ -190,10 +1219,7 @@
     </div>
 
     <div class="package-card" data-aos="fade-up">
-      <div class="package-img-wrap">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop" alt="Dubai Package">
-        <span class="badge">Luxury</span>
-      </div>
+      <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop" alt="Dubai Package">
       <div class="package-content">
         <h3>Dubai Premium</h3>
         <p class="days">4N / 5D</p>
@@ -205,8 +1231,10 @@
 
   </div>
 
-  <div class="center-btn">
-    <a href="/package/index.html" class="gold-btn">View All Packages</a>
+  <div style="text-align:center;margin-top:40px;">
+    <a href="/package/index.html" class="gold-btn">
+      View All Packages
+    </a>
   </div>
 
 </section>
@@ -221,7 +1249,7 @@
   <div class="slider-track">
 
     <div class="slide-card">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=1200&auto=format&fit=crop" alt="Maldives">
+      <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=1200&auto=format&fit=crop" alt="Maldives">
       <div class="slide-content">
         <h3>Maldives</h3>
         <p>Luxury water villa experience.</p>
@@ -231,7 +1259,7 @@
     </div>
 
     <div class="slide-card">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?q=80&w=1200&auto=format&fit=crop" alt="Bali">
+      <img src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?q=80&w=1200&auto=format&fit=crop" alt="Bali">
       <div class="slide-content">
         <h3>Bali</h3>
         <p>Private villa & tropical vibes.</p>
@@ -241,7 +1269,7 @@
     </div>
 
     <div class="slide-card">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Thailand">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Thailand">
       <div class="slide-content">
         <h3>Thailand</h3>
         <p>Bangkok • Phuket • Krabi.</p>
@@ -251,7 +1279,7 @@
     </div>
 
     <div class="slide-card">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop" alt="Dubai">
+      <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop" alt="Dubai">
       <div class="slide-content">
         <h3>Dubai</h3>
         <p>Luxury skyline & desert safari.</p>
@@ -261,7 +1289,7 @@
     </div>
 
     <div class="slide-card">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=1200&auto=format&fit=crop" alt="Maldives">
+      <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=1200&auto=format&fit=crop" alt="Maldives">
       <div class="slide-content">
         <h3>Maldives</h3>
         <p>Luxury water villa experience.</p>
@@ -271,7 +1299,7 @@
     </div>
 
     <div class="slide-card">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?q=80&w=1200&auto=format&fit=crop" alt="Bali">
+      <img src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?q=80&w=1200&auto=format&fit=crop" alt="Bali">
       <div class="slide-content">
         <h3>Bali</h3>
         <p>Private villa & tropical vibes.</p>
@@ -319,12 +1347,7 @@
 
   </div>
 
-  <div class="center-btn">
-    <a href="/visa/index.html" class="outline-btn">View Full Visa Page</a>
-  </div>
-
 </section>
-
 <section class="stats-section">
 
   <div class="stats-grid">
@@ -352,8 +1375,7 @@
   </div>
 
 </section>
-
-<section id="booking" class="booking-section">
+<section id="booking">
 
   <div class="section-title">
     <p>BOOK YOUR TRIP</p>
@@ -432,7 +1454,7 @@
 
 </section>
 
-<section class="gallery-section">
+<section>
 
   <div class="section-title">
     <p>TRAVEL GALLERY</p>
@@ -442,24 +1464,25 @@
   <div class="gallery-grid">
 
     <div class="gallery-item" data-aos="zoom-in">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Beach Travel">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Beach Travel">
     </div>
 
     <div class="gallery-item" data-aos="zoom-in">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1200&auto=format&fit=crop" alt="Goa Travel">
+      <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1200&auto=format&fit=crop" alt="Goa Travel">
     </div>
 
     <div class="gallery-item" data-aos="zoom-in">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?q=80&w=1200&auto=format&fit=crop" alt="Luxury Travel">
+      <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?q=80&w=1200&auto=format&fit=crop" alt="Luxury Travel">
     </div>
 
     <div class="gallery-item" data-aos="zoom-in">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop" alt="Mountain Travel">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop" alt="Mountain Travel">
     </div>
 
   </div>
 
 </section>
+
 
 <section class="travel-reels">
 
@@ -468,54 +1491,53 @@
     <h2>Luxury Travel Moments</h2>
   </div>
 
-  <div class="reels-grid">
+ <div class="reels-grid">
 
-    <div class="reel-card">
-      <video autoplay muted loop playsinline preload="metadata" poster="/maldives-poster.jpg">
-        <source src="/maldives-reel.mp4" type="video/mp4">
-      </video>
+  <div class="reel-card">
+    <video autoplay muted loop playsinline preload="auto">
+      <source src="/maldives-reel.mp4" type="video/mp4">
+    </video>
 
-      <div class="reel-overlay">
-        <h3>Maldives</h3>
-        <p>Luxury water villa experience.</p>
-        <a href="/package/maldives/index.html" class="reel-btn">Explore</a>
-      </div>
+    <div class="reel-overlay">
+      <h3>Maldives</h3>
+      <p>Luxury water villa experience.</p>
+      <a href="/package/maldives/index.html" class="reel-btn">Explore</a>
     </div>
-
-    <div class="reel-card">
-      <video autoplay muted loop playsinline preload="metadata" poster="/bali-poster.jpg">
-        <source src="/bali-reel.mp4" type="video/mp4">
-      </video>
-
-      <div class="reel-overlay">
-        <h3>Bali</h3>
-        <p>Private villa & tropical vibes.</p>
-        <a href="/package/bali/index.html" class="reel-btn">Explore</a>
-      </div>
-    </div>
-
-    <div class="reel-card">
-      <video autoplay muted loop playsinline preload="metadata" poster="/thailand-poster.jpg">
-        <source src="/thailand-reel.mp4" type="video/mp4">
-      </video>
-
-      <div class="reel-overlay">
-        <h3>Thailand</h3>
-        <p>Bangkok • Phuket • Krabi.</p>
-        <a href="/package/thailand/index.html" class="reel-btn">Explore</a>
-      </div>
-    </div>
-
   </div>
-</section>
 
+  <div class="reel-card">
+    <video autoplay muted loop playsinline preload="auto">
+      <source src="/bali-reel.mp4" type="video/mp4">
+    </video>
+
+    <div class="reel-overlay">
+      <h3>Bali</h3>
+      <p>Private villa & tropical vibes.</p>
+      <a href="/package/bali/index.html" class="reel-btn">Explore</a>
+    </div>
+  </div>
+
+  <div class="reel-card">
+    <video autoplay muted loop playsinline preload="auto">
+      <source src="/thailand-reel.mp4" type="video/mp4">
+    </video>
+
+    <div class="reel-overlay">
+      <h3>Thailand</h3>
+      <p>Bangkok • Phuket • Krabi.</p>
+      <a href="/package/thailand/index.html" class="reel-btn">Explore</a>
+    </div>
+  </div>
+
+</div>
+</section>
 <section class="cta-banner">
 
   <h2>Ready For Your Dream Vacation?</h2>
 
   <p>Maldives • Bali • Thailand • Dubai • Kashmir • Goa & more</p>
 
-  <a href="https://wa.me/918595789670?text=Hi Holidaydope, I want to book my dream vacation." target="_blank" class="dark-btn">
+  <a href="https://wa.me/918595789670" target="_blank" class="dark-btn">
     Book Now on WhatsApp
   </a>
 
@@ -556,19 +1578,23 @@
 
 </footer>
 
-<a href="https://wa.me/918595789670" target="_blank" class="float-whatsapp">WhatsApp</a>
+<a href="https://wa.me/918595789670" target="_blank" class="float-whatsapp">
+  WhatsApp
+</a>
 
-<a href="https://www.facebook.com/profile.php?id=61555482407475" target="_blank" class="facebook-btn" aria-label="Facebook">
+<a href="https://www.facebook.com/profile.php?id=61555482407475" target="_blank" class="facebook-btn">
   <img src="/facebook.png" alt="Facebook">
 </a>
 
-<a href="https://instagram.com/holiday_dope" target="_blank" class="insta-btn" aria-label="Instagram">
+<a href="https://instagram.com/holiday_dope" target="_blank" class="insta-btn">
   <img src="/instagram.png" alt="Instagram">
 </a>
 
-<a href="tel:+918595789670" class="call-btn">📞 Call Now</a>
+<a href="tel:+918595789670" class="call-btn">
+  📞 Call Now
+</a>
 
-<button onclick="scrollToTop()" id="topBtn" aria-label="Back to top">↑</button>
+<button onclick="scrollToTop()" id="topBtn">↑</button>
 
 <div class="ai-chatbot">
   <button class="ai-chat-btn" onclick="toggleAIChat()">💬 Holidaydope AI</button>
@@ -580,15 +1606,15 @@
     </div>
 
     <div class="ai-message" id="aiText">
-      Hello 👋 Welcome to Holidaydope.<br><br>
-      Maldives, Bali, Thailand ya Dubai trip plan karna hai?
-    </div>
+  Hello 👋 Welcome to Holidaydope.<br><br>
+  Maldives, Bali, Thailand ya Dubai trip plan karna hai?
+</div>
 
-    <div class="typing">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+<div class="typing">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
 
     <button onclick="sendAIOption('Best Packages')">🌍 Best Packages</button>
     <button onclick="sendAIOption('Maldives Package')">🏝️ Maldives</button>
@@ -608,11 +1634,6 @@
   <span onclick="closeInstallPopup()">×</span>
 </div>
 
-<div class="booking-popup" id="bookingPopup">
-  <strong>Recent Booking ✈️</strong>
-  <p id="popupText">Rahul from Delhi booked Bali Package</p>
-</div>
-
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 <script>
@@ -622,15 +1643,8 @@
   });
 
   function toggleMenu(){
-    const menu = document.getElementById("mobileMenu");
-    menu.classList.toggle("show");
+    document.getElementById("mobileMenu").classList.toggle("show");
   }
-
-  document.querySelectorAll("#mobileMenu a").forEach(function(link){
-    link.addEventListener("click", function(){
-      document.getElementById("mobileMenu").classList.remove("show");
-    });
-  });
 
   function toggleAIChat(){
     document.getElementById("aiChatBox").classList.toggle("show");
@@ -668,6 +1682,8 @@
       "_blank"
     );
   }
+
+  
 
   function sendToWhatsApp(event){
     event.preventDefault();
@@ -709,6 +1725,7 @@ Plan: ${plan}`;
 
   setTimeout(() => {
     const chatBox = document.getElementById("aiChatBox");
+
     if(chatBox){
       chatBox.classList.add("show");
     }
@@ -716,35 +1733,53 @@ Plan: ${plan}`;
 
   let deferredPrompt;
 
-  const isAndroid = /Android/i.test(navigator.userAgent);
+const isAndroid =
+/Android/i.test(navigator.userAgent);
 
-  if(isAndroid){
-    window.addEventListener("beforeinstallprompt", function(e){
+if(isAndroid){
+
+  window.addEventListener(
+    "beforeinstallprompt",
+    function(e){
+
       e.preventDefault();
+
       deferredPrompt = e;
 
       setTimeout(function(){
-        const popup = document.getElementById("installPopup");
-        if(popup){
-          popup.style.display = "flex";
-        }
+
+        document.getElementById(
+          "installPopup"
+        ).style.display = "flex";
+
       }, 5000);
-    });
 
-    const installBtn = document.getElementById("installBtn");
-
-    if(installBtn){
-      installBtn.addEventListener("click", async function(){
-        if(deferredPrompt){
-          deferredPrompt.prompt();
-          await deferredPrompt.userChoice;
-          deferredPrompt = null;
-
-          document.getElementById("installPopup").style.display = "none";
-        }
-      });
     }
-  }
+  );
+
+  document.getElementById(
+    "installBtn"
+  ).addEventListener(
+    "click",
+    async function(){
+
+      if(deferredPrompt){
+
+        deferredPrompt.prompt();
+
+        await deferredPrompt.userChoice;
+
+        deferredPrompt = null;
+
+        document.getElementById(
+          "installPopup"
+        ).style.display = "none";
+      }
+
+    }
+  );
+
+}
 
   function closeInstallPopup(){
     document.getElementById("installPopup").style.display = "none";
@@ -755,52 +1790,68 @@ Plan: ${plan}`;
       navigator.serviceWorker.register("/service-worker.js");
     });
   }
-
   document.addEventListener("DOMContentLoaded", function(){
-    const videos = document.querySelectorAll(".reel-card video");
 
-    videos.forEach(function(video){
-      video.muted = true;
-      video.play().catch(function(){});
-    });
+  const videos = document.querySelectorAll(".reel-card video");
+
+  videos.forEach(function(video){
+
+    video.muted = true;
+
+    video.play().catch(function(){});
+
   });
 
+});
   const bookings = [
-    "Rahul from Delhi booked Bali Package ✈️",
-    "David booked Maldives Luxury Package 🏝️",
-    "Priya from Mumbai booked Dubai Trip 🌆",
-    "Aman booked Thailand Vacation 🌴",
-    "Miss Ngaihkim booked Bali Honeymoon 💕"
-  ];
 
-  let popupIndex = 0;
+  "Rahul from Delhi booked Bali Package ✈️",
+  "David booked Maldives Luxury Package 🏝️",
+  "Priya from Mumbai booked Dubai Trip 🌆",
+  "Aman booked Thailand Vacation 🌴",
+  "Miss Ngaihkim booked Bali Honeymoon 💕"
 
-  setInterval(() => {
-    const popupText = document.getElementById("popupText");
+];
 
-    if(!popupText){
-      return;
-    }
+let popupIndex = 0;
 
-    popupIndex++;
+setInterval(() => {
 
-    if(popupIndex >= bookings.length){
-      popupIndex = 0;
-    }
+  popupIndex++;
 
-    popupText.innerText = bookings[popupIndex];
-  }, 4000);
+  if(popupIndex >= bookings.length){
+    popupIndex = 0;
+  }
 
+  document.getElementById("popupText").innerText = bookings[popupIndex];
+
+}, 4000);
   window.addEventListener("scroll", function(){
-    const navbar = document.querySelector(".navbar");
 
-    if(window.scrollY > 50){
-      navbar.classList.add("scrolled");
-    }else{
-      navbar.classList.remove("scrolled");
-    }
-  });
+  const navbar = document.querySelector(".navbar");
+
+  if(window.scrollY > 50){
+    navbar.classList.add("scrolled");
+  }else{
+    navbar.classList.remove("scrolled");
+  }
+
+});
 </script>
+<div class="booking-popup" id="bookingPopup">
 
+  <strong>Recent Booking ✈️</strong>
+
+  <p id="popupText">
+    Rahul from Delhi booked Bali Package
+  </p>
+
+</div>
+  <div class="logo-intro" id="logoIntro">
+  <div class="intro-plane">✈</div>
+  <div class="intro-trail"></div>
+
+  <img src="/logo.png" class="intro-logo" alt="Holidaydope">
+</div>
 </body>
 </html>
