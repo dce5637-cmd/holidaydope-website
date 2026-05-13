@@ -92,7 +92,31 @@
   box-shadow:0 10px 30px rgba(0,0,0,.25);
 }
 
-    .nav-logo{width:135px}
+    .nav-logo{
+  width:135px;
+  animation:logoGlow 3s ease-in-out infinite;
+  transition:.4s;
+}
+
+.nav-logo:hover{
+  transform:scale(1.05);
+}
+
+@keyframes logoGlow{
+
+  0%{
+    filter:drop-shadow(0 0 0px rgba(245,199,107,.2));
+  }
+
+  50%{
+    filter:drop-shadow(0 0 18px rgba(245,199,107,.75));
+  }
+
+  100%{
+    filter:drop-shadow(0 0 0px rgba(245,199,107,.2));
+  }
+
+}
 
     .nav-links{
       display:flex;
