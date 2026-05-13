@@ -49,8 +49,23 @@
     }
 
     @keyframes pulse{
-      50%{transform:scale(1.08);opacity:.7}
-    }
+
+  0%{
+    transform:scale(.9);
+    opacity:.3;
+  }
+
+  50%{
+    transform:scale(1.08);
+    opacity:1;
+  }
+
+  100%{
+    transform:scale(.9);
+    opacity:.3;
+  }
+
+}
 
     .hero{
       height:100vh;
