@@ -986,3 +986,101 @@ section{
     padding:22px;
   }
 }
+/* FINAL PREMIUM POLISH */
+
+.hero-content{
+  padding-top:60px;
+}
+
+/* Better Navbar */
+.navbar{
+  background:rgba(5,11,20,.45)!important;
+  backdrop-filter:blur(18px)!important;
+  border-bottom:1px solid rgba(245,199,107,.12);
+}
+
+/* Better Hero Text */
+.hero-content h1{
+  text-shadow:0 10px 35px rgba(0,0,0,.55);
+}
+
+.hero-subtitle{
+  max-width:650px;
+  line-height:1.6;
+}
+
+/* Logo Polish */
+.nav-logo{
+  width:125px!important;
+  filter:drop-shadow(0 0 16px rgba(245,199,107,.55));
+}
+
+/* AI Chat Smaller */
+.ai-chat-box{
+  width:250px!important;
+}
+
+.ai-chat-btn{
+  padding:12px 16px!important;
+  font-size:13px!important;
+}
+
+/* Booking Popup Better */
+.booking-popup{
+  bottom:150px!important;
+  left:20px!important;
+  background:rgba(17,29,45,.92)!important;
+  backdrop-filter:blur(16px);
+  width:260px;
+}
+
+/* Floating Buttons Cleaner */
+.facebook-btn,
+.insta-btn,
+.call-btn{
+  transform:scale(.92);
+}
+
+.facebook-btn:hover,
+.insta-btn:hover,
+.call-btn:hover{
+  transform:scale(1);
+}
+
+/* Premium Buttons */
+.gold-btn,
+.package-btn,
+.slide-btn{
+  box-shadow:
+  0 10px 30px rgba(212,175,55,.25),
+  inset 0 1px 0 rgba(255,255,255,.35);
+}
+
+/* Hero Buttons Gap */
+.hero-buttons{
+  margin-top:10px;
+}
+
+/* Mobile Polish */
+@media(max-width:768px){
+
+  .hero-content{
+    padding-top:20px;
+  }
+
+  .booking-popup{
+    display:none;
+  }
+
+  .hero-content h1{
+    font-size:44px!important;
+  }
+
+  .hero-subtitle{
+    font-size:17px!important;
+  }
+
+  .ai-chat-box{
+    width:220px!important;
+  }
+}
