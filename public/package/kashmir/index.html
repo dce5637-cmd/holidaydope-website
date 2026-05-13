@@ -200,7 +200,24 @@
       }
 
     }
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
 
+.gallery-grid img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:22px;
+}
+
+@media(max-width:768px){
+  .gallery-grid{
+    grid-template-columns:1fr;
+  }
+}
   </style>
 
 </head>
