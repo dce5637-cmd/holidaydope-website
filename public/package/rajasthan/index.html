@@ -2,380 +2,300 @@
 <html lang="en">
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Rajasthan Tour Package | Holidaydope</title>
+<title>Rajasthan Tour Packages | Holidaydope</title>
 
-  <meta name="description" content="Book Rajasthan package with Holidaydope. Explore Jaipur, Udaipur, Jaisalmer, royal palaces, desert safari and heritage experiences.">
+<meta name="description" content="Book Rajasthan packages with Holidaydope. Explore Udaipur, Mount Abu and Jaipur with royal palaces, lakes and luxury heritage stays.">
+<meta name="keywords" content="Rajasthan package, Jaipur package, Udaipur package, Mount Abu tour, Holidaydope Rajasthan">
 
-  <meta name="keywords" content="Rajasthan package, Jaipur tour, Udaipur trip, Jaisalmer desert safari, Holidaydope Rajasthan">
+<meta property="og:title" content="Rajasthan Tour Packages | Holidaydope">
+<meta property="og:description" content="Premium Rajasthan holiday packages with royal palaces, lakes and heritage experiences.">
+<meta property="og:image" content="/logo.png">
 
-  <meta property="og:title" content="Rajasthan Tour Package | Holidaydope">
-  <meta property="og:description" content="Royal Rajasthan holiday package with palaces, forts and desert experiences.">
-  <meta property="og:image" content="/logo.png">
+<link rel="icon" href="/favicon.png">
 
-  <link rel="icon" href="/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#08111f;color:#fff;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{width:100%;display:block}
+section{padding:80px 7%}
 
-  <style>
+.navbar{position:absolute;top:0;left:0;width:100%;padding:20px 7%;display:flex;align-items:center;justify-content:space-between;z-index:10}
+.logo{width:130px}
+.home-btn{background:linear-gradient(135deg,#d4af37,#f7df8a);color:#111;padding:12px 22px;border-radius:40px;font-weight:800;box-shadow:0 10px 25px rgba(212,175,55,.25)}
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins',sans-serif;
-    }
-
-    body{
-      background:#08111f;
-      color:#fff;
-      overflow-x:hidden;
-    }
-
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
-
-    img{
-      width:100%;
-      display:block;
-    }
-
-    section{
-      padding:80px 7%;
-    }
-
-    .navbar{
-      position:absolute;
-      top:0;
-      left:0;
-      width:100%;
-      padding:20px 7%;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      z-index:10;
-    }
-
-    .logo{
-      width:130px;
-    }
-
-    .home-btn{
-      background:linear-gradient(135deg,#d4af37,#f7df8a);
-      color:#111;
-      padding:12px 22px;
-      border-radius:40px;
-      font-weight:800;
-    }
-
-    .hero{
-      height:80vh;
-
-      background:
-      linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-      url('https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=1600&auto=format&fit=crop');
-
-      background-size:cover;
-      background-position:center;
-
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-    }
-
-    .hero-content h1{
-      font-size:78px;
-      font-family:'Playfair Display',serif;
-    }
-
-    .hero-content p{
-      color:#f5c76b;
-      letter-spacing:3px;
-      margin-bottom:15px;
-      font-weight:700;
-    }
-
-    .detail-grid{
-      display:grid;
-      grid-template-columns:2fr 1fr;
-      gap:40px;
-    }
-
-    .box{
-      background:#111d2d;
-      border-radius:24px;
-      padding:35px;
-      border:1px solid rgba(255,255,255,.08);
-      margin-bottom:30px;
-    }
-
-    .box h2{
-      color:#f5c76b;
-      margin-bottom:20px;
-      font-size:34px;
-    }
-
-    .box p,
-    .box li{
-      color:#cbd5e1;
-      line-height:1.9;
-    }
-
-    .box ul{
-      padding-left:20px;
-    }
-
-    .gallery{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:15px;
-    }
-
-    .gallery img{
-      height:240px;
-      object-fit:cover;
-      border-radius:20px;
-    }
-
-    .booking-card{
-      background:#111d2d;
-      border-radius:24px;
-      padding:35px;
-      position:sticky;
-      top:30px;
-      border:1px solid rgba(255,255,255,.08);
-    }
-
-    .booking-card h3{
-      font-size:48px;
-      color:#f5c76b;
-      margin:12px 0;
-    }
-
-    .booking-btn{
-      display:block;
-      margin-top:25px;
-      background:linear-gradient(135deg,#d4af37,#f7df8a);
-      color:#111;
-      text-align:center;
-      padding:16px;
-      border-radius:50px;
-      font-weight:800;
-    }
-
-    footer{
-      background:#050b14;
-      padding:50px 7%;
-      text-align:center;
-      margin-top:40px;
-    }
-
-    .footer-logo{
-      width:150px;
-      margin:0 auto 20px;
-    }
-
-    footer p{
-      color:#cbd5e1;
-      margin-bottom:10px;
-    }
-
-    @media(max-width:900px){
-
-      .detail-grid{
-        grid-template-columns:1fr;
-      }
-
-      .hero-content h1{
-        font-size:48px;
-      }
-
-      .gallery{
-        grid-template-columns:1fr;
-      }
-
-    }
-.gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
+.hero{
+height:80vh;
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.58)),url('https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
 }
 
-.gallery-grid img{
-  width:100%;
-  height:260px;
-  object-fit:cover;
-  border-radius:22px;
+.hero-content h1{font-size:78px;font-family:'Playfair Display',serif;margin-bottom:12px}
+.hero-content p{color:#f5c76b;letter-spacing:3px;margin-bottom:15px;font-weight:700}
+.hero-content span{display:block;max-width:760px;margin:auto;color:#e5e7eb;font-size:18px;line-height:1.7;padding:0 18px}
+
+.box{
+background:#111d2d;
+border-radius:24px;
+padding:35px;
+border:1px solid rgba(255,255,255,.08);
+margin-bottom:30px;
+box-shadow:0 18px 45px rgba(0,0,0,.18);
 }
 
-@media(max-width:768px){
-  .gallery-grid{
-    grid-template-columns:1fr;
-  }
+.box h2{color:#f5c76b;margin-bottom:20px;font-size:34px;font-family:'Playfair Display',serif}
+.box p{color:#cbd5e1;line-height:1.9}
+
+.package-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;margin-top:40px}
+
+.package-card{
+background:#111d2d;
+border-radius:28px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,.08);
+box-shadow:0 18px 45px rgba(0,0,0,.22);
+transition:.35s ease;
 }
-  </style>
+
+.package-card:hover{transform:translateY(-8px);border-color:rgba(245,199,107,.35)}
+.package-card img{height:280px;object-fit:cover}
+.package-content{padding:30px}
+.package-content h2{color:#f5c76b;font-family:'Playfair Display',serif;font-size:34px;margin-bottom:12px}
+.package-content p{color:#cbd5e1;line-height:1.8;margin-bottom:18px}
+
+.price{color:#fff;font-size:15px;margin-bottom:18px}
+.price b{display:block;color:#f5c76b;font-size:34px;margin-top:5px}
+
+.highlights{list-style:none;margin:20px 0;padding:0}
+.highlights li{color:#cbd5e1;margin-bottom:10px;font-size:15px}
+
+.booking-btn{
+display:inline-block;
+margin-top:15px;
+background:linear-gradient(135deg,#d4af37,#f7df8a);
+color:#111;
+text-align:center;
+padding:15px 26px;
+border-radius:50px;
+font-weight:800;
+}
+
+.call-btn{
+display:inline-block;
+margin-top:15px;
+margin-left:8px;
+border:1px solid rgba(245,199,107,.5);
+color:#f5c76b;
+text-align:center;
+padding:14px 24px;
+border-radius:50px;
+font-weight:800;
+}
+
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.gallery-grid img{height:220px;object-fit:cover;border-radius:20px;transition:.35s ease}
+.gallery-grid img:hover{transform:scale(1.03)}
+
+.cta-box{
+background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url('https://images.unsplash.com/photo-1615836245337-f5b9b2303f10?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+border-radius:28px;
+text-align:center;
+padding:55px 30px;
+border:1px solid rgba(245,199,107,.25);
+margin-top:30px;
+}
+
+.cta-box h2{color:#f5c76b;font-family:'Playfair Display',serif;font-size:38px;margin-bottom:12px}
+.cta-box p{max-width:760px;margin:0 auto 24px;color:#e5e7eb;line-height:1.8}
+
+footer{background:#050b14;padding:50px 7%;text-align:center;margin-top:40px}
+.footer-logo{width:150px;margin:0 auto 20px}
+footer p{color:#cbd5e1;margin-bottom:10px}
+footer a{color:#f5c76b}
+
+@media(max-width:900px){
+section{padding:60px 5%}
+.hero-content h1{font-size:48px}
+.hero-content span{font-size:15px}
+.package-grid,.gallery-grid{grid-template-columns:1fr}
+.package-content h2{font-size:29px}
+.call-btn{margin-left:0;display:block}
+.booking-btn{display:block}
+}
+</style>
 
 </head>
 
 <body>
 
 <nav class="navbar">
+<a href="/">
+<img src="/logo.png" class="logo" alt="Holidaydope">
+</a>
 
-  <a href="/">
-    <img src="/logo.png" class="logo" alt="Holidaydope">
-  </a>
-
-  <a href="/package/index.html" class="home-btn">
-    All Packages
-  </a>
-
+<a href="/package/index.html" class="home-btn">
+All Packages
+</a>
 </nav>
 
 <section class="hero">
-
-  <div class="hero-content">
-
-    <p>PREMIUM DOMESTIC PACKAGE</p>
-
-    <h1>Rajasthan</h1>
-
-  </div>
-
+<div class="hero-content">
+<p>PREMIUM DOMESTIC PACKAGE</p>
+<h1>Rajasthan</h1>
+<span>
+Royal palaces, lakes, forts, heritage hotels and unforgettable Rajasthan experiences with Holidaydope.
+</span>
+</div>
 </section>
 
 <section>
 
-  <div class="detail-grid">
-
-    <div>
-
-      <div class="box">
-
-        <h2>Overview</h2>
-
-        <p>
-          Explore the royal beauty of Rajasthan with grand palaces,
-          forts, desert safari, cultural experiences and luxury heritage stays.
-          Perfect for history lovers, couples and family vacations.
-        </p>
-
-      </div>
-
-      <div class="box">
-
-        <h2>Package Gallery</h2>
-
-        <div class="gallery-grid">
-
-  <img src="https://images.unsplash.com/photo-1477586957327-847a0f3f4fe3?q=80&w=1200&auto=format&fit=crop" alt="Jaipur Palace">
-
-  <img src="https://images.unsplash.com/photo-1615836245337-f5b9b2303f10?q=80&w=1200&auto=format&fit=crop" alt="Udaipur Lake Palace">
-
-  <img src="https://images.unsplash.com/photo-1633702738734-443da2c18f3c?q=80&w=1200&auto=format&fit=crop" alt="Jaisalmer Desert">
-
-  <img src="https://images.unsplash.com/photo-1654245363109-b873bb61b2fa?q=80&w=1200&auto=format&fit=crop" alt="Rajasthan Heritage">
-
+<div class="box">
+<h2>Rajasthan Packages</h2>
+<p>
+Choose your perfect Rajasthan holiday — romantic lakes of Udaipur & Mount Abu
+or vibrant royal Jaipur city experiences.
+</p>
 </div>
 
-      </div>
+<div class="package-grid">
 
-      <div class="box">
+<div class="package-card">
+<img src="https://images.unsplash.com/photo-1615836245337-f5b9b2303f10?q=80&w=1200&auto=format&fit=crop" alt="Udaipur Mount Abu Package">
 
-        <h2>Package Includes</h2>
+<div class="package-content">
+<h2>Udaipur & Mount Abu</h2>
 
-        <ul>
+<p>
+Experience beautiful lakes, royal palaces, mountain vibes and luxury heritage stays
+with this premium Rajasthan escape. Perfect for couples and family vacations.
+</p>
 
-          <li>Premium Hotel Stay</li>
+<div class="price">
+Starting From
+<b>₹16,999</b>
+Per Person
+</div>
 
-          <li>Daily Breakfast & Dinner</li>
+<ul class="highlights">
+<li>✅ 4 Nights / 5 Days</li>
+<li>✅ Udaipur Lake Tour</li>
+<li>✅ Mount Abu Sightseeing</li>
+<li>✅ Luxury Hotel Stay</li>
+<li>✅ Breakfast Included</li>
+</ul>
 
-          <li>Airport / Railway Transfers</li>
+<a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Udaipur%20Mount%20Abu%20package%20details." target="_blank" class="booking-btn">
+Book Now
+</a>
 
-          <li>Jaipur & Udaipur Sightseeing</li>
+<a href="tel:8595789670" class="call-btn">
+Call Now
+</a>
+</div>
+</div>
 
-          <li>Desert Safari Experience</li>
+<div class="package-card">
+<img src="https://images.unsplash.com/photo-1477586957327-847a0f3f4fe3?q=80&w=1200&auto=format&fit=crop" alt="Jaipur Package">
 
-          <li>24/7 Holidaydope Support</li>
+<div class="package-content">
+<h2>Jaipur Royal City Package</h2>
 
-        </ul>
+<p>
+Explore Jaipur forts, palaces, markets and royal heritage experiences.
+Perfect for short royal vacations, heritage sightseeing and weekend Rajasthan escapes.
+</p>
 
-      </div>
+<div class="price">
+Starting From
+<b>₹8,999</b>
+Per Person
+</div>
 
-      <div class="box">
+<ul class="highlights">
+<li>✅ 3 Nights / 4 Days</li>
+<li>✅ Jaipur Fort Tour</li>
+<li>✅ Palace & Market Visit</li>
+<li>✅ Hotel Stay + Breakfast</li>
+<li>✅ Private Local Sightseeing</li>
+</ul>
 
-        <h2>Day Wise Itinerary</h2>
+<a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Jaipur%20package%20details." target="_blank" class="booking-btn">
+Book Now
+</a>
 
-        <p><b>Day 1:</b> Arrival & Jaipur Hotel Check-In</p>
+<a href="tel:8595789670" class="call-btn">
+Call Now
+</a>
+</div>
+</div>
 
-        <p><b>Day 2:</b> Jaipur Fort & Palace Tour</p>
+</div>
+</section>
 
-        <p><b>Day 3:</b> Udaipur Lake & City Experience</p>
+<section>
 
-        <p><b>Day 4:</b> Desert Safari & Cultural Evening</p>
+<div class="box">
+<h2>Package Gallery</h2>
 
-        <p><b>Day 5:</b> Return Journey</p>
+<div class="gallery-grid">
+<img src="https://images.unsplash.com/photo-1477586957327-847a0f3f4fe3?q=80&w=1200&auto=format&fit=crop" alt="Jaipur Palace">
+<img src="https://images.unsplash.com/photo-1615836245337-f5b9b2303f10?q=80&w=1200&auto=format&fit=crop" alt="Udaipur Lake Palace">
+<img src="https://images.unsplash.com/photo-1654245363109-b873bb61b2fa?q=80&w=1200&auto=format&fit=crop" alt="Rajasthan Heritage">
+<img src="https://images.unsplash.com/photo-1633702738734-443da2c18f3c?q=80&w=1200&auto=format&fit=crop" alt="Rajasthan Desert">
+</div>
+</div>
 
-      </div>
+<div class="cta-box">
+<h2>Ready To Explore Rajasthan?</h2>
 
-    </div>
+<p>
+Choose your perfect Rajasthan package with Holidaydope —
+whether you want Udaipur & Mount Abu luxury or a short Jaipur royal escape.
+</p>
 
-    <div>
-
-      <div class="booking-card">
-
-        <p>Starting From</p>
-
-        <h3>₹23,999</h3>
-
-        <p>Per Person</p>
-
-        <a
-          href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Rajasthan%20package%20details."
-          target="_blank"
-          class="booking-btn"
-        >
-          Book Now
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
+<a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Rajasthan%20package%20details." target="_blank" class="booking-btn">
+Get Rajasthan Package
+</a>
+</div>
 
 </section>
 
 <footer>
+<img src="/logo.png" class="footer-logo" alt="Holidaydope">
 
-  <img src="/logo.png" class="footer-logo" alt="Holidaydope">
+<p>Holidaydope — Chalo Duniya Ghume</p>
+<p>WhatsApp / Call: 8595789670</p>
 
-  <p>Holidaydope — Chalo Duniya Ghume</p>
+<p>
+Instagram:
+<a href="https://instagram.com/holiday_dope" target="_blank">
+@holiday_dope
+</a>
+</p>
 
-  <p>WhatsApp / Call: 8595789670</p>
+<p>
+Facebook:
+<a href="https://www.facebook.com/profile.php?id=61555482407475" target="_blank">
+Holidaydope Official
+</a>
+</p>
 
-  <p>
-    Instagram:
-    <a href="https://instagram.com/holiday_dope" target="_blank">
-      @holiday_dope
-    </a>
-  </p>
-
-  <p>
-    Facebook:
-    <a href="https://www.facebook.com/profile.php?id=61555482407475" target="_blank">
-      Holidaydope Official
-    </a>
-  </p>
-
-  <p style="margin-top:20px;color:#888;">
-    © 2026 Holidaydope. All Rights Reserved.
-  </p>
-
+<p style="margin-top:20px;color:#888;">
+© 2026 Holidaydope. All Rights Reserved.
+</p>
 </footer>
 
 </body>
