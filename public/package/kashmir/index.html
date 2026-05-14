@@ -7,12 +7,11 @@
 
   <title>Kashmir Tour Package | Holidaydope</title>
 
-  <meta name="description" content="Book Kashmir package with Holidaydope. Explore Srinagar, Gulmarg, Sonmarg, snow mountains, houseboats and beautiful valleys.">
-
-  <meta name="keywords" content="Kashmir package, Gulmarg tour, Srinagar trip, Kashmir holiday, Holidaydope Kashmir">
+  <meta name="description" content="Book Kashmir package with Holidaydope. Explore Srinagar, Gulmarg, Sonmarg, Dal Lake, houseboats, snow mountains and beautiful valleys.">
+  <meta name="keywords" content="Kashmir package, Gulmarg tour, Srinagar trip, Kashmir holiday, Sonmarg tour, Holidaydope Kashmir">
 
   <meta property="og:title" content="Kashmir Tour Package | Holidaydope">
-  <meta property="og:description" content="Beautiful Kashmir holiday package with mountains, snow and luxury stays.">
+  <meta property="og:description" content="Beautiful Kashmir holiday package with mountains, snow, houseboat stay and luxury stays.">
   <meta property="og:image" content="/logo.png">
 
   <link rel="icon" href="/favicon.png">
@@ -20,91 +19,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    body{background:#08111f;color:#fff;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    img{width:100%;display:block}
+    section{padding:80px 7%}
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins',sans-serif;
-    }
-
-    body{
-      background:#08111f;
-      color:#fff;
-      overflow-x:hidden;
-    }
-
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
-
-    img{
-      width:100%;
-      display:block;
-    }
-
-    section{
-      padding:80px 7%;
-    }
-
-    .navbar{
-      position:absolute;
-      top:0;
-      left:0;
-      width:100%;
-      padding:20px 7%;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      z-index:10;
-    }
-
-    .logo{
-      width:130px;
-    }
-
-    .home-btn{
-      background:linear-gradient(135deg,#d4af37,#f7df8a);
-      color:#111;
-      padding:12px 22px;
-      border-radius:40px;
-      font-weight:800;
-    }
+    .navbar{position:absolute;top:0;left:0;width:100%;padding:20px 7%;display:flex;align-items:center;justify-content:space-between;z-index:10}
+    .logo{width:130px}
+    .home-btn{background:linear-gradient(135deg,#d4af37,#f7df8a);color:#111;padding:12px 22px;border-radius:40px;font-weight:800;box-shadow:0 10px 25px rgba(212,175,55,.25)}
 
     .hero{
       height:80vh;
-
-      background:
-      linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-      url('https://images.unsplash.com/photo-1598091383021-15ddea10925d?q=80&w=1600&auto=format&fit=crop');
-
+      background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.58)),url('https://images.unsplash.com/photo-1598091383021-15ddea10925d?q=80&w=1600&auto=format&fit=crop');
       background-size:cover;
       background-position:center;
-
       display:flex;
       align-items:center;
       justify-content:center;
       text-align:center;
     }
 
-    .hero-content h1{
-      font-size:78px;
-      font-family:'Playfair Display',serif;
-    }
+    .hero-content h1{font-size:78px;font-family:'Playfair Display',serif;margin-bottom:12px}
+    .hero-content p{color:#f5c76b;letter-spacing:3px;margin-bottom:15px;font-weight:700}
+    .hero-content span{display:block;max-width:720px;margin:auto;color:#e5e7eb;font-size:18px;line-height:1.7;padding:0 18px}
 
-    .hero-content p{
-      color:#f5c76b;
-      letter-spacing:3px;
-      margin-bottom:15px;
-      font-weight:700;
-    }
-
-    .detail-grid{
-      display:grid;
-      grid-template-columns:2fr 1fr;
-      gap:40px;
-    }
+    .detail-grid{display:grid;grid-template-columns:2fr 1fr;gap:40px}
 
     .box{
       background:#111d2d;
@@ -112,35 +52,30 @@
       padding:35px;
       border:1px solid rgba(255,255,255,.08);
       margin-bottom:30px;
+      box-shadow:0 18px 45px rgba(0,0,0,.18);
     }
 
-    .box h2{
-      color:#f5c76b;
-      margin-bottom:20px;
-      font-size:34px;
-    }
+    .box h2{color:#f5c76b;margin-bottom:20px;font-size:34px;font-family:'Playfair Display',serif}
+    .box p,.box li{color:#cbd5e1;line-height:1.9;font-size:15.5px}
+    .box ul{padding-left:20px}
 
-    .box p,
-    .box li{
-      color:#cbd5e1;
-      line-height:1.9;
-    }
+    .highlight-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+    .highlight-card{background:#0b1626;border:1px solid rgba(245,199,107,.18);border-radius:18px;padding:18px}
+    .highlight-card small{color:#f5c76b;font-weight:700;display:block;margin-bottom:6px}
+    .highlight-card p{color:#fff;line-height:1.5}
 
-    .box ul{
-      padding-left:20px;
-    }
+    .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .gallery-grid img{width:100%;height:260px;object-fit:cover;border-radius:22px;transition:.35s ease}
+    .gallery-grid img:hover{transform:scale(1.03)}
 
-    .gallery{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:15px;
-    }
+    .itinerary-day{background:#0b1626;border-left:4px solid #f5c76b;border-radius:18px;padding:22px;margin-bottom:18px}
+    .itinerary-day h3{color:#f5c76b;margin-bottom:8px;font-size:20px}
 
-    .gallery img{
-      height:240px;
-      object-fit:cover;
-      border-radius:20px;
-    }
+    .include-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .mini-box{background:#0b1626;border-radius:18px;padding:24px;border:1px solid rgba(255,255,255,.07)}
+    .mini-box h3{color:#f5c76b;margin-bottom:14px}
+    .mini-box ul{list-style:none;padding-left:0}
+    .mini-box li{margin-bottom:10px}
 
     .booking-card{
       background:#111d2d;
@@ -149,75 +84,45 @@
       position:sticky;
       top:30px;
       border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 18px 45px rgba(0,0,0,.25);
     }
 
-    .booking-card h3{
-      font-size:48px;
-      color:#f5c76b;
-      margin:12px 0;
-    }
+    .booking-card h3{font-size:48px;color:#f5c76b;margin:12px 0}
+    .booking-card .tag{background:#0b1626;color:#f5c76b;display:inline-block;padding:8px 14px;border-radius:30px;font-size:13px;font-weight:700;margin-bottom:18px}
+    .booking-card ul{list-style:none;margin-top:22px}
+    .booking-card li{color:#cbd5e1;margin-bottom:10px;font-size:14px}
 
-    .booking-btn{
-      display:block;
-      margin-top:25px;
-      background:linear-gradient(135deg,#d4af37,#f7df8a);
-      color:#111;
+    .booking-btn{display:block;margin-top:25px;background:linear-gradient(135deg,#d4af37,#f7df8a);color:#111;text-align:center;padding:16px;border-radius:50px;font-weight:800}
+    .call-btn{display:block;margin-top:12px;border:1px solid rgba(245,199,107,.5);color:#f5c76b;text-align:center;padding:14px;border-radius:50px;font-weight:800}
+
+    .cta-box{
+      background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url('https://images.unsplash.com/photo-1715457573748-8e8a70b2c1be?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      border-radius:28px;
       text-align:center;
-      padding:16px;
-      border-radius:50px;
-      font-weight:800;
+      padding:55px 30px;
+      border:1px solid rgba(245,199,107,.25);
     }
 
-    footer{
-      background:#050b14;
-      padding:50px 7%;
-      text-align:center;
-      margin-top:40px;
-    }
+    .cta-box h2{color:#f5c76b;font-family:'Playfair Display',serif;font-size:38px;margin-bottom:12px}
+    .cta-box p{max-width:700px;margin:0 auto 24px;color:#e5e7eb;line-height:1.8}
 
-    .footer-logo{
-      width:150px;
-      margin:0 auto 20px;
-    }
-
-    footer p{
-      color:#cbd5e1;
-      margin-bottom:10px;
-    }
+    footer{background:#050b14;padding:50px 7%;text-align:center;margin-top:40px}
+    .footer-logo{width:150px;margin:0 auto 20px}
+    footer p{color:#cbd5e1;margin-bottom:10px}
+    footer a{color:#f5c76b}
 
     @media(max-width:900px){
-
-      .detail-grid{
-        grid-template-columns:1fr;
-      }
-
-      .hero-content h1{
-        font-size:48px;
-      }
-
-      .gallery{
-        grid-template-columns:1fr;
-      }
-
+      section{padding:60px 5%}
+      .detail-grid{grid-template-columns:1fr}
+      .hero-content h1{font-size:48px}
+      .hero-content span{font-size:15px}
+      .gallery-grid,.highlight-grid,.include-grid{grid-template-columns:1fr}
+      .booking-card{position:relative;top:0}
+      .box{padding:25px}
+      .box h2{font-size:28px}
     }
-.gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
-}
-
-.gallery-grid img{
-  width:100%;
-  height:260px;
-  object-fit:cover;
-  border-radius:22px;
-}
-
-@media(max-width:768px){
-  .gallery-grid{
-    grid-template-columns:1fr;
-  }
-}
   </style>
 
 </head>
@@ -225,7 +130,6 @@
 <body>
 
 <nav class="navbar">
-
   <a href="/">
     <img src="/logo.png" class="logo" alt="Holidaydope">
   </a>
@@ -233,106 +137,191 @@
   <a href="/package/index.html" class="home-btn">
     All Packages
   </a>
-
 </nav>
 
 <section class="hero">
-
   <div class="hero-content">
-
     <p>PREMIUM DOMESTIC PACKAGE</p>
-
     <h1>Kashmir</h1>
-
+    <span>Snow-covered mountains, Dal Lake houseboats, Gulmarg adventures, Sonmarg valleys and peaceful Kashmir memories with Holidaydope.</span>
   </div>
-
 </section>
 
 <section>
-
   <div class="detail-grid">
 
     <div>
 
       <div class="box">
-
         <h2>Overview</h2>
-
         <p>
-          Discover the beauty of Kashmir with snow-covered mountains,
-          Dal Lake houseboats, Gulmarg adventures and breathtaking valleys.
-          Experience nature, peace and unforgettable memories with Holidaydope.
+          Discover the beauty of Kashmir with snow-covered mountains, Dal Lake houseboats, Gulmarg adventures,
+          Sonmarg valleys and breathtaking landscapes. This package is perfect for couples, families and nature lovers
+          looking for a peaceful domestic holiday with premium travel support.
         </p>
-
       </div>
 
       <div class="box">
+        <h2>Quick Highlights</h2>
 
+        <div class="highlight-grid">
+          <div class="highlight-card">
+            <small>Duration</small>
+            <p>4 Nights / 5 Days</p>
+          </div>
+
+          <div class="highlight-card">
+            <small>Stay</small>
+            <p>Hotel + Houseboat Experience</p>
+          </div>
+
+          <div class="highlight-card">
+            <small>Transfers</small>
+            <p>Airport Pickup & Drop</p>
+          </div>
+
+          <div class="highlight-card">
+            <small>Meals</small>
+            <p>Breakfast & Dinner</p>
+          </div>
+
+          <div class="highlight-card">
+            <small>Best For</small>
+            <p>Family / Couples / Honeymoon</p>
+          </div>
+
+          <div class="highlight-card">
+            <small>Experience</small>
+            <p>Srinagar, Gulmarg, Sonmarg & Dal Lake</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
         <h2>Package Gallery</h2>
 
         <div class="gallery-grid">
-
-  <img src="https://images.unsplash.com/photo-1715457573748-8e8a70b2c1be?q=80&w=1200&auto=format&fit=crop" alt="Dal Lake">
-
-  <img src="https://images.unsplash.com/photo-1651509094074-e8acaeb84d8f?q=80&w=1200&auto=format&fit=crop" alt="Gulmarg">
-
-  <img src="https://images.unsplash.com/photo-1674108886859-3f968080f012?q=80&w=1200&auto=format&fit=crop" alt="Sonmarg">
-
-  <img src="https://images.unsplash.com/photo-1666688449550-26a765798090?q=80&w=1200&auto=format&fit=crop" alt="Pahalgam">
-
-</div>
-
+          <img src="https://images.unsplash.com/photo-1715457573748-8e8a70b2c1be?q=80&w=1200&auto=format&fit=crop" alt="Dal Lake Kashmir">
+          <img src="https://images.unsplash.com/photo-1651509094074-e8acaeb84d8f?q=80&w=1200&auto=format&fit=crop" alt="Gulmarg Kashmir">
+          <img src="https://images.unsplash.com/photo-1674108886859-3f968080f012?q=80&w=1200&auto=format&fit=crop" alt="Sonmarg Kashmir">
+          <img src="https://images.unsplash.com/photo-1666688449550-26a765798090?q=80&w=1200&auto=format&fit=crop" alt="Pahalgam Kashmir">
+        </div>
       </div>
 
       <div class="box">
-
-        <h2>Package Includes</h2>
-
-        <ul>
-
-          <li>Premium Hotel Stay</li>
-
-          <li>Daily Breakfast & Dinner</li>
-
-          <li>Airport Transfers</li>
-
-          <li>Srinagar Houseboat Experience</li>
-
-          <li>Gulmarg & Sonmarg Tour</li>
-
-          <li>24/7 Holidaydope Support</li>
-
-        </ul>
-
-      </div>
-
-      <div class="box">
-
         <h2>Day Wise Itinerary</h2>
 
-        <p><b>Day 1:</b> Arrival in Srinagar & Houseboat Stay</p>
+        <div class="itinerary-day">
+          <h3>Day 1 — Arrival in Srinagar</h3>
+          <p>
+            Arrive at Srinagar Airport and meet our representative. Transfer to your hotel or houseboat,
+            complete check-in and enjoy a peaceful evening near Dal Lake.
+          </p>
+        </div>
 
-        <p><b>Day 2:</b> Gulmarg Snow & Gondola Experience</p>
+        <div class="itinerary-day">
+          <h3>Day 2 — Gulmarg Snow & Gondola Experience</h3>
+          <p>
+            After breakfast, proceed for a full-day Gulmarg tour. Enjoy snow views, mountain landscapes
+            and optional Gondola ride experience. Return to Srinagar by evening.
+          </p>
+        </div>
 
-        <p><b>Day 3:</b> Sonmarg Valley Tour</p>
+        <div class="itinerary-day">
+          <h3>Day 3 — Sonmarg Valley Tour</h3>
+          <p>
+            Explore Sonmarg, known for golden meadows, river views and beautiful valley landscapes.
+            Enjoy photography, local sightseeing and peaceful mountain vibes.
+          </p>
+        </div>
 
-        <p><b>Day 4:</b> Dal Lake Shikara Ride & Shopping</p>
+        <div class="itinerary-day">
+          <h3>Day 4 — Dal Lake Shikara Ride & Shopping</h3>
+          <p>
+            Enjoy a relaxing Shikara ride on Dal Lake, visit local markets for Kashmiri handicrafts,
+            dry fruits and souvenirs, then spend the evening at leisure.
+          </p>
+        </div>
 
-        <p><b>Day 5:</b> Return Journey</p>
+        <div class="itinerary-day">
+          <h3>Day 5 — Departure</h3>
+          <p>
+            Enjoy breakfast, complete checkout and transfer to Srinagar Airport with unforgettable Kashmir memories.
+          </p>
+        </div>
+      </div>
 
+      <div class="box">
+        <h2>Inclusions & Exclusions</h2>
+
+        <div class="include-grid">
+          <div class="mini-box">
+            <h3>Inclusions</h3>
+            <ul>
+              <li>✅ Premium hotel stay</li>
+              <li>✅ Houseboat experience</li>
+              <li>✅ Daily breakfast & dinner</li>
+              <li>✅ Airport pickup & drop</li>
+              <li>✅ Srinagar, Gulmarg & Sonmarg tour</li>
+              <li>✅ 24/7 Holidaydope support</li>
+            </ul>
+          </div>
+
+          <div class="mini-box">
+            <h3>Exclusions</h3>
+            <ul>
+              <li>❌ Airfare / train fare</li>
+              <li>❌ Gondola ticket</li>
+              <li>❌ Pony ride / union taxi charges</li>
+              <li>❌ Personal expenses</li>
+              <li>❌ GST</li>
+              <li>❌ Anything not mentioned in inclusions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <h2>Best Time To Visit</h2>
+        <p>
+          March to June is best for pleasant weather and sightseeing, while December to February is best
+          for snow lovers and winter experiences in Gulmarg.
+        </p>
+      </div>
+
+      <div class="cta-box">
+        <h2>Ready To Explore Kashmir?</h2>
+        <p>
+          Get the best Kashmir package with Holidaydope. Share your travel date, number of passengers and hotel preference —
+          our team will suggest the best Kashmir plan.
+        </p>
+
+        <a
+          href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Kashmir%20package%20details."
+          target="_blank"
+          class="booking-btn"
+        >
+          Book Now
+        </a>
       </div>
 
     </div>
 
     <div>
-
       <div class="booking-card">
+        <span class="tag">Best Domestic Mountain Escape</span>
 
         <p>Starting From</p>
-
-        <h3>₹24,999</h3>
-
+        <h3>₹14,999</h3>
         <p>Per Person</p>
+
+        <ul>
+          <li>✅ 4 Nights / 5 Days</li>
+          <li>✅ Hotel + Houseboat Experience</li>
+          <li>✅ Breakfast & Dinner</li>
+          <li>✅ Srinagar Sightseeing</li>
+          <li>✅ Gulmarg & Sonmarg Tour</li>
+        </ul>
 
         <a
           href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Kashmir%20package%20details."
@@ -342,16 +331,16 @@
           Book Now
         </a>
 
+        <a href="tel:8595789670" class="call-btn">
+          Call Now
+        </a>
       </div>
-
     </div>
 
   </div>
-
 </section>
 
 <footer>
-
   <img src="/logo.png" class="footer-logo" alt="Holidaydope">
 
   <p>Holidaydope — Chalo Duniya Ghume</p>
@@ -375,7 +364,6 @@
   <p style="margin-top:20px;color:#888;">
     © 2026 Holidaydope. All Rights Reserved.
   </p>
-
 </footer>
 
 </body>
