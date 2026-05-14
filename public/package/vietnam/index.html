@@ -7,9 +7,9 @@
 
   <title>Vietnam Tour Package | Holidaydope</title>
 
-  <meta name="description" content="Book Vietnam package with Holidaydope. Explore Hanoi, Da Nang, beaches, nightlife and luxury Vietnam vacation experience.">
+  <meta name="description" content="Book Vietnam package with Holidaydope. Explore Da Nang, beaches, nightlife, luxury resorts and premium Vietnam vacation experience.">
 
-  <meta name="keywords" content="Vietnam package, Vietnam tour, Da Nang package, Hanoi trip, Holidaydope Vietnam">
+  <meta name="keywords" content="Vietnam package, Vietnam tour, Da Nang package, Hanoi trip, Vietnam beaches, Holidaydope Vietnam">
 
   <meta property="og:title" content="Vietnam Tour Package | Holidaydope">
   <meta property="og:description" content="Luxury Vietnam holiday package with beaches, city tours and premium experiences.">
@@ -70,13 +70,14 @@
       padding:12px 22px;
       border-radius:40px;
       font-weight:800;
+      box-shadow:0 10px 25px rgba(212,175,55,.25);
     }
 
     .hero{
       height:80vh;
 
       background:
-      linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+      linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.58)),
       url('https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=1600&auto=format&fit=crop');
 
       background-size:cover;
@@ -91,6 +92,7 @@
     .hero-content h1{
       font-size:78px;
       font-family:'Playfair Display',serif;
+      margin-bottom:12px;
     }
 
     .hero-content p{
@@ -98,6 +100,16 @@
       letter-spacing:3px;
       margin-bottom:15px;
       font-weight:700;
+    }
+
+    .hero-content span{
+      display:block;
+      max-width:720px;
+      margin:auto;
+      color:#e5e7eb;
+      font-size:18px;
+      line-height:1.7;
+      padding:0 18px;
     }
 
     .detail-grid{
@@ -112,34 +124,109 @@
       padding:35px;
       border:1px solid rgba(255,255,255,.08);
       margin-bottom:30px;
+      box-shadow:0 18px 45px rgba(0,0,0,.18);
     }
 
     .box h2{
       color:#f5c76b;
       margin-bottom:20px;
       font-size:34px;
+      font-family:'Playfair Display',serif;
     }
 
     .box p,
     .box li{
       color:#cbd5e1;
       line-height:1.9;
+      font-size:15.5px;
     }
 
     .box ul{
       padding-left:20px;
     }
 
-    .gallery{
+    .highlight-grid{
       display:grid;
       grid-template-columns:repeat(2,1fr);
       gap:15px;
     }
 
-    .gallery img{
-      height:240px;
+    .highlight-card{
+      background:#0b1626;
+      border:1px solid rgba(245,199,107,.18);
+      border-radius:18px;
+      padding:18px;
+    }
+
+    .highlight-card small{
+      color:#f5c76b;
+      font-weight:700;
+      display:block;
+      margin-bottom:6px;
+    }
+
+    .highlight-card p{
+      color:#fff;
+      line-height:1.5;
+    }
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+    }
+
+    .gallery-grid img{
+      width:100%;
+      height:260px;
       object-fit:cover;
-      border-radius:20px;
+      border-radius:22px;
+      transition:.35s ease;
+    }
+
+    .gallery-grid img:hover{
+      transform:scale(1.03);
+    }
+
+    .itinerary-day{
+      background:#0b1626;
+      border-left:4px solid #f5c76b;
+      border-radius:18px;
+      padding:22px;
+      margin-bottom:18px;
+    }
+
+    .itinerary-day h3{
+      color:#f5c76b;
+      margin-bottom:8px;
+      font-size:20px;
+    }
+
+    .include-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .mini-box{
+      background:#0b1626;
+      border-radius:18px;
+      padding:24px;
+      border:1px solid rgba(255,255,255,.07);
+    }
+
+    .mini-box h3{
+      color:#f5c76b;
+      margin-bottom:14px;
+    }
+
+    .mini-box ul{
+      list-style:none;
+      padding-left:0;
+    }
+
+    .mini-box li{
+      margin-bottom:10px;
     }
 
     .booking-card{
@@ -149,12 +236,35 @@
       position:sticky;
       top:30px;
       border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 18px 45px rgba(0,0,0,.25);
     }
 
     .booking-card h3{
       font-size:48px;
       color:#f5c76b;
       margin:12px 0;
+    }
+
+    .booking-card .tag{
+      background:#0b1626;
+      color:#f5c76b;
+      display:inline-block;
+      padding:8px 14px;
+      border-radius:30px;
+      font-size:13px;
+      font-weight:700;
+      margin-bottom:18px;
+    }
+
+    .booking-card ul{
+      list-style:none;
+      margin-top:22px;
+    }
+
+    .booking-card li{
+      color:#cbd5e1;
+      margin-bottom:10px;
+      font-size:14px;
     }
 
     .booking-btn{
@@ -166,6 +276,44 @@
       padding:16px;
       border-radius:50px;
       font-weight:800;
+    }
+
+    .call-btn{
+      display:block;
+      margin-top:12px;
+      border:1px solid rgba(245,199,107,.5);
+      color:#f5c76b;
+      text-align:center;
+      padding:14px;
+      border-radius:50px;
+      font-weight:800;
+    }
+
+    .cta-box{
+      background:
+      linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+      url('https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?q=80&w=1600&auto=format&fit=crop');
+
+      background-size:cover;
+      background-position:center;
+      border-radius:28px;
+      text-align:center;
+      padding:55px 30px;
+      border:1px solid rgba(245,199,107,.25);
+    }
+
+    .cta-box h2{
+      color:#f5c76b;
+      font-family:'Playfair Display',serif;
+      font-size:38px;
+      margin-bottom:12px;
+    }
+
+    .cta-box p{
+      max-width:700px;
+      margin:0 auto 24px;
+      color:#e5e7eb;
+      line-height:1.8;
     }
 
     footer{
@@ -185,7 +333,15 @@
       margin-bottom:10px;
     }
 
+    footer a{
+      color:#f5c76b;
+    }
+
     @media(max-width:900px){
+
+      section{
+        padding:60px 5%;
+      }
 
       .detail-grid{
         grid-template-columns:1fr;
@@ -195,29 +351,31 @@
         font-size:48px;
       }
 
-      .gallery{
+      .hero-content span{
+        font-size:15px;
+      }
+
+      .gallery-grid,
+      .highlight-grid,
+      .include-grid{
         grid-template-columns:1fr;
       }
 
+      .booking-card{
+        position:relative;
+        top:0;
+      }
+
+      .box{
+        padding:25px;
+      }
+
+      .box h2{
+        font-size:28px;
+      }
+
     }
-.gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
-}
 
-.gallery-grid img{
-  width:100%;
-  height:260px;
-  object-fit:cover;
-  border-radius:22px;
-}
-
-@media(max-width:768px){
-  .gallery-grid{
-    grid-template-columns:1fr;
-  }
-}
   </style>
 
 </head>
@@ -244,6 +402,11 @@
 
     <h1>Vietnam</h1>
 
+    <span>
+      Discover Vietnam with beautiful beaches, Da Nang city vibes,
+      nightlife, tropical experiences and unforgettable luxury vacations with Holidaydope.
+    </span>
+
   </div>
 
 </section>
@@ -259,10 +422,51 @@
         <h2>Overview</h2>
 
         <p>
-          Discover Vietnam with beautiful beaches, luxury resorts,
-          vibrant nightlife, Da Nang city tours and unforgettable
-          tropical experiences. Perfect for couples, friends and family vacations.
+          Vietnam is perfect for travelers looking for a combination of beaches,
+          nightlife, city exploration and tropical relaxation. Explore Da Nang,
+          scenic attractions, beautiful coastlines and vibrant street culture
+          with this premium Vietnam holiday package.
         </p>
+
+      </div>
+
+      <div class="box">
+
+        <h2>Quick Highlights</h2>
+
+        <div class="highlight-grid">
+
+          <div class="highlight-card">
+            <small>Duration</small>
+            <p>4 Nights / 5 Days</p>
+          </div>
+
+          <div class="highlight-card">
+            <small>Stay</small>
+            <p>Premium Hotel Stay</p>
+          </div>
+
+          <div class="highlight-card">
+            <small>Transfers</small>
+            <p>Airport Pickup & Drop</p>
+          </div>
+
+          <div class="highlight-card">
+            <small>Meals</small>
+            <p>Daily Breakfast</p>
+          </div>
+
+          <div class="highlight-card">
+            <small>Best For</small>
+            <p>Friends / Couples / Family Trip</p>
+          </div>
+
+          <div class="highlight-card">
+            <small>Experience</small>
+            <p>Da Nang, Beaches & Nightlife</p>
+          </div>
+
+        </div>
 
       </div>
 
@@ -272,37 +476,15 @@
 
         <div class="gallery-grid">
 
-  <img src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=1200&auto=format&fit=crop" alt="Vietnam Landscape">
+          <img src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=1200&auto=format&fit=crop" alt="Vietnam Landscape">
 
-  <img src="https://images.unsplash.com/photo-1555921015-5532091f6026?q=80&w=1200&auto=format&fit=crop" alt="Vietnam Street">
+          <img src="https://images.unsplash.com/photo-1555921015-5532091f6026?q=80&w=1200&auto=format&fit=crop" alt="Vietnam Street">
 
-  <img src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?q=80&w=1200&auto=format&fit=crop" alt="Vietnam Beach">
+          <img src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?q=80&w=1200&auto=format&fit=crop" alt="Vietnam Beach">
 
-  <img src="https://images.unsplash.com/photo-1709064159097-91b634741c96?q=80&w=1200&auto=format&fit=crop" alt="Vietnam Scenic View">
+          <img src="https://images.unsplash.com/photo-1709064159097-91b634741c96?q=80&w=1200&auto=format&fit=crop" alt="Vietnam Scenic View">
 
-</div>
-
-      </div>
-
-      <div class="box">
-
-        <h2>Package Includes</h2>
-
-        <ul>
-
-          <li>Premium Hotel Stay</li>
-
-          <li>Daily Breakfast</li>
-
-          <li>Airport Transfers</li>
-
-          <li>Da Nang City Tour</li>
-
-          <li>Beach & Nightlife Experience</li>
-
-          <li>24/7 Holidaydope Support</li>
-
-        </ul>
+        </div>
 
       </div>
 
@@ -310,15 +492,145 @@
 
         <h2>Day Wise Itinerary</h2>
 
-        <p><b>Day 1:</b> Arrival & Hotel Check-In</p>
+        <div class="itinerary-day">
 
-        <p><b>Day 2:</b> Da Nang City Tour</p>
+          <h3>Day 1 — Arrival in Vietnam</h3>
 
-        <p><b>Day 3:</b> Beach & Leisure Activities</p>
+          <p>
+            Arrive at Vietnam International Airport and transfer to your hotel.
+            Complete check-in and spend the evening exploring nearby cafes,
+            local nightlife and beautiful city vibes.
+          </p>
 
-        <p><b>Day 4:</b> Shopping & Nightlife Experience</p>
+        </div>
 
-        <p><b>Day 5:</b> Return Journey</p>
+        <div class="itinerary-day">
+
+          <h3>Day 2 — Da Nang City Tour</h3>
+
+          <p>
+            Explore Da Nang city attractions, famous bridges, local markets,
+            scenic viewpoints and enjoy the modern tropical atmosphere of Vietnam.
+          </p>
+
+        </div>
+
+        <div class="itinerary-day">
+
+          <h3>Day 3 — Beach & Leisure Experience</h3>
+
+          <p>
+            Relax at beautiful beaches, enjoy water activities,
+            beachside cafes and peaceful ocean views with free leisure time.
+          </p>
+
+        </div>
+
+        <div class="itinerary-day">
+
+          <h3>Day 4 — Shopping & Nightlife</h3>
+
+          <p>
+            Explore Vietnam shopping streets, local markets and nightlife areas.
+            Enjoy food, cafes and memorable evening experiences.
+          </p>
+
+        </div>
+
+        <div class="itinerary-day">
+
+          <h3>Day 5 — Departure</h3>
+
+          <p>
+            Enjoy breakfast, complete checkout and transfer to the airport
+            with unforgettable Vietnam memories.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="box">
+
+        <h2>Inclusions & Exclusions</h2>
+
+        <div class="include-grid">
+
+          <div class="mini-box">
+
+            <h3>Inclusions</h3>
+
+            <ul>
+
+              <li>✅ Premium hotel stay</li>
+
+              <li>✅ Daily breakfast</li>
+
+              <li>✅ Airport pickup & drop</li>
+
+              <li>✅ Da Nang city tour</li>
+
+              <li>✅ Beach & nightlife experience</li>
+
+              <li>✅ 24/7 Holidaydope support</li>
+
+            </ul>
+
+          </div>
+
+          <div class="mini-box">
+
+            <h3>Exclusions</h3>
+
+            <ul>
+
+              <li>❌ Airfare</li>
+
+              <li>❌ Visa charges if applicable</li>
+
+              <li>❌ Personal expenses</li>
+
+              <li>❌ Travel insurance</li>
+
+              <li>❌ GST / TCS</li>
+
+              <li>❌ Anything not mentioned in inclusions</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="box">
+
+        <h2>Best Time To Visit</h2>
+
+        <p>
+          February to May is considered one of the best times to visit Vietnam
+          for beaches, sightseeing and comfortable weather conditions.
+        </p>
+
+      </div>
+
+      <div class="cta-box">
+
+        <h2>Ready To Explore Vietnam?</h2>
+
+        <p>
+          Get the best Vietnam package with Holidaydope.
+          Share your travel dates and preferences for the best hotel and tour options.
+        </p>
+
+        <a
+          href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Vietnam%20package%20details."
+          target="_blank"
+          class="booking-btn"
+        >
+          Book Now
+        </a>
 
       </div>
 
@@ -328,11 +640,27 @@
 
       <div class="booking-card">
 
+        <span class="tag">Best Budget International Escape</span>
+
         <p>Starting From</p>
 
-        <h3>₹52,999</h3>
+        <h3>₹19,999</h3>
 
         <p>Per Person</p>
+
+        <ul>
+
+          <li>✅ 4 Nights / 5 Days</li>
+
+          <li>✅ Premium Hotel Stay</li>
+
+          <li>✅ Daily Breakfast</li>
+
+          <li>✅ Da Nang City Tour</li>
+
+          <li>✅ Beach & Nightlife Experience</li>
+
+        </ul>
 
         <a
           href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Vietnam%20package%20details."
@@ -340,6 +668,10 @@
           class="booking-btn"
         >
           Book Now
+        </a>
+
+        <a href="tel:8595789670" class="call-btn">
+          Call Now
         </a>
 
       </div>
