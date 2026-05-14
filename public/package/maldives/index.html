@@ -3,28 +3,24 @@
 <head>
 
   <!-- SEO -->
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Maldives Luxury Package | Holidaydope</title>
 
-  <meta name="description" content="Book luxury Maldives package with Holidaydope. Water villa stay, premium resorts, island tours and unforgettable beach vacation.">
-
-  <meta name="keywords" content="Maldives package, Maldives tour, water villa, Holidaydope Maldives">
+  <meta name="description" content="Book luxury Maldives package with Holidaydope. Water villa stay, beach villa, speedboat transfers, premium resorts, island tours and romantic beach vacation.">
+  <meta name="keywords" content="Maldives package, Maldives tour, water villa, Maldives honeymoon package, Holidaydope Maldives">
 
   <meta property="og:title" content="Maldives Luxury Package | Holidaydope">
-  <meta property="og:description" content="Luxury Maldives holiday package with premium resorts and island experience.">
+  <meta property="og:description" content="Luxury Maldives holiday package with premium resorts, water villa and island experience.">
   <meta property="og:image" content="/logo.png">
 
   <link rel="icon" href="/favicon.png">
 
   <!-- FONT -->
-
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-
     *{
       margin:0;
       padding:0;
@@ -53,7 +49,6 @@
     }
 
     /* NAVBAR */
-
     .navbar{
       position:absolute;
       top:0;
@@ -76,20 +71,17 @@
       padding:12px 22px;
       border-radius:40px;
       font-weight:800;
+      box-shadow:0 10px 25px rgba(212,175,55,.25);
     }
 
     /* HERO */
-
     .hero{
       height:80vh;
-
       background:
-      linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+      linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.58)),
       url('https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=1600&auto=format&fit=crop');
-
       background-size:cover;
       background-position:center;
-
       display:flex;
       align-items:center;
       justify-content:center;
@@ -99,6 +91,7 @@
     .hero-content h1{
       font-size:78px;
       font-family:'Playfair Display',serif;
+      margin-bottom:12px;
     }
 
     .hero-content p{
@@ -108,8 +101,17 @@
       font-weight:700;
     }
 
-    /* GRID */
+    .hero-content span{
+      display:block;
+      max-width:720px;
+      margin:auto;
+      color:#e5e7eb;
+      font-size:18px;
+      line-height:1.7;
+      padding:0 18px;
+    }
 
+    /* GRID */
     .detail-grid{
       display:grid;
       grid-template-columns:2fr 1fr;
@@ -122,26 +124,54 @@
       padding:35px;
       border:1px solid rgba(255,255,255,.08);
       margin-bottom:30px;
+      box-shadow:0 18px 45px rgba(0,0,0,.18);
     }
 
     .box h2{
       color:#f5c76b;
       margin-bottom:20px;
       font-size:34px;
+      font-family:'Playfair Display',serif;
     }
 
     .box p,
     .box li{
       color:#cbd5e1;
       line-height:1.9;
+      font-size:15.5px;
     }
 
     .box ul{
       padding-left:20px;
     }
 
-    /* GALLERY */
+    /* QUICK HIGHLIGHTS */
+    .highlight-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:15px;
+    }
 
+    .highlight-card{
+      background:#0b1626;
+      border:1px solid rgba(245,199,107,.18);
+      border-radius:18px;
+      padding:18px;
+    }
+
+    .highlight-card small{
+      color:#f5c76b;
+      font-weight:700;
+      display:block;
+      margin-bottom:6px;
+    }
+
+    .highlight-card p{
+      color:#fff;
+      line-height:1.5;
+    }
+
+    /* GALLERY */
     .gallery{
       display:grid;
       grid-template-columns:repeat(2,1fr);
@@ -152,10 +182,57 @@
       height:240px;
       object-fit:cover;
       border-radius:20px;
+      transition:.35s ease;
+    }
+
+    .gallery img:hover{
+      transform:scale(1.03);
+    }
+
+    /* ITINERARY */
+    .itinerary-day{
+      background:#0b1626;
+      border-left:4px solid #f5c76b;
+      border-radius:18px;
+      padding:22px;
+      margin-bottom:18px;
+    }
+
+    .itinerary-day h3{
+      color:#f5c76b;
+      margin-bottom:8px;
+      font-size:20px;
+    }
+
+    /* INCLUSION */
+    .include-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .mini-box{
+      background:#0b1626;
+      border-radius:18px;
+      padding:24px;
+      border:1px solid rgba(255,255,255,.07);
+    }
+
+    .mini-box h3{
+      color:#f5c76b;
+      margin-bottom:14px;
+    }
+
+    .mini-box ul{
+      list-style:none;
+      padding-left:0;
+    }
+
+    .mini-box li{
+      margin-bottom:10px;
     }
 
     /* BOOKING */
-
     .booking-card{
       background:#111d2d;
       border-radius:24px;
@@ -163,12 +240,35 @@
       position:sticky;
       top:30px;
       border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 18px 45px rgba(0,0,0,.25);
     }
 
     .booking-card h3{
       font-size:48px;
       color:#f5c76b;
       margin:12px 0;
+    }
+
+    .booking-card .tag{
+      background:#0b1626;
+      color:#f5c76b;
+      display:inline-block;
+      padding:8px 14px;
+      border-radius:30px;
+      font-size:13px;
+      font-weight:700;
+      margin-bottom:18px;
+    }
+
+    .booking-card ul{
+      list-style:none;
+      margin-top:22px;
+    }
+
+    .booking-card li{
+      color:#cbd5e1;
+      margin-bottom:10px;
+      font-size:14px;
     }
 
     .booking-btn{
@@ -182,12 +282,51 @@
       font-weight:800;
     }
 
-    .booking-btn:hover{
+    .call-btn{
+      display:block;
+      margin-top:12px;
+      border:1px solid rgba(245,199,107,.5);
+      color:#f5c76b;
+      text-align:center;
+      padding:14px;
+      border-radius:50px;
+      font-weight:800;
+    }
+
+    .booking-btn:hover,
+    .call-btn:hover,
+    .home-btn:hover{
       opacity:.9;
     }
 
-    /* FOOTER */
+    /* CTA */
+    .cta-box{
+      background:
+      linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+      url('https://images.unsplash.com/photo-1540202404-a2f29016b523?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      border-radius:28px;
+      text-align:center;
+      padding:55px 30px;
+      border:1px solid rgba(245,199,107,.25);
+    }
 
+    .cta-box h2{
+      color:#f5c76b;
+      font-family:'Playfair Display',serif;
+      font-size:38px;
+      margin-bottom:12px;
+    }
+
+    .cta-box p{
+      max-width:700px;
+      margin:0 auto 24px;
+      color:#e5e7eb;
+      line-height:1.8;
+    }
+
+    /* FOOTER */
     footer{
       background:#050b14;
       padding:50px 7%;
@@ -205,9 +344,15 @@
       margin-bottom:10px;
     }
 
-    /* MOBILE */
+    footer a{
+      color:#f5c76b;
+    }
 
+    /* MOBILE */
     @media(max-width:900px){
+      section{
+        padding:60px 5%;
+      }
 
       .detail-grid{
         grid-template-columns:1fr;
@@ -217,12 +362,29 @@
         font-size:48px;
       }
 
-      .gallery{
+      .hero-content span{
+        font-size:15px;
+      }
+
+      .gallery,
+      .highlight-grid,
+      .include-grid{
         grid-template-columns:1fr;
       }
 
-    }
+      .booking-card{
+        position:relative;
+        top:0;
+      }
 
+      .box{
+        padding:25px;
+      }
+
+      .box h2{
+        font-size:28px;
+      }
+    }
   </style>
 
 </head>
@@ -230,9 +392,7 @@
 <body>
 
 <!-- NAVBAR -->
-
 <nav class="navbar">
-
   <a href="/">
     <img src="/logo.png" class="logo" alt="Holidaydope">
   </a>
@@ -240,123 +400,203 @@
   <a href="/package/index.html" class="home-btn">
     All Packages
   </a>
-
 </nav>
 
 <!-- HERO -->
-
 <section class="hero">
-
   <div class="hero-content">
-
     <p>LUXURY INTERNATIONAL PACKAGE</p>
-
-    <h1>
-      Maldives
-    </h1>
-
+    <h1>Maldives</h1>
+    <span>Crystal blue waters, private villas, romantic sunsets and unforgettable island experiences with Holidaydope.</span>
   </div>
-
 </section>
 
 <!-- DETAILS -->
-
 <section>
-
   <div class="detail-grid">
 
     <!-- LEFT -->
-
     <div>
 
       <!-- OVERVIEW -->
-
       <div class="box">
-
         <h2>Overview</h2>
-
         <p>
-          Experience crystal clear blue ocean, luxury water villas and unforgettable tropical island vibes in Maldives.
-          Enjoy premium resorts, romantic sunsets, private beaches and luxury dining with Holidaydope.
+          Experience the magic of Maldives with luxury beach villas, turquoise lagoons, water villa stays and peaceful island vibes.
+          This package is designed for honeymoon couples, families and luxury travellers who want a premium tropical escape with smooth transfers,
+          relaxing resort experiences and memorable ocean views.
         </p>
+      </div>
 
+      <!-- QUICK HIGHLIGHTS -->
+      <div class="box">
+        <h2>Quick Highlights</h2>
+
+        <div class="highlight-grid">
+          <div class="highlight-card">
+            <small>Duration</small>
+            <p>4 Nights / 5 Days</p>
+          </div>
+
+          <div class="highlight-card">
+            <small>Stay</small>
+            <p>Beach Villa + Water Villa</p>
+          </div>
+
+          <div class="highlight-card">
+            <small>Transfers</small>
+            <p>Speedboat Transfer</p>
+          </div>
+
+          <div class="highlight-card">
+            <small>Meals</small>
+            <p>Breakfast & Dinner</p>
+          </div>
+
+          <div class="highlight-card">
+            <small>Best For</small>
+            <p>Honeymoon / Couples / Luxury Trip</p>
+          </div>
+
+          <div class="highlight-card">
+            <small>Experience</small>
+            <p>Beach, Lagoon, Resort & Water Villa</p>
+          </div>
+        </div>
       </div>
 
       <!-- GALLERY -->
-
       <div class="box">
-
         <h2>Package Gallery</h2>
 
         <div class="gallery">
-
-          <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=1200&auto=format&fit=crop">
-
-          <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=1200&auto=format&fit=crop">
-
-          <img src="https://images.unsplash.com/photo-1540202404-a2f29016b523?q=80&w=1200&auto=format&fit=crop">
-
-          <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1200&auto=format&fit=crop">
-
+          <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=1200&auto=format&fit=crop" alt="Maldives luxury water villa">
+          <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=1200&auto=format&fit=crop" alt="Maldives tropical island beach">
+          <img src="https://images.unsplash.com/photo-1540202404-a2f29016b523?q=80&w=1200&auto=format&fit=crop" alt="Maldives resort beach">
+          <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1200&auto=format&fit=crop" alt="Maldives ocean holiday">
         </div>
-
-      </div>
-
-      <!-- INCLUDES -->
-
-      <div class="box">
-
-        <h2>Package Includes</h2>
-
-        <ul>
-
-          <li>Luxury Water Villa Stay</li>
-
-          <li>Daily Breakfast & Dinner</li>
-
-          <li>Airport Transfers</li>
-
-          <li>Island Excursions</li>
-
-          <li>Premium Resort Experience</li>
-
-          <li>24/7 Holidaydope Support</li>
-
-        </ul>
-
       </div>
 
       <!-- ITINERARY -->
-
       <div class="box">
-
         <h2>Day Wise Itinerary</h2>
 
-        <p><b>Day 1:</b> Arrival & Luxury Resort Check-In</p>
+        <div class="itinerary-day">
+          <h3>Day 1 — Arrival in Maldives</h3>
+          <p>
+            Arrive at Maldives International Airport and meet the resort representative. Enjoy a scenic speedboat transfer to your luxury resort,
+            complete check-in, sip your welcome drink, relax by the private beach and enjoy a beautiful sunset dinner by the ocean.
+          </p>
+        </div>
 
-        <p><b>Day 2:</b> Water Activities & Island Exploration</p>
+        <div class="itinerary-day">
+          <h3>Day 2 — Water Activities & Island Experience</h3>
+          <p>
+            Start your day with breakfast at the resort. Explore Maldives' clear lagoon and marine life with snorkeling.
+            Optional activities like scuba diving, jet ski or sandbank excursion can be arranged. Spend the evening at leisure with peaceful ocean views.
+          </p>
+        </div>
 
-        <p><b>Day 3:</b> Romantic Beach Dinner & Leisure</p>
+        <div class="itinerary-day">
+          <h3>Day 3 — Water Villa Experience</h3>
+          <p>
+            Shift to your luxury water villa and enjoy breathtaking views of the turquoise lagoon. Relax in your private villa,
+            enjoy a floating breakfast experience and end the day with a romantic candlelight dinner.
+          </p>
+        </div>
 
-        <p><b>Day 4:</b> Resort Relaxation & Sunset Cruise</p>
+        <div class="itinerary-day">
+          <h3>Day 4 — Leisure, Spa & Sunset Cruise</h3>
+          <p>
+            Enjoy a slow luxury day at the resort. You can relax at the beach, book a spa session, capture beautiful vacation photos,
+            enjoy resort activities and experience a peaceful sunset cruise.
+          </p>
+        </div>
 
-        <p><b>Day 5:</b> Checkout & Return Journey</p>
+        <div class="itinerary-day">
+          <h3>Day 5 — Departure</h3>
+          <p>
+            Enjoy your final breakfast in paradise, complete checkout formalities and take the speedboat transfer back to the airport
+            with unforgettable Maldives memories.
+          </p>
+        </div>
+      </div>
 
+      <!-- INCLUSIONS & EXCLUSIONS -->
+      <div class="box">
+        <h2>Inclusions & Exclusions</h2>
+
+        <div class="include-grid">
+          <div class="mini-box">
+            <h3>Inclusions</h3>
+            <ul>
+              <li>✅ Luxury resort stay</li>
+              <li>✅ Beach Villa + Water Villa experience</li>
+              <li>✅ Daily Breakfast & Dinner</li>
+              <li>✅ Speedboat airport transfers</li>
+              <li>✅ Welcome drink on arrival</li>
+              <li>✅ 24/7 Holidaydope support</li>
+            </ul>
+          </div>
+
+          <div class="mini-box">
+            <h3>Exclusions</h3>
+            <ul>
+              <li>❌ Airfare</li>
+              <li>❌ Personal expenses</li>
+              <li>❌ Travel insurance</li>
+              <li>❌ GST / TCS</li>
+              <li>❌ Optional water activities</li>
+              <li>❌ Anything not mentioned in inclusions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- BEST TIME -->
+      <div class="box">
+        <h2>Best Time To Visit</h2>
+        <p>
+          November to April is considered the best time to visit Maldives for sunny weather, clear blue water,
+          romantic sunsets and premium island experiences.
+        </p>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-box">
+        <h2>Ready To Explore Maldives?</h2>
+        <p>
+          Get the best Maldives package with Holidaydope. Share your travel date, number of passengers and hotel preference —
+          our team will suggest the best resort options.
+        </p>
+
+        <a
+          href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Maldives%20package%20details."
+          target="_blank"
+          class="booking-btn"
+        >
+          WhatsApp Inquiry
+        </a>
       </div>
 
     </div>
 
     <!-- RIGHT -->
-
     <div>
-
       <div class="booking-card">
+        <span class="tag">Most Loved Honeymoon Escape</span>
 
         <p>Starting From</p>
-
         <h3>₹69,999</h3>
-
         <p>Per Person</p>
+
+        <ul>
+          <li>✅ 4 Nights / 5 Days</li>
+          <li>✅ Beach Villa + Water Villa</li>
+          <li>✅ Breakfast & Dinner</li>
+          <li>✅ Speedboat Transfers</li>
+          <li>✅ Premium Resort Experience</li>
+        </ul>
 
         <a
           href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Maldives%20package%20details."
@@ -366,19 +606,18 @@
           Book Now
         </a>
 
+        <a href="tel:8595789670" class="call-btn">
+          Call Now
+        </a>
       </div>
-
     </div>
 
   </div>
-
 </section>
 
 <!-- FOOTER -->
-
 <footer>
-
-  <img src="/logo.png" class="footer-logo">
+  <img src="/logo.png" class="footer-logo" alt="Holidaydope Logo">
 
   <p>Holidaydope — Chalo Duniya Ghume</p>
 
@@ -401,7 +640,6 @@
   <p style="margin-top:20px;color:#888;">
     © 2026 Holidaydope. All Rights Reserved.
   </p>
-
 </footer>
 
 </body>
