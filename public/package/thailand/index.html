@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thailand Tour Package | Holidaydope</title>
+  <title>Thailand Tour Packages | Holidaydope</title>
 
-  <meta name="description" content="Book Thailand package with Holidaydope. Bangkok, Phuket, Krabi, island tours, nightlife and premium beach vacation.">
+  <meta name="description" content="Book Thailand packages with Holidaydope. Bangkok Pattaya package, Phuket Krabi package, island tours, nightlife, beaches and premium Thailand vacation.">
+  <meta name="keywords" content="Thailand package, Bangkok Pattaya package, Phuket Krabi package, Thailand tour, Holidaydope Thailand">
 
-  <meta name="keywords" content="Thailand package, Phuket tour, Krabi package, Bangkok trip, Holidaydope Thailand">
-
-  <meta property="og:title" content="Thailand Tour Package | Holidaydope">
-  <meta property="og:description" content="Premium Thailand holiday package with Phuket, Krabi and Bangkok experience.">
+  <meta property="og:title" content="Thailand Tour Packages | Holidaydope">
+  <meta property="og:description" content="Premium Thailand holiday packages with Bangkok Pattaya and Phuket Krabi options.">
   <meta property="og:image" content="/logo.png">
 
   <link rel="icon" href="/favicon.png">
@@ -18,7 +17,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-
     *{
       margin:0;
       padding:0;
@@ -68,18 +66,16 @@
       padding:12px 22px;
       border-radius:40px;
       font-weight:800;
+      box-shadow:0 10px 25px rgba(212,175,55,.25);
     }
 
     .hero{
       height:80vh;
-
       background:
-      linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-      url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop');
-
+      linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.58)),
+      url('https://images.unsplash.com/photo-1508009603885-50cf7c579365?q=80&w=1600&auto=format&fit=crop');
       background-size:cover;
       background-position:center;
-
       display:flex;
       align-items:center;
       justify-content:center;
@@ -89,6 +85,7 @@
     .hero-content h1{
       font-size:78px;
       font-family:'Playfair Display',serif;
+      margin-bottom:12px;
     }
 
     .hero-content p{
@@ -98,10 +95,14 @@
       font-weight:700;
     }
 
-    .detail-grid{
-      display:grid;
-      grid-template-columns:2fr 1fr;
-      gap:40px;
+    .hero-content span{
+      display:block;
+      max-width:760px;
+      margin:auto;
+      color:#e5e7eb;
+      font-size:18px;
+      line-height:1.7;
+      padding:0 18px;
     }
 
     .box{
@@ -110,60 +111,208 @@
       padding:35px;
       border:1px solid rgba(255,255,255,.08);
       margin-bottom:30px;
+      box-shadow:0 18px 45px rgba(0,0,0,.18);
     }
 
     .box h2{
       color:#f5c76b;
       margin-bottom:20px;
       font-size:34px;
+      font-family:'Playfair Display',serif;
     }
 
     .box p,
     .box li{
       color:#cbd5e1;
       line-height:1.9;
+      font-size:15.5px;
     }
 
-    .box ul{
-      padding-left:20px;
+    .package-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:30px;
+      margin-top:40px;
+    }
+
+    .package-card{
+      background:#111d2d;
+      border-radius:28px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 18px 45px rgba(0,0,0,.22);
+      transition:.35s ease;
+    }
+
+    .package-card:hover{
+      transform:translateY(-8px);
+      border-color:rgba(245,199,107,.35);
+    }
+
+    .package-card img{
+      height:280px;
+      object-fit:cover;
+    }
+
+    .package-content{
+      padding:30px;
+    }
+
+    .package-content h2{
+      color:#f5c76b;
+      font-family:'Playfair Display',serif;
+      font-size:34px;
+      margin-bottom:12px;
+    }
+
+    .package-content p{
+      color:#cbd5e1;
+      line-height:1.8;
+      margin-bottom:18px;
+    }
+
+    .price{
+      color:#fff;
+      font-size:15px;
+      margin-bottom:18px;
+    }
+
+    .price b{
+      display:block;
+      color:#f5c76b;
+      font-size:34px;
+      margin-top:5px;
+    }
+
+    .highlights{
+      list-style:none;
+      margin:20px 0;
+    }
+
+    .highlights li{
+      color:#cbd5e1;
+      margin-bottom:10px;
+      font-size:15px;
+    }
+
+    .booking-btn{
+      display:inline-block;
+      margin-top:15px;
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      color:#111;
+      text-align:center;
+      padding:15px 26px;
+      border-radius:50px;
+      font-weight:800;
+    }
+
+    .outline-btn{
+      display:inline-block;
+      margin-top:15px;
+      margin-left:8px;
+      border:1px solid rgba(245,199,107,.5);
+      color:#f5c76b;
+      text-align:center;
+      padding:14px 24px;
+      border-radius:50px;
+      font-weight:800;
+    }
+
+    .itinerary-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:25px;
+      margin-top:30px;
+    }
+
+    .itinerary-box{
+      background:#0b1626;
+      border-radius:22px;
+      padding:28px;
+      border-left:4px solid #f5c76b;
+    }
+
+    .itinerary-box h3{
+      color:#f5c76b;
+      margin-bottom:16px;
+      font-size:22px;
+    }
+
+    .itinerary-box p{
+      color:#cbd5e1;
+      line-height:1.8;
+      margin-bottom:12px;
     }
 
     .gallery{
       display:grid;
-      grid-template-columns:repeat(2,1fr);
+      grid-template-columns:repeat(4,1fr);
       gap:15px;
     }
 
     .gallery img{
-      height:240px;
+      height:220px;
       object-fit:cover;
       border-radius:20px;
+      transition:.35s ease;
     }
 
-    .booking-card{
-      background:#111d2d;
-      border-radius:24px;
-      padding:35px;
-      position:sticky;
-      top:30px;
-      border:1px solid rgba(255,255,255,.08);
+    .gallery img:hover{
+      transform:scale(1.03);
     }
 
-    .booking-card h3{
-      font-size:48px;
+    .include-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .mini-box{
+      background:#0b1626;
+      border-radius:18px;
+      padding:24px;
+      border:1px solid rgba(255,255,255,.07);
+    }
+
+    .mini-box h3{
       color:#f5c76b;
-      margin:12px 0;
+      margin-bottom:14px;
     }
 
-    .booking-btn{
-      display:block;
-      margin-top:25px;
-      background:linear-gradient(135deg,#d4af37,#f7df8a);
-      color:#111;
+    .mini-box ul{
+      list-style:none;
+      padding-left:0;
+    }
+
+    .mini-box li{
+      margin-bottom:10px;
+    }
+
+    .cta-box{
+      background:
+      linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+      url('https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      border-radius:28px;
       text-align:center;
-      padding:16px;
-      border-radius:50px;
-      font-weight:800;
+      padding:55px 30px;
+      border:1px solid rgba(245,199,107,.25);
+      margin-top:30px;
+    }
+
+    .cta-box h2{
+      color:#f5c76b;
+      font-family:'Playfair Display',serif;
+      font-size:38px;
+      margin-bottom:12px;
+    }
+
+    .cta-box p{
+      max-width:760px;
+      margin:0 auto 24px;
+      color:#e5e7eb;
+      line-height:1.8;
     }
 
     footer{
@@ -183,30 +332,57 @@
       margin-bottom:10px;
     }
 
-    @media(max-width:900px){
+    footer a{
+      color:#f5c76b;
+    }
 
-      .detail-grid{
-        grid-template-columns:1fr;
+    @media(max-width:900px){
+      section{
+        padding:60px 5%;
       }
 
       .hero-content h1{
         font-size:48px;
       }
 
+      .hero-content span{
+        font-size:15px;
+      }
+
+      .package-grid,
+      .itinerary-grid,
+      .include-grid,
       .gallery{
         grid-template-columns:1fr;
       }
 
+      .box{
+        padding:25px;
+      }
+
+      .box h2{
+        font-size:28px;
+      }
+
+      .package-content h2{
+        font-size:29px;
+      }
+
+      .outline-btn{
+        margin-left:0;
+        display:block;
+      }
+
+      .booking-btn{
+        display:block;
+      }
     }
-
   </style>
-
 </head>
 
 <body>
 
 <nav class="navbar">
-
   <a href="/">
     <img src="/logo.png" class="logo" alt="Holidaydope">
   </a>
@@ -214,125 +390,205 @@
   <a href="/package/index.html" class="home-btn">
     All Packages
   </a>
-
 </nav>
 
 <section class="hero">
-
   <div class="hero-content">
-
     <p>LUXURY INTERNATIONAL PACKAGE</p>
-
     <h1>Thailand</h1>
+    <span>Choose your perfect Thailand escape — Bangkok Pattaya for nightlife and city fun, or Phuket Krabi for beaches, islands and tropical luxury.</span>
+  </div>
+</section>
+
+<section>
+
+  <div class="box">
+    <h2>Thailand Packages</h2>
+    <p>
+      Thailand is perfect for couples, friends, families and first-time international travellers.
+      Holidaydope offers two popular Thailand package options: Bangkok + Pattaya for city, shopping, nightlife and Coral Island experience,
+      and Phuket + Krabi for premium beaches, island hopping and tropical relaxation.
+    </p>
+  </div>
+
+  <div class="package-grid">
+
+    <!-- Bangkok Pattaya -->
+    <div class="package-card">
+      <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?q=80&w=1200&auto=format&fit=crop" alt="Bangkok Pattaya Thailand Package">
+
+      <div class="package-content">
+        <h2>Bangkok + Pattaya</h2>
+        <p>
+          Best for nightlife, shopping, Coral Island, floating market and fun city experiences.
+          Perfect for friends, couples and budget-friendly Thailand holidays.
+        </p>
+
+        <div class="price">
+          Starting From
+          <b>₹19,999</b>
+          Per Person
+        </div>
+
+        <ul class="highlights">
+          <li>✅ 4 Nights / 5 Days</li>
+          <li>✅ Bangkok + Pattaya Stay</li>
+          <li>✅ Coral Island Tour</li>
+          <li>✅ Bangkok City Tour</li>
+          <li>✅ Daily Breakfast</li>
+        </ul>
+
+        <a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Bangkok%20Pattaya%20Thailand%20package%20details." target="_blank" class="booking-btn">
+          WhatsApp Inquiry
+        </a>
+
+        <a href="tel:8595789670" class="outline-btn">
+          Call Now
+        </a>
+      </div>
+    </div>
+
+    <!-- Phuket Krabi -->
+    <div class="package-card">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Phuket Krabi Thailand Package">
+
+      <div class="package-content">
+        <h2>Phuket + Krabi</h2>
+        <p>
+          Best for premium beaches, island hopping, Phi Phi Island, Krabi 4 Island Tour and luxury tropical vibes.
+          Perfect for couples, honeymoon and beach lovers.
+        </p>
+
+        <div class="price">
+          Starting From
+          <b>₹29,999</b>
+          Per Person
+        </div>
+
+        <ul class="highlights">
+          <li>✅ 4 Nights / 5 Days</li>
+          <li>✅ Phuket + Krabi Stay</li>
+          <li>✅ Phi Phi Island Tour</li>
+          <li>✅ Krabi 4 Island Tour</li>
+          <li>✅ Daily Breakfast</li>
+        </ul>
+
+        <a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Phuket%20Krabi%20Thailand%20package%20details." target="_blank" class="booking-btn">
+          WhatsApp Inquiry
+        </a>
+
+        <a href="tel:8595789670" class="outline-btn">
+          Call Now
+        </a>
+      </div>
+    </div>
 
   </div>
 
 </section>
 
 <section>
+  <div class="box">
+    <h2>Day Wise Itinerary</h2>
 
-  <div class="detail-grid">
+    <div class="itinerary-grid">
 
-    <div>
+      <div class="itinerary-box">
+        <h3>Bangkok + Pattaya Itinerary</h3>
 
-      <div class="box">
-
-        <h2>Overview</h2>
-
-        <p>
-          Explore Thailand with Bangkok nightlife, Phuket beaches,
-          Krabi island tours, floating markets and luxury tropical vibes.
-          Perfect for friends, couples and unforgettable beach vacations.
-        </p>
-
+        <p><b>Day 1:</b> Arrival in Bangkok, transfer to Pattaya and hotel check-in.</p>
+        <p><b>Day 2:</b> Coral Island Tour with beach activities and leisure evening.</p>
+        <p><b>Day 3:</b> Pattaya sightseeing, optional floating market and transfer to Bangkok.</p>
+        <p><b>Day 4:</b> Bangkok city tour, temples, shopping and nightlife experience.</p>
+        <p><b>Day 5:</b> Breakfast, checkout and airport transfer.</p>
       </div>
 
-      <div class="box">
+      <div class="itinerary-box">
+        <h3>Phuket + Krabi Itinerary</h3>
 
-        <h2>Package Gallery</h2>
-
-        <div class="gallery">
-
-          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop">
-
-          <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=1200&auto=format&fit=crop">
-
-          <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=1200&auto=format&fit=crop">
-
-          <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?q=80&w=1200&auto=format&fit=crop">
-
-        </div>
-
+        <p><b>Day 1:</b> Arrival in Phuket, hotel check-in and leisure evening.</p>
+        <p><b>Day 2:</b> Phi Phi Island Tour with scenic beaches and crystal-clear water.</p>
+        <p><b>Day 3:</b> Transfer to Krabi and relax near beautiful beaches.</p>
+        <p><b>Day 4:</b> Krabi 4 Island Tour with longtail boat experience.</p>
+        <p><b>Day 5:</b> Breakfast, checkout and airport transfer.</p>
       </div>
 
-      <div class="box">
+    </div>
+  </div>
+</section>
 
-        <h2>Package Includes</h2>
+<section>
+  <div class="box">
+    <h2>Package Gallery</h2>
 
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?q=80&w=1200&auto=format&fit=crop" alt="Bangkok Thailand">
+      <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=1200&auto=format&fit=crop" alt="Thailand temple tour">
+      <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=1200&auto=format&fit=crop" alt="Phuket Thailand beach">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Krabi Thailand beach">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="box">
+    <h2>Inclusions & Exclusions</h2>
+
+    <div class="include-grid">
+
+      <div class="mini-box">
+        <h3>Inclusions</h3>
         <ul>
-
-          <li>Premium Hotel Stay</li>
-
-          <li>Daily Breakfast</li>
-
-          <li>Airport Transfers</li>
-
-          <li>Bangkok City Tour</li>
-
-          <li>Phuket & Krabi Island Tour</li>
-
-          <li>24/7 Holidaydope Support</li>
-
+          <li>✅ Premium hotel stay</li>
+          <li>✅ Daily breakfast</li>
+          <li>✅ Airport pickup & drop</li>
+          <li>✅ Sightseeing as per package</li>
+          <li>✅ Island tours as per package</li>
+          <li>✅ 24/7 Holidaydope support</li>
         </ul>
-
       </div>
 
-      <div class="box">
-
-        <h2>Day Wise Itinerary</h2>
-
-        <p><b>Day 1:</b> Arrival in Bangkok & Hotel Check-In</p>
-
-        <p><b>Day 2:</b> Bangkok City Tour & Nightlife</p>
-
-        <p><b>Day 3:</b> Phuket Beach Experience</p>
-
-        <p><b>Day 4:</b> Krabi Island Tour & Adventure</p>
-
-        <p><b>Day 5:</b> Shopping & Return Journey</p>
-
+      <div class="mini-box">
+        <h3>Exclusions</h3>
+        <ul>
+          <li>❌ Airfare</li>
+          <li>❌ Visa charges if applicable</li>
+          <li>❌ Personal expenses</li>
+          <li>❌ Travel insurance</li>
+          <li>❌ GST / TCS</li>
+          <li>❌ Anything not mentioned in inclusions</li>
+        </ul>
       </div>
 
     </div>
-
-    <div>
-
-      <div class="booking-card">
-
-        <p>Starting From</p>
-
-        <h3>₹42,999</h3>
-
-        <p>Per Person</p>
-
-        <a
-          href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Thailand%20package%20details."
-          target="_blank"
-          class="booking-btn"
-        >
-          Book Now
-        </a>
-
-      </div>
-
-    </div>
-
   </div>
 
+  <div class="box">
+    <h2>Best Time To Visit</h2>
+    <p>
+      November to April is one of the best times to visit Thailand for beaches, island tours, sightseeing and outdoor activities.
+      Bangkok and Pattaya can be visited almost all year, while Phuket and Krabi are best enjoyed in clear-weather months.
+    </p>
+  </div>
+
+  <div class="cta-box">
+    <h2>Ready To Explore Thailand?</h2>
+    <p>
+      Tell us your preferred Thailand package — Bangkok Pattaya or Phuket Krabi — and Holidaydope will share the best plan,
+      hotel options and final quotation.
+    </p>
+
+    <a
+      href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Thailand%20package%20details.%20Please%20share%20Bangkok%20Pattaya%20and%20Phuket%20Krabi%20options."
+      target="_blank"
+      class="booking-btn"
+    >
+      Get Thailand Package
+    </a>
+  </div>
 </section>
 
 <footer>
-
   <img src="/logo.png" class="footer-logo" alt="Holidaydope">
 
   <p>Holidaydope — Chalo Duniya Ghume</p>
@@ -356,7 +612,6 @@
   <p style="margin-top:20px;color:#888;">
     © 2026 Holidaydope. All Rights Reserved.
   </p>
-
 </footer>
 
 </body>
