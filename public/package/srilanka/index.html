@@ -7,12 +7,12 @@
 
   <title>Sri Lanka Tour Package | Holidaydope</title>
 
-  <meta name="description" content="Book Sri Lanka package with Holidaydope. Explore beaches, luxury resorts, tea gardens and tropical island experiences.">
+  <meta name="description" content="Book Sri Lanka package with Holidaydope. Explore beaches, tea gardens, Colombo city, luxury resorts and tropical island experiences.">
 
-  <meta name="keywords" content="Sri Lanka package, Sri Lanka tour, Colombo trip, Holidaydope Sri Lanka">
+  <meta name="keywords" content="Sri Lanka package, Sri Lanka tour, Colombo trip, tea garden experience, Holidaydope Sri Lanka">
 
   <meta property="og:title" content="Sri Lanka Tour Package | Holidaydope">
-  <meta property="og:description" content="Luxury Sri Lanka holiday package with beaches and tropical island experiences.">
+  <meta property="og:description" content="Luxury Sri Lanka holiday package with beaches, tea gardens and tropical island experiences.">
   <meta property="og:image" content="/logo.png">
 
   <link rel="icon" href="/favicon.png">
@@ -70,13 +70,14 @@
       padding:12px 22px;
       border-radius:40px;
       font-weight:800;
+      box-shadow:0 10px 25px rgba(212,175,55,.25);
     }
 
     .hero{
       height:80vh;
 
       background:
-      linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+      linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.58)),
       url('https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=1600&auto=format&fit=crop');
 
       background-size:cover;
@@ -91,6 +92,7 @@
     .hero-content h1{
       font-size:78px;
       font-family:'Playfair Display',serif;
+      margin-bottom:12px;
     }
 
     .hero-content p{
@@ -98,6 +100,16 @@
       letter-spacing:3px;
       margin-bottom:15px;
       font-weight:700;
+    }
+
+    .hero-content span{
+      display:block;
+      max-width:720px;
+      margin:auto;
+      color:#e5e7eb;
+      font-size:18px;
+      line-height:1.7;
+      padding:0 18px;
     }
 
     .detail-grid{
@@ -112,34 +124,109 @@
       padding:35px;
       border:1px solid rgba(255,255,255,.08);
       margin-bottom:30px;
+      box-shadow:0 18px 45px rgba(0,0,0,.18);
     }
 
     .box h2{
       color:#f5c76b;
       margin-bottom:20px;
       font-size:34px;
+      font-family:'Playfair Display',serif;
     }
 
     .box p,
     .box li{
       color:#cbd5e1;
       line-height:1.9;
+      font-size:15.5px;
     }
 
     .box ul{
       padding-left:20px;
     }
 
-    .gallery{
+    .highlight-grid{
       display:grid;
       grid-template-columns:repeat(2,1fr);
       gap:15px;
     }
 
-    .gallery img{
-      height:240px;
+    .highlight-card{
+      background:#0b1626;
+      border:1px solid rgba(245,199,107,.18);
+      border-radius:18px;
+      padding:18px;
+    }
+
+    .highlight-card small{
+      color:#f5c76b;
+      font-weight:700;
+      display:block;
+      margin-bottom:6px;
+    }
+
+    .highlight-card p{
+      color:#fff;
+      line-height:1.5;
+    }
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+    }
+
+    .gallery-grid img{
+      width:100%;
+      height:260px;
       object-fit:cover;
-      border-radius:20px;
+      border-radius:22px;
+      transition:.35s ease;
+    }
+
+    .gallery-grid img:hover{
+      transform:scale(1.03);
+    }
+
+    .itinerary-day{
+      background:#0b1626;
+      border-left:4px solid #f5c76b;
+      border-radius:18px;
+      padding:22px;
+      margin-bottom:18px;
+    }
+
+    .itinerary-day h3{
+      color:#f5c76b;
+      margin-bottom:8px;
+      font-size:20px;
+    }
+
+    .include-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .mini-box{
+      background:#0b1626;
+      border-radius:18px;
+      padding:24px;
+      border:1px solid rgba(255,255,255,.07);
+    }
+
+    .mini-box h3{
+      color:#f5c76b;
+      margin-bottom:14px;
+    }
+
+    .mini-box ul{
+      list-style:none;
+      padding-left:0;
+    }
+
+    .mini-box li{
+      margin-bottom:10px;
     }
 
     .booking-card{
@@ -149,12 +236,35 @@
       position:sticky;
       top:30px;
       border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 18px 45px rgba(0,0,0,.25);
     }
 
     .booking-card h3{
       font-size:48px;
       color:#f5c76b;
       margin:12px 0;
+    }
+
+    .booking-card .tag{
+      background:#0b1626;
+      color:#f5c76b;
+      display:inline-block;
+      padding:8px 14px;
+      border-radius:30px;
+      font-size:13px;
+      font-weight:700;
+      margin-bottom:18px;
+    }
+
+    .booking-card ul{
+      list-style:none;
+      margin-top:22px;
+    }
+
+    .booking-card li{
+      color:#cbd5e1;
+      margin-bottom:10px;
+      font-size:14px;
     }
 
     .booking-btn{
@@ -166,6 +276,45 @@
       padding:16px;
       border-radius:50px;
       font-weight:800;
+    }
+
+    .call-btn{
+      display:block;
+      margin-top:12px;
+      border:1px solid rgba(245,199,107,.5);
+      color:#f5c76b;
+      text-align:center;
+      padding:14px;
+      border-radius:50px;
+      font-weight:800;
+    }
+
+    .cta-box{
+      background:
+      linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+      url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?q=80&w=1600&auto=format&fit=crop');
+
+      background-size:cover;
+      background-position:center;
+
+      border-radius:28px;
+      text-align:center;
+      padding:55px 30px;
+      border:1px solid rgba(245,199,107,.25);
+    }
+
+    .cta-box h2{
+      color:#f5c76b;
+      font-family:'Playfair Display',serif;
+      font-size:38px;
+      margin-bottom:12px;
+    }
+
+    .cta-box p{
+      max-width:700px;
+      margin:0 auto 24px;
+      color:#e5e7eb;
+      line-height:1.8;
     }
 
     footer{
@@ -185,7 +334,15 @@
       margin-bottom:10px;
     }
 
+    footer a{
+      color:#f5c76b;
+    }
+
     @media(max-width:900px){
+
+      section{
+        padding:60px 5%;
+      }
 
       .detail-grid{
         grid-template-columns:1fr;
@@ -195,8 +352,27 @@
         font-size:48px;
       }
 
-      .gallery{
+      .hero-content span{
+        font-size:15px;
+      }
+
+      .gallery-grid,
+      .highlight-grid,
+      .include-grid{
         grid-template-columns:1fr;
+      }
+
+      .booking-card{
+        position:relative;
+        top:0;
+      }
+
+      .box{
+        padding:25px;
+      }
+
+      .box h2{
+        font-size:28px;
       }
 
     }
@@ -227,6 +403,11 @@
 
     <h1>Sri Lanka</h1>
 
+    <span>
+      Explore tropical beaches, tea gardens, Colombo city vibes,
+      luxury resorts and unforgettable island experiences with Holidaydope.
+    </span>
+
   </div>
 
 </section>
@@ -242,26 +423,49 @@
         <h2>Overview</h2>
 
         <p>
-          Explore the tropical beauty of Sri Lanka with luxury beaches,
-          tea gardens, premium resorts and unforgettable island vibes.
-          Perfect for relaxing holidays, honeymoon trips and family vacations.
+          Sri Lanka is perfect for travelers looking for beaches,
+          nature, tea gardens and peaceful tropical vacations.
+          Explore Colombo city, scenic landscapes, island experiences
+          and luxury resorts with this premium Sri Lanka package.
         </p>
 
       </div>
 
       <div class="box">
 
-        <h2>Package Gallery</h2>
+        <h2>Quick Highlights</h2>
 
-        <div class="gallery">
+        <div class="highlight-grid">
 
-          <img src="https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=1200&auto=format&fit=crop">
+          <div class="highlight-card">
+            <small>Duration</small>
+            <p>4 Nights / 5 Days</p>
+          </div>
 
-          <img src="https://images.unsplash.com/photo-1566296314736-6eaac1ca0cb9?q=80&w=1200&auto=format&fit=crop">
+          <div class="highlight-card">
+            <small>Stay</small>
+            <p>Luxury Hotel Stay</p>
+          </div>
 
-          <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop">
+          <div class="highlight-card">
+            <small>Transfers</small>
+            <p>Airport Pickup & Drop</p>
+          </div>
 
-          <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?q=80&w=1200&auto=format&fit=crop">
+          <div class="highlight-card">
+            <small>Meals</small>
+            <p>Daily Breakfast</p>
+          </div>
+
+          <div class="highlight-card">
+            <small>Best For</small>
+            <p>Family / Couples / Relaxing Holidays</p>
+          </div>
+
+          <div class="highlight-card">
+            <small>Experience</small>
+            <p>Tea Gardens, Beaches & Colombo Tour</p>
+          </div>
 
         </div>
 
@@ -269,23 +473,19 @@
 
       <div class="box">
 
-        <h2>Package Includes</h2>
+        <h2>Package Gallery</h2>
 
-        <ul>
+        <div class="gallery-grid">
 
-          <li>Luxury Hotel Stay</li>
+          <img src="https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=1200&auto=format&fit=crop" alt="Sri Lanka Beach">
 
-          <li>Daily Breakfast</li>
+          <img src="https://images.unsplash.com/photo-1566296314736-6eaac1ca0cb9?q=80&w=1200&auto=format&fit=crop" alt="Sri Lanka Tea Garden">
 
-          <li>Airport Transfers</li>
+          <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop" alt="Sri Lanka Nature">
 
-          <li>Colombo City Tour</li>
+          <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?q=80&w=1200&auto=format&fit=crop" alt="Sri Lanka Scenic View">
 
-          <li>Beach & Tea Garden Experience</li>
-
-          <li>24/7 Holidaydope Support</li>
-
-        </ul>
+        </div>
 
       </div>
 
@@ -293,15 +493,144 @@
 
         <h2>Day Wise Itinerary</h2>
 
-        <p><b>Day 1:</b> Arrival & Hotel Check-In</p>
+        <div class="itinerary-day">
 
-        <p><b>Day 2:</b> Colombo City Tour</p>
+          <h3>Day 1 — Arrival in Sri Lanka</h3>
 
-        <p><b>Day 3:</b> Tea Garden & Nature Experience</p>
+          <p>
+            Arrive at Sri Lanka International Airport and transfer to your hotel.
+            Complete check-in and relax while enjoying the peaceful tropical atmosphere.
+          </p>
 
-        <p><b>Day 4:</b> Beach Relaxation & Leisure</p>
+        </div>
 
-        <p><b>Day 5:</b> Return Journey</p>
+        <div class="itinerary-day">
+
+          <h3>Day 2 — Colombo City Tour</h3>
+
+          <p>
+            Explore Colombo city attractions, shopping streets,
+            local culture and beautiful ocean-side locations.
+          </p>
+
+        </div>
+
+        <div class="itinerary-day">
+
+          <h3>Day 3 — Tea Garden & Nature Experience</h3>
+
+          <p>
+            Visit scenic tea gardens, mountain views and nature attractions.
+            Enjoy peaceful surroundings and beautiful photography spots.
+          </p>
+
+        </div>
+
+        <div class="itinerary-day">
+
+          <h3>Day 4 — Beach Relaxation & Leisure</h3>
+
+          <p>
+            Spend your day relaxing at tropical beaches,
+            enjoying resort experiences and leisure activities.
+          </p>
+
+        </div>
+
+        <div class="itinerary-day">
+
+          <h3>Day 5 — Departure</h3>
+
+          <p>
+            Enjoy breakfast, complete checkout and transfer to the airport
+            with unforgettable Sri Lanka memories.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="box">
+
+        <h2>Inclusions & Exclusions</h2>
+
+        <div class="include-grid">
+
+          <div class="mini-box">
+
+            <h3>Inclusions</h3>
+
+            <ul>
+
+              <li>✅ Luxury hotel stay</li>
+
+              <li>✅ Daily breakfast</li>
+
+              <li>✅ Airport pickup & drop</li>
+
+              <li>✅ Colombo city tour</li>
+
+              <li>✅ Tea garden & beach experience</li>
+
+              <li>✅ 24/7 Holidaydope support</li>
+
+            </ul>
+
+          </div>
+
+          <div class="mini-box">
+
+            <h3>Exclusions</h3>
+
+            <ul>
+
+              <li>❌ Airfare</li>
+
+              <li>❌ Visa charges if applicable</li>
+
+              <li>❌ Personal expenses</li>
+
+              <li>❌ Travel insurance</li>
+
+              <li>❌ GST / TCS</li>
+
+              <li>❌ Anything not mentioned in inclusions</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="box">
+
+        <h2>Best Time To Visit</h2>
+
+        <p>
+          December to April is one of the best times to visit Sri Lanka
+          for beaches, sightseeing and tropical island experiences.
+        </p>
+
+      </div>
+
+      <div class="cta-box">
+
+        <h2>Ready To Explore Sri Lanka?</h2>
+
+        <p>
+          Get the best Sri Lanka package with Holidaydope.
+          Share your travel dates and preferences for the best resort and tour options.
+        </p>
+
+        <a
+          href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Sri%20Lanka%20package%20details."
+          target="_blank"
+          class="booking-btn"
+        >
+          Book Now
+        </a>
 
       </div>
 
@@ -311,11 +640,27 @@
 
       <div class="booking-card">
 
+        <span class="tag">Luxury Tropical Island Escape</span>
+
         <p>Starting From</p>
 
-        <h3>₹47,999</h3>
+        <h3>₹29,999</h3>
 
         <p>Per Person</p>
+
+        <ul>
+
+          <li>✅ 4 Nights / 5 Days</li>
+
+          <li>✅ Luxury Hotel Stay</li>
+
+          <li>✅ Daily Breakfast</li>
+
+          <li>✅ Colombo City Tour</li>
+
+          <li>✅ Tea Garden & Beach Experience</li>
+
+        </ul>
 
         <a
           href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Sri%20Lanka%20package%20details."
@@ -323,6 +668,10 @@
           class="booking-btn"
         >
           Book Now
+        </a>
+
+        <a href="tel:8595789670" class="call-btn">
+          Call Now
         </a>
 
       </div>
