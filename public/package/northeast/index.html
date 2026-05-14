@@ -2,380 +2,229 @@
 <html lang="en">
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>North East Tour Package | Holidaydope</title>
+<title>North East Tour Packages | Holidaydope</title>
 
-  <meta name="description" content="Book North East package with Holidaydope. Explore Meghalaya, Assam, Sikkim, waterfalls, mountains and beautiful nature experiences.">
+<meta name="description" content="Book North East packages with Holidaydope. Explore Assam, Meghalaya, Sikkim and Darjeeling with wildlife, waterfalls, monasteries, tea gardens and mountain experiences.">
+<meta name="keywords" content="North East package, Assam Meghalaya package, Sikkim Darjeeling tour, Kaziranga safari, Holidaydope North East">
 
-  <meta name="keywords" content="North East package, Meghalaya trip, Sikkim tour, Assam holiday, Holidaydope North East">
+<meta property="og:title" content="North East Tour Packages | Holidaydope">
+<meta property="og:description" content="Premium North East holiday packages with Assam Meghalaya and Sikkim Darjeeling options.">
+<meta property="og:image" content="/logo.png">
 
-  <meta property="og:title" content="North East Tour Package | Holidaydope">
-  <meta property="og:description" content="Beautiful North East holiday package with mountains, waterfalls and nature experiences.">
-  <meta property="og:image" content="/logo.png">
+<link rel="icon" href="/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="icon" href="/favicon.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#08111f;color:#fff;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{width:100%;display:block}
+section{padding:80px 7%}
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+.navbar{position:absolute;top:0;left:0;width:100%;padding:20px 7%;display:flex;align-items:center;justify-content:space-between;z-index:10}
+.logo{width:130px}
+.home-btn{background:linear-gradient(135deg,#d4af37,#f7df8a);color:#111;padding:12px 22px;border-radius:40px;font-weight:800;box-shadow:0 10px 25px rgba(212,175,55,.25)}
 
-  <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins',sans-serif;
-    }
-
-    body{
-      background:#08111f;
-      color:#fff;
-      overflow-x:hidden;
-    }
-
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
-
-    img{
-      width:100%;
-      display:block;
-    }
-
-    section{
-      padding:80px 7%;
-    }
-
-    .navbar{
-      position:absolute;
-      top:0;
-      left:0;
-      width:100%;
-      padding:20px 7%;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      z-index:10;
-    }
-
-    .logo{
-      width:130px;
-    }
-
-    .home-btn{
-      background:linear-gradient(135deg,#d4af37,#f7df8a);
-      color:#111;
-      padding:12px 22px;
-      border-radius:40px;
-      font-weight:800;
-    }
-
-    .hero{
-      height:80vh;
-
-      background:
-      linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-      url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop');
-
-      background-size:cover;
-      background-position:center;
-
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-    }
-
-    .hero-content h1{
-      font-size:78px;
-      font-family:'Playfair Display',serif;
-    }
-
-    .hero-content p{
-      color:#f5c76b;
-      letter-spacing:3px;
-      margin-bottom:15px;
-      font-weight:700;
-    }
-
-    .detail-grid{
-      display:grid;
-      grid-template-columns:2fr 1fr;
-      gap:40px;
-    }
-
-    .box{
-      background:#111d2d;
-      border-radius:24px;
-      padding:35px;
-      border:1px solid rgba(255,255,255,.08);
-      margin-bottom:30px;
-    }
-
-    .box h2{
-      color:#f5c76b;
-      margin-bottom:20px;
-      font-size:34px;
-    }
-
-    .box p,
-    .box li{
-      color:#cbd5e1;
-      line-height:1.9;
-    }
-
-    .box ul{
-      padding-left:20px;
-    }
-
-    .gallery{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:15px;
-    }
-
-    .gallery img{
-      height:240px;
-      object-fit:cover;
-      border-radius:20px;
-    }
-
-    .booking-card{
-      background:#111d2d;
-      border-radius:24px;
-      padding:35px;
-      position:sticky;
-      top:30px;
-      border:1px solid rgba(255,255,255,.08);
-    }
-
-    .booking-card h3{
-      font-size:48px;
-      color:#f5c76b;
-      margin:12px 0;
-    }
-
-    .booking-btn{
-      display:block;
-      margin-top:25px;
-      background:linear-gradient(135deg,#d4af37,#f7df8a);
-      color:#111;
-      text-align:center;
-      padding:16px;
-      border-radius:50px;
-      font-weight:800;
-    }
-
-    footer{
-      background:#050b14;
-      padding:50px 7%;
-      text-align:center;
-      margin-top:40px;
-    }
-
-    .footer-logo{
-      width:150px;
-      margin:0 auto 20px;
-    }
-
-    footer p{
-      color:#cbd5e1;
-      margin-bottom:10px;
-    }
-
-    @media(max-width:900px){
-
-      .detail-grid{
-        grid-template-columns:1fr;
-      }
-
-      .hero-content h1{
-        font-size:48px;
-      }
-
-      .gallery{
-        grid-template-columns:1fr;
-      }
-
-    }
-.gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
+.hero{
+height:80vh;
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.58)),url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
 }
 
-.gallery-grid img{
-  width:100%;
-  height:260px;
-  object-fit:cover;
-  border-radius:22px;
+.hero-content h1{font-size:78px;font-family:'Playfair Display',serif;margin-bottom:12px}
+.hero-content p{color:#f5c76b;letter-spacing:3px;margin-bottom:15px;font-weight:700}
+.hero-content span{display:block;max-width:780px;margin:auto;color:#e5e7eb;font-size:18px;line-height:1.7;padding:0 18px}
+
+.box{background:#111d2d;border-radius:24px;padding:35px;border:1px solid rgba(255,255,255,.08);margin-bottom:30px;box-shadow:0 18px 45px rgba(0,0,0,.18)}
+.box h2{color:#f5c76b;margin-bottom:20px;font-size:34px;font-family:'Playfair Display',serif}
+.box p{color:#cbd5e1;line-height:1.9}
+
+.package-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;margin-top:40px}
+.package-card{background:#111d2d;border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,.08);box-shadow:0 18px 45px rgba(0,0,0,.22);transition:.35s ease}
+.package-card:hover{transform:translateY(-8px);border-color:rgba(245,199,107,.35)}
+.package-card img{height:280px;object-fit:cover}
+.package-content{padding:30px}
+.package-content h2{color:#f5c76b;font-family:'Playfair Display',serif;font-size:34px;margin-bottom:12px}
+.package-content p{color:#cbd5e1;line-height:1.8;margin-bottom:18px}
+
+.price{color:#fff;font-size:15px;margin-bottom:18px}
+.price b{display:block;color:#f5c76b;font-size:34px;margin-top:5px}
+
+.highlights{list-style:none;margin:20px 0;padding:0}
+.highlights li{color:#cbd5e1;margin-bottom:10px;font-size:15px}
+
+.booking-btn{display:inline-block;margin-top:15px;background:linear-gradient(135deg,#d4af37,#f7df8a);color:#111;text-align:center;padding:15px 26px;border-radius:50px;font-weight:800}
+.call-btn{display:inline-block;margin-top:15px;margin-left:8px;border:1px solid rgba(245,199,107,.5);color:#f5c76b;text-align:center;padding:14px 24px;border-radius:50px;font-weight:800}
+
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.gallery-grid img{height:220px;object-fit:cover;border-radius:20px;transition:.35s ease}
+.gallery-grid img:hover{transform:scale(1.03)}
+
+.cta-box{
+background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url('https://images.unsplash.com/photo-1625654325562-762dcec9e6f2?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+border-radius:28px;
+text-align:center;
+padding:55px 30px;
+border:1px solid rgba(245,199,107,.25);
+margin-top:30px;
 }
 
-@media(max-width:768px){
-  .gallery-grid{
-    grid-template-columns:1fr;
-  }
+.cta-box h2{color:#f5c76b;font-family:'Playfair Display',serif;font-size:38px;margin-bottom:12px}
+.cta-box p{max-width:760px;margin:0 auto 24px;color:#e5e7eb;line-height:1.8}
+
+footer{background:#050b14;padding:50px 7%;text-align:center;margin-top:40px}
+.footer-logo{width:150px;margin:0 auto 20px}
+footer p{color:#cbd5e1;margin-bottom:10px}
+footer a{color:#f5c76b}
+
+@media(max-width:900px){
+section{padding:60px 5%}
+.hero-content h1{font-size:48px}
+.hero-content span{font-size:15px}
+.package-grid,.gallery-grid{grid-template-columns:1fr}
+.package-content h2{font-size:29px}
+.call-btn{margin-left:0;display:block}
+.booking-btn{display:block}
 }
-  </style>
+</style>
 
 </head>
 
 <body>
 
 <nav class="navbar">
-
-  <a href="/">
-    <img src="/logo.png" class="logo" alt="Holidaydope">
-  </a>
-
-  <a href="/package/index.html" class="home-btn">
-    All Packages
-  </a>
-
+<a href="/"><img src="/logo.png" class="logo" alt="Holidaydope"></a>
+<a href="/package/index.html" class="home-btn">All Packages</a>
 </nav>
 
 <section class="hero">
-
-  <div class="hero-content">
-
-    <p>PREMIUM DOMESTIC PACKAGE</p>
-
-    <h1>North East</h1>
-
-  </div>
-
+<div class="hero-content">
+<p>PREMIUM DOMESTIC PACKAGE</p>
+<h1>North East</h1>
+<span>Clouds, wildlife, monasteries, tea gardens, waterfalls and peaceful mountain experiences with Holidaydope.</span>
+</div>
 </section>
 
 <section>
 
-  <div class="detail-grid">
-
-    <div>
-
-      <div class="box">
-
-        <h2>Overview</h2>
-
-        <p>
-          Explore the hidden paradise of North East India with beautiful mountains,
-          waterfalls, lakes, forests and peaceful nature experiences.
-          Perfect for adventure lovers, couples and family vacations.
-        </p>
-
-      </div>
-
-      <div class="box">
-
-        <h2>Package Gallery</h2>
-
-        <div class="gallery-grid">
-
-  <img src="https://images.unsplash.com/photo-1625654325562-762dcec9e6f2?q=80&w=1074&auto=format&fit=crop" alt="Northeast Mountains">
-
-  <img src="https://images.unsplash.com/photo-1521437620269-f477f5437820?q=80&w=1073&auto=format&fit=crop" alt="Meghalaya Nature">
-
-  <img src="https://images.unsplash.com/photo-1609276804051-8c5e906cc430?q=80&w=1074&auto=format&fit=crop" alt="Sikkim Landscape">
-
-  <img src="https://images.unsplash.com/photo-1675296098616-53e3d4a1dd57?q=80&w=1170&auto=format&fit=crop" alt="Northeast Scenic View">
-
+<div class="box">
+<h2>North East Packages</h2>
+<p>
+Choose your perfect North East escape — Assam & Meghalaya for clouds, waterfalls and wildlife,
+or Sikkim & Darjeeling for monasteries, high-altitude lakes and tea gardens.
+</p>
 </div>
 
-      </div>
+<div class="package-grid">
 
-      <div class="box">
+<div class="package-card">
+<img src="https://images.unsplash.com/photo-1521437620269-f477f5437820?q=80&w=1200&auto=format&fit=crop" alt="Assam Meghalaya Package">
 
-        <h2>Package Includes</h2>
+<div class="package-content">
+<h2>Clouds & Wildlife</h2>
+<p>
+Assam & Meghalaya package with Shillong, Umiam Lake, Cherrapunji and Kaziranga National Park jeep safari.
+Perfect for nature, waterfalls, wildlife and peaceful cloud-kissed landscapes.
+</p>
 
-        <ul>
+<div class="price">
+Starting From
+<b>₹19,999</b>
+Per Person
+</div>
 
-          <li>Premium Hotel Stay</li>
+<ul class="highlights">
+<li>✅ 5 Nights / 6 Days</li>
+<li>✅ Guwahati Arrival & Departure</li>
+<li>✅ 2 Nights Shillong</li>
+<li>✅ Cherrapunji Day Trip</li>
+<li>✅ 2 Nights Kaziranga + Jeep Safari</li>
+</ul>
 
-          <li>Daily Breakfast & Dinner</li>
+<a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Assam%20Meghalaya%20package%20details." target="_blank" class="booking-btn">Book Now</a>
+<a href="tel:8595789670" class="call-btn">Call Now</a>
+</div>
+</div>
 
-          <li>Airport Transfers</li>
+<div class="package-card">
+<img src="https://images.unsplash.com/photo-1609276804051-8c5e906cc430?q=80&w=1200&auto=format&fit=crop" alt="Sikkim Darjeeling Package">
 
-          <li>Shillong & Meghalaya Sightseeing</li>
+<div class="package-content">
+<h2>Himalayan Peaks</h2>
+<p>
+Sikkim & Darjeeling package for monasteries, high-altitude lakes, tea gardens, Tiger Hill sunrise and Toy Train experiences.
+Best for scenic mountain holidays and peaceful Himalayan views.
+</p>
 
-          <li>Waterfall & Nature Experience</li>
+<div class="price">
+Starting From
+<b>₹19,999</b>
+Per Person
+</div>
 
-          <li>24/7 Holidaydope Support</li>
+<ul class="highlights">
+<li>✅ 4 Nights / 5 Days</li>
+<li>✅ Starts at Siliguri / Bagdogra</li>
+<li>✅ 2 Nights Gangtok</li>
+<li>✅ Tsomgo Lake Visit</li>
+<li>✅ 2 Nights Darjeeling + Tiger Hill</li>
+</ul>
 
-        </ul>
+<a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Sikkim%20Darjeeling%20package%20details." target="_blank" class="booking-btn">Book Now</a>
+<a href="tel:8595789670" class="call-btn">Call Now</a>
+</div>
+</div>
 
-      </div>
+</div>
+</section>
 
-      <div class="box">
+<section>
 
-        <h2>Day Wise Itinerary</h2>
+<div class="box">
+<h2>Package Gallery</h2>
 
-        <p><b>Day 1:</b> Arrival & Shillong Hotel Check-In</p>
+<div class="gallery-grid">
+<img src="https://images.unsplash.com/photo-1625654325562-762dcec9e6f2?q=80&w=1200&auto=format&fit=crop" alt="Northeast Mountains">
+<img src="https://images.unsplash.com/photo-1521437620269-f477f5437820?q=80&w=1200&auto=format&fit=crop" alt="Meghalaya Nature">
+<img src="https://images.unsplash.com/photo-1609276804051-8c5e906cc430?q=80&w=1200&auto=format&fit=crop" alt="Sikkim Landscape">
+<img src="https://images.unsplash.com/photo-1675296098616-53e3d4a1dd57?q=80&w=1200&auto=format&fit=crop" alt="Northeast Scenic View">
+</div>
+</div>
 
-        <p><b>Day 2:</b> Meghalaya Waterfall Tour</p>
+<div class="cta-box">
+<h2>Ready To Explore North East?</h2>
+<p>
+Choose your North East package with Holidaydope — Assam Meghalaya for clouds and wildlife,
+or Sikkim Darjeeling for Himalayan peaks and tea gardens.
+</p>
 
-        <p><b>Day 3:</b> Nature & Lake Experience</p>
-
-        <p><b>Day 4:</b> Local Sightseeing & Relaxation</p>
-
-        <p><b>Day 5:</b> Return Journey</p>
-
-      </div>
-
-    </div>
-
-    <div>
-
-      <div class="booking-card">
-
-        <p>Starting From</p>
-
-        <h3>₹26,999</h3>
-
-        <p>Per Person</p>
-
-        <a
-          href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20North%20East%20package%20details."
-          target="_blank"
-          class="booking-btn"
-        >
-          Book Now
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
+<a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20North%20East%20package%20details." target="_blank" class="booking-btn">
+Get North East Package
+</a>
+</div>
 
 </section>
 
 <footer>
+<img src="/logo.png" class="footer-logo" alt="Holidaydope">
 
-  <img src="/logo.png" class="footer-logo" alt="Holidaydope">
+<p>Holidaydope — Chalo Duniya Ghume</p>
+<p>WhatsApp / Call: 8595789670</p>
 
-  <p>Holidaydope — Chalo Duniya Ghume</p>
+<p>Instagram: <a href="https://instagram.com/holiday_dope" target="_blank">@holiday_dope</a></p>
+<p>Facebook: <a href="https://www.facebook.com/profile.php?id=61555482407475" target="_blank">Holidaydope Official</a></p>
 
-  <p>WhatsApp / Call: 8595789670</p>
-
-  <p>
-    Instagram:
-    <a href="https://instagram.com/holiday_dope" target="_blank">
-      @holiday_dope
-    </a>
-  </p>
-
-  <p>
-    Facebook:
-    <a href="https://www.facebook.com/profile.php?id=61555482407475" target="_blank">
-      Holidaydope Official
-    </a>
-  </p>
-
-  <p style="margin-top:20px;color:#888;">
-    © 2026 Holidaydope. All Rights Reserved.
-  </p>
-
+<p style="margin-top:20px;color:#888;">© 2026 Holidaydope. All Rights Reserved.</p>
 </footer>
 
 </body>
