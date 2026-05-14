@@ -12,7 +12,7 @@
   <meta name="keywords" content="Goa package, Goa tour, Goa beach trip, Goa nightlife, Holidaydope Goa">
 
   <meta property="og:title" content="Goa Tour Package | Holidaydope">
-  <meta property="og:description" content="Luxury Goa holiday package with beaches and nightlife experiences.">
+  <meta property="og:description" content="Luxury Goa holiday package with beaches, nightlife and water sports experiences.">
   <meta property="og:image" content="/logo.png">
 
   <link rel="icon" href="/favicon.png">
@@ -70,13 +70,14 @@
       padding:12px 22px;
       border-radius:40px;
       font-weight:800;
+      box-shadow:0 10px 25px rgba(212,175,55,.25);
     }
 
     .hero{
       height:80vh;
 
       background:
-      linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+      linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.58)),
       url('https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1600&auto=format&fit=crop');
 
       background-size:cover;
@@ -91,6 +92,7 @@
     .hero-content h1{
       font-size:78px;
       font-family:'Playfair Display',serif;
+      margin-bottom:12px;
     }
 
     .hero-content p{
@@ -98,6 +100,16 @@
       letter-spacing:3px;
       margin-bottom:15px;
       font-weight:700;
+    }
+
+    .hero-content span{
+      display:block;
+      max-width:720px;
+      margin:auto;
+      color:#e5e7eb;
+      font-size:18px;
+      line-height:1.7;
+      padding:0 18px;
     }
 
     .detail-grid{
@@ -112,34 +124,109 @@
       padding:35px;
       border:1px solid rgba(255,255,255,.08);
       margin-bottom:30px;
+      box-shadow:0 18px 45px rgba(0,0,0,.18);
     }
 
     .box h2{
       color:#f5c76b;
       margin-bottom:20px;
       font-size:34px;
+      font-family:'Playfair Display',serif;
     }
 
     .box p,
     .box li{
       color:#cbd5e1;
       line-height:1.9;
+      font-size:15.5px;
     }
 
     .box ul{
       padding-left:20px;
     }
 
-    .gallery{
+    .highlight-grid{
       display:grid;
       grid-template-columns:repeat(2,1fr);
       gap:15px;
     }
 
-    .gallery img{
-      height:240px;
+    .highlight-card{
+      background:#0b1626;
+      border:1px solid rgba(245,199,107,.18);
+      border-radius:18px;
+      padding:18px;
+    }
+
+    .highlight-card small{
+      color:#f5c76b;
+      font-weight:700;
+      display:block;
+      margin-bottom:6px;
+    }
+
+    .highlight-card p{
+      color:#fff;
+      line-height:1.5;
+    }
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+    }
+
+    .gallery-grid img{
+      width:100%;
+      height:260px;
       object-fit:cover;
-      border-radius:20px;
+      border-radius:22px;
+      transition:.35s ease;
+    }
+
+    .gallery-grid img:hover{
+      transform:scale(1.03);
+    }
+
+    .itinerary-day{
+      background:#0b1626;
+      border-left:4px solid #f5c76b;
+      border-radius:18px;
+      padding:22px;
+      margin-bottom:18px;
+    }
+
+    .itinerary-day h3{
+      color:#f5c76b;
+      margin-bottom:8px;
+      font-size:20px;
+    }
+
+    .include-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .mini-box{
+      background:#0b1626;
+      border-radius:18px;
+      padding:24px;
+      border:1px solid rgba(255,255,255,.07);
+    }
+
+    .mini-box h3{
+      color:#f5c76b;
+      margin-bottom:14px;
+    }
+
+    .mini-box ul{
+      list-style:none;
+      padding-left:0;
+    }
+
+    .mini-box li{
+      margin-bottom:10px;
     }
 
     .booking-card{
@@ -149,12 +236,35 @@
       position:sticky;
       top:30px;
       border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 18px 45px rgba(0,0,0,.25);
     }
 
     .booking-card h3{
       font-size:48px;
       color:#f5c76b;
       margin:12px 0;
+    }
+
+    .booking-card .tag{
+      background:#0b1626;
+      color:#f5c76b;
+      display:inline-block;
+      padding:8px 14px;
+      border-radius:30px;
+      font-size:13px;
+      font-weight:700;
+      margin-bottom:18px;
+    }
+
+    .booking-card ul{
+      list-style:none;
+      margin-top:22px;
+    }
+
+    .booking-card li{
+      color:#cbd5e1;
+      margin-bottom:10px;
+      font-size:14px;
     }
 
     .booking-btn{
@@ -166,6 +276,45 @@
       padding:16px;
       border-radius:50px;
       font-weight:800;
+    }
+
+    .call-btn{
+      display:block;
+      margin-top:12px;
+      border:1px solid rgba(245,199,107,.5);
+      color:#f5c76b;
+      text-align:center;
+      padding:14px;
+      border-radius:50px;
+      font-weight:800;
+    }
+
+    .cta-box{
+      background:
+      linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+      url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop');
+
+      background-size:cover;
+      background-position:center;
+
+      border-radius:28px;
+      text-align:center;
+      padding:55px 30px;
+      border:1px solid rgba(245,199,107,.25);
+    }
+
+    .cta-box h2{
+      color:#f5c76b;
+      font-family:'Playfair Display',serif;
+      font-size:38px;
+      margin-bottom:12px;
+    }
+
+    .cta-box p{
+      max-width:700px;
+      margin:0 auto 24px;
+      color:#e5e7eb;
+      line-height:1.8;
     }
 
     footer{
@@ -185,7 +334,15 @@
       margin-bottom:10px;
     }
 
+    footer a{
+      color:#f5c76b;
+    }
+
     @media(max-width:900px){
+
+      section{
+        padding:60px 5%;
+      }
 
       .detail-grid{
         grid-template-columns:1fr;
@@ -195,8 +352,27 @@
         font-size:48px;
       }
 
-      .gallery{
+      .hero-content span{
+        font-size:15px;
+      }
+
+      .gallery-grid,
+      .highlight-grid,
+      .include-grid{
         grid-template-columns:1fr;
+      }
+
+      .booking-card{
+        position:relative;
+        top:0;
+      }
+
+      .box{
+        padding:25px;
+      }
+
+      .box h2{
+        font-size:28px;
       }
 
     }
@@ -227,6 +403,10 @@
 
     <h1>Goa</h1>
 
+    <span>
+      Beaches, nightlife, beach clubs, water sports and unforgettable tropical vibes with Holidaydope.
+    </span>
+
   </div>
 
 </section>
@@ -242,26 +422,47 @@
         <h2>Overview</h2>
 
         <p>
-          Enjoy Goa beaches, nightlife, beach clubs, water sports
-          and luxury vacation vibes with Holidaydope.
-          Perfect for friends, couples and relaxing beach holidays.
+          Enjoy Goa beaches, nightlife, beach clubs, water sports and luxury vacation vibes with Holidaydope.
+          Perfect for friends, couples and relaxing beach holidays looking for fun, sunsets and unforgettable memories.
         </p>
 
       </div>
 
       <div class="box">
 
-        <h2>Package Gallery</h2>
+        <h2>Quick Highlights</h2>
 
-        <div class="gallery">
+        <div class="highlight-grid">
 
-          <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1200&auto=format&fit=crop">
+          <div class="highlight-card">
+            <small>Duration</small>
+            <p>4 Nights / 5 Days</p>
+          </div>
 
-          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop">
+          <div class="highlight-card">
+            <small>Stay</small>
+            <p>Premium Hotel Stay</p>
+          </div>
 
-          <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1200&auto=format&fit=crop">
+          <div class="highlight-card">
+            <small>Transfers</small>
+            <p>Airport Pickup & Drop</p>
+          </div>
 
-          <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?q=80&w=1200&auto=format&fit=crop">
+          <div class="highlight-card">
+            <small>Meals</small>
+            <p>Daily Breakfast</p>
+          </div>
+
+          <div class="highlight-card">
+            <small>Best For</small>
+            <p>Friends / Couples / Beach Holiday</p>
+          </div>
+
+          <div class="highlight-card">
+            <small>Experience</small>
+            <p>North Goa, South Goa & Nightlife</p>
+          </div>
 
         </div>
 
@@ -269,23 +470,19 @@
 
       <div class="box">
 
-        <h2>Package Includes</h2>
+        <h2>Package Gallery</h2>
 
-        <ul>
+        <div class="gallery-grid">
 
-          <li>Premium Hotel Stay</li>
+          <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1200&auto=format&fit=crop" alt="Goa Beach">
 
-          <li>Daily Breakfast</li>
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Goa Sunset">
 
-          <li>Airport Transfers</li>
+          <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1200&auto=format&fit=crop" alt="Goa Water Sports">
 
-          <li>North & South Goa Tour</li>
+          <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?q=80&w=1200&auto=format&fit=crop" alt="Goa Nightlife">
 
-          <li>Beach & Nightlife Experience</li>
-
-          <li>24/7 Holidaydope Support</li>
-
-        </ul>
+        </div>
 
       </div>
 
@@ -293,15 +490,139 @@
 
         <h2>Day Wise Itinerary</h2>
 
-        <p><b>Day 1:</b> Arrival & Hotel Check-In</p>
+        <div class="itinerary-day">
 
-        <p><b>Day 2:</b> North Goa Beach Tour</p>
+          <h3>Day 1 — Arrival in Goa</h3>
 
-        <p><b>Day 3:</b> South Goa Sightseeing</p>
+          <p>
+            Arrive in Goa and transfer to your hotel. Complete check-in and spend the evening relaxing at nearby beaches or cafes.
+          </p>
 
-        <p><b>Day 4:</b> Water Sports & Nightlife</p>
+        </div>
 
-        <p><b>Day 5:</b> Return Journey</p>
+        <div class="itinerary-day">
+
+          <h3>Day 2 — North Goa Beach Tour</h3>
+
+          <p>
+            Explore famous North Goa beaches, beach clubs, forts, cafes and vibrant tourist attractions.
+          </p>
+
+        </div>
+
+        <div class="itinerary-day">
+
+          <h3>Day 3 — South Goa Sightseeing</h3>
+
+          <p>
+            Visit peaceful South Goa beaches, churches, scenic spots and enjoy relaxing coastal vibes.
+          </p>
+
+        </div>
+
+        <div class="itinerary-day">
+
+          <h3>Day 4 — Water Sports & Nightlife</h3>
+
+          <p>
+            Enjoy optional water sports, beach activities and Goa nightlife experiences with music and beachside fun.
+          </p>
+
+        </div>
+
+        <div class="itinerary-day">
+
+          <h3>Day 5 — Departure</h3>
+
+          <p>
+            Enjoy breakfast, complete checkout and transfer for your return journey with unforgettable Goa memories.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="box">
+
+        <h2>Inclusions & Exclusions</h2>
+
+        <div class="include-grid">
+
+          <div class="mini-box">
+
+            <h3>Inclusions</h3>
+
+            <ul>
+
+              <li>✅ Premium hotel stay</li>
+
+              <li>✅ Daily breakfast</li>
+
+              <li>✅ Airport pickup & drop</li>
+
+              <li>✅ North & South Goa tour</li>
+
+              <li>✅ Beach & nightlife experience</li>
+
+              <li>✅ 24/7 Holidaydope support</li>
+
+            </ul>
+
+          </div>
+
+          <div class="mini-box">
+
+            <h3>Exclusions</h3>
+
+            <ul>
+
+              <li>❌ Airfare / train fare</li>
+
+              <li>❌ Water sports charges</li>
+
+              <li>❌ Personal expenses</li>
+
+              <li>❌ Travel insurance</li>
+
+              <li>❌ GST</li>
+
+              <li>❌ Anything not mentioned in inclusions</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="box">
+
+        <h2>Best Time To Visit</h2>
+
+        <p>
+          November to February is considered one of the best times to visit Goa
+          for beaches, nightlife, water sports and pleasant weather.
+        </p>
+
+      </div>
+
+      <div class="cta-box">
+
+        <h2>Ready To Explore Goa?</h2>
+
+        <p>
+          Get the best Goa package with Holidaydope.
+          Share your travel dates and preferences for the best hotel and tour options.
+        </p>
+
+        <a
+          href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Goa%20package%20details."
+          target="_blank"
+          class="booking-btn"
+        >
+          Book Now
+        </a>
 
       </div>
 
@@ -311,11 +632,27 @@
 
       <div class="booking-card">
 
+        <span class="tag">Best Beach Party Escape</span>
+
         <p>Starting From</p>
 
-        <h3>₹18,999</h3>
+        <h3>₹12,999</h3>
 
         <p>Per Person</p>
+
+        <ul>
+
+          <li>✅ 4 Nights / 5 Days</li>
+
+          <li>✅ Premium Hotel Stay</li>
+
+          <li>✅ Daily Breakfast</li>
+
+          <li>✅ North & South Goa Tour</li>
+
+          <li>✅ Beach & Nightlife Experience</li>
+
+        </ul>
 
         <a
           href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Goa%20package%20details."
@@ -323,6 +660,10 @@
           class="booking-btn"
         >
           Book Now
+        </a>
+
+        <a href="tel:8595789670" class="call-btn">
+          Call Now
         </a>
 
       </div>
