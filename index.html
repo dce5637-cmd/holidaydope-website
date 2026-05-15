@@ -2176,19 +2176,7 @@ if(isAndroid){
       navigator.serviceWorker.register("/service-worker.js");
     });
   }
-  document.addEventListener("DOMContentLoaded", function(){
-
-  const videos = document.querySelectorAll(".reel-card video");
-
-  videos.forEach(function(video){
-
-    video.muted = true;
-
-    video.play().catch(function(){});
-
-  });
-
-});
+  
   const bookings = [
 
   "Rahul from Delhi booked Bali Package ✈️",
