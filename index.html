@@ -1685,53 +1685,40 @@ if(isAndroid){
     });
   }
   
- const bookings = [
+ document.addEventListener("DOMContentLoaded", function(){
 
-  "Rahul from Delhi booked Bali Package ✈️",
-  "David booked Maldives Luxury Package 🏝️",
-  "Priya from Mumbai booked Dubai Trip 🌆",
-  "Aman booked Thailand Vacation 🌴",
-  "Miss Ngaihkim booked Bali Honeymoon 💕"
+  const bookings = [
+    "Rahul from Delhi booked Bali Package ✈️",
+    "David booked Maldives Luxury Package 🏝️",
+    "Priya from Mumbai booked Dubai Trip 🌆",
+    "Aman booked Thailand Vacation 🌴",
+    "Miss Ngaihkim booked Bali Honeymoon 💕"
+  ];
 
-];
+  let popupIndex = 0;
 
-let popupIndex = 0;
+  const bookingPopup = document.getElementById("bookingPopup");
+  const popupText = document.getElementById("popupText");
 
-const bookingPopup = document.getElementById("bookingPopup");
-const popupText = document.getElementById("popupText");
+  bookingPopup.style.display = "none";
 
-function showBookingPopup(){
+  function showBookingPopup(){
+    popupText.innerText = bookings[popupIndex];
+    bookingPopup.style.display = "block";
 
-  popupText.innerText = bookings[popupIndex];
+    setTimeout(function(){
+      bookingPopup.style.display = "none";
+    }, 6000);
 
-  bookingPopup.style.display = "block";
-
-  setTimeout(() => {
-
-    bookingPopup.style.display = "none";
-
-  }, 6000);
-
-  popupIndex++;
-
-  if(popupIndex >= bookings.length){
-    popupIndex = 0;
+    popupIndex = (popupIndex + 1) % bookings.length;
   }
 
-}
-
-setTimeout(() => {
-
-  showBookingPopup();
-
-  setInterval(() => {
-
+  setTimeout(function(){
     showBookingPopup();
+    setInterval(showBookingPopup, 30000);
+  }, 10000);
 
-  }, 30000);
-
-}, 10000);
-
+});
 
 /* NAVBAR SCROLL */
 
@@ -1749,14 +1736,9 @@ window.addEventListener("scroll", function(){
 
 </script>
 
-<div class="booking-popup" id="bookingPopup">
-
+<div class="booking-popup" id="bookingPopup" style="display:none;">
   <strong>Recent Booking ✈️</strong>
-
-  <p id="popupText">
-    Rahul from Delhi booked Bali Package
-  </p>
-
+  <p id="popupText"></p>
 </div>
 
 <div class="logo-intro" id="logoIntro">
