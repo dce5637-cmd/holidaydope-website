@@ -1687,7 +1687,7 @@ if(isAndroid){
     });
   }
   
-  const bookings = [
+ const bookings = [
 
   "Rahul from Delhi booked Bali Package ✈️",
   "David booked Maldives Luxury Package 🏝️",
@@ -1699,7 +1699,20 @@ if(isAndroid){
 
 let popupIndex = 0;
 
-setInterval(() => {
+const bookingPopup = document.getElementById("bookingPopup");
+const popupText = document.getElementById("popupText");
+
+function showBookingPopup(){
+
+  popupText.innerText = bookings[popupIndex];
+
+  bookingPopup.style.display = "block";
+
+  setTimeout(() => {
+
+    bookingPopup.style.display = "none";
+
+  }, 6000);
 
   popupIndex++;
 
@@ -1707,10 +1720,24 @@ setInterval(() => {
     popupIndex = 0;
   }
 
-  document.getElementById("popupText").innerText = bookings[popupIndex];
+}
 
-}, 4000);
-  window.addEventListener("scroll", function(){
+setTimeout(() => {
+
+  showBookingPopup();
+
+  setInterval(() => {
+
+    showBookingPopup();
+
+  }, 30000);
+
+}, 10000);
+
+
+/* NAVBAR SCROLL */
+
+window.addEventListener("scroll", function(){
 
   const navbar = document.querySelector(".navbar");
 
@@ -1721,7 +1748,9 @@ setInterval(() => {
   }
 
 });
+
 </script>
+
 <div class="booking-popup" id="bookingPopup">
 
   <strong>Recent Booking ✈️</strong>
@@ -1731,7 +1760,8 @@ setInterval(() => {
   </p>
 
 </div>
-  <div class="logo-intro" id="logoIntro">
+
+<div class="logo-intro" id="logoIntro">
   <div class="intro-plane">✈</div>
   <div class="intro-trail"></div>
 
