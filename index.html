@@ -1416,6 +1416,61 @@ body{
   background:#f5c76b;
   color:#111;
 }
+    /* PREMIUM FINAL SPACING */
+
+section{
+  scroll-margin-top:90px;
+}
+
+.packages,
+.trending-slider,
+.visa-flags,
+.stats-section,
+#booking,
+#reviews,
+.travel-reels{
+  position:relative;
+}
+
+.packages::before,
+.trending-slider::before,
+.visa-flags::before,
+.stats-section::before,
+#booking::before,
+#reviews::before,
+.travel-reels::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:70%;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(245,199,107,.25),transparent);
+}
+
+.section-title{
+  animation:sectionFade .9s ease;
+}
+
+@keyframes sectionFade{
+  from{
+    opacity:0;
+    transform:translateY(18px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@media(max-width:768px){
+  section{
+    padding-top:70px;
+    padding-bottom:70px;
+  }
+}
   </style>
 </head>
 
