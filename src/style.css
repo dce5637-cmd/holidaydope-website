@@ -1068,3 +1068,45 @@ section{
   color:#000;
   font-weight:bold;
 }
+.package-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.package-card{
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.package-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  display:block;
+}
+
+.package-content{
+  padding:22px;
+}
+
+.package-content h3{
+  margin-bottom:10px;
+}
+
+.package-content p{
+  margin-bottom:18px;
+  line-height:1.6;
+}
+
+.package-content a{
+  display:inline-block;
+  padding:12px 22px;
+  border-radius:50px;
+  text-decoration:none;
+  background:#000;
+  color:#fff;
+  font-weight:600;
+}
