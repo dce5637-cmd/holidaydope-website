@@ -389,6 +389,76 @@
   transform:translateY(-3px);
   box-shadow:0 15px 30px rgba(212,175,55,.35);
 }
+    .pdf-btn{
+  width:100%;
+  margin-top:18px;
+  border:none;
+  background:linear-gradient(135deg,#d4af37,#f7df8a);
+  color:#111;
+  padding:16px;
+  border-radius:50px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.pdf-popup{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.7);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:999999;
+}
+
+.pdf-box{
+  background:#fff;
+  width:100%;
+  max-width:400px;
+  border-radius:24px;
+  padding:30px;
+  text-align:center;
+  position:relative;
+}
+
+.pdf-box h2{
+  color:#111;
+  margin-bottom:10px;
+}
+
+.pdf-box p{
+  color:#666;
+  margin-bottom:20px;
+}
+
+.pdf-box input{
+  width:100%;
+  padding:14px;
+  margin-bottom:14px;
+  border-radius:12px;
+  border:1px solid #ddd;
+}
+
+.pdf-download-btn{
+  width:100%;
+  border:none;
+  background:#111;
+  color:#fff;
+  padding:15px;
+  border-radius:50px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.pdf-close{
+  position:absolute;
+  top:12px;
+  right:16px;
+  border:none;
+  background:none;
+  font-size:28px;
+  cursor:pointer;
+}
   </style>
 </head>
 
@@ -449,7 +519,12 @@
           <li>✅ Bangkok City Tour</li>
           <li>✅ Daily Breakfast</li>
         </ul>
+<button class="pdf-btn"
+onclick="openPDFForm('Thailand', '/itinerary/thailand.pdf')">
 
+Download Itinerary
+
+</button>
         <a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Bangkok%20Pattaya%20Thailand%20package%20details." target="_blank" class="booking-btn">
           Book Now
         </a>
@@ -625,6 +700,11 @@
     © 2026 Holidaydope. All Rights Reserved.
   </p>
 </footer>
+<button class="pdf-btn"
+onclick="openPDFForm('Thailand', '/itinerary/thailand.pdf')">
 
+Download Itinerary
+
+</button>
 </body>
 </html>
