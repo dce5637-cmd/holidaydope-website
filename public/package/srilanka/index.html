@@ -376,7 +376,76 @@
       }
 
     }
+.pdf-btn{
+  width:100%;
+  margin-top:18px;
+  border:none;
+  background:linear-gradient(135deg,#d4af37,#f7df8a);
+  color:#111;
+  padding:16px;
+  border-radius:50px;
+  font-weight:800;
+  cursor:pointer;
+}
 
+.pdf-popup{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.7);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:999999;
+}
+
+.pdf-box{
+  background:#fff;
+  width:100%;
+  max-width:400px;
+  border-radius:24px;
+  padding:30px;
+  text-align:center;
+  position:relative;
+}
+
+.pdf-box h2{
+  color:#111;
+  margin-bottom:10px;
+}
+
+.pdf-box p{
+  color:#666;
+  margin-bottom:20px;
+}
+
+.pdf-box input{
+  width:100%;
+  padding:14px;
+  margin-bottom:14px;
+  border-radius:12px;
+  border:1px solid #ddd;
+}
+
+.pdf-download-btn{
+  width:100%;
+  border:none;
+  background:#111;
+  color:#fff;
+  padding:15px;
+  border-radius:50px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.pdf-close{
+  position:absolute;
+  top:12px;
+  right:16px;
+  border:none;
+  background:none;
+  font-size:28px;
+  cursor:pointer;
+}
   </style>
 
 </head>
@@ -623,7 +692,12 @@
           Get the best Sri Lanka package with Holidaydope.
           Share your travel dates and preferences for the best resort and tour options.
         </p>
+<button class="pdf-btn"
+onclick="openPDFForm('Sri Lanka', '/itinerary/srilanka.pdf')">
 
+Download Itinerary
+
+</button>
         <a
           href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Sri%20Lanka%20package%20details."
           target="_blank"
@@ -709,6 +783,92 @@
   </p>
 
 </footer>
+<div class="pdf-popup" id="pdfPopup">
 
+  <div class="pdf-box">
+
+    <button class="pdf-close"
+    onclick="closePDFForm()">×</button>
+
+    <h2>Download Itinerary</h2>
+
+    <p id="pdfPackageName">
+      Get your package PDF instantly
+    </p>
+
+    <input type="text"
+    id="leadName"
+    placeholder="Your Name">
+
+    <input type="tel"
+    id="leadPhone"
+    placeholder="WhatsApp Number">
+
+    <button class="pdf-download-btn"
+    onclick="downloadItinerary()">
+
+      Download PDF
+
+    </button>
+
+  </div>
+
+</div>
+
+<script>
+
+let selectedPDF = "";
+let selectedPackage = "";
+
+function openPDFForm(packageName, pdfLink){
+
+  selectedPackage = packageName;
+  selectedPDF = pdfLink;
+
+  document.getElementById("pdfPackageName").innerText =
+    packageName + " itinerary PDF";
+
+  document.getElementById("pdfPopup").style.display = "flex";
+}
+
+function closePDFForm(){
+  document.getElementById("pdfPopup").style.display = "none";
+}
+
+function downloadItinerary(){
+
+  const name =
+    document.getElementById("leadName").value.trim();
+
+  const phone =
+    document.getElementById("leadPhone").value.trim();
+
+  if(name === "" || phone === ""){
+    alert("Please enter your details.");
+    return;
+  }
+
+  window.open(
+    "https://wa.me/918595789670?text=Hi%20Holidaydope%20I%20downloaded%20Sri%20Lanka%20itinerary",
+    "_blank"
+  );
+
+  const link = document.createElement("a");
+
+  link.href = selectedPDF;
+
+  link.download =
+    selectedPackage + "-Holidaydope-Itinerary.pdf";
+
+  document.body.appendChild(link);
+
+  link.click();
+
+  document.body.removeChild(link);
+
+  closePDFForm();
+}
+
+</script>
 </body>
 </html>
