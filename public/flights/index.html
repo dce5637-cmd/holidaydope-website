@@ -2,96 +2,392 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>Flight Booking | Holidaydope</title>
-  <meta name="description" content="Book cheapest domestic and international flights with Holidaydope. Get flight deals for Maldives, Bali, Dubai, Thailand, Kashmir, Goa and more." />
-  <link rel="stylesheet" href="/style.css" />
+  <meta name="description" content="Book domestic and international flights with Holidaydope. Get cheapest flight assistance for Dubai, Bali, Maldives, Thailand, Kashmir, Goa and more.">
+  <meta name="keywords" content="Holidaydope flights, cheap flights, international flights, domestic flights, flight booking India">
+  <meta name="author" content="Holidaydope">
+
+  <meta property="og:title" content="Flight Booking | Holidaydope">
+  <meta property="og:description" content="Book cheapest domestic and international flights with Holidaydope.">
+  <meta property="og:image" content="/logo.png">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    body{background:#08111f;color:#fff;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    section{padding:80px 7%}
+
+    .navbar{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      padding:20px 7%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      z-index:10;
+    }
+
+    .logo{width:130px}
+
+    .home-btn{
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      color:#111;
+      padding:12px 22px;
+      border-radius:40px;
+      font-weight:800;
+    }
+
+    .hero{
+      min-height:72vh;
+      background:
+      linear-gradient(rgba(0,0,0,.62),rgba(8,17,31,.82)),
+      url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:120px 7% 80px;
+    }
+
+    .hero p:first-child{
+      color:#f5c76b;
+      letter-spacing:3px;
+      font-weight:700;
+      margin-bottom:15px;
+    }
+
+    .hero h1{
+      font-family:'Playfair Display',serif;
+      font-size:72px;
+      line-height:1.05;
+      max-width:900px;
+      margin:auto;
+    }
+
+    .hero span{color:#f5c76b}
+
+    .hero-sub{
+      max-width:720px;
+      margin:22px auto 30px;
+      color:#e5e7eb;
+      line-height:1.8;
+    }
+
+    .gold-btn{
+      display:inline-block;
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      color:#111;
+      padding:14px 28px;
+      border-radius:40px;
+      font-weight:800;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:45px;
+    }
+
+    .section-title p{
+      color:#f5c76b;
+      letter-spacing:2px;
+      font-weight:700;
+    }
+
+    .section-title h2{
+      font-family:'Playfair Display',serif;
+      font-size:46px;
+      margin-top:10px;
+    }
+
+    .flight-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:25px;
+    }
+
+    .flight-card{
+      background:#111d2d;
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:24px;
+      overflow:hidden;
+      transition:.3s;
+      box-shadow:0 20px 45px rgba(0,0,0,.25);
+    }
+
+    .flight-card:hover{
+      transform:translateY(-8px);
+      border-color:rgba(245,199,107,.5);
+    }
+
+    .flight-card img{
+      width:100%;
+      height:210px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .flight-content{
+      padding:28px;
+    }
+
+    .flight-content h3{
+      font-size:25px;
+      margin-bottom:10px;
+    }
+
+    .flight-content p{
+      color:#cbd5e1;
+      line-height:1.7;
+      margin-bottom:22px;
+    }
+
+    .flight-btn{
+      display:inline-block;
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      color:#111;
+      padding:13px 24px;
+      border-radius:40px;
+      font-weight:800;
+    }
+
+    .form-section{
+      background:#0b1627;
+    }
+
+    .flight-form{
+      max-width:850px;
+      margin:auto;
+      background:#111d2d;
+      padding:38px;
+      border-radius:26px;
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 20px 45px rgba(0,0,0,.25);
+    }
+
+    .form-row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+
+    .flight-form input,
+    .flight-form select{
+      width:100%;
+      padding:16px;
+      margin-bottom:18px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background:#08111f;
+      color:#fff;
+      outline:none;
+      font-size:15px;
+    }
+
+    .flight-form input::placeholder{
+      color:#94a3b8;
+    }
+
+    .submit-btn{
+      width:100%;
+      border:none;
+      cursor:pointer;
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      color:#111;
+      padding:15px 28px;
+      border-radius:40px;
+      font-weight:800;
+      font-size:16px;
+    }
+
+    .process{
+      background:#08111f;
+    }
+
+    .process-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:25px;
+    }
+
+    .process-box{
+      background:#111d2d;
+      padding:28px;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.08);
+      text-align:center;
+    }
+
+    .process-box h3{
+      color:#f5c76b;
+      margin-bottom:10px;
+    }
+
+    .process-box p{
+      color:#cbd5e1;
+      line-height:1.7;
+    }
+
+    .cta{
+      text-align:center;
+      background:
+      linear-gradient(135deg,rgba(212,175,55,.92),rgba(247,223,138,.92)),
+      url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      color:#111;
+    }
+
+    .cta h2{
+      font-family:'Playfair Display',serif;
+      font-size:44px;
+      margin-bottom:15px;
+    }
+
+    .cta p{
+      font-weight:600;
+      margin-bottom:25px;
+    }
+
+    .dark-btn{
+      display:inline-block;
+      background:#08111f;
+      color:#fff;
+      padding:14px 28px;
+      border-radius:40px;
+      font-weight:800;
+    }
+
+    footer{
+      background:#050b14;
+      padding:50px 7%;
+      text-align:center;
+    }
+
+    .footer-logo{
+      width:150px;
+      margin:0 auto 20px;
+      display:block;
+    }
+
+    footer p{
+      color:#cbd5e1;
+      margin-bottom:10px;
+    }
+
+    footer a{
+      color:#f5c76b;
+    }
+
+    .footer-links{
+      display:flex;
+      justify-content:center;
+      gap:25px;
+      flex-wrap:wrap;
+      margin:25px 0;
+    }
+
+    .whatsapp-float{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      z-index:99;
+      background:#25D366;
+      color:#fff;
+      padding:14px 22px;
+      border-radius:40px;
+      font-weight:800;
+      box-shadow:0 10px 30px rgba(0,0,0,.3);
+    }
+
+    @media(max-width:768px){
+      section{padding:65px 6%}
+      .logo{width:115px}
+      .hero{min-height:76vh}
+      .hero h1{font-size:44px}
+      .section-title h2{font-size:34px}
+      .form-row{grid-template-columns:1fr}
+      .flight-form{padding:25px}
+      .flight-card img{height:190px}
+    }
+  </style>
 </head>
 
-<body class="flights-page">
+<body>
 
-<header class="navbar">
-  <a href="/" class="logo">
-    <img src="/logo.png" alt="Holidaydope Logo" />
+<nav class="navbar">
+  <a href="/">
+    <img src="/logo.png" class="logo" alt="Holidaydope">
   </a>
 
-  <nav>
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/package/index.html">Packages</a></li>
-      <li><a href="/flights/index.html">Flights</a></li>
-      <li><a href="/visa/index.html">Visa</a></li>
-      <li><a href="/blog/index.html">Blogs</a></li>
-      <li><a href="/#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <a href="/" class="home-btn">Home</a>
+</nav>
 
-  <button class="menu-btn" onclick="toggleMenu()">☰</button>
-</header>
-
-<div class="mobile-menu" id="mobileMenu">
-  <a href="/">Home</a>
-  <a href="/package/index.html">Packages</a>
-  <a href="/flights/index.html">Flights</a>
-  <a href="/visa/index.html">Visa</a>
-  <a href="/blog/index.html">Blogs</a>
-  <a href="/#contact">Contact</a>
-</div>
-
-<section class="page-hero flight-hero">
-  <div class="page-hero-content">
-    <span class="section-badge">Flight Booking</span>
-    <h1>Book Cheapest Flights With Holidaydope</h1>
-    <p>Domestic & international flight deals for your next dream trip.</p>
-    <a href="#flight-enquiry" class="btn-primary">Get Flight Quote</a>
+<section class="hero">
+  <div>
+    <p>HOLIDAYDOPE FLIGHT BOOKING</p>
+    <h1>Book Cheapest <span>Flights</span> For Your Trip</h1>
+    <p class="hero-sub">
+      Domestic and international flight assistance for Maldives, Bali, Dubai, Thailand, Kashmir, Goa and more.
+    </p>
+    <a href="#flight-enquiry" class="gold-btn">Get Flight Quote</a>
   </div>
 </section>
 
-<section class="section">
+<section>
   <div class="section-title">
-    <span class="section-badge">Popular Routes</span>
-    <h2>Best Flight Deals</h2>
-    <p>Share your travel date and we will find the best available fare for you.</p>
+    <p>POPULAR FLIGHT SERVICES</p>
+    <h2>Choose Your Flight Type</h2>
   </div>
 
-  <div class="package-grid">
-    <div class="package-card">
-      <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=900&q=80" alt="International Flights">
-      <div class="package-content">
+  <div class="flight-grid">
+
+    <div class="flight-card">
+      <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop" alt="International Flights">
+      <div class="flight-content">
         <h3>International Flights</h3>
-        <p>Dubai, Bali, Maldives, Thailand, Vietnam, Sri Lanka and more.</p>
-        <a href="https://wa.me/918595789670?text=Hi Holidaydope, I need cheapest international flight options." target="_blank">Enquire Now</a>
+        <p>Flight support for Dubai, Bali, Maldives, Thailand, Vietnam, Singapore, Sri Lanka and more.</p>
+        <a class="flight-btn" target="_blank" href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20cheapest%20international%20flight%20options.">Inquiry Now</a>
       </div>
     </div>
 
-    <div class="package-card">
-      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Domestic Flights">
-      <div class="package-content">
+    <div class="flight-card">
+      <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?q=80&w=1200&auto=format&fit=crop" alt="Domestic Flights">
+      <div class="flight-content">
         <h3>Domestic Flights</h3>
-        <p>Kashmir, Goa, Kerala, Rajasthan, Himachal, North East and more.</p>
-        <a href="https://wa.me/918595789670?text=Hi Holidaydope, I need cheapest domestic flight options." target="_blank">Enquire Now</a>
+        <p>Book flights for Kashmir, Goa, Kerala, Himachal, Rajasthan, North East and other Indian destinations.</p>
+        <a class="flight-btn" target="_blank" href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20cheapest%20domestic%20flight%20options.">Inquiry Now</a>
       </div>
     </div>
 
-    <div class="package-card">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Flight with Package">
-      <div class="package-content">
-        <h3>Flight + Holiday Package</h3>
-        <p>Complete package with flights, hotel, transfers, sightseeing and visa support.</p>
-        <a href="https://wa.me/918595789670?text=Hi Holidaydope, I need flight plus holiday package options." target="_blank">Enquire Now</a>
+    <div class="flight-card">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" alt="Flight and Hotel Package">
+      <div class="flight-content">
+        <h3>Flight + Hotel Package</h3>
+        <p>Complete holiday planning with flights, hotel, transfers, sightseeing and travel assistance.</p>
+        <a class="flight-btn" target="_blank" href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20flight%20plus%20hotel%20package%20details.">Inquiry Now</a>
       </div>
     </div>
+
   </div>
 </section>
 
-<section class="section light-section" id="flight-enquiry">
+<section class="form-section" id="flight-enquiry">
   <div class="section-title">
-    <span class="section-badge">Flight Enquiry</span>
-    <h2>Get Cheapest Flight Quote</h2>
-    <p>Fill details and send directly on WhatsApp.</p>
+    <p>GET FLIGHT QUOTE</p>
+    <h2>Send Flight Enquiry</h2>
   </div>
 
-  <form class="booking-form" onsubmit="sendFlightEnquiry(event)">
+  <form class="flight-form" onsubmit="sendFlightEnquiry(event)">
     <div class="form-row">
       <input type="text" id="fromCity" placeholder="From City" required>
       <input type="text" id="toCity" placeholder="To City" required>
@@ -99,7 +395,7 @@
 
     <div class="form-row">
       <input type="date" id="travelDate" required>
-      <input type="number" id="travellers" placeholder="Travellers" min="1" required>
+      <input type="number" id="travellers" placeholder="Number of Travellers" min="1" required>
     </div>
 
     <select id="tripType" required>
@@ -109,43 +405,53 @@
       <option value="Multi City">Multi City</option>
     </select>
 
-    <button type="submit" class="btn-primary">Send Flight Enquiry</button>
+    <button type="submit" class="submit-btn">Send Enquiry On WhatsApp</button>
   </form>
 </section>
 
-<section class="section">
+<section class="process">
   <div class="section-title">
-    <span class="section-badge">Why Book With Us</span>
-    <h2>Holidaydope Flight Support</h2>
+    <p>HOW IT WORKS</p>
+    <h2>Simple Flight Booking Process</h2>
   </div>
 
-  <div class="features-grid">
-    <div class="feature-card">
-      <h3>Best Fare Search</h3>
-      <p>We compare available fares and suggest suitable options.</p>
+  <div class="process-grid">
+    <div class="process-box">
+      <h3>1. Send Inquiry</h3>
+      <p>Share your route, travel date and number of travellers.</p>
     </div>
 
-    <div class="feature-card">
-      <h3>Package Combo</h3>
-      <p>Flights can be combined with hotel, visa and transfers.</p>
+    <div class="process-box">
+      <h3>2. Fare Search</h3>
+      <p>We check suitable flight options based on your travel plan.</p>
     </div>
 
-    <div class="feature-card">
-      <h3>WhatsApp Assistance</h3>
-      <p>Quick support for domestic and international travel plans.</p>
+    <div class="process-box">
+      <h3>3. Confirm Option</h3>
+      <p>Choose your preferred timing, airline and fare option.</p>
+    </div>
+
+    <div class="process-box">
+      <h3>4. Travel Ready</h3>
+      <p>Get booking support with package, hotel and visa if needed.</p>
     </div>
   </div>
 </section>
 
-<footer id="contact" class="footer">
-  <img src="/logo.png" alt="Holidaydope Logo" class="footer-logo">
+<section class="cta">
+  <h2>Need Cheapest Flight Options?</h2>
+  <p>Message Holidaydope and get quick domestic or international flight assistance.</p>
+
+  <a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20need%20cheapest%20flight%20options." target="_blank" class="dark-btn">
+    WhatsApp Now
+  </a>
+</section>
+
+<footer>
+  <img src="/logo.png" class="footer-logo" alt="Holidaydope">
 
   <p>Holidaydope — Chalo Duniya Ghume</p>
-
-  <p>
-    Call / WhatsApp:
-    <a href="https://wa.me/918595789670" target="_blank">8595789670</a>
-  </p>
+  <p>WhatsApp / Call: 8595789670</p>
 
   <p>
     Instagram:
@@ -165,18 +471,12 @@
     <a href="/blog/index.html">Blogs</a>
   </div>
 
-  <p class="seo-text">
-    Holidaydope helps travellers book domestic and international flights, holiday packages, visa assistance and custom travel plans.
-  </p>
+  <p style="color:#888;">© 2026 Holidaydope. All Rights Reserved.</p>
 </footer>
 
 <a href="https://wa.me/918595789670" class="whatsapp-float" target="_blank">WhatsApp</a>
 
 <script>
-  function toggleMenu(){
-    document.getElementById("mobileMenu").classList.toggle("show");
-  }
-
   function sendFlightEnquiry(event){
     event.preventDefault();
 
@@ -187,7 +487,7 @@
     const tripType = document.getElementById("tripType").value;
 
     const message =
-      "Hi Holidaydope, I need cheapest flight options.%0A%0A" +
+      "Hi Holidaydope 👋%0A%0AI need cheapest flight options.%0A%0A" +
       "From: " + fromCity + "%0A" +
       "To: " + toCity + "%0A" +
       "Travel Date: " + travelDate + "%0A" +
