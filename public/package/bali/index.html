@@ -498,11 +498,22 @@ function downloadItinerary(){
     return;
   }
 
-  window.open(
-    "https://wa.me/918595789670?text=Hi%20Holidaydope%20I%20downloaded%20Bali%20itinerary",
-    "_blank"
-  );
+  const message =
+`Hi Holidaydope 👋
 
+New Itinerary Download
+
+Package: ${selectedPackage}
+
+Name: ${name}
+
+Phone: ${phone}`;
+
+window.open(
+  "https://wa.me/918595789670?text=" +
+  encodeURIComponent(message),
+  "_blank"
+);
   const link = document.createElement("a");
 
   link.href = selectedPDF;
