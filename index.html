@@ -514,6 +514,35 @@ section{padding:85px 7%;scroll-margin-top:90px}
 /* REVIEWS */
 .client{margin-top:18px}
 .client h4{color:#f5c76b}
+   .review-slider{
+  overflow:hidden;
+  max-width:1100px;
+  margin:auto;
+}
+
+.review-track{
+  display:flex;
+  gap:24px;
+  animation:reviewSlide 18s linear infinite;
+}
+
+.review-track .review-card{
+  min-width:340px;
+}
+
+.review-slider:hover .review-track{
+  animation-play-state:paused;
+}
+
+@keyframes reviewSlide{
+  0%{
+    transform:translateX(0);
+  }
+
+  100%{
+    transform:translateX(-55%);
+  }
+}
 .real-review{
   padding:90px 7%;
 }
