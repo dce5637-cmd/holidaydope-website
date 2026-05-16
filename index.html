@@ -538,10 +538,23 @@ section{padding:85px 7%;scroll-margin-top:90px}
 .reel-card{
   position:relative;
   overflow:hidden;
-  border-radius:24px;
+  border-radius:28px;
   height:500px;
   background:#111;
   box-shadow:0 15px 35px rgba(0,0,0,.35);
+  transition:.45s ease;
+}
+   .reel-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 25px 55px rgba(0,0,0,.45);
+}
+
+.reel-card video{
+  transition:transform .7s ease;
+}
+
+.reel-card:hover video{
+  transform:scale(1.05);
 }
 
 .reel-card video{
