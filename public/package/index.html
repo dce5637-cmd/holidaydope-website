@@ -627,8 +627,7 @@ function filterPackages(type){
     btn.classList.remove("active");
   });
 
-  event.target.classList.add("active");
-
+  document.activeElement.classList.add("active");
   if(type === "all"){
     international.style.display = "block";
     domestic.style.display = "block";
