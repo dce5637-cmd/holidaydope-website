@@ -125,7 +125,43 @@
       margin-top:10px;
       font-family:'Playfair Display',serif;
     }
+/* FILTER TABS */
 
+.filter-tabs{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-bottom:45px;
+}
+
+.filter-btn{
+  border:none;
+  padding:14px 26px;
+  border-radius:50px;
+
+  background:rgba(255,255,255,.06);
+  color:#fff;
+
+  font-weight:700;
+  cursor:pointer;
+
+  border:1px solid rgba(245,199,107,.18);
+
+  backdrop-filter:blur(12px);
+
+  transition:.35s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+  background:linear-gradient(135deg,#d4af37,#f7df8a);
+  color:#111;
+
+  transform:translateY(-2px);
+
+  box-shadow:0 12px 30px rgba(212,175,55,.28);
+}
     /* GRID */
 
     .package-grid{
