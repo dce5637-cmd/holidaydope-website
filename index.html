@@ -327,10 +327,8 @@ section{padding:85px 7%;scroll-margin-top:90px}
 .package-content{
   display:flex;
   flex-direction:column;
-  min-height:290px;
+  min-height:320px;
 }
-
-.package-content .package-btn{margin-top:auto}
 
 .package-content h3{
   font-size:29px;
@@ -363,17 +361,28 @@ section{padding:85px 7%;scroll-margin-top:90px}
 }
 
 .package-btn{
-  display:inline-block;
-  margin-top:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin-top:auto;
+
+  width:220px;
+  height:56px;
+
   background:linear-gradient(135deg,#d4af37,#f7df8a);
   color:#111;
-  padding:14px 26px;
+
   border-radius:50px;
+
   font-weight:900;
   letter-spacing:.4px;
-  box-shadow:0 12px 30px rgba(212,175,55,.28), inset 0 1px 0 rgba(255,255,255,.45);
+
+  box-shadow:
+  0 12px 30px rgba(212,175,55,.28),
+  inset 0 1px 0 rgba(255,255,255,.45);
+
   transition:.35s ease;
-  width:max-content;
 }
 
 .package-btn:hover{
