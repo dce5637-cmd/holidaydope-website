@@ -559,6 +559,52 @@ section{padding:85px 7%;scroll-margin-top:90px}
   line-height:1.9;
   font-size:18px;
 }
+   .real-review-card{
+  position:relative;
+  overflow:hidden;
+  transition:.45s ease;
+}
+
+.real-review-card::before{
+  content:'';
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(245,199,107,.08),
+    transparent 40%
+  );
+
+  pointer-events:none;
+}
+
+.real-review-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 35px 80px rgba(0,0,0,.45);
+}
+
+.review-top img{
+  border:2px solid rgba(245,199,107,.28);
+}
+
+.review-text{
+  position:relative;
+}
+
+.review-text::before{
+  content:'★★★★★';
+  display:block;
+
+  color:#f5c76b;
+
+  letter-spacing:4px;
+
+  margin-bottom:16px;
+
+  font-size:14px;
+}
 /* GALLERY */
 .gallery-item img{
   height:260px;
