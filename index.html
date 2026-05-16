@@ -1083,12 +1083,35 @@ footer{
 
 /* MOBILE */
 @media(max-width:768px){
+
   section{
     padding:70px 6%;
   }
 
-  .nav-links{display:none}
-  .menu-toggle{display:block}
+  .navbar{
+    width:92%;
+    padding:14px 22px;
+    top:12px;
+    border-radius:22px;
+  }
+
+  .nav-logo{
+    width:130px!important;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  .menu-toggle{
+    display:block;
+    font-size:28px;
+  }
+
+  .mobile-menu{
+    top:82px;
+    right:4%;
+  }
 
   .hero{
     background-position:center;
@@ -1097,12 +1120,12 @@ footer{
   .hero-content{
     text-align:center;
     align-items:center;
-    padding:70px 7% 0!important;
+    padding:95px 7% 0!important;
   }
 
   .hero-content h1{
-    font-size:42px!important;
-    line-height:1.15;
+    font-size:48px!important;
+    line-height:1.12;
   }
 
   .hero-subtitle{
@@ -1113,10 +1136,26 @@ footer{
 
   .hero-buttons{
     justify-content:center;
+    width:100%;
+  }
+
+  .gold-btn,
+  .outline-btn{
+    width:100%;
+    text-align:center;
+    justify-content:center;
   }
 
   .section-title h2{
     font-size:34px;
+  }
+
+  .package-card{
+    border-radius:24px;
+  }
+
+  .package-content{
+    padding:22px;
   }
 
   .booking-form{
@@ -1126,6 +1165,13 @@ footer{
   .booking-form textarea,
   .booking-form button{
     grid-column:1;
+  }
+
+  .booking-form input,
+  .booking-form select,
+  .booking-form textarea{
+    padding:15px;
+    border-radius:12px;
   }
 
   .reel-card{
@@ -1189,8 +1235,6 @@ footer{
     padding:12px 14px;
     font-size:13px;
   }
-
-  
 
   .intro-logo{
     width:175px;
