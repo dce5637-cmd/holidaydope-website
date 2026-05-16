@@ -857,32 +857,50 @@ footer{
 .booking-popup{
   position:fixed;
   left:20px!important;
-  bottom:150px!important;
-  background:rgba(17,29,45,.92)!important;
-  backdrop-filter:blur(16px);
-  border:1px solid rgba(245,199,107,.22);
+  bottom:145px!important;
+
+  width:235px;
+
+  background:rgba(17,29,45,.72)!important;
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+
+  border:1px solid rgba(245,199,107,.20);
+
   border-radius:18px;
-  padding:12px 15px;
-  width:260px;
+
+  padding:12px 14px;
+
   z-index:999999;
-  box-shadow:0 15px 35px rgba(0,0,0,.35);
-  animation:popupFade .5s ease;
+
+  box-shadow:0 18px 45px rgba(0,0,0,.35);
+
+  animation:slideUp .5s ease;
 }
 
-.booking-popup strong{color:#f5c76b}
+.booking-popup strong{
+  color:#f5c76b;
+  font-size:14px;
+}
 
 .booking-popup p{
-  font-size:14px;
+  font-size:13px;
   color:#ddd;
   margin-top:6px;
   line-height:1.5;
 }
 
-@keyframes popupFade{
-  from{opacity:0;transform:translateY(20px)}
-  to{opacity:1;transform:translateY(0)}
-}
+@keyframes slideUp{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
 
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
 .install-popup{
   position:fixed;
   left:50%;
