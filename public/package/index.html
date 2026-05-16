@@ -613,6 +613,52 @@
   </p>
 
 </footer>
+<script>
 
+function filterPackages(type){
+
+  const international =
+  document.getElementById("international-section");
+
+  const domestic =
+  document.getElementById("domestic-section");
+
+  const buttons =
+  document.querySelectorAll(".filter-btn");
+
+  buttons.forEach(btn=>{
+    btn.classList.remove("active");
+  });
+
+  event.target.classList.add("active");
+
+  if(type === "all"){
+    international.style.display = "block";
+    domestic.style.display = "block";
+  }
+
+  if(type === "international"){
+    international.style.display = "block";
+    domestic.style.display = "none";
+  }
+
+  if(type === "domestic"){
+    international.style.display = "none";
+    domestic.style.display = "block";
+  }
+
+  if(type === "luxury"){
+    international.style.display = "block";
+    domestic.style.display = "none";
+  }
+
+  if(type === "honeymoon"){
+    international.style.display = "block";
+    domestic.style.display = "none";
+  }
+
+}
+
+</script>
 </body>
 </html>
