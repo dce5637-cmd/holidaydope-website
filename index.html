@@ -618,6 +618,7 @@ footer{
   background:#050b14;
   text-align:center;
   padding:60px 7%;
+  border-top:1px solid rgba(245,199,107,.18);
 }
 
 .footer-logo{
@@ -626,16 +627,24 @@ footer{
 }
 
 .footer-links{
+   transition:.3s ease;
+}
+
+.footer-links a:hover{
+  color:#f5c76b;
+}
   display:flex;
   justify-content:center;
   flex-wrap:wrap;
   gap:25px;
   margin:25px 0;
-}
+
 
 .footer-copy{
-  color:#aaa;
-  margin-top:20px;
+  color:#8b95a7;
+  margin-top:22px;
+  font-size:13px;
+  letter-spacing:.4px;
 }
 
 .footer-address{
