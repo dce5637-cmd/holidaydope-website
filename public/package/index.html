@@ -2,86 +2,33 @@
 <html lang="en">
 <head>
 
-  <!-- SEO -->
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Holidaydope Packages | International & Domestic Tours</title>
 
-  <meta name="description" content="Explore Holidaydope international and domestic travel packages including Maldives, Bali, Thailand, Dubai, Kashmir, Goa and more.">
-
-  <meta name="keywords" content="Holidaydope packages, Maldives package, Bali package, Thailand package, Kashmir package">
+  <meta name="description" content="Explore Holidaydope premium international and domestic travel packages including Maldives, Bali, Thailand, Dubai, Vietnam, Sri Lanka, Kashmir, Goa, Kerala, Himachal, Rajasthan, Delhi Agra and North East.">
+  <meta name="keywords" content="Holidaydope packages, Maldives package, Bali package, Thailand package, Dubai package, Kashmir package, Goa package, Kerala package">
+  <meta name="author" content="Holidaydope">
 
   <meta property="og:title" content="Holidaydope Packages">
   <meta property="og:description" content="Premium International & Domestic Holiday Packages">
   <meta property="og:image" content="/logo.png">
+  <meta property="og:type" content="website">
 
   <link rel="icon" href="/favicon.png">
-
-  <!-- FONT -->
+  <link rel="canonical" href="https://www.holidaydope.com/package/index.html">
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins',sans-serif;
-    }
-
-    body{
-      background:#08111f;
-      color:#fff;
-      overflow-x:hidden;
-    }
-
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
-
-    img{
-      width:100%;
-      display:block;
-    }
-
-    section{
-      padding:80px 7%;
-    }
-
-    /* HERO */
-
-    .hero{
-      height:60vh;
-      background:
-      linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-      url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop');
-
-      background-size:cover;
-      background-position:center;
-
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-    }
-
-    .hero-content h1{
-      font-size:72px;
-      font-family:'Playfair Display',serif;
-    }
-
-    .hero-content p{
-      color:#f5c76b;
-      letter-spacing:3px;
-      margin-bottom:15px;
-      font-weight:700;
-    }
-
-    /* NAVBAR */
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    html{scroll-behavior:smooth}
+    body{background:#08111f;color:#fff;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    img{width:100%;display:block}
+    section{padding:80px 7%}
+    ::selection{background:#f5c76b;color:#111}
 
     .navbar{
       position:absolute;
@@ -96,7 +43,8 @@
     }
 
     .logo{
-      width:130px;
+      width:135px;
+      filter:drop-shadow(0 0 14px rgba(245,199,107,.35));
     }
 
     .home-btn{
@@ -105,9 +53,87 @@
       padding:12px 22px;
       border-radius:40px;
       font-weight:800;
+      box-shadow:0 10px 25px rgba(212,175,55,.25);
+      transition:.35s ease;
     }
 
-    /* TITLE */
+    .home-btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 15px 30px rgba(212,175,55,.35);
+    }
+
+    .hero{
+      min-height:68vh;
+      background:
+      linear-gradient(rgba(0,0,0,.62),rgba(0,0,0,.66)),
+      url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:120px 7% 80px;
+    }
+
+    .hero-content p{
+      color:#f5c76b;
+      letter-spacing:3px;
+      margin-bottom:15px;
+      font-weight:800;
+      font-size:13px;
+    }
+
+    .hero-content h1{
+      font-size:72px;
+      font-family:'Playfair Display',serif;
+      margin-bottom:16px;
+      text-shadow:0 14px 35px rgba(0,0,0,.55);
+    }
+
+    .hero-content span{
+      display:block;
+      max-width:780px;
+      margin:auto;
+      color:#e5e7eb;
+      font-size:18px;
+      line-height:1.7;
+      padding:0 18px;
+    }
+
+    .filter-section{
+      padding:34px 7% 20px;
+      background:#08111f;
+    }
+
+    .filter-tabs{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:14px;
+    }
+
+    .filter-btn{
+      border:none;
+      padding:14px 26px;
+      border-radius:50px;
+      background:rgba(255,255,255,.06);
+      color:#fff;
+      font-weight:800;
+      cursor:pointer;
+      border:1px solid rgba(245,199,107,.18);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+      transition:.35s ease;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active{
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      color:#111;
+      transform:translateY(-2px);
+      box-shadow:0 12px 30px rgba(212,175,55,.28);
+    }
 
     .section-title{
       text-align:center;
@@ -117,7 +143,8 @@
     .section-title p{
       color:#f5c76b;
       letter-spacing:2px;
-      font-weight:700;
+      font-weight:800;
+      font-size:13px;
     }
 
     .section-title h2{
@@ -125,108 +152,38 @@
       margin-top:10px;
       font-family:'Playfair Display',serif;
     }
-/* FILTER TABS */
-
-.filter-tabs{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:14px;
-  margin-bottom:45px;
-}
-
-.filter-btn{
-  border:none;
-  padding:14px 26px;
-  border-radius:50px;
-
-  background:rgba(255,255,255,.06);
-  color:#fff;
-
-  font-weight:700;
-  cursor:pointer;
-
-  border:1px solid rgba(245,199,107,.18);
-
-  backdrop-filter:blur(12px);
-
-  transition:.35s ease;
-}
-
-.filter-btn:hover,
-.filter-btn.active{
-  background:linear-gradient(135deg,#d4af37,#f7df8a);
-  color:#111;
-
-  transform:translateY(-2px);
-
-  box-shadow:0 12px 30px rgba(212,175,55,.28);
-}
-    /* GRID */
 
     .package-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:25px;
+      grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+      gap:28px;
     }
 
-    .badge{
-  position:absolute;
-  top:16px;
-  left:16px;
+    .card{
+      position:relative;
+      background:linear-gradient(180deg,#111d2d,#08111f);
+      border-radius:26px;
+      overflow:hidden;
+      border:1px solid rgba(245,199,107,.13);
+      transition:.35s ease;
+      box-shadow:0 18px 45px rgba(0,0,0,.20);
+    }
 
-  padding:8px 16px;
-  border-radius:40px;
-
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:.8px;
-text-transform:uppercase;
-  z-index:5;
-
-  backdrop-filter:blur(10px);
-
-  box-shadow:0 10px 25px rgba(0,0,0,.25);
-}
-
-.badge.luxury{
-  background:linear-gradient(135deg,#d4af37,#f7df8a);
-  color:#111;
-}
-
-.badge.honeymoon{
-  background:linear-gradient(135deg,#ff4d6d,#ff8fab);
-  color:#fff;
-}
-
-.badge.bestseller{
-  background:linear-gradient(135deg,#0ea5e9,#67e8f9);
-  color:#08111f;
-}
-
-.badge.budget{
-  background:linear-gradient(135deg,#22c55e,#86efac);
-  color:#08111f;
-}
-.card{
-  position:relative;
-  background:#111d2d;
-  border-radius:24px;
-  overflow:hidden;
-  border:1px solid rgba(255,255,255,.08);
-  transition:.3s;
-}
-
-     
-
-   .card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 18px 45px rgba(0,0,0,.32);
-}
+    .card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 22px 55px rgba(0,0,0,.34);
+      border-color:rgba(245,199,107,.35);
+    }
 
     .card img{
       height:260px;
       object-fit:cover;
+      filter:saturate(1.06) contrast(1.03) brightness(.96);
+      transition:.35s ease;
+    }
+
+    .card:hover img{
+      transform:scale(1.04);
     }
 
     .card-content{
@@ -234,13 +191,24 @@ text-transform:uppercase;
     }
 
     .card-content h3{
-      font-size:24px;
+      font-size:26px;
       margin-bottom:10px;
+      color:#fff;
+      font-family:'Playfair Display',serif;
     }
 
     .card-content p{
       color:#cbd5e1;
-      margin-bottom:20px;
+      margin-bottom:18px;
+      line-height:1.7;
+      font-size:15px;
+    }
+
+    .price-line{
+      color:#f5c76b;
+      font-weight:800;
+      margin-bottom:18px;
+      font-size:14px;
     }
 
     .btn{
@@ -249,20 +217,89 @@ text-transform:uppercase;
       color:#111;
       padding:12px 22px;
       border-radius:40px;
-      font-weight:700;
+      font-weight:800;
       transition:.3s ease;
     }
-.btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 12px 30px rgba(212,175,55,.28);
-}
-    /* FOOTER */
+
+    .btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 12px 30px rgba(212,175,55,.28);
+    }
+
+    .badge{
+      position:absolute;
+      top:16px;
+      left:16px;
+      padding:8px 16px;
+      border-radius:40px;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.8px;
+      text-transform:uppercase;
+      z-index:5;
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+      box-shadow:0 10px 25px rgba(0,0,0,.25);
+    }
+
+    .badge.luxury{
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      color:#111;
+    }
+
+    .badge.honeymoon{
+      background:linear-gradient(135deg,#ff4d6d,#ff8fab);
+      color:#fff;
+    }
+
+    .badge.bestseller{
+      background:linear-gradient(135deg,#0ea5e9,#67e8f9);
+      color:#08111f;
+    }
+
+    .badge.budget{
+      background:linear-gradient(135deg,#22c55e,#86efac);
+      color:#08111f;
+    }
+
+    .badge.domestic{
+      background:linear-gradient(135deg,#a78bfa,#ddd6fe);
+      color:#08111f;
+    }
+
+    .cta-banner{
+      background:
+      linear-gradient(rgba(0,0,0,.68),rgba(0,0,0,.68)),
+      url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      border-radius:30px;
+      padding:60px 30px;
+      text-align:center;
+      border:1px solid rgba(245,199,107,.22);
+      margin-top:40px;
+    }
+
+    .cta-banner h2{
+      color:#f5c76b;
+      font-size:40px;
+      font-family:'Playfair Display',serif;
+      margin-bottom:12px;
+    }
+
+    .cta-banner p{
+      max-width:720px;
+      margin:0 auto 24px;
+      color:#e5e7eb;
+      line-height:1.8;
+    }
 
     footer{
       background:#050b14;
       padding:50px 7%;
       text-align:center;
       margin-top:40px;
+      border-top:1px solid rgba(245,199,107,.15);
     }
 
     .footer-logo{
@@ -275,30 +312,53 @@ text-transform:uppercase;
       margin-bottom:10px;
     }
 
-    /* MOBILE */
+    footer a{
+      color:#f5c76b;
+    }
 
     @media(max-width:768px){
+      section{padding:60px 5%}
+      .navbar{padding:16px 5%}
+      .logo{width:118px}
+      .home-btn{padding:10px 16px;font-size:13px}
+
+      .hero{
+        min-height:64vh;
+        padding-top:120px;
+      }
 
       .hero-content h1{
-        font-size:46px;
+        font-size:44px;
+      }
+
+      .hero-content span{
+        font-size:15px;
       }
 
       .section-title h2{
         font-size:34px;
       }
 
-    }
+      .filter-btn{
+        padding:12px 18px;
+        font-size:13px;
+      }
 
+      .card img{
+        height:230px;
+      }
+
+      .cta-banner h2{
+        font-size:30px;
+      }
+    }
   </style>
 
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-
 <nav class="navbar">
-
   <a href="/">
     <img src="/logo.png" class="logo" alt="Holidaydope">
   </a>
@@ -306,343 +366,227 @@ text-transform:uppercase;
   <a href="/" class="home-btn">
     Home
   </a>
-
 </nav>
 
-<!-- HERO -->
-
 <section class="hero">
-
   <div class="hero-content">
-
     <p>HOLIDAYDOPE PACKAGES</p>
-
-    <h1>
-      Explore The World
-    </h1>
-
+    <h1>Explore The World</h1>
+    <span>
+      Discover premium international and domestic holiday packages curated for honeymoon, family, luxury and budget-friendly travel.
+    </span>
   </div>
-
 </section>
 
-<section style="padding-bottom:20px;">
-
+<section class="filter-section">
   <div class="filter-tabs">
 
-    <button class="filter-btn active" onclick="filterPackages('all')">
-      All
+    <button class="filter-btn active" onclick="filterPackages('all', this)">
+      All Packages
     </button>
 
-    <button class="filter-btn" onclick="filterPackages('international')">
+    <button class="filter-btn" onclick="filterPackages('international', this)">
       International
     </button>
 
-    <button class="filter-btn" onclick="filterPackages('domestic')">
+    <button class="filter-btn" onclick="filterPackages('domestic', this)">
       Domestic
     </button>
 
-    <button class="filter-btn" onclick="filterPackages('luxury')">
+    <button class="filter-btn" onclick="filterPackages('luxury', this)">
       Luxury
     </button>
 
-    <button class="filter-btn" onclick="filterPackages('honeymoon')">
+    <button class="filter-btn" onclick="filterPackages('honeymoon', this)">
       Honeymoon
     </button>
 
   </div>
-
 </section>
 
-<!-- INTERNATIONAL -->
-<section id="international-section">
+<section id="international-section" class="package-section international luxury honeymoon">
 
   <div class="section-title">
-
     <p>INTERNATIONAL PACKAGES</p>
-
     <h2>Luxury International Tours</h2>
-
   </div>
 
   <div class="package-grid">
-
-    <!-- MALDIVES -->
 
     <a href="/package/maldives/index.html" class="card">
-<div class="badge luxury">
-  LUXURY
-</div>
-      <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=1200&auto=format&fit=crop">
-
+      <div class="badge luxury">Luxury</div>
+      <img loading="lazy" src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=1200&auto=format&fit=crop" alt="Maldives package">
       <div class="card-content">
-
         <h3>Maldives</h3>
-
-        <p>Luxury water villa & island escape.</p>
-
+        <p>Luxury water villa, beach villa and romantic island escape.</p>
+        <div class="price-line">Starting from ₹49,999</div>
         <span class="btn">View Details</span>
-
       </div>
-
     </a>
-
-    <!-- BALI -->
 
     <a href="/package/bali/index.html" class="card">
-<div class="badge honeymoon">
-  HONEYMOON
-</div>
-      <img src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?q=80&w=1200&auto=format&fit=crop">
-
+      <div class="badge honeymoon">Honeymoon</div>
+      <img loading="lazy" src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?q=80&w=1200&auto=format&fit=crop" alt="Bali package">
       <div class="card-content">
-
         <h3>Bali</h3>
-
-        <p>Private villas, beaches & waterfalls.</p>
-
+        <p>Private villas, beaches, waterfalls, Ubud and Nusa Penida.</p>
+        <div class="price-line">Starting from ₹24,999</div>
         <span class="btn">View Details</span>
-
       </div>
-
     </a>
-
-    <!-- THAILAND -->
 
     <a href="/package/thailand/index.html" class="card">
-<div class="badge bestseller">
-  BEST SELLER
-</div>
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop">
-
+      <div class="badge bestseller">Best Seller</div>
+      <img loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Thailand package">
       <div class="card-content">
-
         <h3>Thailand</h3>
-
-        <p>Bangkok, Phuket & Krabi adventures.</p>
-
+        <p>Bangkok Pattaya and Phuket Krabi island experiences.</p>
+        <div class="price-line">Starting from ₹19,999</div>
         <span class="btn">View Details</span>
-
       </div>
-
     </a>
-
-    <!-- DUBAI -->
 
     <a href="/package/dubai/index.html" class="card">
-
-      <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop">
-
+      <div class="badge luxury">Luxury</div>
+      <img loading="lazy" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop" alt="Dubai package">
       <div class="card-content">
-
         <h3>Dubai</h3>
-
-        <p>Luxury city experience & desert safari.</p>
-
+        <p>Burj Khalifa, desert safari, dhow cruise and luxury city vibes.</p>
+        <div class="price-line">Starting from ₹29,999</div>
         <span class="btn">View Details</span>
-
       </div>
-
     </a>
-
-    <!-- VIETNAM -->
 
     <a href="/package/vietnam/index.html" class="card">
-
-      <img src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=1200&auto=format&fit=crop">
-
+      <div class="badge budget">Budget</div>
+      <img loading="lazy" src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=1200&auto=format&fit=crop" alt="Vietnam package">
       <div class="card-content">
-
         <h3>Vietnam</h3>
-
-        <p>Beautiful beaches & cultural journeys.</p>
-
+        <p>Da Nang beaches, nightlife, city tour and cultural journeys.</p>
+        <div class="price-line">Starting from ₹19,999</div>
         <span class="btn">View Details</span>
-
       </div>
-
     </a>
 
-    <!-- SRI LANKA -->
-
     <a href="/package/srilanka/index.html" class="card">
-
-      <img src="https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=1200&auto=format&fit=crop">
-
+      <div class="badge luxury">Island</div>
+      <img loading="lazy" src="https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=1200&auto=format&fit=crop" alt="Sri Lanka package">
       <div class="card-content">
-
         <h3>Sri Lanka</h3>
-
-        <p>Luxury tropical island vacation.</p>
-
+        <p>Tropical beaches, tea gardens, Colombo city and island escape.</p>
+        <div class="price-line">Starting from ₹29,999</div>
         <span class="btn">View Details</span>
-
       </div>
-
     </a>
 
   </div>
 
 </section>
 
-<!-- DOMESTIC -->
-<section id="domestic-section">
+<section id="domestic-section" class="package-section domestic">
 
   <div class="section-title">
-
     <p>DOMESTIC PACKAGES</p>
-
     <h2>Explore Incredible India</h2>
-
   </div>
 
   <div class="package-grid">
 
-    <!-- KASHMIR -->
-
     <a href="/package/kashmir/index.html" class="card">
-
-      <img src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?q=80&w=1200&auto=format&fit=crop">
-
+      <div class="badge honeymoon">Honeymoon</div>
+      <img loading="lazy" src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?q=80&w=1200&auto=format&fit=crop" alt="Kashmir package">
       <div class="card-content">
-
         <h3>Kashmir</h3>
-
-        <p>Heaven on earth with snow mountains.</p>
-
+        <p>Snow mountains, Dal Lake, houseboat stay and Gulmarg tour.</p>
+        <div class="price-line">Starting from ₹14,999</div>
         <span class="btn">View Details</span>
-
       </div>
-
     </a>
-
-    <!-- GOA -->
 
     <a href="/package/goa/index.html" class="card">
-<div class="badge budget">
-  BUDGET
-</div>
-      <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1200&auto=format&fit=crop">
-
+      <div class="badge budget">Budget</div>
+      <img loading="lazy" src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1200&auto=format&fit=crop" alt="Goa package">
       <div class="card-content">
-
         <h3>Goa</h3>
-
-        <p>Beach nightlife & fun vacations.</p>
-
+        <p>Beaches, nightlife, water sports and fun tropical vacations.</p>
+        <div class="price-line">Starting from ₹12,999</div>
         <span class="btn">View Details</span>
-
       </div>
-
     </a>
-
-    <!-- KERALA -->
 
     <a href="/package/kerala/index.html" class="card">
-
-      <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=1200&auto=format&fit=crop">
-
+      <div class="badge honeymoon">Nature</div>
+      <img loading="lazy" src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=1200&auto=format&fit=crop" alt="Kerala package">
       <div class="card-content">
-
         <h3>Kerala</h3>
-
-        <p>Backwaters, tea gardens & nature.</p>
-
+        <p>Munnar tea gardens, Alleppey houseboat and backwaters.</p>
+        <div class="price-line">Starting from ₹13,999</div>
         <span class="btn">View Details</span>
-
       </div>
-
     </a>
-
-    <!-- HIMACHAL -->
 
     <a href="/package/himachal/index.html" class="card">
-
-      <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop">
-
+      <div class="badge domestic">Mountain</div>
+      <img loading="lazy" src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop" alt="Himachal package">
       <div class="card-content">
-
         <h3>Himachal</h3>
-
-        <p>Beautiful mountain escapes & snowfall.</p>
-
+        <p>Manali adventure and romantic Shimla honeymoon packages.</p>
+        <div class="price-line">Starting from ₹7,999</div>
         <span class="btn">View Details</span>
-
       </div>
-
     </a>
-
-    <!-- RAJASTHAN -->
 
     <a href="/package/rajasthan/index.html" class="card">
-
-      <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=1200&auto=format&fit=crop">
-
+      <div class="badge luxury">Royal</div>
+      <img loading="lazy" src="https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=1200&auto=format&fit=crop" alt="Rajasthan package">
       <div class="card-content">
-
         <h3>Rajasthan</h3>
-
-        <p>Royal palaces & desert experiences.</p>
-
+        <p>Royal palaces, lakes, forts, Jaipur and Udaipur experiences.</p>
+        <div class="price-line">Starting from ₹8,999</div>
         <span class="btn">View Details</span>
-
       </div>
-
     </a>
-    <!-- DELHI AGRA -->
 
-<a href="/package/delhi-agra/index.html" class="card">
+    <a href="/package/delhi-agra/index.html" class="card">
+      <div class="badge domestic">Heritage</div>
+      <img loading="lazy" src="https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1200&auto=format&fit=crop" alt="Delhi Agra package">
+      <div class="card-content">
+        <h3>Delhi Agra</h3>
+        <p>Taj Mahal, Red Fort, India Gate and heritage city experiences.</p>
+        <div class="price-line">Starting from ₹13,999</div>
+        <span class="btn">View Details</span>
+      </div>
+    </a>
 
-  <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1200&auto=format&fit=crop" alt="Delhi Agra">
-
-  <div class="card-content">
-
-    <h3>Delhi Agra</h3>
-
-    <p>
-      Taj Mahal, Red Fort, India Gate & heritage city experiences.
-    </p>
-
-    <span class="btn">
-      View Details
-    </span>
-
-  </div>
-
-</a>
-
-<!-- NORTH EAST -->
-
-<a href="/package/northeast/index.html" class="card">
-
-  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop" alt="North East">
-
-  <div class="card-content">
-
-    <h3>North East</h3>
-
-    <p>
-      Meghalaya, waterfalls, mountains & beautiful nature escapes.
-    </p>
-
-    <span class="btn">
-      View Details
-    </span>
+    <a href="/package/northeast/index.html" class="card">
+      <div class="badge domestic">Nature</div>
+      <img loading="lazy" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop" alt="North East package">
+      <div class="card-content">
+        <h3>North East</h3>
+        <p>Meghalaya clouds, Kaziranga safari, Sikkim and Darjeeling.</p>
+        <div class="price-line">Starting from ₹19,999</div>
+        <span class="btn">View Details</span>
+      </div>
+    </a>
 
   </div>
 
-</a>
+  <div class="cta-banner">
+    <h2>Need A Custom Trip?</h2>
+    <p>
+      Tell us your destination, travel date, number of passengers and budget. Holidaydope will create a custom package for you.
+    </p>
 
-    
-
+    <a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20a%20custom%20holiday%20package." target="_blank" class="btn">
+      Plan My Trip
+    </a>
   </div>
 
 </section>
-
-<!-- FOOTER -->
 
 <footer>
 
-  <img src="/logo.png" class="footer-logo">
+  <img loading="lazy" src="/logo.png" class="footer-logo" alt="Holidaydope">
 
   <p>Holidaydope — Chalo Duniya Ghume</p>
 
@@ -662,25 +606,30 @@ text-transform:uppercase;
     </a>
   </p>
 
-</footer>
-<script>
+  <p style="margin-top:20px;color:#888;">
+    © 2026 Holidaydope. All Rights Reserved.
+  </p>
 
-function filterPackages(type){
+</footer>
+
+<script>
+function filterPackages(type, button){
 
   const international =
-  document.getElementById("international-section");
+    document.getElementById("international-section");
 
   const domestic =
-  document.getElementById("domestic-section");
+    document.getElementById("domestic-section");
 
   const buttons =
-  document.querySelectorAll(".filter-btn");
+    document.querySelectorAll(".filter-btn");
 
   buttons.forEach(btn=>{
     btn.classList.remove("active");
   });
 
-  document.activeElement.classList.add("active");
+  button.classList.add("active");
+
   if(type === "all"){
     international.style.display = "block";
     domestic.style.display = "block";
@@ -698,16 +647,15 @@ function filterPackages(type){
 
   if(type === "luxury"){
     international.style.display = "block";
-    domestic.style.display = "none";
+    domestic.style.display = "block";
   }
 
   if(type === "honeymoon"){
     international.style.display = "block";
-    domestic.style.display = "none";
+    domestic.style.display = "block";
   }
-
 }
-
 </script>
+
 </body>
 </html>
