@@ -8,45 +8,82 @@
   <title>Goa Tour Package | Holidaydope</title>
 
   <meta name="description" content="Book Goa package with Holidaydope. Explore beaches, nightlife, water sports, beach clubs and luxury Goa vacation.">
-
   <meta name="keywords" content="Goa package, Goa tour, Goa beach trip, Goa nightlife, Holidaydope Goa">
+  <meta name="author" content="Holidaydope">
 
   <meta property="og:title" content="Goa Tour Package | Holidaydope">
   <meta property="og:description" content="Luxury Goa holiday package with beaches, nightlife and water sports experiences.">
   <meta property="og:image" content="/logo.png">
+  <meta property="og:type" content="website">
 
   <link rel="icon" href="/favicon.png">
+  <link rel="canonical" href="https://www.holidaydope.com/package/goa/index.html">
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"TouristTrip",
+    "name":"Goa Tour Package",
+    "description":"Premium Goa holiday package with beach stay, North Goa tour, South Goa sightseeing, nightlife, beach clubs, water sports options and airport transfers.",
+    "provider":{
+      "@type":"TravelAgency",
+      "name":"Holidaydope",
+      "telephone":"+918595789670",
+      "url":"https://www.holidaydope.com"
+    },
+    "touristType":["Couples","Friends","Family","Beach Holiday Travellers"],
+    "itinerary":{
+      "@type":"ItemList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Arrival in Goa"},
+        {"@type":"ListItem","position":2,"name":"North Goa Beach Tour"},
+        {"@type":"ListItem","position":3,"name":"South Goa Sightseeing"},
+        {"@type":"ListItem","position":4,"name":"Water Sports & Nightlife"},
+        {"@type":"ListItem","position":5,"name":"Departure"}
+      ]
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Is this Goa package suitable for friends and couples?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes, this Goa package is suitable for friends, couples and families looking for beaches, nightlife, beach clubs and relaxed holiday experiences."}
+      },
+      {
+        "@type":"Question",
+        "name":"Are flights included in the Goa package?",
+        "acceptedAnswer":{"@type":"Answer","text":"Flights or train fare are not included by default, but Holidaydope can help you add suitable travel options on request."}
+      },
+      {
+        "@type":"Question",
+        "name":"Are water sports included in this Goa package?",
+        "acceptedAnswer":{"@type":"Answer","text":"Water sports charges are not included by default, but optional water sports can be arranged as per availability and customer preference."}
+      },
+      {
+        "@type":"Question",
+        "name":"What is the best time to visit Goa?",
+        "acceptedAnswer":{"@type":"Answer","text":"November to February is one of the best times to visit Goa for beaches, nightlife, water sports and pleasant weather."}
+      }
+    ]
+  }
+  </script>
+
   <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins',sans-serif;
-    }
-
-    body{
-      background:#08111f;
-      color:#fff;
-      overflow-x:hidden;
-    }
-
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
-
-    img{
-      width:100%;
-      display:block;
-    }
-
-    section{
-      padding:80px 7%;
-    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    html{scroll-behavior:smooth}
+    body{background:#08111f;color:#fff;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    img{width:100%;display:block}
+    section{padding:80px 7%;scroll-margin-top:90px}
+    ::selection{background:#f5c76b;color:#111}
 
     .navbar{
       position:absolute;
@@ -61,7 +98,8 @@
     }
 
     .logo{
-      width:130px;
+      width:135px;
+      filter:drop-shadow(0 0 14px rgba(245,199,107,.35));
     }
 
     .home-btn{
@@ -71,40 +109,46 @@
       border-radius:40px;
       font-weight:800;
       box-shadow:0 10px 25px rgba(212,175,55,.25);
+      transition:.35s ease;
+    }
+
+    .home-btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 15px 30px rgba(212,175,55,.35);
     }
 
     .hero{
-      height:80vh;
-
+      min-height:82vh;
       background:
-      linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.58)),
+      linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.60)),
       url('https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1600&auto=format&fit=crop');
-
       background-size:cover;
       background-position:center;
-
       display:flex;
       align-items:center;
       justify-content:center;
       text-align:center;
+      padding:120px 7% 80px;
     }
 
     .hero-content h1{
       font-size:78px;
       font-family:'Playfair Display',serif;
       margin-bottom:12px;
+      text-shadow:0 14px 35px rgba(0,0,0,.55);
     }
 
     .hero-content p{
       color:#f5c76b;
       letter-spacing:3px;
       margin-bottom:15px;
-      font-weight:700;
+      font-weight:800;
+      font-size:13px;
     }
 
     .hero-content span{
       display:block;
-      max-width:720px;
+      max-width:760px;
       margin:auto;
       color:#e5e7eb;
       font-size:18px;
@@ -112,19 +156,39 @@
       padding:0 18px;
     }
 
+    .trust-strip{
+      padding:26px 7%;
+      background:#08111f;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+      gap:16px;
+    }
+
+    .trust-card{
+      background:rgba(255,255,255,.055);
+      border:1px solid rgba(245,199,107,.18);
+      border-radius:20px;
+      padding:17px;
+      text-align:center;
+      font-weight:800;
+      color:#f8fafc;
+      box-shadow:0 14px 35px rgba(0,0,0,.22);
+    }
+
     .detail-grid{
       display:grid;
       grid-template-columns:2fr 1fr;
       gap:40px;
+      align-items:start;
     }
 
     .box{
-      background:#111d2d;
+      background:linear-gradient(180deg,#111d2d,#0b1626);
       border-radius:24px;
       padding:35px;
-      border:1px solid rgba(255,255,255,.08);
+      border:1px solid rgba(245,199,107,.13);
       margin-bottom:30px;
-      box-shadow:0 18px 45px rgba(0,0,0,.18);
+      box-shadow:0 18px 45px rgba(0,0,0,.20);
     }
 
     .box h2{
@@ -141,9 +205,7 @@
       font-size:15.5px;
     }
 
-    .box ul{
-      padding-left:20px;
-    }
+    .box ul{padding-left:20px}
 
     .highlight-grid{
       display:grid;
@@ -152,7 +214,7 @@
     }
 
     .highlight-card{
-      background:#0b1626;
+      background:#08111f;
       border:1px solid rgba(245,199,107,.18);
       border-radius:18px;
       padding:18px;
@@ -160,7 +222,7 @@
 
     .highlight-card small{
       color:#f5c76b;
-      font-weight:700;
+      font-weight:800;
       display:block;
       margin-bottom:6px;
     }
@@ -182,6 +244,7 @@
       object-fit:cover;
       border-radius:22px;
       transition:.35s ease;
+      filter:saturate(1.06) contrast(1.03) brightness(.97);
     }
 
     .gallery-grid img:hover{
@@ -189,7 +252,7 @@
     }
 
     .itinerary-day{
-      background:#0b1626;
+      background:#08111f;
       border-left:4px solid #f5c76b;
       border-radius:18px;
       padding:22px;
@@ -209,7 +272,7 @@
     }
 
     .mini-box{
-      background:#0b1626;
+      background:#08111f;
       border-radius:18px;
       padding:24px;
       border:1px solid rgba(255,255,255,.07);
@@ -230,13 +293,13 @@
     }
 
     .booking-card{
-      background:#111d2d;
+      background:linear-gradient(180deg,#111d2d,#08111f);
       border-radius:24px;
       padding:35px;
       position:sticky;
       top:30px;
-      border:1px solid rgba(255,255,255,.08);
-      box-shadow:0 18px 45px rgba(0,0,0,.25);
+      border:1px solid rgba(245,199,107,.18);
+      box-shadow:0 18px 45px rgba(0,0,0,.28);
     }
 
     .booking-card h3{
@@ -246,14 +309,15 @@
     }
 
     .booking-card .tag{
-      background:#0b1626;
+      background:#08111f;
       color:#f5c76b;
       display:inline-block;
       padding:8px 14px;
       border-radius:30px;
       font-size:13px;
-      font-weight:700;
+      font-weight:800;
       margin-bottom:18px;
+      border:1px solid rgba(245,199,107,.18);
     }
 
     .booking-card ul{
@@ -267,36 +331,76 @@
       font-size:14px;
     }
 
-    .booking-btn{
+    .booking-btn,
+    .call-btn,
+    .pdf-btn{
       display:block;
-      margin-top:25px;
-      background:linear-gradient(135deg,#d4af37,#f7df8a);
-      color:#111;
+      width:100%;
       text-align:center;
-      padding:16px;
       border-radius:50px;
       font-weight:800;
+      transition:.35s ease;
+    }
+
+    .booking-btn,
+    .pdf-btn{
+      margin-top:18px;
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      color:#111;
+      padding:16px;
+      border:none;
+      cursor:pointer;
     }
 
     .call-btn{
-      display:block;
       margin-top:12px;
       border:1px solid rgba(245,199,107,.5);
       color:#f5c76b;
-      text-align:center;
       padding:14px;
-      border-radius:50px;
-      font-weight:800;
+    }
+
+    .booking-btn:hover,
+    .call-btn:hover,
+    .pdf-btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 15px 30px rgba(212,175,55,.35);
+    }
+
+    .pdf-btn:disabled,
+    .pdf-download-btn:disabled{
+      opacity:.7;
+      cursor:not-allowed;
+    }
+
+    .faq-grid{
+      display:grid;
+      gap:16px;
+    }
+
+    .faq-item{
+      background:#08111f;
+      border:1px solid rgba(245,199,107,.15);
+      border-radius:18px;
+      padding:22px;
+    }
+
+    .faq-item h3{
+      color:#f5c76b;
+      margin-bottom:8px;
+      font-size:18px;
+    }
+
+    .faq-item p{
+      color:#cbd5e1;
+      line-height:1.8;
     }
 
     .cta-box{
       background:
       linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
       url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop');
-
       background-size:cover;
       background-position:center;
-
       border-radius:28px;
       text-align:center;
       padding:55px 30px;
@@ -322,6 +426,7 @@
       padding:50px 7%;
       text-align:center;
       margin-top:40px;
+      border-top:1px solid rgba(245,199,107,.15);
     }
 
     .footer-logo{
@@ -338,45 +443,88 @@
       color:#f5c76b;
     }
 
-    @media(max-width:900px){
-
-      section{
-        padding:60px 5%;
-      }
-
-      .detail-grid{
-        grid-template-columns:1fr;
-      }
-
-      .hero-content h1{
-        font-size:48px;
-      }
-
-      .hero-content span{
-        font-size:15px;
-      }
-
-      .gallery-grid,
-      .highlight-grid,
-      .include-grid{
-        grid-template-columns:1fr;
-      }
-
-      .booking-card{
-        position:relative;
-        top:0;
-      }
-
-      .box{
-        padding:25px;
-      }
-
-      .box h2{
-        font-size:28px;
-      }
-
+    .pdf-popup{
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,.72);
+      display:none;
+      justify-content:center;
+      align-items:center;
+      z-index:999999;
+      padding:18px;
     }
 
+    .pdf-box{
+      background:#fff;
+      width:100%;
+      max-width:410px;
+      border-radius:24px;
+      padding:30px;
+      text-align:center;
+      position:relative;
+      box-shadow:0 24px 80px rgba(0,0,0,.45);
+    }
+
+    .pdf-box h2{
+      color:#111;
+      margin-bottom:10px;
+      font-family:'Playfair Display',serif;
+      font-size:30px;
+    }
+
+    .pdf-box p{
+      color:#666;
+      margin-bottom:20px;
+    }
+
+    .pdf-box input{
+      width:100%;
+      padding:14px;
+      margin-bottom:14px;
+      border-radius:12px;
+      border:1px solid #ddd;
+      outline:none;
+    }
+
+    .pdf-download-btn{
+      width:100%;
+      border:none;
+      background:#111;
+      color:#fff;
+      padding:15px;
+      border-radius:50px;
+      font-weight:800;
+      cursor:pointer;
+    }
+
+    .pdf-close{
+      position:absolute;
+      top:12px;
+      right:16px;
+      border:none;
+      background:none;
+      font-size:28px;
+      cursor:pointer;
+    }
+
+    @media(max-width:900px){
+      section{padding:60px 5%}
+      .navbar{padding:16px 5%}
+      .logo{width:118px}
+      .home-btn{padding:10px 16px;font-size:13px}
+      .detail-grid{grid-template-columns:1fr}
+      .hero{min-height:72vh;padding-top:120px}
+      .hero-content h1{font-size:48px}
+      .hero-content span{font-size:15px}
+      .gallery-grid,
+      .highlight-grid,
+      .include-grid{grid-template-columns:1fr}
+      .booking-card{position:relative;top:0;margin-top:20px}
+      .box{padding:25px}
+      .box h2{font-size:28px}
+      .booking-card h3{font-size:40px}
+      .gallery-grid img{height:230px}
+    }
   </style>
 
 </head>
@@ -384,7 +532,6 @@
 <body>
 
 <nav class="navbar">
-
   <a href="/">
     <img src="/logo.png" class="logo" alt="Holidaydope">
   </a>
@@ -392,48 +539,43 @@
   <a href="/package/index.html" class="home-btn">
     All Packages
   </a>
-
 </nav>
 
 <section class="hero">
-
   <div class="hero-content">
-
     <p>PREMIUM DOMESTIC PACKAGE</p>
-
     <h1>Goa</h1>
-
     <span>
       Beaches, nightlife, beach clubs, water sports and unforgettable tropical vibes with Holidaydope.
     </span>
-
   </div>
+</section>
 
+<section class="trust-strip">
+  <div class="trust-card">🏖️ North & South Goa</div>
+  <div class="trust-card">🌊 Beach Experiences</div>
+  <div class="trust-card">🎶 Nightlife & Clubs</div>
+  <div class="trust-card">📞 24/7 Travel Support</div>
 </section>
 
 <section>
-
   <div class="detail-grid">
 
     <div>
 
       <div class="box">
-
         <h2>Overview</h2>
-
         <p>
           Enjoy Goa beaches, nightlife, beach clubs, water sports and luxury vacation vibes with Holidaydope.
-          Perfect for friends, couples and relaxing beach holidays looking for fun, sunsets and unforgettable memories.
+          This Goa package is perfect for friends, couples and relaxing beach holidays looking for fun, sunsets and unforgettable memories.
+          Holidaydope helps you plan a smooth domestic holiday with hotel stay, transfers, sightseeing and complete travel support.
         </p>
-
       </div>
 
       <div class="box">
-
         <h2>Quick Highlights</h2>
 
         <div class="highlight-grid">
-
           <div class="highlight-card">
             <small>Duration</small>
             <p>4 Nights / 5 Days</p>
@@ -463,154 +605,124 @@
             <small>Experience</small>
             <p>North Goa, South Goa & Nightlife</p>
           </div>
-
         </div>
-
       </div>
 
       <div class="box">
-
         <h2>Package Gallery</h2>
 
         <div class="gallery-grid">
-
-          <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1200&auto=format&fit=crop" alt="Goa Beach">
-
-          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Goa Sunset">
-
-          <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1200&auto=format&fit=crop" alt="Goa Water Sports">
-
-          <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?q=80&w=1200&auto=format&fit=crop" alt="Goa Nightlife">
-
+          <img loading="lazy" src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1200&auto=format&fit=crop" alt="Goa Beach">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Goa Sunset">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1200&auto=format&fit=crop" alt="Goa Water Sports">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?q=80&w=1200&auto=format&fit=crop" alt="Goa Nightlife">
         </div>
-
       </div>
 
       <div class="box">
-
         <h2>Day Wise Itinerary</h2>
 
         <div class="itinerary-day">
-
           <h3>Day 1 — Arrival in Goa</h3>
-
           <p>
             Arrive in Goa and transfer to your hotel. Complete check-in and spend the evening relaxing at nearby beaches or cafes.
           </p>
-
         </div>
 
         <div class="itinerary-day">
-
           <h3>Day 2 — North Goa Beach Tour</h3>
-
           <p>
             Explore famous North Goa beaches, beach clubs, forts, cafes and vibrant tourist attractions.
           </p>
-
         </div>
 
         <div class="itinerary-day">
-
           <h3>Day 3 — South Goa Sightseeing</h3>
-
           <p>
             Visit peaceful South Goa beaches, churches, scenic spots and enjoy relaxing coastal vibes.
           </p>
-
         </div>
 
         <div class="itinerary-day">
-
           <h3>Day 4 — Water Sports & Nightlife</h3>
-
           <p>
             Enjoy optional water sports, beach activities and Goa nightlife experiences with music and beachside fun.
           </p>
-
         </div>
 
         <div class="itinerary-day">
-
           <h3>Day 5 — Departure</h3>
-
           <p>
             Enjoy breakfast, complete checkout and transfer for your return journey with unforgettable Goa memories.
           </p>
-
         </div>
-
       </div>
 
       <div class="box">
-
         <h2>Inclusions & Exclusions</h2>
 
         <div class="include-grid">
-
           <div class="mini-box">
-
             <h3>Inclusions</h3>
-
             <ul>
-
               <li>✅ Premium hotel stay</li>
-
               <li>✅ Daily breakfast</li>
-
               <li>✅ Airport pickup & drop</li>
-
               <li>✅ North & South Goa tour</li>
-
               <li>✅ Beach & nightlife experience</li>
-
               <li>✅ 24/7 Holidaydope support</li>
-
             </ul>
-
           </div>
 
           <div class="mini-box">
-
             <h3>Exclusions</h3>
-
             <ul>
-
               <li>❌ Airfare / train fare</li>
-
               <li>❌ Water sports charges</li>
-
               <li>❌ Personal expenses</li>
-
               <li>❌ Travel insurance</li>
-
               <li>❌ GST</li>
-
               <li>❌ Anything not mentioned in inclusions</li>
-
             </ul>
-
           </div>
-
         </div>
-
       </div>
 
       <div class="box">
-
         <h2>Best Time To Visit</h2>
-
         <p>
-          November to February is considered one of the best times to visit Goa
-          for beaches, nightlife, water sports and pleasant weather.
+          November to February is considered one of the best times to visit Goa for beaches, nightlife, water sports and pleasant weather.
         </p>
+      </div>
 
+      <div class="box">
+        <h2>Goa Package FAQs</h2>
+
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>Is this Goa package suitable for friends and couples?</h3>
+            <p>Yes, this package is suitable for friends, couples and families looking for beaches, nightlife, beach clubs and relaxed holiday experiences.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Are flights or train tickets included?</h3>
+            <p>Flights or train fare are not included by default, but Holidaydope can help you add suitable travel options at the best available fare.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Are water sports included in this package?</h3>
+            <p>Water sports charges are not included by default, but optional water sports can be arranged as per availability and customer preference.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Can this Goa package be customized?</h3>
+            <p>Yes, the package can be customized based on your travel dates, budget, hotel preference, transfers and sightseeing choices.</p>
+          </div>
+        </div>
       </div>
 
       <div class="cta-box">
-
         <h2>Ready To Explore Goa?</h2>
-
         <p>
           Get the best Goa package with Holidaydope.
           Share your travel dates and preferences for the best hotel and tour options.
@@ -621,38 +733,31 @@
           target="_blank"
           class="booking-btn"
         >
-          Book Now
+          WhatsApp Inquiry
         </a>
-
       </div>
 
     </div>
 
     <div>
-
       <div class="booking-card">
-
         <span class="tag">Best Beach Party Escape</span>
 
         <p>Starting From</p>
-
         <h3>₹12,999</h3>
-
         <p>Per Person</p>
 
         <ul>
-
           <li>✅ 4 Nights / 5 Days</li>
-
           <li>✅ Premium Hotel Stay</li>
-
           <li>✅ Daily Breakfast</li>
-
           <li>✅ North & South Goa Tour</li>
-
           <li>✅ Beach & Nightlife Experience</li>
-
         </ul>
+
+        <button class="pdf-btn" onclick="openPDFForm('Goa', '/itinerary/goa.pdf')">
+          Download Itinerary
+        </button>
 
         <a
           href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Goa%20package%20details."
@@ -665,18 +770,14 @@
         <a href="tel:8595789670" class="call-btn">
           Call Now
         </a>
-
       </div>
-
     </div>
 
   </div>
-
 </section>
 
 <footer>
-
-  <img src="/logo.png" class="footer-logo" alt="Holidaydope">
+  <img loading="lazy" src="/logo.png" class="footer-logo" alt="Holidaydope">
 
   <p>Holidaydope — Chalo Duniya Ghume</p>
 
@@ -699,8 +800,103 @@
   <p style="margin-top:20px;color:#888;">
     © 2026 Holidaydope. All Rights Reserved.
   </p>
-
 </footer>
+
+<div class="pdf-popup" id="pdfPopup">
+  <div class="pdf-box">
+
+    <button class="pdf-close" onclick="closePDFForm()">×</button>
+
+    <h2>Download Itinerary</h2>
+
+    <p id="pdfPackageName">
+      Get your package PDF instantly
+    </p>
+
+    <input type="text" id="leadName" placeholder="Your Name">
+
+    <input type="tel" id="leadPhone" placeholder="WhatsApp Number">
+
+    <button class="pdf-download-btn" onclick="downloadItinerary()">
+      Download PDF
+    </button>
+
+  </div>
+</div>
+
+<script>
+let selectedPDF = "";
+let selectedPackage = "";
+
+function openPDFForm(packageName, pdfLink){
+  selectedPackage = packageName;
+  selectedPDF = pdfLink;
+
+  document.getElementById("pdfPackageName").innerText =
+    packageName + " itinerary PDF";
+
+  document.getElementById("pdfPopup").style.display = "flex";
+}
+
+function closePDFForm(){
+  document.getElementById("pdfPopup").style.display = "none";
+}
+
+function downloadItinerary(){
+
+  const name =
+    document.getElementById("leadName").value.trim();
+
+  const phone =
+    document.getElementById("leadPhone").value.trim();
+
+  const btn =
+    document.querySelector(".pdf-download-btn");
+
+  if(name === "" || phone.length < 10){
+    alert("Please enter valid details.");
+    return;
+  }
+
+  btn.innerText = "Preparing PDF...";
+  btn.disabled = true;
+
+  const message =
+`Hi Holidaydope 👋
+
+New Premium Itinerary Download Request
+
+Interested Package: ${selectedPackage}
+
+Name: ${name}
+
+Phone: ${phone}`;
+
+  window.open(
+    "https://wa.me/918595789670?text=" +
+    encodeURIComponent(message),
+    "_blank"
+  );
+
+  const link = document.createElement("a");
+
+  link.href = selectedPDF;
+
+  link.download =
+    selectedPackage + "-Holidaydope-Itinerary.pdf";
+
+  document.body.appendChild(link);
+
+  link.click();
+
+  document.body.removeChild(link);
+
+  btn.innerText = "Download PDF";
+  btn.disabled = false;
+
+  closePDFForm();
+}
+</script>
 
 </body>
 </html>
