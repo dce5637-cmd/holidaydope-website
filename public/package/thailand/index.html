@@ -3,46 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>Thailand Tour Packages | Holidaydope</title>
 
   <meta name="description" content="Book Thailand packages with Holidaydope. Bangkok Pattaya package, Phuket Krabi package, island tours, nightlife, beaches and premium Thailand vacation.">
   <meta name="keywords" content="Thailand package, Bangkok Pattaya package, Phuket Krabi package, Thailand tour, Holidaydope Thailand">
+  <meta name="author" content="Holidaydope">
 
   <meta property="og:title" content="Thailand Tour Packages | Holidaydope">
   <meta property="og:description" content="Premium Thailand holiday packages with Bangkok Pattaya and Phuket Krabi options.">
   <meta property="og:image" content="/logo.png">
+  <meta property="og:type" content="website">
 
   <link rel="icon" href="/favicon.png">
-<link rel="canonical" href="https://www.holidaydope.com/package/thailand/index.html">
+  <link rel="canonical" href="https://www.holidaydope.com/package/thailand/index.html">
+
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"TouristTrip",
+    "name":"Thailand Tour Packages",
+    "description":"Thailand holiday packages with Bangkok Pattaya and Phuket Krabi options, including hotels, breakfast, airport transfers, sightseeing and island tours.",
+    "provider":{
+      "@type":"TravelAgency",
+      "name":"Holidaydope",
+      "telephone":"+918595789670",
+      "url":"https://www.holidaydope.com"
+    },
+    "touristType":["Couples","Friends","Family","Honeymoon"],
+    "itinerary":{
+      "@type":"ItemList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Bangkok Pattaya Package"},
+        {"@type":"ListItem","position":2,"name":"Phuket Krabi Package"}
+      ]
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which Thailand package is best for first-time travellers?",
+        "acceptedAnswer":{"@type":"Answer","text":"Bangkok Pattaya is a popular option for first-time travellers because it includes city experiences, shopping, nightlife and Coral Island."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which Thailand package is best for beaches?",
+        "acceptedAnswer":{"@type":"Answer","text":"Phuket Krabi is best for beaches, island hopping, Phi Phi Island, Krabi 4 Island Tour and tropical luxury experiences."}
+      },
+      {
+        "@type":"Question",
+        "name":"Are flights included in Thailand packages?",
+        "acceptedAnswer":{"@type":"Answer","text":"Flights are not included by default, but Holidaydope can help you add suitable flight options on request."}
+      },
+      {
+        "@type":"Question",
+        "name":"What is the best time to visit Thailand?",
+        "acceptedAnswer":{"@type":"Answer","text":"November to April is one of the best times to visit Thailand for beaches, island tours, sightseeing and outdoor activities."}
+      }
+    ]
+  }
+  </script>
+
   <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins',sans-serif;
-    }
-
-    body{
-      background:#08111f;
-      color:#fff;
-      overflow-x:hidden;
-    }
-
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
-
-    img{
-      width:100%;
-      display:block;
-    }
-
-    section{
-      padding:80px 7%;
-    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    html{scroll-behavior:smooth}
+    body{background:#08111f;color:#fff;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    img{width:100%;display:block}
+    section{padding:80px 7%;scroll-margin-top:90px}
+    ::selection{background:#f5c76b;color:#111}
 
     .navbar{
       position:absolute;
@@ -57,7 +94,8 @@
     }
 
     .logo{
-      width:130px;
+      width:135px;
+      filter:drop-shadow(0 0 14px rgba(245,199,107,.35));
     }
 
     .home-btn{
@@ -67,12 +105,18 @@
       border-radius:40px;
       font-weight:800;
       box-shadow:0 10px 25px rgba(212,175,55,.25);
+      transition:.35s ease;
+    }
+
+    .home-btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 15px 30px rgba(212,175,55,.35);
     }
 
     .hero{
-      height:80vh;
+      min-height:82vh;
       background:
-      linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.58)),
+      linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.60)),
       url('https://images.unsplash.com/photo-1508009603885-50cf7c579365?q=80&w=1600&auto=format&fit=crop');
       background-size:cover;
       background-position:center;
@@ -80,19 +124,22 @@
       align-items:center;
       justify-content:center;
       text-align:center;
+      padding:120px 7% 80px;
     }
 
     .hero-content h1{
       font-size:78px;
       font-family:'Playfair Display',serif;
       margin-bottom:12px;
+      text-shadow:0 14px 35px rgba(0,0,0,.55);
     }
 
     .hero-content p{
       color:#f5c76b;
       letter-spacing:3px;
       margin-bottom:15px;
-      font-weight:700;
+      font-weight:800;
+      font-size:13px;
     }
 
     .hero-content span{
@@ -105,13 +152,32 @@
       padding:0 18px;
     }
 
+    .trust-strip{
+      padding:26px 7%;
+      background:#08111f;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+      gap:16px;
+    }
+
+    .trust-card{
+      background:rgba(255,255,255,.055);
+      border:1px solid rgba(245,199,107,.18);
+      border-radius:20px;
+      padding:17px;
+      text-align:center;
+      font-weight:800;
+      color:#f8fafc;
+      box-shadow:0 14px 35px rgba(0,0,0,.22);
+    }
+
     .box{
-      background:#111d2d;
+      background:linear-gradient(180deg,#111d2d,#0b1626);
       border-radius:24px;
       padding:35px;
-      border:1px solid rgba(255,255,255,.08);
+      border:1px solid rgba(245,199,107,.13);
       margin-bottom:30px;
-      box-shadow:0 18px 45px rgba(0,0,0,.18);
+      box-shadow:0 18px 45px rgba(0,0,0,.20);
     }
 
     .box h2{
@@ -136,11 +202,11 @@
     }
 
     .package-card{
-      background:#111d2d;
+      background:linear-gradient(180deg,#111d2d,#08111f);
       border-radius:28px;
       overflow:hidden;
-      border:1px solid rgba(255,255,255,.08);
-      box-shadow:0 18px 45px rgba(0,0,0,.22);
+      border:1px solid rgba(245,199,107,.13);
+      box-shadow:0 18px 45px rgba(0,0,0,.24);
       transition:.35s ease;
     }
 
@@ -152,6 +218,7 @@
     .package-card img{
       height:280px;
       object-fit:cover;
+      filter:saturate(1.06) contrast(1.03) brightness(.97);
     }
 
     .package-content{
@@ -195,27 +262,45 @@
       font-size:15px;
     }
 
-    .booking-btn{
+    .booking-btn,
+    .outline-btn,
+    .pdf-btn{
       display:inline-block;
       margin-top:15px;
-      background:linear-gradient(135deg,#d4af37,#f7df8a);
-      color:#111;
-      text-align:center;
-      padding:15px 26px;
       border-radius:50px;
       font-weight:800;
+      transition:.35s ease;
+      text-align:center;
+    }
+
+    .booking-btn,
+    .pdf-btn{
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      color:#111;
+      padding:15px 26px;
+      border:none;
+      cursor:pointer;
     }
 
     .outline-btn{
-      display:inline-block;
-      margin-top:15px;
       margin-left:8px;
       border:1px solid rgba(245,199,107,.5);
       color:#f5c76b;
-      text-align:center;
       padding:14px 24px;
-      border-radius:50px;
-      font-weight:800;
+    }
+
+    .pdf-btn{
+      width:100%;
+      margin-top:18px;
+      padding:16px;
+    }
+
+    .booking-btn:hover,
+    .outline-btn:hover,
+    .home-btn:hover,
+    .pdf-btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 15px 30px rgba(212,175,55,.35);
     }
 
     .itinerary-grid{
@@ -226,7 +311,7 @@
     }
 
     .itinerary-box{
-      background:#0b1626;
+      background:#08111f;
       border-radius:22px;
       padding:28px;
       border-left:4px solid #f5c76b;
@@ -255,6 +340,7 @@
       object-fit:cover;
       border-radius:20px;
       transition:.35s ease;
+      filter:saturate(1.06) contrast(1.03) brightness(.97);
     }
 
     .gallery img:hover{
@@ -268,7 +354,7 @@
     }
 
     .mini-box{
-      background:#0b1626;
+      background:#08111f;
       border-radius:18px;
       padding:24px;
       border:1px solid rgba(255,255,255,.07);
@@ -286,6 +372,29 @@
 
     .mini-box li{
       margin-bottom:10px;
+    }
+
+    .faq-grid{
+      display:grid;
+      gap:16px;
+    }
+
+    .faq-item{
+      background:#08111f;
+      border:1px solid rgba(245,199,107,.15);
+      border-radius:18px;
+      padding:22px;
+    }
+
+    .faq-item h3{
+      color:#f5c76b;
+      margin-bottom:8px;
+      font-size:18px;
+    }
+
+    .faq-item p{
+      color:#cbd5e1;
+      line-height:1.8;
     }
 
     .cta-box{
@@ -320,6 +429,7 @@
       padding:50px 7%;
       text-align:center;
       margin-top:40px;
+      border-top:1px solid rgba(245,199,107,.15);
     }
 
     .footer-logo{
@@ -336,129 +446,102 @@
       color:#f5c76b;
     }
 
+    .pdf-popup{
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,.72);
+      display:none;
+      justify-content:center;
+      align-items:center;
+      z-index:999999;
+      padding:18px;
+    }
+
+    .pdf-box{
+      background:#fff;
+      width:100%;
+      max-width:410px;
+      border-radius:24px;
+      padding:30px;
+      text-align:center;
+      position:relative;
+      box-shadow:0 24px 80px rgba(0,0,0,.45);
+    }
+
+    .pdf-box h2{
+      color:#111;
+      margin-bottom:10px;
+      font-family:'Playfair Display',serif;
+      font-size:30px;
+    }
+
+    .pdf-box p{
+      color:#666;
+      margin-bottom:20px;
+    }
+
+    .pdf-box input{
+      width:100%;
+      padding:14px;
+      margin-bottom:14px;
+      border-radius:12px;
+      border:1px solid #ddd;
+      outline:none;
+    }
+
+    .pdf-download-btn{
+      width:100%;
+      border:none;
+      background:#111;
+      color:#fff;
+      padding:15px;
+      border-radius:50px;
+      font-weight:800;
+      cursor:pointer;
+    }
+
+    .pdf-btn:disabled,
+    .pdf-download-btn:disabled{
+      opacity:.7;
+      cursor:not-allowed;
+    }
+
+    .pdf-close{
+      position:absolute;
+      top:12px;
+      right:16px;
+      border:none;
+      background:none;
+      font-size:28px;
+      cursor:pointer;
+    }
+
     @media(max-width:900px){
-      section{
-        padding:60px 5%;
-      }
-
-      .hero-content h1{
-        font-size:48px;
-      }
-
-      .hero-content span{
-        font-size:15px;
-      }
-
+      section{padding:60px 5%}
+      .navbar{padding:16px 5%}
+      .logo{width:118px}
+      .home-btn{padding:10px 16px;font-size:13px}
+      .hero{min-height:72vh;padding-top:120px}
+      .hero-content h1{font-size:48px}
+      .hero-content span{font-size:15px}
       .package-grid,
       .itinerary-grid,
       .include-grid,
-      .gallery{
-        grid-template-columns:1fr;
-      }
-
-      .box{
-        padding:25px;
-      }
-
-      .box h2{
-        font-size:28px;
-      }
-
-      .package-content h2{
-        font-size:29px;
-      }
-
+      .gallery{grid-template-columns:1fr}
+      .box{padding:25px}
+      .box h2{font-size:28px}
+      .package-content h2{font-size:29px}
       .outline-btn{
         margin-left:0;
         display:block;
+        width:100%;
       }
-
       .booking-btn{
         display:block;
+        width:100%;
       }
+      .gallery img{height:230px}
     }
-    .booking-btn,
-.outline-btn,
-.home-btn{
-  transition:.35s ease;
-}
-
-.booking-btn:hover,
-.outline-btn:hover,
-.home-btn:hover{
-  transform:translateY(-3px);
-  box-shadow:0 15px 30px rgba(212,175,55,.35);
-}
-    .pdf-btn{
-  width:100%;
-  margin-top:18px;
-  border:none;
-  background:linear-gradient(135deg,#d4af37,#f7df8a);
-  color:#111;
-  padding:16px;
-  border-radius:50px;
-  font-weight:800;
-  cursor:pointer;
-}
-
-.pdf-popup{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.7);
-  display:none;
-  justify-content:center;
-  align-items:center;
-  z-index:999999;
-}
-
-.pdf-box{
-  background:#fff;
-  width:100%;
-  max-width:400px;
-  border-radius:24px;
-  padding:30px;
-  text-align:center;
-  position:relative;
-}
-
-.pdf-box h2{
-  color:#111;
-  margin-bottom:10px;
-}
-
-.pdf-box p{
-  color:#666;
-  margin-bottom:20px;
-}
-
-.pdf-box input{
-  width:100%;
-  padding:14px;
-  margin-bottom:14px;
-  border-radius:12px;
-  border:1px solid #ddd;
-}
-
-.pdf-download-btn{
-  width:100%;
-  border:none;
-  background:#111;
-  color:#fff;
-  padding:15px;
-  border-radius:50px;
-  font-weight:700;
-  cursor:pointer;
-}
-
-.pdf-close{
-  position:absolute;
-  top:12px;
-  right:16px;
-  border:none;
-  background:none;
-  font-size:28px;
-  cursor:pointer;
-}
   </style>
 </head>
 
@@ -478,8 +561,17 @@
   <div class="hero-content">
     <p>LUXURY INTERNATIONAL PACKAGE</p>
     <h1>Thailand</h1>
-    <span>Choose your perfect Thailand escape — Bangkok Pattaya for nightlife and city fun, or Phuket Krabi for beaches, islands and tropical luxury.</span>
+    <span>
+      Choose your perfect Thailand escape — Bangkok Pattaya for nightlife and city fun, or Phuket Krabi for beaches, islands and tropical luxury.
+    </span>
   </div>
+</section>
+
+<section class="trust-strip">
+  <div class="trust-card">🏙️ Bangkok + Pattaya</div>
+  <div class="trust-card">🏝️ Phuket + Krabi</div>
+  <div class="trust-card">🚤 Island Tours</div>
+  <div class="trust-card">📞 24/7 Travel Support</div>
 </section>
 
 <section>
@@ -495,7 +587,6 @@
 
   <div class="package-grid">
 
-    <!-- Bangkok Pattaya -->
     <div class="package-card">
       <img loading="lazy" src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?q=80&w=1200&auto=format&fit=crop" alt="Bangkok Pattaya Thailand Package">
 
@@ -519,12 +610,11 @@
           <li>✅ Bangkok City Tour</li>
           <li>✅ Daily Breakfast</li>
         </ul>
-<button class="pdf-btn"
-onclick="openPDFForm('Thailand', '/itinerary/thailand.pdf')">
 
-Download Itinerary
+        <button class="pdf-btn" onclick="openPDFForm('Bangkok Pattaya Thailand', '/itinerary/thailand.pdf')">
+          Download Itinerary
+        </button>
 
-</button>
         <a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Bangkok%20Pattaya%20Thailand%20package%20details." target="_blank" class="booking-btn">
           Book Now
         </a>
@@ -535,7 +625,6 @@ Download Itinerary
       </div>
     </div>
 
-    <!-- Phuket Krabi -->
     <div class="package-card">
       <img loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Phuket Krabi Thailand Package">
 
@@ -559,6 +648,10 @@ Download Itinerary
           <li>✅ Krabi 4 Island Tour</li>
           <li>✅ Daily Breakfast</li>
         </ul>
+
+        <button class="pdf-btn" onclick="openPDFForm('Phuket Krabi Thailand', '/itinerary/thailand.pdf')">
+          Download Itinerary
+        </button>
 
         <a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Phuket%20Krabi%20Thailand%20package%20details." target="_blank" class="booking-btn">
           Book Now
@@ -658,6 +751,32 @@ Download Itinerary
     </p>
   </div>
 
+  <div class="box">
+    <h2>Thailand Package FAQs</h2>
+
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>Which Thailand package is best for first-time travellers?</h3>
+        <p>Bangkok Pattaya is a popular option for first-time travellers because it includes city experiences, shopping, nightlife and Coral Island.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Which Thailand package is best for beaches?</h3>
+        <p>Phuket Krabi is best for beaches, island hopping, Phi Phi Island, Krabi 4 Island Tour and tropical luxury experiences.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Are flights included in Thailand packages?</h3>
+        <p>Flights are not included by default, but Holidaydope can help you add suitable flight options at the best available fare.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can Thailand packages be customized?</h3>
+        <p>Yes, packages can be customized based on your travel date, budget, hotel preference, sightseeing choices and honeymoon or family requirements.</p>
+      </div>
+    </div>
+  </div>
+
   <div class="cta-box">
     <h2>Ready To Explore Thailand?</h2>
     <p>
@@ -676,7 +795,7 @@ Download Itinerary
 </section>
 
 <footer>
-  <img src="/logo.png" class="footer-logo" alt="Holidaydope">
+  <img loading="lazy" src="/logo.png" class="footer-logo" alt="Holidaydope">
 
   <p>Holidaydope — Chalo Duniya Ghume</p>
 
@@ -700,11 +819,102 @@ Download Itinerary
     © 2026 Holidaydope. All Rights Reserved.
   </p>
 </footer>
-<button class="pdf-btn"
-onclick="openPDFForm('Thailand', '/itinerary/thailand.pdf')">
 
-Download Itinerary
+<div class="pdf-popup" id="pdfPopup">
+  <div class="pdf-box">
 
-</button>
+    <button class="pdf-close" onclick="closePDFForm()">×</button>
+
+    <h2>Download Itinerary</h2>
+
+    <p id="pdfPackageName">
+      Get your package PDF instantly
+    </p>
+
+    <input type="text" id="leadName" placeholder="Your Name">
+
+    <input type="tel" id="leadPhone" placeholder="WhatsApp Number">
+
+    <button class="pdf-download-btn" onclick="downloadItinerary()">
+      Download PDF
+    </button>
+
+  </div>
+</div>
+
+<script>
+let selectedPDF = "";
+let selectedPackage = "";
+
+function openPDFForm(packageName, pdfLink){
+  selectedPackage = packageName;
+  selectedPDF = pdfLink;
+
+  document.getElementById("pdfPackageName").innerText =
+    packageName + " itinerary PDF";
+
+  document.getElementById("pdfPopup").style.display = "flex";
+}
+
+function closePDFForm(){
+  document.getElementById("pdfPopup").style.display = "none";
+}
+
+function downloadItinerary(){
+
+  const name =
+    document.getElementById("leadName").value.trim();
+
+  const phone =
+    document.getElementById("leadPhone").value.trim();
+
+  const btn =
+    document.querySelector(".pdf-download-btn");
+
+  if(name === "" || phone.length < 10){
+    alert("Please enter valid details.");
+    return;
+  }
+
+  btn.innerText = "Preparing PDF...";
+  btn.disabled = true;
+
+  const message =
+`Hi Holidaydope 👋
+
+New Premium Itinerary Download Request
+
+Interested Package: ${selectedPackage}
+
+Name: ${name}
+
+Phone: ${phone}`;
+
+  window.open(
+    "https://wa.me/918595789670?text=" +
+    encodeURIComponent(message),
+    "_blank"
+  );
+
+  const link = document.createElement("a");
+
+  link.href = selectedPDF;
+
+  link.download =
+    selectedPackage + "-Holidaydope-Itinerary.pdf";
+
+  document.body.appendChild(link);
+
+  link.click();
+
+  document.body.removeChild(link);
+
+  btn.innerText = "Download PDF";
+  btn.disabled = false;
+
+  closePDFForm();
+}
+</script>
+
 </body>
 </html>
