@@ -3,98 +3,400 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>Bali Luxury Package | Holidaydope</title>
 
   <meta name="description" content="Book Bali package with Holidaydope. Private villa, beaches, waterfalls, Ubud tour, Nusa Penida island tour and premium Bali vacation experience.">
   <meta name="keywords" content="Bali package, Bali tour, Bali honeymoon, Bali private villa, Nusa Penida tour, Holidaydope Bali">
+  <meta name="author" content="Holidaydope">
 
   <meta property="og:title" content="Bali Luxury Package | Holidaydope">
   <meta property="og:description" content="Premium Bali holiday package with private villas, beaches, waterfalls and island tours.">
   <meta property="og:image" content="/logo.png">
+  <meta property="og:type" content="website">
 
   <link rel="icon" href="/favicon.png">
-<link rel="canonical" href="https://www.holidaydope.com/package/bali/index.html">
+  <link rel="canonical" href="https://www.holidaydope.com/package/bali/index.html">
+
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"TouristTrip",
+    "name":"Bali Luxury Package",
+    "description":"Premium Bali holiday package with private villa stay, Ubud tour, Nusa Penida island tour, beaches, waterfalls and airport transfers.",
+    "provider":{
+      "@type":"TravelAgency",
+      "name":"Holidaydope",
+      "telephone":"+918595789670",
+      "url":"https://www.holidaydope.com"
+    },
+    "touristType":["Couples","Honeymoon","Family","Friends"],
+    "itinerary":{
+      "@type":"ItemList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Arrival in Bali"},
+        {"@type":"ListItem","position":2,"name":"Ubud Tour, Waterfall & Rice Terrace"},
+        {"@type":"ListItem","position":3,"name":"Nusa Penida Island Tour"},
+        {"@type":"ListItem","position":4,"name":"Beach Club, Temple Visit & Sunset"},
+        {"@type":"ListItem","position":5,"name":"Shopping, Leisure & Departure"}
+      ]
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Is this Bali package suitable for honeymoon couples?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes, this Bali package is suitable for honeymoon couples and includes private villa or premium hotel stay, scenic tours, beach clubs and romantic sunset experiences."}
+      },
+      {
+        "@type":"Question",
+        "name":"Are flights included in the Bali package?",
+        "acceptedAnswer":{"@type":"Answer","text":"Flights are not included by default, but Holidaydope can help you add suitable flight options on request."}
+      },
+      {
+        "@type":"Question",
+        "name":"What is included in this Bali package?",
+        "acceptedAnswer":{"@type":"Answer","text":"The Bali package includes hotel or private villa stay, daily breakfast, airport pickup and drop, Ubud tour, Nusa Penida island tour and Holidaydope support."}
+      },
+      {
+        "@type":"Question",
+        "name":"What is the best time to visit Bali?",
+        "acceptedAnswer":{"@type":"Answer","text":"April to October is generally considered the best time to visit Bali for beaches, outdoor tours, island hopping and pleasant tropical weather."}
+      }
+    ]
+  }
+  </script>
 
   <style>
     *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    html{scroll-behavior:smooth}
     body{background:#08111f;color:#fff;overflow-x:hidden}
     a{text-decoration:none;color:inherit}
     img{width:100%;display:block}
-    section{padding:80px 7%}
+    section{padding:80px 7%;scroll-margin-top:90px}
+    ::selection{background:#f5c76b;color:#111}
 
-    .navbar{position:absolute;top:0;left:0;width:100%;padding:20px 7%;display:flex;align-items:center;justify-content:space-between;z-index:10}
-    .logo{width:130px}
-    .home-btn{background:linear-gradient(135deg,#d4af37,#f7df8a);color:#111;padding:12px 22px;border-radius:40px;font-weight:800;box-shadow:0 10px 25px rgba(212,175,55,.25)}
+    .navbar{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      padding:20px 7%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      z-index:10
+    }
+
+    .logo{
+      width:135px;
+      filter:drop-shadow(0 0 14px rgba(245,199,107,.35));
+    }
+
+    .home-btn{
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      color:#111;
+      padding:12px 22px;
+      border-radius:40px;
+      font-weight:800;
+      box-shadow:0 10px 25px rgba(212,175,55,.25);
+      transition:.35s ease;
+    }
+
+    .home-btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 15px 30px rgba(212,175,55,.35);
+    }
 
     .hero{
-      height:80vh;
-      background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.58)),url('https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?q=80&w=1600&auto=format&fit=crop');
+      min-height:82vh;
+      background:
+      linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.60)),
+      url('https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?q=80&w=1600&auto=format&fit=crop');
       background-size:cover;
       background-position:center;
       display:flex;
       align-items:center;
       justify-content:center;
       text-align:center;
+      padding:120px 7% 80px;
     }
 
-    .hero-content h1{font-size:78px;font-family:'Playfair Display',serif;margin-bottom:12px}
-    .hero-content p{color:#f5c76b;letter-spacing:3px;margin-bottom:15px;font-weight:700}
-    .hero-content span{display:block;max-width:720px;margin:auto;color:#e5e7eb;font-size:18px;line-height:1.7;padding:0 18px}
+    .hero-content p{
+      color:#f5c76b;
+      letter-spacing:3px;
+      margin-bottom:15px;
+      font-weight:800;
+      font-size:13px;
+    }
 
-    .detail-grid{display:grid;grid-template-columns:2fr 1fr;gap:40px}
+    .hero-content h1{
+      font-size:78px;
+      font-family:'Playfair Display',serif;
+      margin-bottom:12px;
+      text-shadow:0 14px 35px rgba(0,0,0,.55);
+    }
+
+    .hero-content span{
+      display:block;
+      max-width:760px;
+      margin:auto;
+      color:#e5e7eb;
+      font-size:18px;
+      line-height:1.7;
+      padding:0 18px;
+    }
+
+    .trust-strip{
+      padding:26px 7%;
+      background:#08111f;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+      gap:16px;
+    }
+
+    .trust-card{
+      background:rgba(255,255,255,.055);
+      border:1px solid rgba(245,199,107,.18);
+      border-radius:20px;
+      padding:17px;
+      text-align:center;
+      font-weight:800;
+      color:#f8fafc;
+      box-shadow:0 14px 35px rgba(0,0,0,.22);
+    }
+
+    .detail-grid{
+      display:grid;
+      grid-template-columns:2fr 1fr;
+      gap:40px;
+      align-items:start;
+    }
 
     .box{
-      background:#111d2d;
+      background:linear-gradient(180deg,#111d2d,#0b1626);
       border-radius:24px;
       padding:35px;
-      border:1px solid rgba(255,255,255,.08);
+      border:1px solid rgba(245,199,107,.13);
       margin-bottom:30px;
-      box-shadow:0 18px 45px rgba(0,0,0,.18);
+      box-shadow:0 18px 45px rgba(0,0,0,.20);
     }
 
-    .box h2{color:#f5c76b;margin-bottom:20px;font-size:34px;font-family:'Playfair Display',serif}
-    .box p,.box li{color:#cbd5e1;line-height:1.9;font-size:15.5px}
+    .box h2{
+      color:#f5c76b;
+      margin-bottom:20px;
+      font-size:34px;
+      font-family:'Playfair Display',serif;
+    }
+
+    .box p,
+    .box li{
+      color:#cbd5e1;
+      line-height:1.9;
+      font-size:15.5px;
+    }
+
     .box ul{padding-left:20px}
 
-    .highlight-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
-    .highlight-card{background:#0b1626;border:1px solid rgba(245,199,107,.18);border-radius:18px;padding:18px}
-    .highlight-card small{color:#f5c76b;font-weight:700;display:block;margin-bottom:6px}
-    .highlight-card p{color:#fff;line-height:1.5}
+    .highlight-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:15px;
+    }
 
-    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
-    .gallery img{height:240px;object-fit:cover;border-radius:20px;transition:.35s ease}
-    .gallery img:hover{transform:scale(1.03)}
+    .highlight-card{
+      background:#08111f;
+      border:1px solid rgba(245,199,107,.18);
+      border-radius:18px;
+      padding:18px;
+    }
 
-    .itinerary-day{background:#0b1626;border-left:4px solid #f5c76b;border-radius:18px;padding:22px;margin-bottom:18px}
-    .itinerary-day h3{color:#f5c76b;margin-bottom:8px;font-size:20px}
+    .highlight-card small{
+      color:#f5c76b;
+      font-weight:800;
+      display:block;
+      margin-bottom:6px;
+    }
 
-    .include-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-    .mini-box{background:#0b1626;border-radius:18px;padding:24px;border:1px solid rgba(255,255,255,.07)}
-    .mini-box h3{color:#f5c76b;margin-bottom:14px}
-    .mini-box ul{list-style:none;padding-left:0}
-    .mini-box li{margin-bottom:10px}
+    .highlight-card p{
+      color:#fff;
+      line-height:1.5;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:15px;
+    }
+
+    .gallery img{
+      height:240px;
+      object-fit:cover;
+      border-radius:20px;
+      transition:.35s ease;
+      filter:saturate(1.06) contrast(1.03) brightness(.97);
+    }
+
+    .gallery img:hover{
+      transform:scale(1.03);
+    }
+
+    .itinerary-day{
+      background:#08111f;
+      border-left:4px solid #f5c76b;
+      border-radius:18px;
+      padding:22px;
+      margin-bottom:18px;
+    }
+
+    .itinerary-day h3{
+      color:#f5c76b;
+      margin-bottom:8px;
+      font-size:20px;
+    }
+
+    .include-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .mini-box{
+      background:#08111f;
+      border-radius:18px;
+      padding:24px;
+      border:1px solid rgba(255,255,255,.07);
+    }
+
+    .mini-box h3{
+      color:#f5c76b;
+      margin-bottom:14px;
+    }
+
+    .mini-box ul{
+      list-style:none;
+      padding-left:0;
+    }
+
+    .mini-box li{
+      margin-bottom:10px;
+    }
 
     .booking-card{
-      background:#111d2d;
+      background:linear-gradient(180deg,#111d2d,#08111f);
       border-radius:24px;
       padding:35px;
       position:sticky;
       top:30px;
-      border:1px solid rgba(255,255,255,.08);
-      box-shadow:0 18px 45px rgba(0,0,0,.25);
+      border:1px solid rgba(245,199,107,.18);
+      box-shadow:0 18px 45px rgba(0,0,0,.28);
     }
 
-    .booking-card h3{font-size:48px;color:#f5c76b;margin:12px 0}
-    .booking-card .tag{background:#0b1626;color:#f5c76b;display:inline-block;padding:8px 14px;border-radius:30px;font-size:13px;font-weight:700;margin-bottom:18px}
-    .booking-card ul{list-style:none;margin-top:22px}
-    .booking-card li{color:#cbd5e1;margin-bottom:10px;font-size:14px}
+    .booking-card h3{
+      font-size:48px;
+      color:#f5c76b;
+      margin:12px 0;
+    }
 
-    .booking-btn{display:block;margin-top:25px;background:linear-gradient(135deg,#d4af37,#f7df8a);color:#111;text-align:center;padding:16px;border-radius:50px;font-weight:800}
-    .call-btn{display:block;margin-top:12px;border:1px solid rgba(245,199,107,.5);color:#f5c76b;text-align:center;padding:14px;border-radius:50px;font-weight:800}
+    .booking-card .tag{
+      background:#08111f;
+      color:#f5c76b;
+      display:inline-block;
+      padding:8px 14px;
+      border-radius:30px;
+      font-size:13px;
+      font-weight:800;
+      margin-bottom:18px;
+      border:1px solid rgba(245,199,107,.18);
+    }
+
+    .booking-card ul{
+      list-style:none;
+      margin-top:22px;
+    }
+
+    .booking-card li{
+      color:#cbd5e1;
+      margin-bottom:10px;
+      font-size:14px;
+    }
+
+    .booking-btn,
+    .call-btn,
+    .pdf-btn{
+      display:block;
+      width:100%;
+      text-align:center;
+      border-radius:50px;
+      font-weight:800;
+      transition:.35s ease;
+    }
+
+    .booking-btn,
+    .pdf-btn{
+      margin-top:18px;
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      color:#111;
+      padding:16px;
+      border:none;
+      cursor:pointer;
+    }
+
+    .call-btn{
+      margin-top:12px;
+      border:1px solid rgba(245,199,107,.5);
+      color:#f5c76b;
+      padding:14px;
+    }
+
+    .booking-btn:hover,
+    .call-btn:hover,
+    .pdf-btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 15px 30px rgba(212,175,55,.35);
+    }
+
+    .pdf-btn:disabled,
+    .pdf-download-btn:disabled{
+      opacity:.7;
+      cursor:not-allowed;
+    }
+
+    .faq-grid{
+      display:grid;
+      gap:16px;
+    }
+
+    .faq-item{
+      background:#08111f;
+      border:1px solid rgba(245,199,107,.15);
+      border-radius:18px;
+      padding:22px;
+    }
+
+    .faq-item h3{
+      color:#f5c76b;
+      margin-bottom:8px;
+      font-size:18px;
+    }
+
+    .faq-item p{
+      color:#cbd5e1;
+      line-height:1.8;
+    }
 
     .cta-box{
-      background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url('https://images.unsplash.com/photo-1558005530-a7958896ec60?q=80&w=1600&auto=format&fit=crop');
+      background:
+      linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+      url('https://images.unsplash.com/photo-1558005530-a7958896ec60?q=80&w=1600&auto=format&fit=crop');
       background-size:cover;
       background-position:center;
       border-radius:28px;
@@ -103,119 +405,133 @@
       border:1px solid rgba(245,199,107,.25);
     }
 
-    .cta-box h2{color:#f5c76b;font-family:'Playfair Display',serif;font-size:38px;margin-bottom:12px}
-    .cta-box p{max-width:700px;margin:0 auto 24px;color:#e5e7eb;line-height:1.8}
+    .cta-box h2{
+      color:#f5c76b;
+      font-family:'Playfair Display',serif;
+      font-size:38px;
+      margin-bottom:12px;
+    }
 
-    footer{background:#050b14;padding:50px 7%;text-align:center;margin-top:40px}
-    .footer-logo{width:150px;margin:0 auto 20px}
-    footer p{color:#cbd5e1;margin-bottom:10px}
-    footer a{color:#f5c76b}
+    .cta-box p{
+      max-width:700px;
+      margin:0 auto 24px;
+      color:#e5e7eb;
+      line-height:1.8;
+    }
+
+    footer{
+      background:#050b14;
+      padding:50px 7%;
+      text-align:center;
+      margin-top:40px;
+      border-top:1px solid rgba(245,199,107,.15);
+    }
+
+    .footer-logo{
+      width:150px;
+      margin:0 auto 20px;
+    }
+
+    footer p{
+      color:#cbd5e1;
+      margin-bottom:10px;
+    }
+
+    footer a{
+      color:#f5c76b;
+    }
+
+    .pdf-popup{
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,.72);
+      display:none;
+      justify-content:center;
+      align-items:center;
+      z-index:999999;
+      padding:18px;
+    }
+
+    .pdf-box{
+      background:#fff;
+      width:100%;
+      max-width:410px;
+      border-radius:24px;
+      padding:30px;
+      text-align:center;
+      position:relative;
+      box-shadow:0 24px 80px rgba(0,0,0,.45);
+    }
+
+    .pdf-box h2{
+      color:#111;
+      margin-bottom:10px;
+      font-family:'Playfair Display',serif;
+      font-size:30px;
+    }
+
+    .pdf-box p{
+      color:#666;
+      margin-bottom:20px;
+    }
+
+    .pdf-box input{
+      width:100%;
+      padding:14px;
+      margin-bottom:14px;
+      border-radius:12px;
+      border:1px solid #ddd;
+      outline:none;
+    }
+
+    .pdf-download-btn{
+      width:100%;
+      border:none;
+      background:#111;
+      color:#fff;
+      padding:15px;
+      border-radius:50px;
+      font-weight:800;
+      cursor:pointer;
+    }
+
+    .pdf-close{
+      position:absolute;
+      top:12px;
+      right:16px;
+      border:none;
+      background:none;
+      font-size:28px;
+      cursor:pointer;
+    }
 
     @media(max-width:900px){
       section{padding:60px 5%}
+      .navbar{padding:16px 5%}
+      .logo{width:118px}
+      .home-btn{padding:10px 16px;font-size:13px}
       .detail-grid{grid-template-columns:1fr}
+      .hero{min-height:72vh;padding-top:120px}
       .hero-content h1{font-size:48px}
       .hero-content span{font-size:15px}
-      .gallery,.highlight-grid,.include-grid{grid-template-columns:1fr}
-      .booking-card{position:relative;top:0}
+      .gallery,
+      .highlight-grid,
+      .include-grid{grid-template-columns:1fr}
+      .booking-card{position:relative;top:0;margin-top:20px}
       .box{padding:25px}
       .box h2{font-size:28px}
+      .booking-card h3{font-size:40px}
+      .gallery img{height:230px}
     }
-    .booking-btn,
-.call-btn,
-.home-btn{
-  transition:.35s ease;
-}
-
-.booking-btn:hover,
-.call-btn:hover,
-.home-btn:hover{
-  transform:translateY(-3px);
-  box-shadow:0 15px 30px rgba(212,175,55,.35);
-}
-
-@media(max-width:900px){
-  .booking-card{
-    margin-top:20px;
-  }
-}
-    .pdf-btn{
-  width:100%;
-  margin-top:18px;
-  border:none;
-  background:linear-gradient(135deg,#d4af37,#f7df8a);
-  color:#111;
-  padding:16px;
-  border-radius:50px;
-  font-weight:800;
-  cursor:pointer;
-}
-
-.pdf-popup{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.7);
-  display:none;
-  justify-content:center;
-  align-items:center;
-  z-index:999999;
-}
-
-.pdf-box{
-  background:#fff;
-  width:100%;
-  max-width:400px;
-  border-radius:24px;
-  padding:30px;
-  text-align:center;
-  position:relative;
-}
-
-.pdf-box h2{
-  color:#111;
-  margin-bottom:10px;
-}
-
-.pdf-box p{
-  color:#666;
-  margin-bottom:20px;
-}
-
-.pdf-box input{
-  width:100%;
-  padding:14px;
-  margin-bottom:14px;
-  border-radius:12px;
-  border:1px solid #ddd;
-}
-
-.pdf-download-btn{
-  width:100%;
-  border:none;
-  background:#111;
-  color:#fff;
-  padding:15px;
-  border-radius:50px;
-  font-weight:700;
-  cursor:pointer;
-}
-
-.pdf-close{
-  position:absolute;
-  top:12px;
-  right:16px;
-  border:none;
-  background:none;
-  font-size:28px;
-  cursor:pointer;
-}
   </style>
 </head>
 
 <body>
 
 <nav class="navbar">
-  <a href="/"><img src="/logo.png" class="logo" alt="Holidaydope"></a>
+  <a href="/">
+    <img src="/logo.png" class="logo" alt="Holidaydope">
+  </a>
   <a href="/package/index.html" class="home-btn">All Packages</a>
 </nav>
 
@@ -223,8 +539,17 @@
   <div class="hero-content">
     <p>LUXURY INTERNATIONAL PACKAGE</p>
     <h1>Bali</h1>
-    <span>Private villas, tropical beaches, waterfalls, temples, beach clubs and unforgettable island vibes with Holidaydope.</span>
+    <span>
+      Private villas, tropical beaches, waterfalls, temples, beach clubs and unforgettable island vibes with Holidaydope.
+    </span>
   </div>
+</section>
+
+<section class="trust-strip">
+  <div class="trust-card">🏝️ Private Villa Options</div>
+  <div class="trust-card">🚘 Airport Transfers</div>
+  <div class="trust-card">🌊 Nusa Penida Tour</div>
+  <div class="trust-card">📞 24/7 Travel Support</div>
 </section>
 
 <section>
@@ -279,11 +604,12 @@
 
       <div class="box">
         <h2>Package Gallery</h2>
+
         <div class="gallery">
-          <img src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?q=80&w=1200&auto=format&fit=crop" alt="Bali beach luxury holiday">
-          <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=1200&auto=format&fit=crop" alt="Bali temple tour">
-          <img src="https://images.unsplash.com/photo-1558005530-a7958896ec60?q=80&w=1200&auto=format&fit=crop" alt="Bali rice terrace Ubud">
-          <img src="https://images.unsplash.com/photo-1604999333679-b86d54738315?q=80&w=1200&auto=format&fit=crop" alt="Bali private villa">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?q=80&w=1200&auto=format&fit=crop" alt="Bali beach luxury holiday">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=1200&auto=format&fit=crop" alt="Bali temple tour">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1558005530-a7958896ec60?q=80&w=1200&auto=format&fit=crop" alt="Bali rice terrace Ubud">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1604999333679-b86d54738315?q=80&w=1200&auto=format&fit=crop" alt="Bali private villa">
         </div>
       </div>
 
@@ -368,6 +694,32 @@
         </p>
       </div>
 
+      <div class="box">
+        <h2>Bali Package FAQs</h2>
+
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>Is this Bali package suitable for honeymoon couples?</h3>
+            <p>Yes, this package is perfect for honeymoon couples looking for private villa stay, scenic locations, sunset vibes and relaxed island experiences.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Are flights included in this package?</h3>
+            <p>Flights are not included by default, but Holidaydope can help you add suitable flight options at the best available fare.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Can this Bali itinerary be customized?</h3>
+            <p>Yes, the itinerary can be customized based on your travel dates, budget, hotel preference, private villa requirement and sightseeing choices.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Do you provide Bali visa assistance?</h3>
+            <p>Yes, Holidaydope can guide you with visa-related support and travel documentation based on current travel requirements.</p>
+          </div>
+        </div>
+      </div>
+
       <div class="cta-box">
         <h2>Ready To Explore Bali?</h2>
         <p>
@@ -397,12 +749,11 @@
           <li>✅ Ubud Tour</li>
           <li>✅ Nusa Penida Island Tour</li>
         </ul>
-<button class="pdf-btn"
-onclick="openPDFForm('Bali', '/itinerary/bali.pdf')">
 
-Download Itinerary
+        <button class="pdf-btn" onclick="openPDFForm('Bali', '/itinerary/bali.pdf')">
+          Download Itinerary
+        </button>
 
-</button>
         <a href="https://wa.me/918595789670?text=Hi%20Holidaydope%20👋%0AI%20want%20Bali%20package%20details." target="_blank" class="booking-btn">
           Book Now
         </a>
@@ -417,7 +768,7 @@ Download Itinerary
 </section>
 
 <footer>
-  <img src="/logo.png" class="footer-logo" alt="Holidaydope">
+  <img loading="lazy" src="/logo.png" class="footer-logo" alt="Holidaydope">
   <p>Holidaydope — Chalo Duniya Ghume</p>
   <p>WhatsApp / Call: 8595789670</p>
 
@@ -433,12 +784,11 @@ Download Itinerary
 
   <p style="margin-top:20px;color:#888;">© 2026 Holidaydope. All Rights Reserved.</p>
 </footer>
-<div class="pdf-popup" id="pdfPopup">
 
+<div class="pdf-popup" id="pdfPopup">
   <div class="pdf-box">
 
-    <button class="pdf-close"
-    onclick="closePDFForm()">×</button>
+    <button class="pdf-close" onclick="closePDFForm()">×</button>
 
     <h2>Download Itinerary</h2>
 
@@ -446,32 +796,22 @@ Download Itinerary
       Get your package PDF instantly
     </p>
 
-    <input type="text"
-    id="leadName"
-    placeholder="Your Name">
+    <input type="text" id="leadName" placeholder="Your Name">
 
-    <input type="tel"
-    id="leadPhone"
-    placeholder="WhatsApp Number">
+    <input type="tel" id="leadPhone" placeholder="WhatsApp Number">
 
-    <button class="pdf-download-btn"
-    onclick="downloadItinerary()">
-
+    <button class="pdf-download-btn" onclick="downloadItinerary()">
       Download PDF
-
     </button>
 
   </div>
-
 </div>
 
 <script>
-
 let selectedPDF = "";
 let selectedPackage = "";
 
 function openPDFForm(packageName, pdfLink){
-
   selectedPackage = packageName;
   selectedPDF = pdfLink;
 
@@ -493,27 +833,34 @@ function downloadItinerary(){
   const phone =
     document.getElementById("leadPhone").value.trim();
 
-  if(name === "" || phone === ""){
-    alert("Please enter your details.");
+  const btn =
+    document.querySelector(".pdf-download-btn");
+
+  if(name === "" || phone.length < 10){
+    alert("Please enter valid details.");
     return;
   }
+
+  btn.innerText = "Preparing PDF...";
+  btn.disabled = true;
 
   const message =
 `Hi Holidaydope 👋
 
-New Itinerary Download
+New Premium Itinerary Download Request
 
-Package: ${selectedPackage}
+Interested Package: ${selectedPackage}
 
 Name: ${name}
 
 Phone: ${phone}`;
 
-window.open(
-  "https://wa.me/918595789670?text=" +
-  encodeURIComponent(message),
-  "_blank"
-);
+  window.open(
+    "https://wa.me/918595789670?text=" +
+    encodeURIComponent(message),
+    "_blank"
+  );
+
   const link = document.createElement("a");
 
   link.href = selectedPDF;
@@ -527,9 +874,12 @@ window.open(
 
   document.body.removeChild(link);
 
+  btn.innerText = "Download PDF";
+  btn.disabled = false;
+
   closePDFForm();
 }
-
 </script>
+
 </body>
 </html>
