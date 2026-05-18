@@ -21,9 +21,9 @@
 
   <link rel="icon" href="/favicon.png">
   <link rel="manifest" href="/manifest.json">
+  <link rel="preload" as="image" href="/holidaydope-hero.webp" fetchpriority="high">
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
 
  <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
@@ -37,35 +37,36 @@ section{padding:85px 7%;scroll-margin-top:90px}
 
 /* HERO */
 .hero{
-  height:100vh;
+  min-height:100vh;
   position:relative;
   overflow:hidden;
-
-  background:
-  linear-gradient(rgba(0,0,0,.40),rgba(0,0,0,.40)),
-  url('/holidaydope-hero.webp');
-
-
-  background-size:cover;
-  background-position:center center;
-  background-repeat:no-repeat;
-
   display:flex;
   align-items:center;
+  background:#050b14;
+}
+
+.hero-img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center center;
+  z-index:0;
 }
 
 /* HERO OVERLAY */
 .overlay{
   position:absolute;
   inset:0;
-
+  z-index:1;
   background:linear-gradient(
     90deg,
-    rgba(0,0,0,.78),
+    rgba(0,0,0,.82),
+    rgba(0,0,0,.30),
     rgba(0,0,0,.18)
   );
-
-  backdrop-filter:blur(.5px);
+  backdrop-filter:blur(.3px);
 }
 /* NAVBAR */
 .navbar{
@@ -176,7 +177,7 @@ section{padding:85px 7%;scroll-margin-top:90px}
 /* HERO CONTENT */
 .hero-content{
   position:relative;
-  z-index:20;
+  z-index:2;
   height:100%;
   display:flex;
   flex-direction:column;
@@ -641,107 +642,6 @@ section{padding:85px 7%;scroll-margin-top:90px}
   border-radius:24px;
 }
 
-/* REELS */
-.travel-reels{
-  background:#050b14;
-  padding:90px 7%;
-}
-
-.reels-grid{
-  display:flex;
-  gap:24px;
-  justify-content:center;
-  align-items:center;
-  scroll-snap-type:x mandatory;
-  padding-bottom:10px;
-}
-
-.reels-grid::-webkit-scrollbar{
-  display:none;
-}
-
-.reel-card{
-  min-width:320px;
-  scroll-snap-align:center;
-}
-
-.reel-card{
-  position:relative;
-  overflow:hidden;
-  border-radius:28px;
-  height:500px;
-  background:#111;
-  box-shadow:0 15px 35px rgba(0,0,0,.35);
-  transition:.45s ease;
-}
-   .reel-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 25px 55px rgba(0,0,0,.45);
-}
-
-.reel-card video{
-  transition:transform .7s ease;
-}
-
-.reel-card:hover video{
-  transform:scale(1.05);
-}
-
-.reel-card video{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.reel-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(transparent,rgba(0,0,0,.85));
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
-  padding:24px;
-}
-
-.reel-overlay h3{
-  font-size:26px;
-  margin-bottom:8px;
-}
-
-.reel-overlay p{
-  color:#ddd;
-  margin-bottom:18px;
-}
-
-.reel-btn{
-  display:inline-block;
-  width:max-content;
-  background:linear-gradient(135deg,#d4af37,#f7df8a);
-  color:#111;
-  padding:10px 20px;
-  border-radius:40px;
-  font-weight:800;
-}
-.reel-badge{
-  display:inline-block;
-  width:max-content;
-  margin-bottom:12px;
-  padding:6px 14px;
-
-  background:rgba(245,199,107,.16);
-
-  border:1px solid rgba(245,199,107,.35);
-
-  backdrop-filter:blur(10px);
-
-  border-radius:40px;
-
-  color:#f5c76b;
-
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:1px;
-}
 /* CTA */
 .cta-banner{
   background:
@@ -1239,16 +1139,14 @@ footer{
 .packages,
 .stats-section,
 #booking,
-#reviews,
-.travel-reels{
+#reviews{
   position:relative;
 }
 
 .packages::before,
 .stats-section::before,
 #booking::before,
-#reviews::before,
-.travel-reels::before{
+#reviews::before::before{
   content:'';
   position:absolute;
   top:0;
@@ -1282,20 +1180,6 @@ footer{
   max-width:100%;
 }
 
-.travel-reels{
-  padding:55px 6%;
-}
-
-.reels-grid{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:22px;
-}
-
-.reel-card{
-  min-width:100%;
-  height:390px;
-}
 
 .trust-badges{
   grid-template-columns:1fr;
@@ -1499,17 +1383,6 @@ footer{
 }
 
 /* compact reels */
-.travel-reels{
-  padding:70px 7%;
-}
-
-.reels-grid{
-  justify-content:center;
-  align-items:center;
-}
-.reel-card{
-  max-width:360px;
-}
 
 /* FAQ SECTION */
 .faq-section{
@@ -1580,8 +1453,17 @@ footer{
     <a href="#contact">Contact</a>
   </div>
 <section class="hero">
+  <img
+    src="/holidaydope-hero.webp"
+    alt="Luxury Maldives holiday packages by Holidaydope"
+    class="hero-img"
+    width="1600"
+    height="1067"
+    fetchpriority="high"
+  >
+
   <div class="overlay"></div>
-  <div class="hero-content" data-aos="fade-right">
+  <div class="hero-content">
 
     <p class="small-title">MALDIVES • BALI • THAILAND • VIETNAM</p>
 
@@ -1590,7 +1472,7 @@ footer{
 </h1>
 
     <p class="hero-subtitle">
-    Premium travel agency in Delhi offering Maldives, Bali, Thailand & Vietnam holiday packages with luxury stays, visa support and customized international tours.
+    Luxury holidays crafted for couples, families and dream travelers with stays, flights and visa support.
     </p>
 
     <div class="hero-buttons">
@@ -1621,7 +1503,7 @@ footer{
 
   <div class="packages-grid">
 
-    <div class="package-card" data-aos="fade-up">
+    <div class="package-card">
       <img loading="lazy" src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=1200&auto=format&fit=crop" alt="Maldives Package">
       <div class="package-content">
         <h3>Maldives Luxury</h3>
@@ -1632,7 +1514,7 @@ footer{
       </div>
     </div>
 
-    <div class="package-card" data-aos="fade-up">
+    <div class="package-card">
       <img loading="lazy"  src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?q=80&w=1200&auto=format&fit=crop" alt="Bali Package">
       <div class="package-content">
         <h3>Bali Escape</h3>
@@ -1643,7 +1525,7 @@ footer{
       </div>
     </div>
 
-    <div class="package-card" data-aos="fade-up">
+    <div class="package-card">
       <img loading="lazy"  src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Thailand Package">
       <div class="package-content">
         <h3>Thailand Tour</h3>
@@ -1654,7 +1536,7 @@ footer{
       </div>
     </div>
 
-    <div class="package-card" data-aos="fade-up">
+    <div class="package-card">
   <img loading="lazy" src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=1200&auto=format&fit=crop" alt="Vietnam Package">
 
   <div class="package-content">
@@ -1775,7 +1657,7 @@ footer{
   <div class="review-slider">
   <div class="review-track">
 
-    <div class="review-card" data-aos="fade-up">
+    <div class="review-card">
       <p>“Amazing Maldives experience with Holidaydope. Everything was perfectly managed.”</p>
       <div class="client">
         <h4>David</h4>
@@ -1783,7 +1665,7 @@ footer{
       </div>
     </div>
 
-    <div class="review-card" data-aos="fade-up">
+    <div class="review-card">
       <p>“Best Bali package at affordable price. Hotels and support were excellent.”</p>
       <div class="client">
         <h4>Miss Ngaihkim</h4>
@@ -1791,7 +1673,7 @@ footer{
       </div>
     </div>
 
-    <div class="review-card" data-aos="fade-up">
+    <div class="review-card">
       <p>“Very smooth Thailand trip. Great service and premium stays.”</p>
       <div class="client">
         <h4>Rahul Sharma</h4>
@@ -1835,19 +1717,19 @@ footer{
 
   <div class="gallery-grid">
 
-    <div class="gallery-item" data-aos="zoom-in">
+    <div class="gallery-item">
       <img loading="lazy"  src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Beach Travel">
     </div>
 
-    <div class="gallery-item" data-aos="zoom-in">
+    <div class="gallery-item">
       <img loading="lazy"  src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1200&auto=format&fit=crop" alt="Goa Travel">
     </div>
 
-    <div class="gallery-item" data-aos="zoom-in">
+    <div class="gallery-item">
       <img loading="lazy"  src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?q=80&w=1200&auto=format&fit=crop" alt="Luxury Travel">
     </div>
 
-    <div class="gallery-item" data-aos="zoom-in">
+    <div class="gallery-item">
       <img loading="lazy"  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop" alt="Mountain Travel">
     </div>
 
@@ -1856,49 +1738,7 @@ footer{
 </section>
 
 
-<section class="travel-reels">
-
-  <div class="section-title">
-    <p>TRAVEL REELS</p>
-    <h2>Luxury Travel Moments</h2>
-  </div>
-
-<div class="reels-grid">
-
-  <div class="reel-card">
-
-    <video controls playsinline preload="metadata"
-      poster="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=1200&auto=format&fit=crop">
-
-      <source src="/maldives-reel.mp4" type="video/mp4">
-
-    </video>
-
-    <div class="reel-overlay">
-
-      <div class="reel-badge">
-        FEATURED TRAVEL REEL
-      </div>
-
-      <h3>Maldives Luxury Escape</h3>
-
-      <p>
-        Water villa, turquoise lagoon & premium honeymoon vibes.
-      </p>
-
-      <a href="/package/maldives/index.html" class="reel-btn">
-        Explore Maldives
-      </a>
-
-    </div>
-
-  </div>
-
-
- 
-</div>
-</section>
-  <section class="faq-section">
+<section class="faq-section">
 
   <div class="section-title">
     <p>TRAVEL QUESTIONS</p>
@@ -2046,15 +1886,8 @@ Holidaydope is a premium travel agency in Delhi offering Maldives, Bali, Thailan
   <span onclick="closeInstallPopup()">×</span>
 </div>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
 <script>
-  AOS.init({
-    duration:1200,
-    once:true
-  });
-
-  function toggleMenu(){
+function toggleMenu(){
     document.getElementById("mobileMenu").classList.toggle("show");
   }
 
