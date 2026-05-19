@@ -460,6 +460,12 @@ section{padding:85px 7%;scroll-margin-top:90px}
   grid-template-columns:repeat(2,1fr);
   gap:18px;
 }
+.booking-form label{
+  color:#f5c76b;
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:-8px;
+}
 
 .booking-form input,
 .booking-form select,
