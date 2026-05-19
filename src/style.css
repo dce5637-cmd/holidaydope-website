@@ -1071,11 +1071,14 @@ footer{
 
 /* MOBILE */
 @media(max-width:768px){
-  .hero{
-  min-height:92vh;
+ .hero{
+  min-height:82vh;
   height:auto;
 }
 
+.hero-img{
+  object-position:center top;
+}
 .hero-content{
   padding-top:120px!important;
 }
