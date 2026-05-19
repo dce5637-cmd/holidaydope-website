@@ -288,9 +288,14 @@
       <option>North East</option>
     </select>
 
-    <input type="date" required>
-    <input type="number" placeholder="Number of Travelers" min="1" required>
-    <textarea placeholder="Your Travel Plan"></textarea>
+    <label for="traveldate">Travel Date</label>
+<input id="traveldate" type="date" required>
+
+<label for="travelers">Number of Travelers</label>
+<input id="travelers" type="number" placeholder="Number of Travelers" min="1" required>
+
+<label for="plan">Your Travel Plan</label>
+<textarea id="plan" placeholder="Your Travel Plan"></textarea>
 
     <button type="submit" aria-label="Send booking request to Holidaydope on WhatsApp">
       Send Booking Request
