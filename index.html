@@ -11,17 +11,19 @@
 <meta name="description" content="Holidaydope is a premium travel agency in Delhi offering Maldives, Bali, Thailand and Vietnam holiday packages with luxury stays, visa support and customized international tours.">
   <meta name="keywords" content="Holidaydope, Maldives package, Bali package, Thailand tour, Dubai tour, Kashmir package, Goa package">
   <meta name="author" content="Holidaydope">
+  <link rel="canonical" href="https://www.holidaydope.com/">
 
   <meta property="og:title" content="Holidaydope - Luxury Travel Agency">
   <meta property="og:description" content="Luxury international and domestic holiday packages.">
   <meta property="og:image" content="/logo.png">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.holidaydope.com/">
 
   <meta name="theme-color" content="#08111f">
 
-  <link rel="icon" href="/favicon.png">
+  <link rel="icon" href="/favicon.png" type="image/png">
   <link rel="manifest" href="/manifest.json">
-  <link rel="preload" as="image" href="/holidaydope-hero.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="/holidaydope-hero.webp" type="image/webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -153,6 +155,9 @@ section{padding:85px 7%;scroll-margin-top:90px}
   display:none;
   font-size:30px;
   cursor:pointer;
+  background:transparent;
+  border:none;
+  color:#fff;
 }
 
 .mobile-menu{
@@ -1155,7 +1160,7 @@ footer{
 .packages::before,
 .stats-section::before,
 #booking::before,
-#reviews::before::before{
+#reviews::before{
   content:'';
   position:absolute;
   top:0;
@@ -1432,7 +1437,7 @@ footer{
 
   <nav class="navbar">
 
-    <img src="/logo.png" class="nav-logo" alt="Holidaydope">
+    <img src="/logo.png" class="nav-logo" alt="Holidaydope" width="155" height="80" decoding="async">
 
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
@@ -1447,7 +1452,7 @@ footer{
 
     
 
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open mobile menu" type="button">☰</button>
 
   </nav>
 
@@ -1469,6 +1474,8 @@ footer{
     width="1600"
     height="1067"
     fetchpriority="high"
+    loading="eager"
+    decoding="async"
   >
 
   <div class="overlay"></div>
@@ -1485,11 +1492,11 @@ footer{
     </p>
 
     <div class="hero-buttons">
-      <a href="https://wa.me/918595789670" target="_blank" class="gold-btn">
+      <a href="https://wa.me/918595789670" target="_blank" rel="noopener" class="gold-btn" aria-label="Send WhatsApp inquiry to Holidaydope">
         WhatsApp Inquiry
       </a>
 
-      <a href="/package/index.html" class="outline-btn">
+      <a href="/package/index.html" class="outline-btn" aria-label="Explore Holidaydope travel packages">
         Explore Packages
       </a>
     </div>
@@ -1499,7 +1506,7 @@ footer{
 </section>
 <section class="trust-badges">
   <div class="trust-card">🔒 SSL Secured</div>
-  <div class="trust-card">✈️ Verified Travel Partner</div>
+  <div class="trust-card">✈️ Trusted Luxury Travel Partner</div>
   <div class="trust-card">💎 Best Price Guarantee</div>
   <div class="trust-card">📞 24/7 Travel Support</div>
 </section>
@@ -1513,42 +1520,42 @@ footer{
   <div class="packages-grid">
 
     <div class="package-card">
-     <img loading="lazy" src="/maldives-premium.webp" width="600" height="400" alt="Maldives Luxury Package">
+     <img loading="lazy" decoding="async" src="/maldives-premium.webp" width="600" height="400" alt="Maldives Luxury Package">
       <div class="package-content">
         <h3>Maldives Luxury</h3>
         <p class="days">4N / 5D</p>
         <div class="price">Starting From ₹49,999</div>
         <p>Luxury water villa experience with premium stay & transfers.</p>
-        <a href="/package/maldives/index.html" class="package-btn">View Details</a>
+        <a href="/package/maldives/index.html" class="package-btn" aria-label="View Maldives Luxury Package details">View Details</a>
       </div>
     </div>
 
     <div class="package-card">
-    <img loading="lazy" src="/bali-nusapenida-premium.webp" width="600" height="400" alt="Bali Package">
+    <img loading="lazy" decoding="async" src="/bali-nusapenida-premium.webp" width="600" height="400" alt="Bali Package">
 
       <div class="package-content">
         <h3>Bali Escape</h3>
         <p class="days">5N / 6D</p>
        <div class="price">Starting From ₹24,999</div>
         <p>Private villa stay with beach, waterfalls & island tours.</p>
-        <a href="/package/bali/index.html" class="package-btn">View Details</a>
+        <a href="/package/bali/index.html" class="package-btn" aria-label="View Bali Escape Package details">View Details</a>
       </div>
     </div>
 
     <div class="package-card">
-     <img loading="lazy" src="/thailand-premium.webp" width="600" height="400" alt="Thailand Package">
+     <img loading="lazy" decoding="async" src="/thailand-premium.webp" width="600" height="400" alt="Thailand Package">
 
       <div class="package-content">
         <h3>Thailand Tour</h3>
         <p class="days">4N / 5D</p>
         <div class="price">Starting From ₹19,999</div>
         <p>Bangkok, Phuket & Krabi premium island holiday package.</p>
-        <a href="/package/thailand/index.html" class="package-btn">View Details</a>
+        <a href="/package/thailand/index.html" class="package-btn" aria-label="View Thailand Tour Package details">View Details</a>
       </div>
     </div>
 
     <div class="package-card">
- <img loading="lazy" src="/vietnam-premium.webp" width="600" height="400" alt="Vietnam Package">
+ <img loading="lazy" decoding="async" src="/vietnam-premium.webp" width="600" height="400" alt="Vietnam Package">
   <div class="package-content">
     <h3>Vietnam Escape</h3>
 
@@ -1560,7 +1567,7 @@ footer{
       Da Nang, Hanoi, Ha Long Bay cruise & scenic Vietnam holiday.
     </p>
 
-    <a href="/package/vietnam/index.html" class="package-btn">
+    <a href="/package/vietnam/index.html" class="package-btn" aria-label="View Vietnam Escape Package details">
       View Details
     </a>
   </div>
@@ -1568,7 +1575,7 @@ footer{
 
   </div>
   <div style="text-align:center;margin-top:40px;">
-    <a href="/package/index.html" class="gold-btn">
+    <a href="/package/index.html" class="gold-btn" aria-label="View all Holidaydope packages">
       View All Packages
     </a>
   </div>
@@ -1649,7 +1656,7 @@ footer{
     <input type="number" placeholder="Number of Travelers" min="1" required>
     <textarea placeholder="Your Travel Plan"></textarea>
 
-    <button type="submit">
+    <button type="submit" aria-label="Send booking request to Holidaydope on WhatsApp">
       Send Booking Request
     </button>
 
@@ -1700,7 +1707,7 @@ footer{
   <div class="real-review-card">
 
     <div class="review-top">
-     <img loading="lazy" src="/review-dave.jpg" alt="Dave Holidaydope Review">
+     <img loading="lazy" decoding="async" src="/review-dave.jpg" alt="Dave Holidaydope Review">
 
       <div>
         <h3>Dave</h3>
@@ -1728,19 +1735,19 @@ footer{
  <div class="gallery-grid">
 
   <div class="gallery-item">
-    <img loading="lazy" src="/bali.webp" width="600" height="400" alt="Bali Swing">
+    <img loading="lazy" decoding="async" src="/bali.webp" width="600" height="400" alt="Bali Swing">
   </div>
 
   <div class="gallery-item">
-    <img loading="lazy" src="/maldives.webp" width="600" height="400" alt="Maldives Luxury">
+    <img loading="lazy" decoding="async" src="/maldives.webp" width="600" height="400" alt="Maldives Luxury">
   </div>
 
   <div class="gallery-item">
-    <img loading="lazy" src="/thailand.webp" width="600" height="400" alt="Thailand Nightlife">
+    <img loading="lazy" decoding="async" src="/thailand.webp" width="600" height="400" alt="Thailand Nightlife">
   </div>
 
   <div class="gallery-item">
-    <img loading="lazy" src="/vietnam.webp" width="600" height="400" alt="Vietnam Mountains">
+    <img loading="lazy" decoding="async" src="/vietnam.webp" width="600" height="400" alt="Vietnam Mountains">
   </div>
 
 </div>
@@ -1786,7 +1793,7 @@ footer{
 
   <p>Maldives • Bali • Thailand • Dubai • Kashmir • Goa & more</p>
 
-  <a href="https://wa.me/918595789670" target="_blank" class="dark-btn">
+  <a href="https://wa.me/918595789670" target="_blank" rel="noopener" class="dark-btn" aria-label="Book holiday package on WhatsApp">
     Book Now on WhatsApp
   </a>
 
@@ -1794,7 +1801,7 @@ footer{
 
 <footer id="contact">
 
-  <img src="/logo.png" class="footer-logo" alt="Holidaydope">
+  <img src="/logo.png" class="footer-logo" alt="Holidaydope" width="150" height="80" loading="lazy" decoding="async">
 
   <p>Holidaydope — Chalo Duniya Ghume</p>
 <p style="margin-top:10px;color:#b8c2d0;font-size:14px;letter-spacing:.4px;">
@@ -1810,7 +1817,7 @@ footer{
     Mahipalpur, New Delhi - 110037
   </p>
 
-<a href="https://share.google/OoEPOPOnn25xOaVhp" target="_blank">
+<a href="https://share.google/OoEPOPOnn25xOaVhp" target="_blank" rel="noopener" aria-label="View Holidaydope office location on Google Maps">
   View Location
 </a>
 
@@ -1822,14 +1829,14 @@ footer{
 
 <p>
   Instagram:
-  <a href="https://instagram.com/holiday_dope" target="_blank">
+  <a href="https://instagram.com/holiday_dope" target="_blank" rel="noopener" aria-label="Visit Holidaydope Instagram profile">
     @holiday_dope
   </a>
 </p>
 
 <p>
   Facebook:
-  <a href="https://www.facebook.com/profile.php?id=61555482407475" target="_blank">
+  <a href="https://www.facebook.com/profile.php?id=61555482407475" target="_blank" rel="noopener" aria-label="Visit Holidaydope Facebook page">
     Holidaydope Official
   </a>
 </p>
@@ -1851,20 +1858,20 @@ Holidaydope is a premium travel agency in Delhi offering Maldives, Bali, Thailan
 
 </footer>
 
-<a href="https://wa.me/918595789670" target="_blank" class="float-whatsapp">
+<a href="https://wa.me/918595789670" target="_blank" rel="noopener" class="float-whatsapp" aria-label="Chat with Holidaydope on WhatsApp">
   WhatsApp
 </a>
 
 
-<button onclick="scrollToTop()" id="topBtn">↑</button>
+<button onclick="scrollToTop()" id="topBtn" aria-label="Scroll to top" type="button">↑</button>
 
 <div class="ai-chatbot">
-  <button class="ai-chat-btn" onclick="toggleAIChat()">💬 Holidaydope AI</button>
+  <button class="ai-chat-btn" onclick="toggleAIChat()" aria-label="Open Holidaydope AI chat" type="button">💬 Holidaydope AI</button>
 
   <div class="ai-chat-box" id="aiChatBox">
     <div class="ai-chat-header">
       <strong>Holidaydope AI Assistant</strong>
-      <span onclick="toggleAIChat()">×</span>
+      <span onclick="toggleAIChat()" role="button" aria-label="Close Holidaydope AI chat" tabindex="0">×</span>
     </div>
 
     <div class="ai-message" id="aiText">
@@ -1878,12 +1885,12 @@ Holidaydope is a premium travel agency in Delhi offering Maldives, Bali, Thailan
   <span></span>
 </div>
 
-    <button onclick="sendAIOption('Best Packages')">🌍 Best Packages</button>
-    <button onclick="sendAIOption('Maldives Package')">🏝️ Maldives</button>
-    <button onclick="sendAIOption('Bali Package')">🌴 Bali</button>
-    <button onclick="sendAIOption('Dubai Package')">🏙️ Dubai</button>
-    <button onclick="sendAIOption('Visa Help')">🛂 Visa Help</button>
-    <button onclick="sendAIOption('Custom Trip Plan')">✈️ Custom Trip Plan</button>
+    <button type="button" onclick="sendAIOption('Best Packages')">🌍 Best Packages</button>
+    <button type="button" onclick="sendAIOption('Maldives Package')">🏝️ Maldives</button>
+    <button type="button" onclick="sendAIOption('Bali Package')">🌴 Bali</button>
+    <button type="button" onclick="sendAIOption('Dubai Package')">🏙️ Dubai</button>
+    <button type="button" onclick="sendAIOption('Visa Help')">🛂 Visa Help</button>
+    <button type="button" onclick="sendAIOption('Custom Trip Plan')">✈️ Custom Trip Plan</button>
   </div>
 </div>
 
@@ -1892,8 +1899,8 @@ Holidaydope is a premium travel agency in Delhi offering Maldives, Bali, Thailan
     <strong>Install Holidaydope App</strong>
     <p>Get quick access to packages, visa help & booking.</p>
   </div>
-  <button id="installBtn">Install</button>
-  <span onclick="closeInstallPopup()">×</span>
+  <button id="installBtn" type="button" aria-label="Install Holidaydope app">Install</button>
+  <span onclick="closeInstallPopup()" role="button" aria-label="Close install popup" tabindex="0">×</span>
 </div>
 
 <script>
@@ -2102,7 +2109,7 @@ window.addEventListener("scroll", function(){
   <div class="intro-plane">✈</div>
   <div class="intro-trail"></div>
 
-  <img src="/logo.png" class="intro-logo" alt="Holidaydope">
+  <img src="/logo.png" class="intro-logo" alt="Holidaydope" width="220" height="120" decoding="async">
 </div>
  <script>
 document.addEventListener("DOMContentLoaded", function(){
