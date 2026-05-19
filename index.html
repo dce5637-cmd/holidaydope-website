@@ -261,10 +261,17 @@
 
   <form class="booking-form" onsubmit="sendToWhatsApp(event)">
 
-    <input type="text" placeholder="Your Name" required>
-    <input type="tel" placeholder="WhatsApp Number" required>
-    <input type="email" placeholder="Email Address">
-    <select required>
+   <label for="name">Your Name</label>
+<input id="name" type="text" placeholder="Your Name" required>
+
+<label for="phone">WhatsApp Number</label>
+<input id="phone" type="tel" placeholder="WhatsApp Number" required>
+
+<label for="email">Email Address</label>
+<input id="email" type="email" placeholder="Email Address">
+   <label for="destination">Select Destination</label>
+
+<select id="destination" required>
       <option value="">Select Destination</option>
       <option>Maldives</option>
       <option>Bali</option>
