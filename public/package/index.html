@@ -181,7 +181,19 @@
       filter:saturate(1.06) contrast(1.03) brightness(.96);
       transition:.35s ease;
     }
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
 
+.gallery-item img{
+  width:100%;
+  aspect-ratio:16/10;
+  height:auto;
+  object-fit:cover;
+  border-radius:24px;
+}
     .card:hover img{
       transform:scale(1.04);
     }
