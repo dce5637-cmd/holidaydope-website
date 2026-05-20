@@ -13,9 +13,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap">
 
-  <link rel="stylesheet" href="/src/style.css">
-
   <style>
+    *{
+      box-sizing:border-box;
+    }
+
     body{
       margin:0;
       font-family:'Poppins',sans-serif;
@@ -23,37 +25,109 @@
       color:#fff;
     }
 
+    a{
+      text-decoration:none;
+    }
+
+    .navbar{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      z-index:999;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 7%;
+      background:rgba(5,11,20,.82);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .nav-logo{
+      width:155px;
+      height:80px;
+      object-fit:contain;
+      display:block;
+    }
+
+    .nav-links{
+      list-style:none;
+      display:flex;
+      align-items:center;
+      gap:28px;
+      margin:0;
+      padding:0;
+    }
+
+    .nav-links li{
+      list-style:none;
+    }
+
+    .nav-links a{
+      color:#fff;
+      font-weight:600;
+      font-size:15px;
+      transition:.3s ease;
+    }
+
+    .nav-links a:hover{
+      color:#f5c76b;
+    }
+
+    .menu-toggle{
+      display:none;
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      border:0;
+      color:#08111f;
+      padding:8px 12px;
+      border-radius:10px;
+      font-size:22px;
+      cursor:pointer;
+    }
+
+    .mobile-menu{
+      display:none;
+    }
+
     .contact-hero{
-      min-height:60vh;
+      min-height:74vh;
       background:
-      linear-gradient(rgba(5,11,20,.72),rgba(5,11,20,.82)),
+      linear-gradient(rgba(5,11,20,.58),rgba(5,11,20,.88)),
       url('/holidaydope-hero.webp') center/cover;
       display:flex;
       align-items:center;
       justify-content:center;
       text-align:center;
-      padding:130px 20px 90px;
+      padding:160px 20px 90px;
+    }
+
+    .contact-hero-content{
+      max-width:950px;
     }
 
     .contact-hero-content p,
-    .contact-form-text p{
+    .contact-form-text p,
+    .section-title p{
       color:#f5c76b;
       letter-spacing:3px;
       font-size:13px;
       font-weight:700;
       margin-bottom:14px;
+      text-transform:uppercase;
     }
 
     .contact-hero-content h1{
       font-family:'Playfair Display',serif;
-      font-size:58px;
-      line-height:1.1;
+      font-size:64px;
+      line-height:1.08;
       margin:0 0 18px;
+      text-shadow:0 14px 40px rgba(0,0,0,.45);
     }
 
     .contact-hero-content span{
       color:#d6dbe3;
-      font-size:17px;
+      font-size:18px;
     }
 
     .contact-section,
@@ -63,19 +137,12 @@
 
     .section-title{
       text-align:center;
-      margin-bottom:45px;
-    }
-
-    .section-title p{
-      color:#f5c76b;
-      letter-spacing:3px;
-      font-size:13px;
-      font-weight:700;
+      margin-bottom:48px;
     }
 
     .section-title h2{
       font-family:'Playfair Display',serif;
-      font-size:42px;
+      font-size:44px;
       margin:10px 0 0;
     }
 
@@ -86,20 +153,20 @@
     }
 
     .contact-card{
-      background:rgba(255,255,255,.055);
+      background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.03));
       border:1px solid rgba(255,255,255,.1);
       border-radius:28px;
-      padding:34px 26px;
+      padding:36px 26px;
       text-align:center;
       backdrop-filter:blur(14px);
       transition:.35s ease;
-      box-shadow:0 14px 38px rgba(0,0,0,.22);
+      box-shadow:0 14px 38px rgba(0,0,0,.24);
     }
 
     .contact-card:hover{
       transform:translateY(-8px);
-      box-shadow:0 22px 55px rgba(0,0,0,.38);
-      border-color:rgba(245,199,107,.35);
+      box-shadow:0 22px 55px rgba(0,0,0,.42);
+      border-color:rgba(245,199,107,.38);
     }
 
     .contact-icon{
@@ -116,26 +183,28 @@
       color:#b7c0ce;
       line-height:1.7;
       min-height:54px;
+      margin-bottom:18px;
     }
 
     .contact-card a{
       color:#f5c76b;
       font-weight:700;
-      text-decoration:none;
     }
 
     .contact-form-section{
-      padding-top:30px;
+      padding-top:25px;
     }
 
     .contact-form-box{
-      max-width:850px;
+      max-width:880px;
       margin:auto;
-      background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.03));
-      border:1px solid rgba(255,255,255,.1);
+      background:
+      radial-gradient(circle at top left,rgba(245,199,107,.12),transparent 32%),
+      linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025));
+      border:1px solid rgba(255,255,255,.11);
       border-radius:34px;
-      padding:55px;
-      box-shadow:0 25px 70px rgba(0,0,0,.35);
+      padding:58px;
+      box-shadow:0 25px 70px rgba(0,0,0,.38);
     }
 
     .contact-form-text{
@@ -145,7 +214,7 @@
 
     .contact-form-text h2{
       font-family:'Playfair Display',serif;
-      font-size:42px;
+      font-size:43px;
       margin:0 0 12px;
     }
 
@@ -164,7 +233,6 @@
     .contact-form-box select,
     .contact-form-box textarea{
       width:100%;
-      box-sizing:border-box;
       padding:15px 16px;
       border-radius:14px;
       border:1px solid rgba(255,255,255,.14);
@@ -172,6 +240,7 @@
       color:#fff;
       outline:none;
       font-family:'Poppins',sans-serif;
+      font-size:15px;
     }
 
     .contact-form-box textarea{
@@ -200,14 +269,16 @@
       cursor:pointer;
       font-size:16px;
       box-shadow:0 12px 32px rgba(212,175,55,.28);
+      transition:.3s ease;
     }
 
     .contact-form-box button:hover{
       transform:translateY(-2px);
+      box-shadow:0 16px 40px rgba(212,175,55,.38);
     }
 
     .faq-section{
-      padding:80px 8%;
+      padding:85px 8%;
       background:#07101d;
     }
 
@@ -228,6 +299,7 @@
     .faq-item h3{
       margin:0 0 10px;
       color:#fff;
+      font-size:20px;
     }
 
     .faq-item p{
@@ -238,7 +310,7 @@
 
     footer{
       text-align:center;
-      padding:70px 8% 35px;
+      padding:75px 8% 35px;
       background:#050b14;
       border-top:1px solid rgba(255,255,255,.08);
     }
@@ -246,6 +318,10 @@
     .footer-logo{
       object-fit:contain;
       margin-bottom:10px;
+    }
+
+    footer p{
+      color:#c7d0dc;
     }
 
     .footer-links{
@@ -259,7 +335,6 @@
     .footer-links a,
     footer a{
       color:#f5c76b;
-      text-decoration:none;
       font-weight:600;
     }
 
@@ -276,9 +351,82 @@
       font-size:13px;
     }
 
-    @media(max-width:768px){
+    .float-whatsapp{
+      position:fixed;
+      right:22px;
+      bottom:24px;
+      z-index:998;
+      background:#25d366;
+      color:#fff;
+      padding:13px 18px;
+      border-radius:999px;
+      font-weight:800;
+      box-shadow:0 10px 30px rgba(0,0,0,.3);
+    }
+
+    #topBtn{
+      position:fixed;
+      right:22px;
+      bottom:82px;
+      z-index:998;
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      border:0;
+      background:#d4af37;
+      color:#08111f;
+      font-weight:900;
+      cursor:pointer;
+    }
+
+    @media(max-width:900px){
+      .navbar{
+        padding:12px 5%;
+      }
+
+      .nav-links{
+        display:none;
+      }
+
+      .menu-toggle{
+        display:block;
+      }
+
+      .mobile-menu{
+        display:none;
+        position:fixed;
+        top:104px;
+        left:0;
+        width:100%;
+        z-index:998;
+        background:rgba(5,11,20,.96);
+        backdrop-filter:blur(14px);
+        border-bottom:1px solid rgba(255,255,255,.08);
+        padding:22px 6%;
+      }
+
+      .mobile-menu.show{
+        display:flex;
+        flex-direction:column;
+        gap:16px;
+      }
+
+      .mobile-menu a{
+        color:#fff;
+        font-weight:600;
+      }
+
+      .contact-hero{
+        min-height:65vh;
+        padding:150px 22px 70px;
+      }
+
       .contact-hero-content h1{
-        font-size:38px;
+        font-size:39px;
+      }
+
+      .contact-hero-content span{
+        font-size:15px;
       }
 
       .section-title h2,
@@ -356,7 +504,7 @@
 
 <section class="contact-hero">
   <div class="contact-hero-content">
-    <p>CONTACT HOLIDAYDOPE</p>
+    <p>Contact Holidaydope</p>
     <h1>Plan Your Dream Holiday With Us</h1>
     <span>Maldives • Bali • Thailand • Dubai • Kashmir • Visa • Flights</span>
   </div>
@@ -364,7 +512,7 @@
 
 <section class="contact-section">
   <div class="section-title">
-    <p>GET IN TOUCH</p>
+    <p>Get In Touch</p>
     <h2>We’re Here To Help You Travel Better</h2>
   </div>
 
@@ -402,7 +550,7 @@
 <section class="contact-form-section">
   <div class="contact-form-box">
     <div class="contact-form-text">
-      <p>QUICK INQUIRY</p>
+      <p>Quick Inquiry</p>
       <h2>Send Your Travel Requirement</h2>
       <span>Fill your details and our team will connect with you on WhatsApp.</span>
     </div>
@@ -444,7 +592,7 @@
 
 <section class="faq-section">
   <div class="section-title">
-    <p>CONTACT FAQ</p>
+    <p>Contact FAQ</p>
     <h2>Before You Message Us</h2>
   </div>
 
