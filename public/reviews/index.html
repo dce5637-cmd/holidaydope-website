@@ -5,59 +5,160 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Holidaydope Reviews | Real Traveler Experiences</title>
+<title>Holidaydope Reviews | Real Traveler Experiences & Customer Feedback</title>
 
-<meta name="description"
-content="Read real customer reviews and travel experiences with Holidaydope for Maldives, Bali, Thailand, Dubai and customized holiday packages.">
+<meta name="description" content="Read real Holidaydope customer reviews for Maldives, Bali, Thailand, Dubai and luxury holiday packages. Trusted travel experiences, honeymoon trips and customized vacations from Delhi.">
 
 <link rel="canonical" href="https://www.holidaydope.com/reviews/">
-
 <link rel="icon" type="image/png" href="/favicon.png">
+
+<meta property="og:title" content="Holidaydope Reviews | Real Traveler Experiences">
+<meta property="og:description" content="Read real customer reviews and travel experiences with Holidaydope for Maldives, Bali, Thailand, Dubai and luxury holiday packages.">
+<meta property="og:image" content="https://www.holidaydope.com/logo.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.holidaydope.com/reviews/">
+
+<meta name="theme-color" content="#08111f">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="stylesheet"
-href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap">
-
-<link rel="stylesheet" href="/src/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap">
 
 <style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 body{
   background:#08111f;
   color:#fff;
+  font-family:'Poppins',sans-serif;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.navbar{
+  position:fixed;
+  top:18px;
+  left:50%;
+  transform:translateX(-50%);
+  width:86%;
+  z-index:1000;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 40px;
+  border-radius:28px;
+  background:rgba(5,11,20,.58);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border:1px solid rgba(245,199,107,.22);
+  box-shadow:0 18px 45px rgba(0,0,0,.32);
+}
+
+.navbar.scrolled{
+  top:10px;
+  background:rgba(5,11,20,.78);
+}
+
+.nav-logo{
+  width:155px;
+  height:80px;
+  object-fit:contain;
+  filter:drop-shadow(0 0 14px rgba(245,199,107,.42));
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:24px;
+  list-style:none;
+}
+
+.nav-links a{
+  color:#fff;
+  font-weight:700;
+  font-size:15px;
+  transition:.3s ease;
+}
+
+.nav-links a:hover{
+  color:#f5c76b;
+}
+
+.menu-toggle{
+  display:none;
+  background:transparent;
+  border:0;
+  color:#fff;
+  font-size:30px;
+  cursor:pointer;
+}
+
+.mobile-menu{
+  display:none;
+  position:fixed;
+  top:95px;
+  right:7%;
+  z-index:2000;
+  background:rgba(17,29,45,.96);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(245,199,107,.22);
+  padding:20px;
+  border-radius:22px;
+  box-shadow:0 18px 45px rgba(0,0,0,.35);
+}
+
+.mobile-menu a{
+  display:block;
+  color:#fff;
+  padding:11px 45px 11px 8px;
+  font-weight:700;
+}
+
+.mobile-menu.show{
+  display:block;
 }
 
 .reviews-hero{
-  min-height:65vh;
+  min-height:72vh;
   background:
-  linear-gradient(rgba(5,11,20,.72),rgba(5,11,20,.82)),
+  linear-gradient(90deg,rgba(0,0,0,.82),rgba(5,11,20,.42),rgba(5,11,20,.82)),
   url('/holidaydope-hero.webp') center/cover;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
-  padding:160px 20px 90px;
+  padding:170px 20px 90px;
 }
 
 .reviews-hero-content{
-  max-width:900px;
+  max-width:950px;
 }
 
-.reviews-hero-content p{
+.reviews-hero-content p,
+.section-title p{
   color:#f5c76b;
   letter-spacing:3px;
   font-size:13px;
-  font-weight:700;
+  font-weight:800;
   margin-bottom:16px;
+  text-transform:uppercase;
 }
 
 .reviews-hero-content h1{
-  font-size:62px;
+  font-size:64px;
   line-height:1.08;
-  margin-bottom:18px;
+  margin-bottom:20px;
   font-family:'Playfair Display',serif;
+  text-shadow:0 12px 36px rgba(0,0,0,.55);
 }
 
 .reviews-hero-content span{
@@ -65,19 +166,25 @@ body{
   font-size:18px;
 }
 
+.review-section{
+  padding:90px 7%;
+}
+
 .rating-box{
   max-width:900px;
-  margin:70px auto 0;
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(245,199,107,.18);
-  border-radius:32px;
-  padding:40px;
+  margin:auto;
+  background:
+  radial-gradient(circle at top left,rgba(245,199,107,.14),transparent 36%),
+  linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025));
+  border:1px solid rgba(245,199,107,.22);
+  border-radius:34px;
+  padding:45px;
   text-align:center;
-  box-shadow:0 20px 55px rgba(0,0,0,.35);
+  box-shadow:0 24px 65px rgba(0,0,0,.38);
 }
 
 .rating-number{
-  font-size:72px;
+  font-size:76px;
   color:#f5c76b;
   font-weight:900;
   line-height:1;
@@ -85,7 +192,7 @@ body{
 
 .rating-stars{
   color:#f5c76b;
-  letter-spacing:5px;
+  letter-spacing:6px;
   margin:18px 0;
   font-size:24px;
 }
@@ -95,8 +202,15 @@ body{
   line-height:1.8;
 }
 
-.review-section{
-  padding:90px 7%;
+.section-title{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.section-title h2{
+  font-size:48px;
+  font-family:'Playfair Display',serif;
+  margin-top:12px;
 }
 
 .review-grid{
@@ -112,11 +226,22 @@ body{
   border:1px solid rgba(245,199,107,.20);
   box-shadow:0 20px 55px rgba(0,0,0,.35);
   transition:.35s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+.review-card::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,rgba(245,199,107,.08),transparent 42%);
+  pointer-events:none;
 }
 
 .review-card:hover{
   transform:translateY(-8px);
-  border-color:rgba(245,199,107,.42);
+  border-color:rgba(245,199,107,.45);
+  box-shadow:0 28px 70px rgba(0,0,0,.45);
 }
 
 .review-top{
@@ -124,13 +249,15 @@ body{
   align-items:center;
   gap:18px;
   margin-bottom:20px;
+  position:relative;
 }
 
 .review-top img{
-  width:78px;
-  height:78px;
+  width:78px!important;
+  height:78px!important;
   border-radius:18px;
   object-fit:cover;
+  border:2px solid rgba(245,199,107,.28);
 }
 
 .review-top h3{
@@ -141,23 +268,28 @@ body{
 .review-destination{
   color:#f5c76b;
   font-size:14px;
+  font-weight:700;
 }
 
 .review-stars{
   color:#f5c76b;
   letter-spacing:4px;
   margin-bottom:18px;
+  position:relative;
 }
 
 .review-text{
   color:#d6deea;
   line-height:1.9;
   font-size:15px;
+  position:relative;
 }
 
 .review-cta{
-  padding:80px 7%;
+  padding:85px 7%;
   text-align:center;
+  background:linear-gradient(135deg,#d4af37,#f7df8a);
+  color:#111;
 }
 
 .review-cta h2{
@@ -167,25 +299,105 @@ body{
 }
 
 .review-cta p{
-  color:#cbd5e1;
   margin-bottom:28px;
+  font-weight:600;
 }
 
 .review-btn{
   display:inline-block;
-  background:linear-gradient(135deg,#d4af37,#f7df8a);
-  color:#111;
+  background:#08111f;
+  color:#fff;
   padding:15px 30px;
   border-radius:50px;
   font-weight:900;
-  box-shadow:0 14px 34px rgba(212,175,55,.28);
+  box-shadow:0 14px 34px rgba(0,0,0,.25);
+}
+
+footer{
+  background:#050b14;
+  text-align:center;
+  padding:65px 7% 35px;
+  border-top:1px solid rgba(245,199,107,.18);
+}
+
+.footer-logo{
+  width:150px;
+  margin:0 auto 20px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:25px;
+  margin:25px 0;
+}
+
+.footer-links a{
+  color:#fff;
+  font-weight:700;
+}
+
+.footer-links a:hover{
+  color:#f5c76b;
+}
+
+.seo-text{
+  max-width:850px;
+  margin:25px auto 0;
+  color:#b8c2d0;
+  line-height:1.8;
+  font-size:14px;
+}
+
+.footer-copy{
+  color:#8b95a7;
+  margin-top:22px;
+  font-size:13px;
+}
+
+.float-whatsapp{
+  position:fixed;
+  right:18px;
+  bottom:30px;
+  background:#25d366;
+  color:#fff;
+  padding:13px 18px;
+  border-radius:40px;
+  font-weight:800;
+  z-index:9999;
+  box-shadow:0 12px 30px rgba(0,0,0,.35);
 }
 
 @media(max-width:768px){
 
+  .navbar{
+    width:92%;
+    padding:14px 22px;
+    top:12px;
+    border-radius:22px;
+  }
+
+  .nav-logo{
+    width:130px;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .mobile-menu{
+    top:82px;
+    right:4%;
+  }
+
   .reviews-hero{
-    min-height:58vh;
-    padding:140px 20px 70px;
+    min-height:62vh;
+    padding:145px 20px 70px;
   }
 
   .reviews-hero-content h1{
@@ -196,17 +408,56 @@ body{
     font-size:15px;
   }
 
+  .review-section{
+    padding:70px 6%;
+  }
+
+  .rating-box{
+    padding:32px 22px;
+  }
+
   .rating-number{
-    font-size:54px;
+    font-size:56px;
+  }
+
+  .section-title h2{
+    font-size:34px;
   }
 
   .review-cta h2{
     font-size:34px;
   }
 
+  .float-whatsapp{
+    right:10px;
+    bottom:20px;
+    font-size:13px;
+    padding:12px 15px;
+  }
 }
-
 </style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Review",
+  "itemReviewed":{
+    "@type":"TravelAgency",
+    "name":"Holidaydope",
+    "url":"https://www.holidaydope.com"
+  },
+  "reviewRating":{
+    "@type":"Rating",
+    "ratingValue":"4.9",
+    "bestRating":"5"
+  },
+  "author":{
+    "@type":"Person",
+    "name":"Holidaydope Travelers"
+  },
+  "reviewBody":"Holidaydope customers share positive travel experiences for Maldives, Bali, Thailand and customized luxury holiday packages."
+}
+</script>
 
 </head>
 
@@ -215,11 +466,7 @@ body{
 <nav class="navbar">
 
   <a href="/">
-    <img src="/logo.webp"
-    class="nav-logo"
-    alt="Holidaydope"
-    width="155"
-    height="80">
+    <img src="/logo.webp" class="nav-logo" alt="Holidaydope" width="155" height="80">
   </a>
 
   <ul class="nav-links">
@@ -232,9 +479,7 @@ body{
     <li><a href="/contact/index.html">Contact</a></li>
   </ul>
 
-  <button class="menu-toggle"
-  onclick="toggleMenu()"
-  type="button">
+  <button class="menu-toggle" onclick="toggleMenu()" type="button" aria-label="Open mobile menu">
     ☰
   </button>
 
@@ -254,15 +499,11 @@ body{
 
   <div class="reviews-hero-content">
 
-    <p>REAL TRAVELER EXPERIENCES</p>
+    <p>Real Traveler Experiences</p>
 
-    <h1>
-      Trusted By Travelers Across India
-    </h1>
+    <h1>Trusted By Travelers Across India</h1>
 
-    <span>
-      Maldives • Bali • Thailand • Dubai • Vietnam • Kashmir
-    </span>
+    <span>Maldives • Bali • Thailand • Dubai • Vietnam • Kashmir</span>
 
   </div>
 
@@ -274,12 +515,10 @@ body{
 
     <div class="rating-number">4.9</div>
 
-    <div class="rating-stars">
-      ★★★★★
-    </div>
+    <div class="rating-stars">★★★★★</div>
 
     <p>
-      Holidaydope has helped hundreds of travelers plan luxury holidays with premium stays, smooth support and unforgettable experiences.
+      Holidaydope has helped travelers plan luxury holidays with premium stays, smooth support and unforgettable experiences.
     </p>
 
   </div>
@@ -289,95 +528,61 @@ body{
 <section class="review-section">
 
   <div class="section-title">
-    <p>CLIENT REVIEWS</p>
+    <p>Client Reviews</p>
     <h2>What Our Travelers Say</h2>
   </div>
 
   <div class="review-grid">
 
     <div class="review-card">
-
       <div class="review-top">
-
-        <img src="/review-dave.webp"
-        alt="Dave Thailand Review"
-        loading="lazy">
+        <img src="/review-dave.webp" alt="Dave Thailand Review" loading="lazy" width="78" height="78">
 
         <div>
           <h3>Dave</h3>
-          <div class="review-destination">
-            Thailand Tour
-          </div>
+          <div class="review-destination">Thailand Tour</div>
         </div>
-
       </div>
 
-      <div class="review-stars">
-        ★★★★★
-      </div>
+      <div class="review-stars">★★★★★</div>
 
       <div class="review-text">
-        “Bangkok vibes & Pattaya beaches ✨
-        Big thanks to Holidaydope for making this trip smooth and memorable.
-        Everything was perfectly planned.”
+        “Bangkok vibes & Pattaya beaches ✨ Big thanks to Holidaydope for making this trip smooth and memorable. Everything was perfectly planned.”
       </div>
-
     </div>
 
     <div class="review-card">
-
       <div class="review-top">
-
-        <img src="/review-dave.webp"
-        alt="Bali Review"
-        loading="lazy">
+        <img src="/review-dave.webp" alt="Bali Review" loading="lazy" width="78" height="78">
 
         <div>
           <h3>Miss Ngaihkim</h3>
-          <div class="review-destination">
-            Bali Vacation
-          </div>
+          <div class="review-destination">Bali Vacation</div>
         </div>
-
       </div>
 
-      <div class="review-stars">
-        ★★★★★
-      </div>
+      <div class="review-stars">★★★★★</div>
 
       <div class="review-text">
-        “Best Bali experience with luxury villa stay and amazing support.
-        Everything from airport pickup to sightseeing was handled smoothly.”
+        “Best Bali experience with luxury villa stay and amazing support. Everything from airport pickup to sightseeing was handled smoothly.”
       </div>
-
     </div>
 
     <div class="review-card">
-
       <div class="review-top">
-
-        <img src="/review-dave.webp"
-        alt="Maldives Review"
-        loading="lazy">
+        <img src="/review-dave.webp" alt="Maldives Review" loading="lazy" width="78" height="78">
 
         <div>
           <h3>Rahul Sharma</h3>
-          <div class="review-destination">
-            Maldives Honeymoon
-          </div>
+          <div class="review-destination">Maldives Honeymoon</div>
         </div>
-
       </div>
 
-      <div class="review-stars">
-        ★★★★★
-      </div>
+      <div class="review-stars">★★★★★</div>
 
       <div class="review-text">
-        “Luxury water villa stay was amazing.
-        Holidaydope managed everything professionally and made our honeymoon unforgettable.”
+        “Luxury water villa stay was amazing. Holidaydope managed everything professionally and made our honeymoon unforgettable.”
       </div>
-
     </div>
 
   </div>
@@ -388,13 +593,9 @@ body{
 
   <h2>Plan Your Dream Holiday</h2>
 
-  <p>
-    Contact Holidaydope for customized luxury travel packages.
-  </p>
+  <p>Contact Holidaydope for customized luxury travel packages.</p>
 
-  <a href="https://wa.me/918595789670"
-  target="_blank"
-  class="review-btn">
+  <a href="https://wa.me/918595789670" target="_blank" rel="noopener" class="review-btn">
     Book Now on WhatsApp
   </a>
 
@@ -402,18 +603,16 @@ body{
 
 <footer>
 
-  <img src="/logo.webp"
-  class="footer-logo"
-  alt="Holidaydope">
+  <img src="/logo.webp" class="footer-logo" alt="Holidaydope" width="150" height="80">
 
-  <p>
-    Holidaydope — Chalo Duniya Ghume
-  </p>
+  <p>Holidaydope — Chalo Duniya Ghume</p>
 
   <div class="footer-links">
     <a href="/">Home</a>
     <a href="/package/index.html">Packages</a>
+    <a href="/flights/index.html">Flights</a>
     <a href="/visa/index.html">Visa</a>
+    <a href="/blog/index.html">Blogs</a>
     <a href="/reviews/index.html">Reviews</a>
     <a href="/contact/index.html">Contact</a>
   </div>
@@ -428,32 +627,24 @@ body{
 
 </footer>
 
-<a href="https://wa.me/918595789670"
-target="_blank"
-class="float-whatsapp">
+<a href="https://wa.me/918595789670" target="_blank" rel="noopener" class="float-whatsapp">
   WhatsApp
 </a>
 
 <script>
-
 function toggleMenu(){
-  document.getElementById("mobileMenu")
-  .classList.toggle("show");
+  document.getElementById("mobileMenu").classList.toggle("show");
 }
 
 window.addEventListener("scroll", function(){
-
-  const navbar =
-  document.querySelector(".navbar");
+  const navbar = document.querySelector(".navbar");
 
   if(window.scrollY > 50){
     navbar.classList.add("scrolled");
   }else{
     navbar.classList.remove("scrolled");
   }
-
 });
-
 </script>
 
 </body>
