@@ -511,59 +511,7 @@ Plan: ${plan}`;
 
 
 
-  let deferredPrompt;
-
-const isAndroid =
-/Android/i.test(navigator.userAgent);
-
-if(isAndroid){
-
-  window.addEventListener(
-    "beforeinstallprompt",
-    function(e){
-
-      e.preventDefault();
-
-      deferredPrompt = e;
-
-      setTimeout(function(){
-
-        document.getElementById(
-          "installPopup"
-        ).style.display = "flex";
-
-      }, 5000);
-
-    }
-  );
-
-  document.getElementById(
-    "installBtn"
-  ).addEventListener(
-    "click",
-    async function(){
-
-      if(deferredPrompt){
-
-        deferredPrompt.prompt();
-
-        await deferredPrompt.userChoice;
-
-        deferredPrompt = null;
-
-        document.getElementById(
-          "installPopup"
-        ).style.display = "none";
-      }
-
-    }
-  );
-
-}
-
-  function closeInstallPopup(){
-    document.getElementById("installPopup").style.display = "none";
-  }
+  
 
   if("serviceWorker" in navigator){
     window.addEventListener("load", function(){
