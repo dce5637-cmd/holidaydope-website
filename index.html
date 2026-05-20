@@ -525,40 +525,7 @@ Plan: ${plan}`;
     });
   }
   
- document.addEventListener("DOMContentLoaded", function(){
-
-  const bookings = [
-    "Rahul from Delhi booked Bali Package ✈️",
-    "David booked Maldives Luxury Package 🏝️",
-    "Priya from Mumbai booked Dubai Trip 🌆",
-    "Aman booked Thailand Vacation 🌴",
-    "Miss Ngaihkim booked Bali Honeymoon 💕"
-  ];
-
-  let popupIndex = 0;
-
-  const bookingPopup = document.getElementById("bookingPopup");
-  const popupText = document.getElementById("popupText");
-
-  bookingPopup.style.display = "none";
-
-  function showBookingPopup(){
-    popupText.innerText = bookings[popupIndex];
-    bookingPopup.style.display = "block";
-
-    setTimeout(function(){
-      bookingPopup.style.display = "none";
-    }, 6000);
-
-    popupIndex = (popupIndex + 1) % bookings.length;
-  }
-
-  setTimeout(function(){
-    showBookingPopup();
-    setInterval(showBookingPopup, 30000);
-}, 10000);
-
-});
+ 
 
 /* NAVBAR SCROLL */
 
