@@ -1312,3 +1312,35 @@ footer{
   color:#cbd5e1;
   line-height:1.7;
 }
+/* MOBILE AI CHATBOT COMPACT */
+@media(max-width:768px){
+
+  .ai-chat-btn{
+    width:56px!important;
+    height:56px!important;
+    border-radius:50%!important;
+    padding:0!important;
+    font-size:0!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+  }
+
+  .ai-chat-btn::before{
+    content:"💬";
+    font-size:24px;
+  }
+
+  .ai-chatbot{
+    right:12px!important;
+    bottom:88px!important;
+  }
+
+  .ai-chat-box{
+    width:260px!important;
+    max-width:86vw!important;
+    bottom:68px!important;
+    right:0!important;
+  }
+
+}
