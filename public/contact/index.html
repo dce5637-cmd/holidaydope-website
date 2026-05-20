@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Contact Holidaydope | Travel Agency in Delhi</title>
-
   <meta name="description" content="Contact Holidaydope for Maldives, Bali, Thailand, Dubai, Kashmir and customized holiday packages from Delhi. Call or WhatsApp for travel, flights and visa assistance.">
-
   <link rel="canonical" href="https://www.holidaydope.com/contact/">
   <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -16,6 +14,290 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap">
 
   <link rel="stylesheet" href="/src/style.css">
+
+  <style>
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background:#050b14;
+      color:#fff;
+    }
+
+    .contact-hero{
+      min-height:60vh;
+      background:
+      linear-gradient(rgba(5,11,20,.72),rgba(5,11,20,.82)),
+      url('/holidaydope-hero.webp') center/cover;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:130px 20px 90px;
+    }
+
+    .contact-hero-content p,
+    .contact-form-text p{
+      color:#f5c76b;
+      letter-spacing:3px;
+      font-size:13px;
+      font-weight:700;
+      margin-bottom:14px;
+    }
+
+    .contact-hero-content h1{
+      font-family:'Playfair Display',serif;
+      font-size:58px;
+      line-height:1.1;
+      margin:0 0 18px;
+    }
+
+    .contact-hero-content span{
+      color:#d6dbe3;
+      font-size:17px;
+    }
+
+    .contact-section,
+    .contact-form-section{
+      padding:90px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:45px;
+    }
+
+    .section-title p{
+      color:#f5c76b;
+      letter-spacing:3px;
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .section-title h2{
+      font-family:'Playfair Display',serif;
+      font-size:42px;
+      margin:10px 0 0;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:28px;
+    }
+
+    .contact-card{
+      background:rgba(255,255,255,.055);
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:28px;
+      padding:34px 26px;
+      text-align:center;
+      backdrop-filter:blur(14px);
+      transition:.35s ease;
+      box-shadow:0 14px 38px rgba(0,0,0,.22);
+    }
+
+    .contact-card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 22px 55px rgba(0,0,0,.38);
+      border-color:rgba(245,199,107,.35);
+    }
+
+    .contact-icon{
+      font-size:42px;
+      margin-bottom:18px;
+    }
+
+    .contact-card h3{
+      margin:0 0 12px;
+      font-size:22px;
+    }
+
+    .contact-card p{
+      color:#b7c0ce;
+      line-height:1.7;
+      min-height:54px;
+    }
+
+    .contact-card a{
+      color:#f5c76b;
+      font-weight:700;
+      text-decoration:none;
+    }
+
+    .contact-form-section{
+      padding-top:30px;
+    }
+
+    .contact-form-box{
+      max-width:850px;
+      margin:auto;
+      background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:34px;
+      padding:55px;
+      box-shadow:0 25px 70px rgba(0,0,0,.35);
+    }
+
+    .contact-form-text{
+      text-align:center;
+      margin-bottom:35px;
+    }
+
+    .contact-form-text h2{
+      font-family:'Playfair Display',serif;
+      font-size:42px;
+      margin:0 0 12px;
+    }
+
+    .contact-form-text span{
+      color:#b7c0ce;
+    }
+
+    .contact-form-box label{
+      display:block;
+      margin:18px 0 8px;
+      color:#f3f5f8;
+      font-weight:600;
+    }
+
+    .contact-form-box input,
+    .contact-form-box select,
+    .contact-form-box textarea{
+      width:100%;
+      box-sizing:border-box;
+      padding:15px 16px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.08);
+      color:#fff;
+      outline:none;
+      font-family:'Poppins',sans-serif;
+    }
+
+    .contact-form-box textarea{
+      min-height:120px;
+      resize:vertical;
+    }
+
+    .contact-form-box input::placeholder,
+    .contact-form-box textarea::placeholder{
+      color:#aeb8c7;
+    }
+
+    .contact-form-box option{
+      color:#111;
+    }
+
+    .contact-form-box button{
+      width:100%;
+      margin-top:26px;
+      border:0;
+      padding:16px;
+      border-radius:999px;
+      background:linear-gradient(135deg,#d4af37,#f7df8a);
+      color:#08111f;
+      font-weight:800;
+      cursor:pointer;
+      font-size:16px;
+      box-shadow:0 12px 32px rgba(212,175,55,.28);
+    }
+
+    .contact-form-box button:hover{
+      transform:translateY(-2px);
+    }
+
+    .faq-section{
+      padding:80px 8%;
+      background:#07101d;
+    }
+
+    .faq-box{
+      max-width:900px;
+      margin:auto;
+      display:grid;
+      gap:18px;
+    }
+
+    .faq-item{
+      background:rgba(255,255,255,.045);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:22px;
+      padding:26px;
+    }
+
+    .faq-item h3{
+      margin:0 0 10px;
+      color:#fff;
+    }
+
+    .faq-item p{
+      margin:0;
+      color:#b7c0ce;
+      line-height:1.7;
+    }
+
+    footer{
+      text-align:center;
+      padding:70px 8% 35px;
+      background:#050b14;
+      border-top:1px solid rgba(255,255,255,.08);
+    }
+
+    .footer-logo{
+      object-fit:contain;
+      margin-bottom:10px;
+    }
+
+    .footer-links{
+      display:flex;
+      justify-content:center;
+      gap:22px;
+      flex-wrap:wrap;
+      margin:24px 0;
+    }
+
+    .footer-links a,
+    footer a{
+      color:#f5c76b;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    .seo-text{
+      max-width:850px;
+      margin:20px auto;
+      color:#b7c0ce;
+      line-height:1.7;
+      font-size:14px;
+    }
+
+    .footer-copy{
+      color:#8894a5;
+      font-size:13px;
+    }
+
+    @media(max-width:768px){
+      .contact-hero-content h1{
+        font-size:38px;
+      }
+
+      .section-title h2,
+      .contact-form-text h2{
+        font-size:32px;
+      }
+
+      .contact-form-box{
+        padding:30px 22px;
+      }
+
+      .contact-section,
+      .contact-form-section,
+      .faq-section{
+        padding-left:6%;
+        padding-right:6%;
+      }
+    }
+  </style>
 
   <script type="application/ld+json">
   {
@@ -34,7 +316,11 @@
         "addressLocality":"New Delhi",
         "postalCode":"110037",
         "addressCountry":"IN"
-      }
+      },
+      "sameAs":[
+        "https://instagram.com/holiday_dope",
+        "https://www.facebook.com/profile.php?id=61555482407475"
+      ]
     }
   }
   </script>
@@ -44,7 +330,7 @@
 
 <nav class="navbar">
   <a href="/">
-    <img src="/logo.webp" class="nav-logo" alt="Holidaydope" width="155" height="80">
+    <img src="/logo.webp" class="nav-logo" alt="Holidaydope" width="155" height="80" decoding="async">
   </a>
 
   <ul class="nav-links">
@@ -56,7 +342,7 @@
     <li><a href="/contact/index.html">Contact</a></li>
   </ul>
 
-  <button class="menu-toggle" onclick="toggleMenu()" type="button">☰</button>
+  <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open mobile menu" type="button">☰</button>
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
@@ -77,14 +363,12 @@
 </section>
 
 <section class="contact-section">
-
   <div class="section-title">
     <p>GET IN TOUCH</p>
     <h2>We’re Here To Help You Travel Better</h2>
   </div>
 
   <div class="contact-grid">
-
     <div class="contact-card">
       <div class="contact-icon">📞</div>
       <h3>Call Us</h3>
@@ -112,25 +396,18 @@
       <p>Follow latest travel deals and updates.</p>
       <a href="https://instagram.com/holiday_dope" target="_blank" rel="noopener">@holiday_dope</a>
     </div>
-
   </div>
-
 </section>
 
 <section class="contact-form-section">
-
   <div class="contact-form-box">
-
     <div class="contact-form-text">
       <p>QUICK INQUIRY</p>
       <h2>Send Your Travel Requirement</h2>
-      <span>
-        Fill your details and our team will connect with you on WhatsApp.
-      </span>
+      <span>Fill your details and our team will connect with you on WhatsApp.</span>
     </div>
 
-    <form class="booking-form" onsubmit="sendContactToWhatsApp(event)">
-
+    <form onsubmit="sendContactToWhatsApp(event)">
       <label for="name">Your Name</label>
       <input id="name" type="text" placeholder="Your Name" required>
 
@@ -161,22 +438,17 @@
       <textarea id="message" placeholder="Tell us your travel plan"></textarea>
 
       <button type="submit">Send Inquiry on WhatsApp</button>
-
     </form>
-
   </div>
-
 </section>
 
 <section class="faq-section">
-
   <div class="section-title">
     <p>CONTACT FAQ</p>
     <h2>Before You Message Us</h2>
   </div>
 
   <div class="faq-box">
-
     <div class="faq-item">
       <h3>Do you provide customized holiday packages?</h3>
       <p>Yes, Holidaydope provides customized international and domestic packages based on your budget, travel date and hotel preference.</p>
@@ -191,14 +463,11 @@
       <h3>Where is Holidaydope located?</h3>
       <p>Holidaydope is located at L3, Street No 1, Mahipalpur, New Delhi - 110037.</p>
     </div>
-
   </div>
-
 </section>
 
 <footer id="contact">
-
-  <img src="/logo.webp" class="footer-logo" alt="Holidaydope" width="150" height="80">
+  <img src="/logo.webp" class="footer-logo" alt="Holidaydope" width="150" height="80" loading="lazy" decoding="async">
 
   <p>Holidaydope — Chalo Duniya Ghume</p>
   <p>WhatsApp / Call: 8595789670</p>
@@ -208,23 +477,21 @@
     <a href="/package/index.html">Packages</a>
     <a href="/visa/index.html">Visa</a>
     <a href="/blog/index.html">Blogs</a>
+    <a href="/contact/index.html">Contact</a>
   </div>
 
   <p class="seo-text">
     Holidaydope is a premium travel agency in Delhi offering Maldives, Bali, Thailand, Vietnam, Dubai, Kashmir and customized holiday packages with visa support.
   </p>
 
-  <p class="footer-copy">
-    © 2026 Holidaydope. All Rights Reserved.
-  </p>
-
+  <p class="footer-copy">© 2026 Holidaydope. All Rights Reserved.</p>
 </footer>
 
-<a href="https://wa.me/918595789670" target="_blank" rel="noopener" class="float-whatsapp">
+<a href="https://wa.me/918595789670" target="_blank" rel="noopener" class="float-whatsapp" aria-label="Chat with Holidaydope on WhatsApp">
   WhatsApp
 </a>
 
-<button onclick="scrollToTop()" id="topBtn" type="button">↑</button>
+<button onclick="scrollToTop()" id="topBtn" type="button" aria-label="Scroll to top">↑</button>
 
 <script>
 function toggleMenu(){
