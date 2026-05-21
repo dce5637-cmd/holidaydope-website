@@ -1344,3 +1344,89 @@ footer{
   }
 
 }
+.hotel-partners{
+  padding:75px 20px;
+  background:linear-gradient(180deg,#050b14,#08111f);
+  text-align:center;
+  overflow:hidden;
+}
+
+.hotel-partners .eyebrow{
+  color:#d4af37;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-size:13px;
+  font-weight:600;
+  margin-bottom:10px;
+}
+
+.hotel-partners h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(30px,4vw,48px);
+  color:#fff;
+  margin-bottom:35px;
+}
+
+.hotel-logo-strip{
+  width:100%;
+  overflow:hidden;
+  mask-image:linear-gradient(to right,transparent,#000 12%,#000 88%,transparent);
+  -webkit-mask-image:linear-gradient(to right,transparent,#000 12%,#000 88%,transparent);
+}
+
+.hotel-logo-track{
+  display:flex;
+  gap:22px;
+  width:max-content;
+  animation:hotelScroll 30s linear infinite;
+}
+
+.hotel-svg{
+  min-width:150px;
+  padding:18px 24px;
+  border:1px solid rgba(212,175,55,.25);
+  border-radius:18px;
+  background:rgba(255,255,255,.045);
+  color:rgba(255,255,255,.88);
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  backdrop-filter:blur(12px);
+  box-shadow:0 12px 35px rgba(0,0,0,.28);
+  transition:.3s ease;
+}
+
+.hotel-svg:hover{
+  color:#f7df8a;
+  transform:translateY(-4px);
+  border-color:rgba(212,175,55,.6);
+  box-shadow:0 18px 42px rgba(212,175,55,.18);
+}
+
+.hotel-note{
+  margin-top:28px;
+  color:rgba(255,255,255,.68);
+  font-size:15px;
+}
+
+@keyframes hotelScroll{
+  from{
+    transform:translateX(0);
+  }
+  to{
+    transform:translateX(-50%);
+  }
+}
+
+@media(max-width:768px){
+  .hotel-partners{
+    padding:55px 16px;
+  }
+
+  .hotel-svg{
+    min-width:125px;
+    font-size:13px;
+    padding:15px 18px;
+  }
+}
